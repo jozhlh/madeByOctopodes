@@ -15,7 +15,7 @@ public class Enemy : MonoBehaviour {
 
     private bool playerInRange = false;
 
-    private Vector3 obstaclePosition = new Vector3(0, 0, 0);
+    private Vector3 enemyPosition = new Vector3(0, 0, 0);
     //private Vector3 obstacleSize = new Vector3(1, 1, 1);
 
 
@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag != "Obstacle")
+        if (other.tag == "Player")
         {
             playerInRange = true;
         }
@@ -36,12 +36,12 @@ public class Enemy : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        obstaclePosition.x = LaneManager.laneData[(int)inLane].laneX;
-        obstaclePosition.y = LaneManager.laneData[(int)inLane].laneY;
+        enemyPosition.x = LaneManager.laneData[(int)inLane].laneX;
+        enemyPosition.y = LaneManager.laneData[(int)inLane].laneY;
 
         if (playerInRange)
         {
-            obstaclePosition.z += (player.shipForwardSpeed * Time.deltaTime);
+            enemyPosition.z += (player.shipForwardSpeed * Time.deltaTime);
 
             // fire at player
                 // if not on cooldown
@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            obstaclePosition.z = zPosition;
+            enemyPosition.z = zPosition;
         }
 
         // Raycast behind itself
@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour {
                     // if route clear
                         // move to that lane
         
-        gameObject.transform.position = obstaclePosition;
+        gameObject.transform.position = enemyPosition;
 
         
        

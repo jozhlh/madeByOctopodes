@@ -4,14 +4,22 @@ using System.Collections.Generic;
 
 public class LevelManager : MonoBehaviour {
 
+    public Vector3 bulletStartPos = new Vector3(0, 0, 0);
+
     List<GameObject> obstacleObjects = new List<GameObject>();
     List<GameObject> enemyObjects = new List<GameObject>();
+    List<GameObject> bulletObjects = new List<GameObject>();
+
+    List<GameObject> toBeCleared = new List<GameObject>();
 
     Enemy[] enemies;
     Obstacle[] obstacles;
 
     [SerializeField]
     private GameObject player;
+
+    [SerializeField]
+    private GameObject playerBullet;
 
     int numberOfObstacles;
     int numberOfEnemies;
@@ -34,11 +42,13 @@ public class LevelManager : MonoBehaviour {
         {
             enemyObjects.Add(enemies[ob].gameObject);
         }
-
+        GameInput.OnTap += PlayerFire;
     }
 	
 	// Update is called once per frame
 	void Update () {
+
+        // Cull enemies and objects lose to the camera
 	    foreach (GameObject obstacle in obstacleObjects)
         {
             if((obstacle.transform.position.z + (obstacle.transform.localScale.z / 2)) < (player.transform.position.z - (player.transform.localScale.z / 2)))
@@ -54,6 +64,8 @@ public class LevelManager : MonoBehaviour {
                 enemy.SetActive(false);
             }
         }
+
+        CleanUp();
     }
 
     public void ResetLevel()
@@ -68,4 +80,51 @@ public class LevelManager : MonoBehaviour {
             enemy.SetActive(true);
         }
     }
+
+    public void PlayerFire(Vector3 position)
+    {
+       
+        bulletStartPos = player.GetComponent<Transform>().position;
+
+        Transform bulletStart = player.GetComponent<Transform>();
+
+        bulletStart.position = bulletStartPos;
+
+        GameObject newBullet = (GameObject)Instantiate(playerBullet, transform);
+
+        newBullet.transform.position = bulletStartPos;
+
+        bulletObjects.Add(newBullet);
+    }
+
+    public void CleanUp()
+    {
+        foreach (GameObject enemy in enemyObjects)
+        {
+            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyThis)
+            {
+                enemy.SetActive(false);
+            }
+            
+        }
+        
+        foreach (GameObject bullet in bulletObjects)
+        {
+            if (bullet.GetComponent<PlayerBullet>().destroyThis)
+            {
+                toBeCleared.Add(bullet);
+            }
+        }
+
+        foreach (GameObject bullet in toBeCleared)
+        {
+            bulletObjects.Remove(bullet);
+            bullet.SetActive(false);
+            Destroy(bullet);
+        }
+
+        toBeCleared.Clear();
+    }
+
+    
 }

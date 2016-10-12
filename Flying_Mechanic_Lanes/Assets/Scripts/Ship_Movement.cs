@@ -54,7 +54,7 @@ public class Ship_Movement : MonoBehaviour {
     // Get the position of any new tap
     private void HandleOnTap(Vector3 position)
     {
-       
+       // Shoot bullet down lane
     }
 
     // Get the direction of any new swipe

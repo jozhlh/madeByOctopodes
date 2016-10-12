@@ -8,9 +8,12 @@ public class LaneManager : MonoBehaviour {
     private float laneWidth = 2.0f;
     [SerializeField]
     private float laneHeight = 2.0f;
+    [SerializeField]
+    private float laneLength = 60.0f;
 
     public static float laneSpacingHorizontal;
     public static float laneSpacingVertical;
+    public static float lengthOfLevel;
 
     public enum PlayerLanes { NW, N, NE, W, C, E, SW, S, SE };
 
@@ -28,6 +31,7 @@ public class LaneManager : MonoBehaviour {
         Gizmos.color = Color.red;
         laneSpacingHorizontal = laneWidth;
         laneSpacingVertical = laneHeight;
+        lengthOfLevel = laneLength;
         for (int j = 0; j < 9; j++)
         {
             if (j < 3)
@@ -45,7 +49,7 @@ public class LaneManager : MonoBehaviour {
                 laneData[j].laneX = (-laneSpacingHorizontal) + ((j - 6) * laneSpacingHorizontal);
                 laneData[j].laneY = -laneSpacingVertical;
             }
-            Gizmos.DrawWireCube(new Vector3(laneData[j].laneX, laneData[j].laneY, 20), new Vector3(laneSpacingHorizontal, laneSpacingVertical, 40));
+            Gizmos.DrawWireCube(new Vector3(laneData[j].laneX, laneData[j].laneY, laneLength / 2), new Vector3(laneSpacingHorizontal, laneSpacingVertical, laneLength));
         }
     }
 
