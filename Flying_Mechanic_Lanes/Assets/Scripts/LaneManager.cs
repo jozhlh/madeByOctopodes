@@ -73,6 +73,7 @@ public class LaneManager : MonoBehaviour {
     {
         laneSpacingHorizontal = laneWidth;
         laneSpacingVertical = laneHeight;
+        lengthOfLevel = laneLength;
         for (int i = 0; i < 9; i++)
         {
             laneData[i].laneID = (PlayerLanes)i;

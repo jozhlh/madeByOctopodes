@@ -6,14 +6,16 @@ public class LevelManager : MonoBehaviour {
 
     public Vector3 bulletStartPos = new Vector3(0, 0, 0);
 
-    List<GameObject> obstacleObjects = new List<GameObject>();
+    // List<GameObject> obstacleObjects = new List<GameObject>();
+    List<GameObject> rockObjects = new List<GameObject>();
     List<GameObject> enemyObjects = new List<GameObject>();
     List<GameObject> bulletObjects = new List<GameObject>();
 
     List<GameObject> toBeCleared = new List<GameObject>();
 
     Enemy[] enemies;
-    Obstacle[] obstacles;
+   // Obstacle[] obstacles;
+    Rock[] rocks;
 
     [SerializeField]
     private GameObject player;
@@ -21,18 +23,29 @@ public class LevelManager : MonoBehaviour {
     [SerializeField]
     private GameObject playerBullet;
 
-    int numberOfObstacles;
+    // int numberOfObstacles;
+    int numberOfRocks;
     int numberOfEnemies;
 
 	// Use this for initialization
 	void Start ()
     {
+        /*
         numberOfObstacles = GetComponentsInChildren<Obstacle>().Length;
         obstacles = new Obstacle[numberOfObstacles];
+
         obstacles = GetComponentsInChildren<Obstacle>();
         for (int ob = 0; ob < numberOfObstacles; ob++)
         {
             obstacleObjects.Add(obstacles[ob].gameObject);
+        }
+        */
+        numberOfRocks = GetComponentsInChildren<Rock>().Length;
+        rocks = new Rock[numberOfRocks];
+        rocks = GetComponentsInChildren<Rock>();
+        for (int ob = 0; ob < numberOfRocks; ob++)
+        {
+            rockObjects.Add(rocks[ob].gameObject);
         }
 
         numberOfEnemies = GetComponentsInChildren<Enemy>().Length;
@@ -49,11 +62,11 @@ public class LevelManager : MonoBehaviour {
 	void Update () {
 
         // Cull enemies and objects lose to the camera
-	    foreach (GameObject obstacle in obstacleObjects)
+	    foreach (GameObject rock in rockObjects)
         {
-            if((obstacle.transform.position.z + (obstacle.transform.localScale.z / 2)) < (player.transform.position.z - (player.transform.localScale.z / 2)))
+            if((rock.transform.position.z + (rock.transform.localScale.z)) < (player.transform.position.z - (player.transform.localScale.z)))
             {
-                obstacle.SetActive(false);
+                rock.SetActive(false);
             }
         }
 
@@ -70,9 +83,9 @@ public class LevelManager : MonoBehaviour {
 
     public void ResetLevel()
     {
-        foreach (GameObject obstacle in obstacleObjects)
+        foreach (GameObject rock in rockObjects)
         {
-            obstacle.SetActive(true);
+            rock.SetActive(true);
         }
 
         foreach (GameObject enemy in enemyObjects)

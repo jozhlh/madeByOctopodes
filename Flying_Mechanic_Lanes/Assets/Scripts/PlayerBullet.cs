@@ -8,11 +8,14 @@ public class PlayerBullet : MonoBehaviour {
 
     private Vector3 bulletPosition;
 
+    private float bulletCulling;
+
     public bool destroyThis = false;
 
     // Use this for initialization
     void Start () {
         bulletPosition = new Vector3();
+        
 	}
 
     void OnTriggerEnter(Collider other)
@@ -31,13 +34,13 @@ public class PlayerBullet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        
-       
+        bulletCulling = LaneManager.lengthOfLevel;
+
         // gameObject.transform.Translate(0.0f, 0.0f, Time.deltaTime * bulletSpeed);
         bulletPosition = gameObject.transform.position;
         bulletPosition.z += Time.deltaTime * bulletSpeed;
 
-        if (bulletPosition.z > 60)
+        if (bulletPosition.z > (bulletCulling * 2))
         {
             destroyThis = true;
         }

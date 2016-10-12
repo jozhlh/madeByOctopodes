@@ -39,7 +39,7 @@ public class Ship_Movement : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Obstacle")
+        if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
             ResetShip();
             levelManager.ResetLevel();
