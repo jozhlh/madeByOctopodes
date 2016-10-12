@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : MonoBehaviour {
 
     public LaneManager.PlayerLanes inLane;
+
+    List<GameObject> bulletObjects = new List<GameObject>();
 
     [SerializeField]
     private float zPosition = 0.0f;
@@ -13,16 +16,22 @@ public class Enemy : MonoBehaviour {
     [SerializeField]
     private Ship_Movement player = null;
 
+    [SerializeField]
+    private GameObject enemyBullet = null;
+
     private bool playerInRange = false;
 
     private Vector3 enemyPosition = new Vector3(0, 0, 0);
     //private Vector3 obstacleSize = new Vector3(1, 1, 1);
 
+    [SerializeField]
+    private float cooldown = 2;
+    private float cooldownProgress;
 
     // Use this for initialization
     void Start()
     {
-
+        cooldownProgress = cooldown;
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,17 +47,24 @@ public class Enemy : MonoBehaviour {
     {
         enemyPosition.x = LaneManager.laneData[(int)inLane].laneX;
         enemyPosition.y = LaneManager.laneData[(int)inLane].laneY;
+        cooldownProgress -= Time.deltaTime;
 
         if (playerInRange)
         {
             enemyPosition.z += (player.shipForwardSpeed * Time.deltaTime);
 
+            
+            if (cooldownProgress < 0)
+            {
+                Fire();
+                cooldownProgress = cooldown;
+            }
             // fire at player
-                // if not on cooldown
-                    // get player position
-                    // calculate where player will be for collision
-                    // shoot there
-                    // start cooldown
+            // if not on cooldown
+            // get player position
+            // calculate where player will be for collision
+            // shoot there
+            // start cooldown
         }
         else
         {
@@ -65,8 +81,27 @@ public class Enemy : MonoBehaviour {
         
         gameObject.transform.position = enemyPosition;
 
-        
-       
+    }
 
+    void Fire()
+    {
+        Vector3 playerPos = new Vector3();
+        Vector3 bulletStartPos = new Vector3();
+
+        playerPos = player.transform.position;
+
+        bulletStartPos = GetComponent<Transform>().position;
+
+        Transform bulletStart = GetComponent<Transform>();
+
+        bulletStart.position = bulletStartPos;
+
+        GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform);
+
+        newBullet.transform.position = bulletStartPos;
+        newBullet.GetComponent<EnemyBullet>().targetLocation = playerPos;
+        newBullet.GetComponent<EnemyBullet>().startPos = bulletStartPos;
+
+        bulletObjects.Add(newBullet);
     }
 }

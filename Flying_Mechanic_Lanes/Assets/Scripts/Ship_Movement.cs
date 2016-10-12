@@ -5,6 +5,8 @@ public class Ship_Movement : MonoBehaviour {
 
     public float shipForwardSpeed = 1.0f;
 
+    public static float gameSpeed;
+
     [SerializeField]
     private float shipMovementSpeed = 20.0f;
 
@@ -26,6 +28,7 @@ public class Ship_Movement : MonoBehaviour {
         GameInput.OnSwipe += HandleOnSwipe;
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
+        gameSpeed = shipForwardSpeed;
 	}
 
     // Update is called once per frame
