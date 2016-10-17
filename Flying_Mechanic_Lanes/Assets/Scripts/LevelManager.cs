@@ -17,6 +17,8 @@ public class LevelManager : MonoBehaviour {
    // Obstacle[] obstacles;
     Rock[] rocks;
 
+    private float[] enemyZStart;
+
     [SerializeField]
     private GameObject player;
 
@@ -50,10 +52,12 @@ public class LevelManager : MonoBehaviour {
 
         numberOfEnemies = GetComponentsInChildren<Enemy>().Length;
         enemies = new Enemy[numberOfEnemies];
+        enemyZStart = new float[numberOfEnemies];
         enemies = GetComponentsInChildren<Enemy>();
         for (int ob = 0; ob < numberOfEnemies; ob++)
         {
             enemyObjects.Add(enemies[ob].gameObject);
+            enemyZStart[ob] = enemies[ob].zPosition;
         }
         GameInput.OnTap += PlayerFire;
     }
@@ -88,9 +92,14 @@ public class LevelManager : MonoBehaviour {
             rock.SetActive(true);
         }
 
+        int iterator = 0;
         foreach (GameObject enemy in enemyObjects)
         {
             enemy.SetActive(true);
+            enemies[iterator].ResetEnemy();
+            enemy.GetComponentInChildren<EnemyHitBox>().destroyThis = false;
+            iterator++;
+            
         }
     }
 

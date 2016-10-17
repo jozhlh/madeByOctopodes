@@ -12,7 +12,7 @@ public class EnemyHitBox : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("enemy hit by" + other.tag);
+   //     Debug.Log("enemy hit by" + other.tag);
         if ((other.tag == "Bullet") | (other.tag == "Obstacle"))
         {
             // Kill enemy

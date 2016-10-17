@@ -23,12 +23,19 @@ public class PlayerBullet : MonoBehaviour {
         // Destroy bullet if it hits a wall
         if ((other.tag == "Obstacle") | (other.tag == "Enemy"))
         {
-            Debug.Log("Bullet hit" + other.tag);
+            destroyThis = true;
+            // Debug.Log("Bullet hit" + other.tag);
             if (other.tag == "Enemy")
             {
-                other.GetComponent<EnemyHitBox>().destroyThis = true;
-            }
-            destroyThis = true;
+                if (other.GetComponent<EnemyHitBox>())
+                {
+                    other.GetComponent<EnemyHitBox>().destroyThis = true;
+                }
+                else
+                {
+                    destroyThis = false;
+                }  
+            } 
         }
     }
 

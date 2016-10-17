@@ -29,7 +29,7 @@ public class EnemyBullet : MonoBehaviour {
         // Destroy bullet if it hits a wall
         if ((other.tag == "Obstacle") | (other.tag == "Player"))
         {
-            Debug.Log("EnemyBullet hit " + other.tag);
+       //     Debug.Log("EnemyBullet hit " + other.tag);
             if (other.tag == "Player")
             {
                 // Reduce player's health

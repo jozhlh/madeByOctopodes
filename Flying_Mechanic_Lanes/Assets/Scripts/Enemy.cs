@@ -2,14 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[ExecuteInEditMode]
 public class Enemy : MonoBehaviour {
 
     public LaneManager.PlayerLanes inLane;
 
     List<GameObject> bulletObjects = new List<GameObject>();
 
-    [SerializeField]
-    private float zPosition = 0.0f;
+    //[SerializeField]
+    public float zPosition = 0.0f;
     [SerializeField]
     private float obstacleLength = 1.0f;
 
@@ -81,6 +82,19 @@ public class Enemy : MonoBehaviour {
         
         gameObject.transform.position = enemyPosition;
 
+    }
+
+    public void ResetEnemy()
+    {
+        cooldownProgress = cooldown;
+        enemyPosition.z = zPosition;
+        playerInRange = false;
+        foreach (GameObject bullet in bulletObjects)
+        {
+            Destroy(bullet);
+        }
+        bulletObjects.Clear();
+  //      Debug.Log("Reset to position" + zPosition);
     }
 
     void Fire()
