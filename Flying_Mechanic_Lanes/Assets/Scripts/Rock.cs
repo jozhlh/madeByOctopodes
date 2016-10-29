@@ -3,7 +3,7 @@ using System.Collections;
 
 [ExecuteInEditMode]
 public class Rock : MonoBehaviour {
-
+    
     public LaneManager.PlayerLanes inLane;
 
     [SerializeField]
@@ -17,6 +17,10 @@ public class Rock : MonoBehaviour {
     [SerializeField]
     private float rotationSpeed = 10.0f;
 
+
+
+
+
     // Use this for initialization
     void Start()
     {
@@ -29,6 +33,7 @@ public class Rock : MonoBehaviour {
         {
             rotationSpeed = -1 * rotationSpeed;
         }
+
     }
 
     // Update is called once per frame
@@ -49,5 +54,40 @@ public class Rock : MonoBehaviour {
         */
 
         gameObject.transform.Rotate(rockRotation, (Time.deltaTime * rotationSpeed));
+
+  //      CalculateFade();
     }
+
+    public float GetzPosition()
+    {
+        return zPosition;
+    }
+/*
+    void CalculateFade()
+    {
+        float playerZ = player.transform.position.z;
+        if ((int)inLane < 3)
+        {
+            if ((zPosition - playerZ) < playerDistanceTop)
+            {
+                transparency = (zPosition - playerZ) / playerDistanceTop;
+                if (transparency < lowestTransparency)
+                {
+                    transparency = lowestTransparency;
+                }
+            }
+        }
+        else if ((int)inLane < 6)
+        {
+            if ((zPosition - playerZ) < playerDistanceMid)
+            {
+                transparency = (zPosition - playerZ) / playerDistanceMid;
+                if (transparency < lowestTransparency)
+                {
+                    transparency = lowestTransparency;
+                }
+            }
+        }
+        attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
+    }*/
 }
