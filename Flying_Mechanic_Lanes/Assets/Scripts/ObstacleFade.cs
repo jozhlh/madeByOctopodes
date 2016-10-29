@@ -10,7 +10,12 @@ public class ObstacleFade : MonoBehaviour {
 
     private Renderer attachedRenderer = null;
 
-    private float transparency = 1.0f;
+    private Material mat = null;
+
+    [SerializeField]
+    private Color targetColour = Color.magenta;
+
+    public float transparency = 1.0f;
     private float lowestTransparency = 0.2f;
     private float playerDistanceTop = 10.0f;
     private float playerDistanceMid = 5.0f;
@@ -20,13 +25,16 @@ public class ObstacleFade : MonoBehaviour {
     void Start () {
         thisRock = gameObject.GetComponent<Rock>();
 
-        attachedRenderer = gameObject.GetComponent<Renderer>();
-        attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
+       //attachedRenderer = gameObject.GetComponent<Renderer>();
+       // attachedRenderer.sharedMaterial.color = targetColour;
+        mat = gameObject.GetComponent<Renderer>().material;
+        mat.SetColor("_Color", targetColour);
     }
 	
 	// Update is called once per frame
 	void Update () {
         float playerZ = player.transform.position.z;
+
         if ((int)thisRock.inLane < 3)
         {
             if ((thisRock.GetzPosition() - playerZ) < playerDistanceTop)
@@ -36,6 +44,10 @@ public class ObstacleFade : MonoBehaviour {
                 {
                     transparency = lowestTransparency;
                 }
+            }
+            else
+            {
+                transparency = 1.0f;
             }
         }
         else if ((int)thisRock.inLane < 6)
@@ -48,8 +60,19 @@ public class ObstacleFade : MonoBehaviour {
                     transparency = lowestTransparency;
                 }
             }
+            else
+            {
+                transparency = 1.0f;
+            }
         }
-        attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
+        else
+        {
+            transparency = 1.0f;
+        }
+               
+        targetColour.a = transparency;
+        mat.SetColor("_Color", targetColour);
+        //attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
     }
 }
 
