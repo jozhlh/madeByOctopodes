@@ -87,6 +87,11 @@ public class ObstacleFade : MonoBehaviour {
             targetColour.a = transparency;
             mat.SetColor("_Color", targetColour);
         }
+        else
+        {
+            gameObject.GetComponent<Renderer>().material = solidMaterial;
+            mat = gameObject.GetComponent<Renderer>().material;
+        }
                
         
         //attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
