@@ -13,9 +13,11 @@ public class CameraFollow : MonoBehaviour {
 
     private Transform cameraTransform;
 
+
     void Awake ()
     {
         followDistance = gameObject.transform.position.z;
+        
     }
 
 	// Use this for initialization
@@ -23,6 +25,7 @@ public class CameraFollow : MonoBehaviour {
 
         cameraTransform = gameObject.GetComponent<Transform>();
         cameraPosition = cameraTransform.position;
+        
     }
 	
 	// Update is called once per frame

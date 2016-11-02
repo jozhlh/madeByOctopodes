@@ -13,6 +13,12 @@ public class ObstacleFade : MonoBehaviour {
     private Material mat = null;
 
     [SerializeField]
+    private Material solidMaterial = null;
+
+    [SerializeField]
+    private Material fadeMaterial = null;
+
+    [SerializeField]
     private Color targetColour = Color.magenta;
 
     public float transparency = 1.0f;
@@ -20,13 +26,15 @@ public class ObstacleFade : MonoBehaviour {
     private float playerDistanceTop = 10.0f;
     private float playerDistanceMid = 5.0f;
 
+    private bool playerInRange = false;
 
     // Use this for initialization
     void Start () {
         thisRock = gameObject.GetComponent<Rock>();
 
-       //attachedRenderer = gameObject.GetComponent<Renderer>();
-       // attachedRenderer.sharedMaterial.color = targetColour;
+        //attachedRenderer = gameObject.GetComponent<Renderer>();
+        // attachedRenderer.sharedMaterial.color = targetColour;
+        gameObject.GetComponent<Renderer>().material = solidMaterial;
         mat = gameObject.GetComponent<Renderer>().material;
         mat.SetColor("_Color", targetColour);
     }
@@ -39,6 +47,7 @@ public class ObstacleFade : MonoBehaviour {
         {
             if ((thisRock.GetzPosition() - playerZ) < playerDistanceTop)
             {
+                playerInRange = true;
                 transparency = (thisRock.GetzPosition() - playerZ) / playerDistanceTop;
                 if (transparency < lowestTransparency)
                 {
@@ -54,6 +63,7 @@ public class ObstacleFade : MonoBehaviour {
         {
             if ((thisRock.GetzPosition() - playerZ) < playerDistanceMid)
             {
+                playerInRange = true;
                 transparency = (thisRock.GetzPosition() - playerZ) / playerDistanceMid;
                 if (transparency < lowestTransparency)
                 {
@@ -69,9 +79,16 @@ public class ObstacleFade : MonoBehaviour {
         {
             transparency = 1.0f;
         }
+
+        if (playerInRange)
+        {
+            gameObject.GetComponent<Renderer>().material = fadeMaterial;
+            mat = gameObject.GetComponent<Renderer>().material;
+            targetColour.a = transparency;
+            mat.SetColor("_Color", targetColour);
+        }
                
-        targetColour.a = transparency;
-        mat.SetColor("_Color", targetColour);
+        
         //attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
     }
 }
