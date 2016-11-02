@@ -37,6 +37,7 @@ public class TracerBeam : MonoBehaviour {
 
         if (Physics.Raycast(tracerStart, fwd, out hit, LayerMask.NameToLayer("Ignore Raycast")))
         {
+            // test comment
             textureTiling.x = hit.distance / dashLength;
             tracerStart.z += hit.distance;
             line.SetPosition(1, tracerStart);
