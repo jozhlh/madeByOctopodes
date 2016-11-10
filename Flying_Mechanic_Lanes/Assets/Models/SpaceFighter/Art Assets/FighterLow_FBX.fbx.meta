@@ -3,7 +3,14 @@ guid: 6f679f9f2b4323f4eb8c1e642c986c87
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: FighterLow
+    100002: //RootNode
+    400000: FighterLow
+    400002: //RootNode
+    2300000: FighterLow
+    3300000: FighterLow
     4300000: FighterLow
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3
@@ -11,7 +18,7 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 

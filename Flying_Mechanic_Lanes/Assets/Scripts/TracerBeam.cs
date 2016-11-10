@@ -35,8 +35,10 @@ public class TracerBeam : MonoBehaviour {
 
         RaycastHit hit;
 
-        if (Physics.Raycast(tracerStart, fwd, out hit, LayerMask.NameToLayer("Ignore Raycast")))
+        /// Only works in unity version 5.4.2
+        if (Physics.Raycast(tracerStart, fwd, out hit, 100.0f, LayerMask.NameToLayer("Ignore Raycast")))
         {
+            Debug.Log("tracer update");
             // test comment
             textureTiling.x = hit.distance / dashLength;
             tracerStart.z += hit.distance;
@@ -44,8 +46,15 @@ public class TracerBeam : MonoBehaviour {
             line.material.mainTextureScale = textureTiling;
         }
 
-        
-            
-
+        /// Works in unity version 5.4.0
+        if (Physics.Raycast(tracerStart, fwd, out hit, 100.0f))
+        {
+            Debug.Log("tracer update");
+            // test comment
+            textureTiling.x = hit.distance / dashLength;
+            tracerStart.z += hit.distance;
+            line.SetPosition(1, tracerStart);
+            line.material.mainTextureScale = textureTiling;
+        }
     }
 }
