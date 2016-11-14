@@ -72,6 +72,7 @@ public class Enemy : MonoBehaviour {
             enemyPosition.z = zPosition;
         }
 
+        //TODO: Enemys to avoid obstacles
         // Raycast behind itself
             // if obstacle within range
                 // raycast to all lanes within range
@@ -110,7 +111,7 @@ public class Enemy : MonoBehaviour {
 
         bulletStart.position = bulletStartPos;
 
-        GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform);
+        GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform.position, transform.rotation);
 
         newBullet.transform.position = bulletStartPos;
         newBullet.GetComponent<EnemyBullet>().targetLocation = playerPos;

@@ -112,7 +112,7 @@ public class LevelManager : MonoBehaviour {
 
         bulletStart.position = bulletStartPos;
 
-        GameObject newBullet = (GameObject)Instantiate(playerBullet, transform);
+        GameObject newBullet = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
 
         newBullet.transform.position = bulletStartPos;
 
