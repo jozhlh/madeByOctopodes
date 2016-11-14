@@ -20,6 +20,11 @@ public class Ship_Movement : MonoBehaviour {
     LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
     LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
 
+    void Awake ()
+    {
+        Application.targetFrameRate = 30;
+    }
+
     // Use this for initialization
     void Start () {
         currentLane = LaneManager.laneData[4];
