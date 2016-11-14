@@ -15,10 +15,14 @@ public class Ship_Movement : MonoBehaviour {
 
     private Transform shipTransform;
 
-    private Vector3 shipPosition = new Vector3(0, 0, 0);
+    public static Vector3 shipPosition = new Vector3(0, 0, 0);
+    public static LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
+    public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
 
-    LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
-    LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
+    void Awake ()
+    {
+        Application.targetFrameRate = 30;
+    }
 
     // Use this for initialization
     void Start () {
@@ -129,6 +133,7 @@ public class Ship_Movement : MonoBehaviour {
 
     private void MoveToLane()
     {
+      
         shipPosition = shipTransform.position;
         shipPosition.z += (shipForwardSpeed * Time.deltaTime);
         if ((shipPosition.x != targetLane.laneX) | (shipPosition.y != targetLane.laneY))

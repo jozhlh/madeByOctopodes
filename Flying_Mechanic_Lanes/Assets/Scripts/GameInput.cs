@@ -36,6 +36,10 @@ public class GameInput : MonoBehaviour
     private const float DiagonalThresholdLo = 0.462f;
     private const float DiagonalThresholdHi = 0.887f;
 
+    InputData thisInput;
+    [SerializeField]
+    private float sensitivity = 200.0f;
+
     void Start()
     {
         mMouseButton = new bool[kNumMouseButtons];
@@ -66,71 +70,33 @@ public class GameInput : MonoBehaviour
         // Detect different input types: Tap and Swipe
         if (MouseButtonJustPressed(MouseButtons.Left))
         {
-            mStartPosition = Input.mousePosition;
             mStartTime = Time.time;
-            mIsPotentiallyTapping = true;
-            mIsPotentiallySwiping = false;
+
+            thisInput = new InputData();
+            thisInput.duration = 0.0f;
+            thisInput.initialPosition = Input.mousePosition;
+            thisInput.endPosition = Input.mousePosition;
         }
         else if (MouseButtonHeld(MouseButtons.Left))
         {
-            float duration = Time.time - mStartTime;
-            mIsPotentiallyTapping = mStartPosition == Input.mousePosition && duration <= TapDuration;
-            mIsPotentiallySwiping = mStartPosition != Input.mousePosition && duration <= SwipeDuration;
+            thisInput.duration = Time.time - mStartTime;
+            thisInput.endPosition = Input.mousePosition;
         }
         else if (MouseButtonJustReleased(MouseButtons.Left))
         {
-            if (mIsPotentiallyTapping)
+            thisInput.endPosition = Input.mousePosition;
+            thisInput.CalculateInput();
+            float result = thisInput.speed + thisInput.displacement;
+            if (thisInput.speed < (sensitivity - thisInput.displacement))
             {
                 tap = true;
             }
-            else if (mIsPotentiallySwiping)
+            else
             {
                 swipe = true;
-                Vector3 difference = mStartPosition - Input.mousePosition;
-                // normalize direction vector
-                // check against compass point thresholds
-                // set direction
-
+                Vector3 difference = thisInput.initialPosition - thisInput.endPosition;
                 direction = CalculateDirection(-difference);
-               
-                /*
-                if (Mathf.Abs(difference.x) > Mathf.Abs(difference.y))
-                {
-                    // Horizontal Movement
-                    if (difference.x < 0)
-                    {
-                        // Right
-                        direction = Direction.Right;
-                    }
-                    else
-                    {
-                        // Left
-                        direction = Direction.Left;
-                    }
-                }
-                else
-                {
-                    // Vertical Movement
-                    if (difference.y < 0)
-                    {
-                        // Up
-                        direction = Direction.Up;
-                    }
-                    else
-                    {
-                        // Down
-                        direction = Direction.Down;
-                    }
-                }
-                */
             }
-        }
-        else
-        {
-            mStartPosition = Vector3.zero;
-            mStartTime = 0.0f;
-            mIsPotentiallyTapping = false;
-            mIsPotentiallySwiping = false;
         }
 
         if (tap || swipe)

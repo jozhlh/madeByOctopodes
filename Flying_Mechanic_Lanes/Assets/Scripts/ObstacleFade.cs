@@ -22,9 +22,13 @@ public class ObstacleFade : MonoBehaviour {
     private Color targetColour = Color.magenta;
 
     public float transparency = 1.0f;
+    [SerializeField]
     private float lowestTransparency = 0.2f;
+    [SerializeField]
     private float playerDistanceTop = 10.0f;
+    [SerializeField]
     private float playerDistanceMid = 5.0f;
+
 
     private bool playerInRange = false;
 
