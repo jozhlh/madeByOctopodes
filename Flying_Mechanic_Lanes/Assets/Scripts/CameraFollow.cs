@@ -35,6 +35,7 @@ public class CameraFollow : MonoBehaviour {
 
     void LateUpdate()
     {
+        
         cameraPosition = cameraTransform.position;
         cameraPosition.z = (followTarget.transform.position.z + followDistance);
         cameraTransform.position = cameraPosition;
