@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour {
     private Transform cameraTransform;
     private float transition = 0.0f;
     private float animationDuration = 2.0f;
-    private Vector3 animationOffset = new Vector3(0,5,-5);
+    private Vector3 animationOffset = new Vector3(0,15,-10);
 
 
     void Awake ()
@@ -46,7 +46,7 @@ public class CameraFollow : MonoBehaviour {
             //Animation at start of game
             cameraTransform.position = Vector3.Lerp(cameraPosition + animationOffset, cameraPosition, transition);
             transition += Time.deltaTime * 1 / animationDuration;
-            //cameraTransform.LookAt(cameraPosition + Vector3.up);
+            cameraTransform.LookAt(Ship_Movement.shipPosition);
         }
     }
 }
