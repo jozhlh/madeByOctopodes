@@ -90,3 +90,5 @@ MonoBehaviour:
   - {fileID: 1000012961928644, guid: 3436084958e26cb47ac0d3f32fb8403a, type: 2}
   - {fileID: 1000012961928644, guid: 12fbb11473b96414fb301af624c991ca, type: 2}
   - {fileID: 1000012961928644, guid: 03651148bf3eaa843bc96ff7681f2454, type: 2}
+  wallGap: 2
+  floorGap: 0

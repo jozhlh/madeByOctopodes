@@ -34,6 +34,8 @@ public class Rock : MonoBehaviour {
             rotationSpeed = -1 * rotationSpeed;
         }
 
+        rotationSpeed = 0;
+
     }
 
     // Update is called once per frame
