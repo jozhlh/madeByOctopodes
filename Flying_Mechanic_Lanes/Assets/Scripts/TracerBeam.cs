@@ -12,6 +12,9 @@ public class TracerBeam : MonoBehaviour {
     [SerializeField]
     private float dashLength = 5.0f;
 
+    [SerializeField]
+    private float defaultTracerLength = 200.0f;
+
     private Vector2 textureTiling = new Vector2(10.0f, 1.0f);
 
     private LineRenderer line = null;
@@ -34,8 +37,8 @@ public class TracerBeam : MonoBehaviour {
         line.SetPosition(0, tracerStart);
 
         RaycastHit hit;
-
-        /// Only works in unity version 5.4.2
+        /*
+        /// Only works in unity version 5.2
         if (Physics.Raycast(tracerStart, fwd, out hit, 100.0f, LayerMask.NameToLayer("Ignore Raycast")))
         {
             //Debug.Log("tracer update");
@@ -45,7 +48,7 @@ public class TracerBeam : MonoBehaviour {
             line.SetPosition(1, tracerStart);
             line.material.mainTextureScale = textureTiling;
         }
-
+        */
         /// Works in unity version 5.4.0
         if (Physics.Raycast(tracerStart, fwd, out hit, 100.0f))
         {
@@ -53,6 +56,13 @@ public class TracerBeam : MonoBehaviour {
             // test comment
             textureTiling.x = hit.distance / dashLength;
             tracerStart.z += hit.distance;
+            line.SetPosition(1, tracerStart);
+            line.material.mainTextureScale = textureTiling;
+        }
+        else
+        {
+            textureTiling.x = defaultTracerLength / dashLength;
+            tracerStart.z += defaultTracerLength;
             line.SetPosition(1, tracerStart);
             line.material.mainTextureScale = textureTiling;
         }
