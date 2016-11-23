@@ -161,4 +161,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 81.07
+  bulletCulling: 100
   destroyThis: 0

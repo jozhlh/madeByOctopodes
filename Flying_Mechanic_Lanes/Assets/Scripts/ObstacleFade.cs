@@ -3,8 +3,8 @@ using System.Collections;
 
 public class ObstacleFade : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject player = null;
+  //  [SerializeField]
+  //  private GameObject player = null;
 
     private Rock thisRock = null;
 
@@ -45,7 +45,7 @@ public class ObstacleFade : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        float playerZ = player.transform.position.z;
+        float playerZ = Ship_Movement.shipPosition.z;
 
         if ((int)thisRock.inLane < 3)
         {
@@ -60,6 +60,7 @@ public class ObstacleFade : MonoBehaviour {
             }
             else
             {
+                playerInRange = false;
                 transparency = 1.0f;
             }
         }
@@ -76,11 +77,13 @@ public class ObstacleFade : MonoBehaviour {
             }
             else
             {
+                playerInRange = false;
                 transparency = 1.0f;
             }
         }
         else
         {
+            playerInRange = false;
             transparency = 1.0f;
         }
 

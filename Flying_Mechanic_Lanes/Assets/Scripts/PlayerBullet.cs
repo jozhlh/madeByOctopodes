@@ -5,10 +5,10 @@ public class PlayerBullet : MonoBehaviour {
 
     [SerializeField]
     private float bulletSpeed = 40.0f;
+    [SerializeField]
+    private float bulletCulling = 100.0f;
 
     private Vector3 bulletPosition;
-
-    private float bulletCulling;
 
     public bool destroyThis = false;
 
@@ -41,13 +41,12 @@ public class PlayerBullet : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        bulletCulling = LaneManager.lengthOfLevel;
 
         // gameObject.transform.Translate(0.0f, 0.0f, Time.deltaTime * bulletSpeed);
         bulletPosition = gameObject.transform.position;
         bulletPosition.z += Time.deltaTime * bulletSpeed;
 
-        if (bulletPosition.z > (bulletCulling * 2))
+        if (bulletPosition.z > (Ship_Movement.shipPosition.z + bulletCulling))
         {
             destroyThis = true;
         }
