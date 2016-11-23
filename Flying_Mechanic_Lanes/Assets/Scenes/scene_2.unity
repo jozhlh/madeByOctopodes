@@ -783,7 +783,7 @@ Prefab:
     - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
         type: 2}
       propertyPath: shipForwardSpeed
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}

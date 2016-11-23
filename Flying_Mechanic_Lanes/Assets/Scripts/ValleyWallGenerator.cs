@@ -4,9 +4,9 @@ using System.Collections.Generic;
 
 public class ValleyWallGenerator : MonoBehaviour {
 
-    private Transform playerTransform;
-    private float spawnZ = -40.0f;
+    private float spawnZ = -200.0f;
     private int lastPrefabIndex = 0;
+
     [SerializeField]
     private float tileLength = 40.0f;
     [SerializeField]
@@ -21,19 +21,11 @@ public class ValleyWallGenerator : MonoBehaviour {
     void Start()
     {
         activeTiles = new List<GameObject>();
-        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
-        
-        for(int i = 0; i < tileOnScreen; i++)
-        {
-            SpawnValleyWallLeft();
-            SpawnValleyWallRight();
-            SpawnValleyFloor();
-        }
     }
 
     void Update()
     {
-        if(playerTransform.position.z > (spawnZ - tileOnScreen * tileLength))
+        if(Ship_Movement.shipPosition.z > (spawnZ - tileOnScreen * tileLength))
         {
             SpawnValleyWallLeft();
             SpawnValleyWallRight();
@@ -41,7 +33,6 @@ public class ValleyWallGenerator : MonoBehaviour {
             spawnZ += tileLength;
             DeleteValleyWalls();
         }
- 
     }
 
     private void SpawnValleyWallLeft(int prefabIndex = -1)
