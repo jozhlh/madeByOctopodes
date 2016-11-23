@@ -90,92 +90,6 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &5057582
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 5057583}
-  - 120: {fileID: 5057584}
-  - 114: {fileID: 5057585}
-  m_Layer: 0
-  m_Name: TracerBeam
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5057583
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5057582}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_Children: []
-  m_Father: {fileID: 2017093829}
-  m_RootOrder: 2
---- !u!120 &5057584
-LineRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5057582}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 5091cd40c1d1e744e9d85f11e0ca5c8c, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: -10}
-  - {x: 0, y: 0, z: 50}
-  m_Parameters:
-    startWidth: 0.2
-    endWidth: 0.2
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4294967295
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4294967295
-  m_UseWorldSpace: 1
---- !u!114 &5057585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 5057582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2a8e52908bb464f91be1edc4a55a95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
-  tracerOffset: 2
-  dashLength: 5
 --- !u!1 &18901063
 GameObject:
   m_ObjectHideFlags: 0
@@ -448,7 +362,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 120
   obstacleLength: 1
-  rockRotation: {x: 0.46499056, y: 0.3487429, z: 0.81373346}
+  rockRotation: {x: 0.40422603, y: 0.64676166, z: 0.64676166}
   rotationSpeed: 10
 --- !u!135 &61393452
 SphereCollider:
@@ -473,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -573,7 +486,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 60
   obstacleLength: 1
-  rockRotation: {x: 0, y: 1, z: 0}
+  rockRotation: {x: 0.8451542, y: 0.50709254, z: 0.16903085}
   rotationSpeed: 10
 --- !u!135 &85399066
 SphereCollider:
@@ -598,7 +511,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -792,7 +704,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 110
   obstacleLength: 1
-  rockRotation: {x: 0.14744195, y: 0.8846517, z: 0.44232586}
+  rockRotation: {x: 0.9434563, y: 0.10482848, z: 0.31448543}
   rotationSpeed: 10
 --- !u!135 &130233503
 SphereCollider:
@@ -817,7 +729,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -993,7 +904,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 130
   obstacleLength: 1
-  rockRotation: {x: 0.69853544, y: 0.1552301, z: 0.69853544}
+  rockRotation: {x: 0.5270463, y: 0.42163703, z: 0.7378648}
   rotationSpeed: 10
 --- !u!135 &161716913
 SphereCollider:
@@ -1018,7 +929,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -1043,64 +953,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1470722823}
     m_Modifications:
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalPosition.x
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalPosition.y
       value: -3
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalPosition.z
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+    - target: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2384638, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-    - target: {fileID: 111306, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 111306, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 1000011143335750, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
+      propertyPath: m_Name
+      value: astre_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: f0fa9f13f949e0d46a0e1fd85bafecfb, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &258402424
 Prefab:
@@ -1276,7 +1166,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 35
   obstacleLength: 1
-  rockRotation: {x: 0, y: 0.3939193, z: 0.91914505}
+  rockRotation: {x: 0, y: 1, z: 0}
   rotationSpeed: 10
 --- !u!135 &341991639
 SphereCollider:
@@ -1301,7 +1191,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -1401,7 +1290,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 90
   obstacleLength: 1
-  rockRotation: {x: 0.8700629, y: 0.09667365, z: 0.48336828}
+  rockRotation: {x: 0.520266, y: 0.346844, z: 0.780399}
   rotationSpeed: 10
 --- !u!135 &360216916
 SphereCollider:
@@ -1426,7 +1315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -1526,7 +1414,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 125
   obstacleLength: 1
-  rockRotation: {x: 0.5547002, y: 0.8320503, z: 0}
+  rockRotation: {x: 0.8479983, y: 0.31799936, z: 0.42399916}
   rotationSpeed: 10
 --- !u!135 &374037698
 SphereCollider:
@@ -1551,7 +1439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -1760,34 +1647,6 @@ Prefab:
       propertyPath: m_Name
       value: astre_0
       objectReference: {fileID: 0}
-    - target: {fileID: 1000013562315080, guid: 122365dc757743745ae8565e15557162, type: 2}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013129305626, guid: 122365dc757743745ae8565e15557162,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2017093825}
-    - target: {fileID: 114000013129305626, guid: 122365dc757743745ae8565e15557162,
-        type: 2}
-      propertyPath: rockRotation.x
-      value: 0.9878783
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013129305626, guid: 122365dc757743745ae8565e15557162,
-        type: 2}
-      propertyPath: rockRotation.y
-      value: 0.10976426
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013129305626, guid: 122365dc757743745ae8565e15557162,
-        type: 2}
-      propertyPath: rockRotation.z
-      value: 0.10976426
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013562315080, guid: 122365dc757743745ae8565e15557162, type: 2}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122365dc757743745ae8565e15557162, type: 2}
   m_IsPrefabParent: 0
@@ -1812,15 +1671,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.w
@@ -1953,7 +1812,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 75
   obstacleLength: 1
-  rockRotation: {x: 0.6285393, y: 0.54997194, z: 0.54997194}
+  rockRotation: {x: 0.43643576, y: 0.21821788, z: 0.8728715}
   rotationSpeed: 10
 --- !u!135 &536111950
 SphereCollider:
@@ -1978,7 +1837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -2078,7 +1936,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 135
   obstacleLength: 1
-  rockRotation: {x: 0.13608277, y: 0.27216554, z: 0.9525793}
+  rockRotation: {x: 0.62469506, y: 0.46852127, z: 0.62469506}
   rotationSpeed: 10
 --- !u!135 &542848283
 SphereCollider:
@@ -2103,31 +1961,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
-  lowestTransparency: 0.2
-  playerDistanceTop: 10
-  playerDistanceMid: 5
---- !u!1 &587989838 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000013562315080, guid: 122365dc757743745ae8565e15557162,
-    type: 2}
-  m_PrefabInternal: {fileID: 423198754}
---- !u!114 &587989843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 587989838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -2263,6 +2096,53 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684730861}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &691181279
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1993166732}
+    m_Modifications:
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014008109108, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2017093826}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &691939229
 Prefab:
   m_ObjectHideFlags: 0
@@ -2355,7 +2235,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 110
   obstacleLength: 1
-  rockRotation: {x: 0.7863336, y: 0.43685204, z: 0.43685204}
+  rockRotation: {x: 0, y: 0.4856429, z: 0.87415725}
   rotationSpeed: 10
 --- !u!135 &691939233
 SphereCollider:
@@ -2380,7 +2260,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -2410,7 +2289,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 30
   obstacleLength: 1
-  rockRotation: {x: 0.6396022, y: 0.42640144, z: 0.6396022}
+  rockRotation: {x: 0.8320503, y: 0.5547002, z: 0}
   rotationSpeed: 10
 --- !u!135 &697349473
 SphereCollider:
@@ -2435,7 +2314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -2443,61 +2321,11 @@ MonoBehaviour:
   lowestTransparency: 0.2
   playerDistanceTop: 10
   playerDistanceMid: 5
---- !u!1 &702499393 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 114474, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-  m_PrefabInternal: {fileID: 1382831947}
 --- !u!4 &702499394 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+  m_PrefabParentObject: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2,
+    type: 2}
   m_PrefabInternal: {fileID: 1382831947}
---- !u!114 &702499397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 702499393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0089d08a452bf14e9027fca43b58fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inLane: 0
-  zPosition: 40
-  obstacleLength: 1
-  rockRotation: {x: 0, y: 0.9363292, z: 0.35112345}
-  rotationSpeed: 10
---- !u!135 &702499398
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 702499393}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.8034
-  m_Center: {x: 0.20176017, y: -0.102036536, z: -0.10203642}
---- !u!114 &702499399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 702499393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
-  lowestTransparency: 0.2
-  playerDistanceTop: 10
-  playerDistanceMid: 5
 --- !u!1001 &726350398
 Prefab:
   m_ObjectHideFlags: 0
@@ -2594,15 +2422,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.w
@@ -2665,7 +2493,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 120
   obstacleLength: 1
-  rockRotation: {x: 0.63375026, y: 0.724286, z: 0.27160725}
+  rockRotation: {x: 0.7448453, y: 0.6620847, z: 0.08276059}
   rotationSpeed: 10
 --- !u!135 &762890837
 SphereCollider:
@@ -2690,7 +2518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -2720,7 +2547,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 40
   obstacleLength: 1
-  rockRotation: {x: 0.40824828, y: 0.81649655, z: 0.40824828}
+  rockRotation: {x: 0, y: 0.8, z: 0.6}
   rotationSpeed: 10
 --- !u!135 &786810013
 SphereCollider:
@@ -2745,7 +2572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -3085,7 +2911,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 65
   obstacleLength: 1
-  rockRotation: {x: 0.5812382, y: 0.81373346, z: 0}
+  rockRotation: {x: 0.26726124, y: 0.5345225, z: 0.80178374}
   rotationSpeed: 10
 --- !u!135 &956666955
 SphereCollider:
@@ -3110,7 +2936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -3118,48 +2943,6 @@ MonoBehaviour:
   lowestTransparency: 0.2
   playerDistanceTop: 10
   playerDistanceMid: 5
---- !u!1001 &1039732888
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 2017093829}
-    m_Modifications:
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400010, guid: 382148aeca448164cac7516a68d97506, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 382148aeca448164cac7516a68d97506, type: 3}
-  m_IsPrefabParent: 0
 --- !u!1 &1077317771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3298,7 +3081,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 130
   obstacleLength: 1
-  rockRotation: {x: 0.30151135, y: 0.904534, z: 0.30151135}
+  rockRotation: {x: 0.5345225, y: 0.8017837, z: 0.26726124}
   rotationSpeed: 10
 --- !u!135 &1091432054
 SphereCollider:
@@ -3323,7 +3106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -3423,7 +3205,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 115
   obstacleLength: 1
-  rockRotation: {x: 0.42426407, y: 0.56568545, z: 0.70710677}
+  rockRotation: {x: 0.724286, y: 0.63375026, z: 0.27160725}
   rotationSpeed: 10
 --- !u!135 &1115641797
 SphereCollider:
@@ -3448,7 +3230,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -3720,7 +3501,7 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
     type: 2}
-  m_PrefabInternal: {fileID: 1654544560}
+  m_PrefabInternal: {fileID: 691181279}
 --- !u!1 &1197342646
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,7 +3688,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 80
   obstacleLength: 1
-  rockRotation: {x: 0.7276069, y: 0.48507127, z: 0.48507127}
+  rockRotation: {x: 0.19802952, y: 0.6931033, z: 0.6931033}
   rotationSpeed: 10
 --- !u!135 &1197678993
 SphereCollider:
@@ -3932,7 +3713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4032,7 +3812,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 75
   obstacleLength: 1
-  rockRotation: {x: 0, y: 1, z: 0}
+  rockRotation: {x: 0.34815532, y: 0.87038827, z: 0.34815532}
   rotationSpeed: 10
 --- !u!135 &1234182945
 SphereCollider:
@@ -4057,7 +3837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4081,7 +3860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4181,7 +3959,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 115
   obstacleLength: 1
-  rockRotation: {x: 0.78072006, y: 0.48795003, z: 0.39036003}
+  rockRotation: {x: 0.5025707, y: 0.64616233, z: 0.5743665}
   rotationSpeed: 10
 --- !u!135 &1268858881
 SphereCollider:
@@ -4206,7 +3984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4306,7 +4083,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 95
   obstacleLength: 1
-  rockRotation: {x: 0.8111071, y: 0.32444283, z: 0.48666427}
+  rockRotation: {x: 0.5345225, y: 0.26726124, z: 0.8017837}
   rotationSpeed: 10
 --- !u!135 &1294122410
 SphereCollider:
@@ -4331,7 +4108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4513,7 +4289,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 50
   obstacleLength: 1
-  rockRotation: {x: 0.9539981, y: 0.21199958, z: 0.21199958}
+  rockRotation: {x: 0.9128709, y: 0.18257418, z: 0.36514837}
   rotationSpeed: 10
 --- !u!135 &1321605097
 SphereCollider:
@@ -4538,7 +4314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4713,7 +4488,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 20
   obstacleLength: 1
-  rockRotation: {x: 0.43643576, y: 0.21821788, z: 0.8728715}
+  rockRotation: {x: 0.30304575, y: 0.5050763, z: 0.80812204}
   rotationSpeed: 10
 --- !u!135 &1382620962
 SphereCollider:
@@ -4738,7 +4513,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4753,64 +4527,44 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1470722823}
     m_Modifications:
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalPosition.z
       value: 40
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+    - target: {fileID: 4000012358965880, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 493160, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2364362, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-    - target: {fileID: 114474, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 114474, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 1000010849459158, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
+      propertyPath: m_Name
+      value: astre_3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 6f6b913233923554eb49f4cb7bd23ff4, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: cc0843859aff13e49a953c3d1ea891f2, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1422751958 stripped
 GameObject:
@@ -4834,7 +4588,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 30
   obstacleLength: 1
-  rockRotation: {x: 0.40824828, y: 0.81649655, z: 0.40824828}
+  rockRotation: {x: 0.54330534, y: 0.69853544, z: 0.4656903}
   rotationSpeed: 10
 --- !u!135 &1422751963
 SphereCollider:
@@ -4859,7 +4613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -4867,71 +4620,6 @@ MonoBehaviour:
   lowestTransparency: 0.2
   playerDistanceTop: 10
   playerDistanceMid: 5
---- !u!1001 &1442654593
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_Name
-      value: Player_Ship
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 1077317773}
-    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: shipForwardSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000013533759346, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000011289063152, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.66
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1455360932
 Prefab:
   m_ObjectHideFlags: 0
@@ -5261,6 +4949,57 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1504778200}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1621354593
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+      propertyPath: m_Name
+      value: Player_Ship
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 1077317773}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1634089105
 GameObject:
   m_ObjectHideFlags: 0
@@ -5377,7 +5116,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 10
   obstacleLength: 1
-  rockRotation: {x: 0.6047079, y: 0.77748156, z: 0.17277369}
+  rockRotation: {x: 0.39056674, y: 0.13018891, z: 0.9113224}
   rotationSpeed: 10
 --- !u!135 &1649435820
 SphereCollider:
@@ -5402,7 +5141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -5410,68 +5148,6 @@ MonoBehaviour:
   lowestTransparency: 0.2
   playerDistanceTop: 10
   playerDistanceMid: 5
---- !u!1001 &1654544560
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1993166732}
-    m_Modifications:
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010095923200, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000014008109108, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
-        type: 2}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2017093826}
-    - target: {fileID: 65000013279536558, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000013279536558, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
-        type: 2}
-      propertyPath: m_Size.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 65000013279536558, guid: 974f7ec714120c04ebb3c4ee0b57d56c,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 20
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1658803779 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013562315080, guid: 122365dc757743745ae8565e15557162,
@@ -5488,7 +5164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -5581,7 +5256,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 10
   obstacleLength: 1
-  rockRotation: {x: 0.842701, y: 0.48154342, z: 0.24077171}
+  rockRotation: {x: 0.49236596, y: 0.6154574, z: 0.6154574}
   rotationSpeed: 10
 --- !u!135 &1697901608
 SphereCollider:
@@ -5606,7 +5281,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -5852,7 +5526,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 70
   obstacleLength: 1
-  rockRotation: {x: 0.8888889, y: 0.11111111, z: 0.44444445}
+  rockRotation: {x: 0.099503726, y: 0.7960298, z: 0.59702235}
   rotationSpeed: 10
 --- !u!135 &1731505769
 SphereCollider:
@@ -5877,7 +5551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -6028,7 +5701,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 105
   obstacleLength: 1
-  rockRotation: {x: 0, y: 0.8320503, z: 0.5547002}
+  rockRotation: {x: 0.8, y: 0.6, z: 0}
   rotationSpeed: 10
 --- !u!135 &1797438356
 SphereCollider:
@@ -6053,7 +5726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -6082,15 +5754,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
       propertyPath: m_LocalRotation.w
@@ -6153,7 +5825,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 85
   obstacleLength: 1
-  rockRotation: {x: 0.8616404, y: 0.49236596, z: 0.12309149}
+  rockRotation: {x: 0.42163703, y: 0.5270463, z: 0.7378648}
   rotationSpeed: 10
 --- !u!135 &1803075160
 SphereCollider:
@@ -6178,7 +5850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -6262,61 +5933,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 974f7ec714120c04ebb3c4ee0b57d56c, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1846996395 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 111306, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
-  m_PrefabInternal: {fileID: 220812525}
 --- !u!4 &1846996396 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 436568, guid: 7255e26f7d2981d4ea7ed83351d2d805, type: 2}
+  m_PrefabParentObject: {fileID: 4000011561417030, guid: f0fa9f13f949e0d46a0e1fd85bafecfb,
+    type: 2}
   m_PrefabInternal: {fileID: 220812525}
---- !u!114 &1846996399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1846996395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0089d08a452bf14e9027fca43b58fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inLane: 8
-  zPosition: 30
-  obstacleLength: 1
-  rockRotation: {x: 0.5345225, y: 0.80178374, z: 0.26726124}
-  rotationSpeed: 10
---- !u!135 &1846996400
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1846996395}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.7018
-  m_Center: {x: 0.16688627, y: -0.17687905, z: -0.17687893}
---- !u!114 &1846996401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1846996395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
-  lowestTransparency: 0.2
-  playerDistanceTop: 10
-  playerDistanceMid: 5
 --- !u!1001 &1874935772
 Prefab:
   m_ObjectHideFlags: 0
@@ -6409,7 +6030,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 125
   obstacleLength: 1
-  rockRotation: {x: 0.56613857, y: 0.79259396, z: 0.22645542}
+  rockRotation: {x: 0.5793241, y: 0.7448453, z: 0.33104235}
   rotationSpeed: 10
 --- !u!135 &1874935776
 SphereCollider:
@@ -6434,7 +6055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -6575,7 +6195,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 100
   obstacleLength: 1
-  rockRotation: {x: 0.7035265, y: 0.10050379, z: 0.7035265}
+  rockRotation: {x: 0.8944272, y: 0, z: 0.4472136}
   rotationSpeed: 10
 --- !u!135 &1977298311
 SphereCollider:
@@ -6600,7 +6220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
@@ -6677,18 +6296,13 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b,
     type: 2}
-  m_PrefabInternal: {fileID: 1442654593}
+  m_PrefabInternal: {fileID: 1621354593}
 --- !u!114 &2017093826 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
     type: 2}
-  m_PrefabInternal: {fileID: 1442654593}
+  m_PrefabInternal: {fileID: 1621354593}
   m_Script: {fileID: 11500000, guid: 3fd3db4f0480544458ace69cb611bbae, type: 3}
---- !u!4 &2017093829 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000014097590258, guid: e0173837cf210c14d9e0245149716d2b,
-    type: 2}
-  m_PrefabInternal: {fileID: 1442654593}
 --- !u!1001 &2065499905
 Prefab:
   m_ObjectHideFlags: 0
@@ -6696,117 +6310,47 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1470722823}
     m_Modifications:
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalPosition.x
       value: -5
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalPosition.y
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalPosition.z
       value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+    - target: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2325168, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-    - target: {fileID: 152982, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 152982, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-      propertyPath: m_Layer
-      value: 0
+    - target: {fileID: 1000010770653740, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
+      propertyPath: m_Name
+      value: astre_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: b08515042d9ba814d805098fb2cc9d42, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2099305063 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 152982, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
-  m_PrefabInternal: {fileID: 2065499905}
 --- !u!4 &2099305064 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 410610, guid: 75204aeb0b1f4194e8dd78998abb7652, type: 2}
+  m_PrefabParentObject: {fileID: 4000013228090258, guid: b08515042d9ba814d805098fb2cc9d42,
+    type: 2}
   m_PrefabInternal: {fileID: 2065499905}
---- !u!114 &2099305067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099305063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0089d08a452bf14e9027fca43b58fc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inLane: 0
-  zPosition: 20
-  obstacleLength: 1
-  rockRotation: {x: 0.76822126, y: 0, z: 0.6401844}
-  rotationSpeed: 10
---- !u!135 &2099305068
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099305063}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 2.0208993
-  m_Center: {x: -0.20849764, y: 0.26366442, z: 0.21898413}
---- !u!114 &2099305069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2099305063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078222f9995452f4fb7c6ec954af0e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2017093825}
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
-  lowestTransparency: 0.2
-  playerDistanceTop: 10
-  playerDistanceMid: 5
