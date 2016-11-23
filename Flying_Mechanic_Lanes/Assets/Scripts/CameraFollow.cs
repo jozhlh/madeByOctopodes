@@ -5,13 +5,14 @@ public class CameraFollow : MonoBehaviour {
 
     [SerializeField]
     private GameObject followTarget = null;
-
     [SerializeField]
     private float followDistance = 10;
 
     private Vector3 cameraPosition = new Vector3(0, 0, 0);
-
     private Transform cameraTransform;
+    private float transition = 0.0f;
+    private float animationDuration = 2.0f;
+    private Vector3 animationOffset = new Vector3(0,5,-5);
 
 
     void Awake ()
@@ -21,11 +22,10 @@ public class CameraFollow : MonoBehaviour {
     }
 
 	// Use this for initialization
-	void Start () {
-
+	void Start ()
+    {
         cameraTransform = gameObject.GetComponent<Transform>();
-        cameraPosition = cameraTransform.position;
-        
+        cameraPosition = cameraTransform.position;        
     }
 	
 	// Update is called once per frame
@@ -35,9 +35,18 @@ public class CameraFollow : MonoBehaviour {
 
     void LateUpdate()
     {
-        
-        cameraPosition = cameraTransform.position;
-        cameraPosition.z = (followTarget.transform.position.z + followDistance);
-        cameraTransform.position = cameraPosition;
+        if (transition > 1.0f)
+        {
+            cameraPosition = cameraTransform.position;
+            cameraPosition.z = (followTarget.transform.position.z + followDistance);
+            cameraTransform.position = cameraPosition;
+        }
+        else
+        {
+            //Animation at start of game
+            cameraTransform.position = Vector3.Lerp(cameraPosition + animationOffset, cameraPosition, transition);
+            transition += Time.deltaTime * 1 / animationDuration;
+            //cameraTransform.LookAt(cameraPosition + Vector3.up);
+        }
     }
 }

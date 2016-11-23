@@ -3,8 +3,11 @@ using System.Collections;
 
 public class Ship_Movement : MonoBehaviour {
 
+    private float transition = 0.0f;
+    private float animationDuration = 2.0f;
+    [SerializeField]
+    private float setShipForwardSpeed = 40.0f;
     public float shipForwardSpeed = 1.0f;
-
     public static float gameSpeed;
 
     [SerializeField]
@@ -14,7 +17,6 @@ public class Ship_Movement : MonoBehaviour {
     private LevelManager levelManager = null;
 
     private Transform shipTransform;
-
     public static Vector3 shipPosition = new Vector3(0, 0, 0);
     public static LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
     public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
@@ -38,6 +40,15 @@ public class Ship_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if (transition > 1.0f)
+        {
+            shipForwardSpeed = setShipForwardSpeed;
+        }
+        else
+        {
+            transition += Time.deltaTime * 1 / animationDuration;
+        }
+
         MoveToLane();
     }
 
