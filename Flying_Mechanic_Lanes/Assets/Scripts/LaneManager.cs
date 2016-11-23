@@ -11,6 +11,7 @@ public class LaneManager : MonoBehaviour {
     [SerializeField]
     private float laneLength = 60.0f;
 
+
     public static float laneSpacingHorizontal;
     public static float laneSpacingVertical;
     public static float lengthOfLevel;

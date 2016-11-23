@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18446353, g: 0.19928169, b: 0.22668126, a: 1}
+  m_IndirectSpecularColor: {r: 0.18446362, g: 0.19928178, b: 0.22668132, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 120
   obstacleLength: 1
-  rockRotation: {x: 0.20628424, y: 0.30942637, z: 0.9282791}
+  rockRotation: {x: 0.46499056, y: 0.3487429, z: 0.81373346}
   rotationSpeed: 10
 --- !u!135 &61393452
 SphereCollider:
@@ -573,7 +573,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 60
   obstacleLength: 1
-  rockRotation: {x: 0, y: 0.7592566, z: 0.65079135}
+  rockRotation: {x: 0, y: 1, z: 0}
   rotationSpeed: 10
 --- !u!135 &85399066
 SphereCollider:
@@ -792,7 +792,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 110
   obstacleLength: 1
-  rockRotation: {x: 0.70710677, y: 0, z: 0.70710677}
+  rockRotation: {x: 0.14744195, y: 0.8846517, z: 0.44232586}
   rotationSpeed: 10
 --- !u!135 &130233503
 SphereCollider:
@@ -993,7 +993,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 130
   obstacleLength: 1
-  rockRotation: {x: 0.4472136, y: 0.8944272, z: 0}
+  rockRotation: {x: 0.69853544, y: 0.1552301, z: 0.69853544}
   rotationSpeed: 10
 --- !u!135 &161716913
 SphereCollider:
@@ -1276,7 +1276,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 35
   obstacleLength: 1
-  rockRotation: {x: 0.74278134, y: 0.55708605, z: 0.37139067}
+  rockRotation: {x: 0, y: 0.3939193, z: 0.91914505}
   rotationSpeed: 10
 --- !u!135 &341991639
 SphereCollider:
@@ -1401,7 +1401,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 90
   obstacleLength: 1
-  rockRotation: {x: 0.37139067, y: 0.55708605, z: 0.74278134}
+  rockRotation: {x: 0.8700629, y: 0.09667365, z: 0.48336828}
   rotationSpeed: 10
 --- !u!135 &360216916
 SphereCollider:
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 125
   obstacleLength: 1
-  rockRotation: {x: 0.70710677, y: 0.56568545, z: 0.42426407}
+  rockRotation: {x: 0.5547002, y: 0.8320503, z: 0}
   rotationSpeed: 10
 --- !u!135 &374037698
 SphereCollider:
@@ -1638,6 +1638,85 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 377657372}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &408104005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 408104009}
+  - 33: {fileID: 408104008}
+  - 64: {fileID: 408104007}
+  - 23: {fileID: 408104006}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &408104006
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408104005}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedWireframeHidden: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!64 &408104007
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408104005}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &408104008
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408104005}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &408104009
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408104005}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -7, z: 2091.7424}
+  m_LocalScale: {x: 1, y: 1, z: 422.93558}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1001 &423198754
 Prefab:
   m_ObjectHideFlags: 0
@@ -1874,7 +1953,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 75
   obstacleLength: 1
-  rockRotation: {x: 0.48795003, y: 0.39036003, z: 0.78072006}
+  rockRotation: {x: 0.6285393, y: 0.54997194, z: 0.54997194}
   rotationSpeed: 10
 --- !u!135 &536111950
 SphereCollider:
@@ -1999,7 +2078,7 @@ MonoBehaviour:
   inLane: 5
   zPosition: 135
   obstacleLength: 1
-  rockRotation: {x: 0.16384639, y: 0.65538555, z: 0.73730874}
+  rockRotation: {x: 0.13608277, y: 0.27216554, z: 0.9525793}
   rotationSpeed: 10
 --- !u!135 &542848283
 SphereCollider:
@@ -2276,7 +2355,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 110
   obstacleLength: 1
-  rockRotation: {x: 0.76626104, y: 0.28734788, z: 0.57469577}
+  rockRotation: {x: 0.7863336, y: 0.43685204, z: 0.43685204}
   rotationSpeed: 10
 --- !u!135 &691939233
 SphereCollider:
@@ -2331,7 +2410,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 30
   obstacleLength: 1
-  rockRotation: {x: 0.74278134, y: 0.37139067, z: 0.55708605}
+  rockRotation: {x: 0.6396022, y: 0.42640144, z: 0.6396022}
   rotationSpeed: 10
 --- !u!135 &697349473
 SphereCollider:
@@ -2386,7 +2465,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 40
   obstacleLength: 1
-  rockRotation: {x: 0.6401844, y: 0, z: 0.76822126}
+  rockRotation: {x: 0, y: 0.9363292, z: 0.35112345}
   rotationSpeed: 10
 --- !u!135 &702499398
 SphereCollider:
@@ -2586,7 +2665,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 120
   obstacleLength: 1
-  rockRotation: {x: 0.42562827, y: 0.68100524, z: 0.59587955}
+  rockRotation: {x: 0.63375026, y: 0.724286, z: 0.27160725}
   rotationSpeed: 10
 --- !u!135 &762890837
 SphereCollider:
@@ -2641,7 +2720,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 40
   obstacleLength: 1
-  rockRotation: {x: 0.43643576, y: 0.21821788, z: 0.8728715}
+  rockRotation: {x: 0.40824828, y: 0.81649655, z: 0.40824828}
   rotationSpeed: 10
 --- !u!135 &786810013
 SphereCollider:
@@ -3006,7 +3085,7 @@ MonoBehaviour:
   inLane: 6
   zPosition: 65
   obstacleLength: 1
-  rockRotation: {x: 0.15617377, y: 0.93704253, z: 0.31234753}
+  rockRotation: {x: 0.5812382, y: 0.81373346, z: 0}
   rotationSpeed: 10
 --- !u!135 &956666955
 SphereCollider:
@@ -3219,7 +3298,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 130
   obstacleLength: 1
-  rockRotation: {x: 0, y: 0.70710677, z: 0.70710677}
+  rockRotation: {x: 0.30151135, y: 0.904534, z: 0.30151135}
   rotationSpeed: 10
 --- !u!135 &1091432054
 SphereCollider:
@@ -3344,7 +3423,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 115
   obstacleLength: 1
-  rockRotation: {x: 0.8017837, y: 0.5345225, z: 0.26726124}
+  rockRotation: {x: 0.42426407, y: 0.56568545, z: 0.70710677}
   rotationSpeed: 10
 --- !u!135 &1115641797
 SphereCollider:
@@ -3622,7 +3701,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   laneWidth: 5
   laneHeight: 3
-  laneLength: 60
+  laneLength: 1000
 --- !u!4 &1185560168
 Transform:
   m_ObjectHideFlags: 0
@@ -3828,7 +3907,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 80
   obstacleLength: 1
-  rockRotation: {x: 0.15617377, y: 0.93704253, z: 0.31234753}
+  rockRotation: {x: 0.7276069, y: 0.48507127, z: 0.48507127}
   rotationSpeed: 10
 --- !u!135 &1197678993
 SphereCollider:
@@ -3953,7 +4032,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 75
   obstacleLength: 1
-  rockRotation: {x: 0.54997194, y: 0.54997194, z: 0.6285393}
+  rockRotation: {x: 0, y: 1, z: 0}
   rotationSpeed: 10
 --- !u!135 &1234182945
 SphereCollider:
@@ -4102,7 +4181,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 115
   obstacleLength: 1
-  rockRotation: {x: 0.50251895, y: 0.50251895, z: 0.7035265}
+  rockRotation: {x: 0.78072006, y: 0.48795003, z: 0.39036003}
   rotationSpeed: 10
 --- !u!135 &1268858881
 SphereCollider:
@@ -4227,7 +4306,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 95
   obstacleLength: 1
-  rockRotation: {x: 0.57735026, y: 0.115470044, z: 0.80829036}
+  rockRotation: {x: 0.8111071, y: 0.32444283, z: 0.48666427}
   rotationSpeed: 10
 --- !u!135 &1294122410
 SphereCollider:
@@ -4434,7 +4513,7 @@ MonoBehaviour:
   inLane: 3
   zPosition: 50
   obstacleLength: 1
-  rockRotation: {x: 0.59587955, y: 0.42562827, z: 0.68100524}
+  rockRotation: {x: 0.9539981, y: 0.21199958, z: 0.21199958}
   rotationSpeed: 10
 --- !u!135 &1321605097
 SphereCollider:
@@ -4634,7 +4713,7 @@ MonoBehaviour:
   inLane: 2
   zPosition: 20
   obstacleLength: 1
-  rockRotation: {x: 0.70710677, y: 0, z: 0.70710677}
+  rockRotation: {x: 0.43643576, y: 0.21821788, z: 0.8728715}
   rotationSpeed: 10
 --- !u!135 &1382620962
 SphereCollider:
@@ -4755,7 +4834,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 30
   obstacleLength: 1
-  rockRotation: {x: 0, y: 1, z: 0}
+  rockRotation: {x: 0.40824828, y: 0.81649655, z: 0.40824828}
   rotationSpeed: 10
 --- !u!135 &1422751963
 SphereCollider:
@@ -5298,7 +5377,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 10
   obstacleLength: 1
-  rockRotation: {x: 0.4767313, y: 0.19069251, z: 0.8581163}
+  rockRotation: {x: 0.6047079, y: 0.77748156, z: 0.17277369}
   rotationSpeed: 10
 --- !u!135 &1649435820
 SphereCollider:
@@ -5502,7 +5581,7 @@ MonoBehaviour:
   inLane: 7
   zPosition: 10
   obstacleLength: 1
-  rockRotation: {x: 0.40422603, y: 0.64676166, z: 0.64676166}
+  rockRotation: {x: 0.842701, y: 0.48154342, z: 0.24077171}
   rotationSpeed: 10
 --- !u!135 &1697901608
 SphereCollider:
@@ -5773,7 +5852,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 70
   obstacleLength: 1
-  rockRotation: {x: 0.39036003, y: 0.48795003, z: 0.78072006}
+  rockRotation: {x: 0.8888889, y: 0.11111111, z: 0.44444445}
   rotationSpeed: 10
 --- !u!135 &1731505769
 SphereCollider:
@@ -5949,7 +6028,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 105
   obstacleLength: 1
-  rockRotation: {x: 0.14002801, y: 0.70014006, z: 0.70014006}
+  rockRotation: {x: 0, y: 0.8320503, z: 0.5547002}
   rotationSpeed: 10
 --- !u!135 &1797438356
 SphereCollider:
@@ -6074,7 +6153,7 @@ MonoBehaviour:
   inLane: 4
   zPosition: 85
   obstacleLength: 1
-  rockRotation: {x: 0, y: 0.99227786, z: 0.12403473}
+  rockRotation: {x: 0.8616404, y: 0.49236596, z: 0.12309149}
   rotationSpeed: 10
 --- !u!135 &1803075160
 SphereCollider:
@@ -6205,7 +6284,7 @@ MonoBehaviour:
   inLane: 8
   zPosition: 30
   obstacleLength: 1
-  rockRotation: {x: 0, y: 1, z: 0}
+  rockRotation: {x: 0.5345225, y: 0.80178374, z: 0.26726124}
   rotationSpeed: 10
 --- !u!135 &1846996400
 SphereCollider:
@@ -6330,7 +6409,7 @@ MonoBehaviour:
   inLane: 1
   zPosition: 125
   obstacleLength: 1
-  rockRotation: {x: 0.42426407, y: 0.56568545, z: 0.70710677}
+  rockRotation: {x: 0.56613857, y: 0.79259396, z: 0.22645542}
   rotationSpeed: 10
 --- !u!135 &1874935776
 SphereCollider:
@@ -6496,7 +6575,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 100
   obstacleLength: 1
-  rockRotation: {x: 0.6622662, y: 0.52981293, z: 0.52981293}
+  rockRotation: {x: 0.7035265, y: 0.10050379, z: 0.7035265}
   rotationSpeed: 10
 --- !u!135 &1977298311
 SphereCollider:
@@ -6698,7 +6777,7 @@ MonoBehaviour:
   inLane: 0
   zPosition: 20
   obstacleLength: 1
-  rockRotation: {x: 0.6047079, y: 0.6047079, z: 0.51832104}
+  rockRotation: {x: 0.76822126, y: 0, z: 0.6401844}
   rotationSpeed: 10
 --- !u!135 &2099305068
 SphereCollider:
