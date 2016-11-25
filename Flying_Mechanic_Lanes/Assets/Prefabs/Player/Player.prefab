@@ -475,7 +475,8 @@ MonoBehaviour:
   setShipForwardSpeed: 30
   shipForwardSpeed: 4
   shipMovementSpeed: 10
-  levelManager: {fileID: 0}
+  levelManager: {fileID: 114000010365221958, guid: 41279e949da921e42a945bba3b183083,
+    type: 2}
 --- !u!120 &120000013302740228
 LineRenderer:
   m_ObjectHideFlags: 1
