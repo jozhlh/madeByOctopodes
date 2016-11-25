@@ -4,7 +4,10 @@ using System.Collections;
 [ExecuteInEditMode]
 public class Obstacle : MonoBehaviour {
 
-    public LaneManager.PlayerLanes inLane;
+    
+   // public LaneManager.PlayerLanes inLane;
+
+    public LaneManager.ObstacleLocation location;
 
     [SerializeField]
     private float zPosition = 0.0f;
@@ -14,6 +17,7 @@ public class Obstacle : MonoBehaviour {
     private Vector3 obstaclePosition = new Vector3(0, 0, 0);
     private Vector3 obstacleSize = new Vector3(1, 1, 1);
 
+    bool rotationSet = false;
 
     // Use this for initialization
     void Start () {
@@ -22,16 +26,25 @@ public class Obstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        obstaclePosition.x = LaneManager.laneData[(int)inLane].laneX;
-        obstaclePosition.y = LaneManager.laneData[(int)inLane].laneY;
+        obstaclePosition.x = LaneManager.obstacleLocationData[(int)location].xPos;
+        obstaclePosition.y = LaneManager.obstacleLocationData[(int)location].yPos;
         obstaclePosition.z = zPosition;
 
-        gameObject.transform.position = obstaclePosition;
+        
 
-        obstacleSize.x = LaneManager.laneSpacingHorizontal;
-        obstacleSize.y = LaneManager.laneSpacingVertical;
-        obstacleSize.z = obstacleLength;
-        gameObject.transform.localScale = 0.8f * obstacleSize;
+        gameObject.transform.position = obstaclePosition;
+        
+        gameObject.transform.eulerAngles = new Vector3(0,0, LaneManager.obstacleLocationData[(int)location].zRot);
+
+        //obstacleSize.x = LaneManager.obstacleLocationData[(int)location].scale;
+        //obstacleSize.y = LaneManager.obstacleLocationData[(int)location].scale;
+        //obstacleSize.z = LaneManager.obstacleLocationData[(int)location].scale;
+        //gameObject.transform.localScale = obstacleSize;
 
 	}
+
+    public float GetzPosition()
+    {
+        return zPosition;
+    }
 }
