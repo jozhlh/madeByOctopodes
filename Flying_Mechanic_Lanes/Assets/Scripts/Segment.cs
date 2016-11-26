@@ -6,7 +6,7 @@ public class Segment : MonoBehaviour {
 	[SerializeField]
 	private List<GameObject> obstacleObjects = new List<GameObject>();
 
-	private Rock[] obstacles;
+	private Obstacle[] obstacles;
 
 	private int numOfObstacles;
 
@@ -26,9 +26,9 @@ public class Segment : MonoBehaviour {
         {
             obstacleObjects.Clear();
         }
-        numOfObstacles = GetComponentsInChildren<Rock>().Length;
-        obstacles = new Rock[numOfObstacles];
-        obstacles = GetComponentsInChildren<Rock>();
+        numOfObstacles = GetComponentsInChildren<Obstacle>().Length;
+        obstacles = new Obstacle[numOfObstacles];
+        obstacles = GetComponentsInChildren<Obstacle>();
         Debug.Log("numberOfRocks: " + numOfObstacles);
         for (int ob = 0; ob < numOfObstacles; ob++)
         {

@@ -1,12 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObstacleFade : MonoBehaviour {
+public class AnimationObstacleFade : MonoBehaviour {
 
-  //  [SerializeField]
+//  [SerializeField]
   //  private GameObject player = null;
 
-    private Rock thisRock = null;
+    private Obstacle thisObstacle = null;
 
     private Renderer[] attachedRenderers = null;
 
@@ -29,30 +29,41 @@ public class ObstacleFade : MonoBehaviour {
     [SerializeField]
     private float playerDistanceMid = 5.0f;
 
+	private int numberOfRenderers;
 
     private bool playerInRange = false;
 
     // Use this for initialization
     void Start () {
-        thisRock = gameObject.GetComponent<Rock>();
+        thisObstacle = gameObject.GetComponent<Obstacle>();
 
         //attachedRenderer = gameObject.GetComponent<Renderer>();
         // attachedRenderer.sharedMaterial.color = targetColour;
-        gameObject.GetComponent<Renderer>().material = solidMaterial;
-        mat = gameObject.GetComponent<Renderer>().material;
-        mat.SetColor("_Color", targetColour);
+       // gameObject.GetComponent<Renderer>().material = solidMaterial;
+       // mat = gameObject.GetComponent<Renderer>().material;
+        //mat.SetColor("_Color", targetColour);
+
+		numberOfRenderers = GetComponentsInChildren<Renderer>().Length;
+		attachedRenderers = new Renderer[numberOfRenderers];
+		attachedRenderers = GetComponentsInChildren<Renderer>();
+		for (int i = 0; i < numberOfRenderers; i++)
+		{
+			attachedRenderers[i].material = solidMaterial;
+			mat = attachedRenderers[i].material;
+			mat.SetColor("_Color", targetColour);
+		}
     }
 	
 	// Update is called once per frame
 	void Update () {
         float playerZ = Ship_Movement.shipPosition.z;
 
-        if ((int)thisRock.inLane < 3)
+        if (((int)thisObstacle.location < 5) | (((int)thisObstacle.location > 6) & ((int)thisObstacle.location < 10))) // NW_R, NW_D, N, NE_D, NE_L, SE_U, S, SW_U
         {
-            if ((thisRock.GetzPosition() - playerZ) < playerDistanceTop)
+            if ((thisObstacle.GetzPosition() - playerZ) < playerDistanceTop)
             {
                 playerInRange = true;
-                transparency = (thisRock.GetzPosition() - playerZ) / playerDistanceTop;
+                transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceTop;
                 if (transparency < lowestTransparency)
                 {
                     transparency = lowestTransparency;
@@ -64,18 +75,18 @@ public class ObstacleFade : MonoBehaviour {
                 transparency = 1.0f;
             }
         }
-        else if ((int)thisRock.inLane < 6)
+        else if ((thisObstacle.location == LaneManager.ObstacleLocation.E) | (thisObstacle.location == LaneManager.ObstacleLocation.W)) // E, W
         {
-            if ((thisRock.GetzPosition() - playerZ) < playerDistanceMid)
+            if ((thisObstacle.GetzPosition() - playerZ) < playerDistanceMid)
             {
                 playerInRange = true;
-                transparency = (thisRock.GetzPosition() - playerZ) / playerDistanceMid;
+                transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceMid;
                 if (transparency < lowestTransparency)
                 {
                     transparency = lowestTransparency;
                 }
             }
-            else
+            else // SE_L, SW_R
             {
                 playerInRange = false;
                 transparency = 1.0f;
@@ -89,19 +100,34 @@ public class ObstacleFade : MonoBehaviour {
 
         if (playerInRange)
         {
+			/*
             gameObject.GetComponent<Renderer>().material = fadeMaterial;
             mat = gameObject.GetComponent<Renderer>().material;
             targetColour.a = transparency;
             mat.SetColor("_Color", targetColour);
+*/
+			for (int i = 0; i < numberOfRenderers; i++)
+			{
+				attachedRenderers[i].material = fadeMaterial;
+				mat = attachedRenderers[i].material;
+				targetColour.a = transparency;
+            	mat.SetColor("_Color", targetColour);
+			}
         }
         else
         {
-            gameObject.GetComponent<Renderer>().material = solidMaterial;
+            /*
+			gameObject.GetComponent<Renderer>().material = solidMaterial;
             mat = gameObject.GetComponent<Renderer>().material;
+			*/
+			for (int i = 0; i < numberOfRenderers; i++)
+			{
+				attachedRenderers[i].material = solidMaterial;
+				mat = attachedRenderers[i].material;
+			}
         }
                
         
         //attachedRenderer.sharedMaterial.color = new Color(1.0f, 1.0f, 1.0f, transparency);
     }
 }
-
