@@ -36,11 +36,13 @@ public class Obstacle : MonoBehaviour {
         
         gameObject.transform.eulerAngles = new Vector3(0,0, LaneManager.obstacleLocationData[(int)location].zRot);
 
-        //obstacleSize.x = LaneManager.obstacleLocationData[(int)location].scale;
-        //obstacleSize.y = LaneManager.obstacleLocationData[(int)location].scale;
-        //obstacleSize.z = LaneManager.obstacleLocationData[(int)location].scale;
-        //gameObject.transform.localScale = obstacleSize;
-
+/*
+        obstacleSize.x = LaneManager.obstacleLocationData[(int)location].scale;
+        obstacleSize.y = LaneManager.obstacleLocationData[(int)location].scale;
+        obstacleSize.z = LaneManager.obstacleLocationData[(int)location].scale;
+        
+        gameObject.transform.localScale = obstacleSize;
+*/
 	}
 
     public float GetzPosition()

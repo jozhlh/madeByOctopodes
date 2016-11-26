@@ -27,7 +27,7 @@ public class LaneManager : MonoBehaviour {
 
     public static LaneInfo[] laneData = new LaneInfo[9];
 
-    public enum ObstacleLocation {NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_L, W}
+    public enum ObstacleLocation {NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_R, W}
 
     public struct ObstacleLocationInfo
     {
@@ -114,31 +114,32 @@ public class LaneManager : MonoBehaviour {
 
     private void InitialiseObstaclePositions()
     {
+        // NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_L, W
         float offset = 0.0f;
         for (int i = 0; i < 12; i++)
         {
             obstacleLocationData[i].locationID = (ObstacleLocation)i;
-            if ((i > 0) & (i < 4))
+            if ((i > 0) & (i < 4)) // NW_D, N, NE_D
             {
                 obstacleLocationData[i].zRot = 180;
                 obstacleLocationData[i].yPos = (1.5f * laneHeight) + offset;
                 obstacleLocationData[i].scale = 1.0f;
             }
-            else if ((i > 3) & (i < 7))
+            else if ((i > 3) & (i < 7)) // NE_L, E, SE_L
             {
-                obstacleLocationData[i].zRot = 270;
+                obstacleLocationData[i].zRot = 90;
                 obstacleLocationData[i].xPos = (1.5f * laneWidth) + offset;
                 obstacleLocationData[i].scale = 2.0f;
             }
-            else if ((i > 6) & (i < 10))
+            else if ((i > 6) & (i < 10)) // SE_U, S, SW_U
             {
                 obstacleLocationData[i].zRot = 0;
                 obstacleLocationData[i].yPos = -1.0f * ((1.5f * laneHeight) + offset);
                 obstacleLocationData[i].scale = 1.0f;
             }
-            else
+            else // SW_L, W, NW_R
             {
-                obstacleLocationData[i].zRot = 90;
+                obstacleLocationData[i].zRot = 270;
                 obstacleLocationData[i].xPos = -1.0f * ((1.5f * laneWidth) + offset);
                 obstacleLocationData[i].scale = 2.0f;
             }
