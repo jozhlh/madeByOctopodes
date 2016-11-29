@@ -47,12 +47,13 @@ public class Segment : MonoBehaviour {
         }
 	}
 
-	public void ResetObstacles()
-	{
-		foreach (GameObject ob in obstacleObjects)
+    public void ResetObstacles()
+    {
+        foreach (GameObject ob in obstacleObjects)
         {
             Debug.Log("Rock Set Active Called");
             ob.SetActive(true);
         }
-	}
+    }
+
 }
