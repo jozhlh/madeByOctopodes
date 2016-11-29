@@ -3,8 +3,7 @@ using System.Collections;
 
 public class EnemyBullet : MonoBehaviour {
 
-    [SerializeField]
-    private float bulletSpeed = 40.0f;
+    public float bulletSpeed = 40.0f;
 
     private Vector3 bulletPosition = new Vector3();
 
