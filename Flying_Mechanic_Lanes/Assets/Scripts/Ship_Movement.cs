@@ -9,7 +9,8 @@ public class Ship_Movement : MonoBehaviour {
     private float setShipForwardSpeed = 40.0f;
     public float shipForwardSpeed = 1.0f;
     public static float gameSpeed;
-
+    private bool restrictSwipe = true;
+    static public bool restrictBullet = true;
     [SerializeField]
     private float shipMovementSpeed = 20.0f;
 
@@ -35,25 +36,26 @@ public class Ship_Movement : MonoBehaviour {
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
         gameSpeed = shipForwardSpeed;
-        StateManager.gameState = StateManager.States.play;
 	}
 
     // Update is called once per frame
     void Update ()
     {
-        if (StateManager.gameState == StateManager.States.play)
+        if (transition < 1.0f)
         {
-            if (transition > 1.0f)
-            {
-                shipForwardSpeed = setShipForwardSpeed;
-            }
-            else
-            {
-                transition += Time.deltaTime * 1 / animationDuration;
-            }
-
-            MoveToLane();
+            transition += Time.deltaTime * 1 / animationDuration;
         }
+        else
+        {
+            shipForwardSpeed = setShipForwardSpeed;
+        }
+
+       if (shipPosition.z > 300)
+        {
+            restrictSwipe = false;
+            restrictBullet = false;
+        }
+        MoveToLane();
     }
 
     void OnTriggerEnter(Collider other)
@@ -63,11 +65,17 @@ public class Ship_Movement : MonoBehaviour {
             ResetShip();
             levelManager.ResetLevel();
         }
+
+        if ((other.tag == "Collider")| (other.tag == "Laser"))
+        {
+            setShipForwardSpeed = 0;
+            restrictSwipe = false;
+        }
     }
 
     void ResetShip()
     {
-        shipPosition = new Vector3 (0, 0, 0);
+        shipPosition = new Vector3 (0, 0, -1);
         transform.position = shipPosition;
         targetLane = LaneManager.laneData[4];
         currentLane = targetLane;
@@ -76,74 +84,84 @@ public class Ship_Movement : MonoBehaviour {
     // Get the position of any new tap
     private void HandleOnTap(Vector3 position)
     {
-       // Shoot bullet down lane
+        setShipForwardSpeed = 40;
+        // Shoot bullet down lane
     }
 
     // Get the direction of any new swipe
     private void HandleOnSwipe(GameInput.Direction direction)
     {
-        switch (direction)
+        if (restrictSwipe == false)
         {
-            
-            case GameInput.Direction.W:
-                //Move player left
-                if (((int)currentLane.laneID != 0) & (((int)currentLane.laneID != 3) & ((int)currentLane.laneID != 6)))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID - 1)];
-                }
-                break;
-            case GameInput.Direction.E:
-                //Move player Right
-                if (((int)currentLane.laneID != 2) & (((int)currentLane.laneID != 5) & ((int)currentLane.laneID != 8)))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID + 1)];
-                }
-                break;
-            case GameInput.Direction.N:
-                //Move player Up
-                if ((int)currentLane.laneID > 2)
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID - 3)];
-                }
-                break;
-            case GameInput.Direction.S:
-                //Move player Down
-                if ((int)currentLane.laneID < 6)
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID + 3)];
-                }
-                break;
-            case GameInput.Direction.NE:
-                //Move player up and right
-                if (((int)currentLane.laneID < 8) & (((int)currentLane.laneID > 2) & ((int)currentLane.laneID != 5)))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID - 2)];
-                }
-                break;
-            case GameInput.Direction.SE:
-                //Move player down and right
-                if (((int)currentLane.laneID < 5) & ((int)currentLane.laneID != 2))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID + 4)];
-                }
-                break;
-            case GameInput.Direction.SW:
-                //Move player down and left
-                if (((int)currentLane.laneID < 6) & (((int)currentLane.laneID > 0) & ((int)currentLane.laneID != 3)))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID + 2)];
-                }
-                break;
-            case GameInput.Direction.NW:
-                //Move player up and left
-                if (((int)currentLane.laneID > 3) & ((int)currentLane.laneID != 6))
-                {
-                    targetLane = LaneManager.laneData[((int)currentLane.laneID - 4)];
-                }
-                break;
+            switch (direction)
+            {
 
+                case GameInput.Direction.W:
+                    //Move player left
+                    if (((int)currentLane.laneID != 0) & (((int)currentLane.laneID != 3) & ((int)currentLane.laneID != 6)))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 1)];
+                    }
+                    break;
+                case GameInput.Direction.E:
+                    //Move player Right
+                    if (((int)currentLane.laneID != 2) & (((int)currentLane.laneID != 5) & ((int)currentLane.laneID != 8)))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 1)];
+                    }
+                    break;
+                case GameInput.Direction.N:
+                    //Move player Up
+                    if ((int)currentLane.laneID > 2)
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 3)];
+                    }
+                    break;
+                case GameInput.Direction.S:
+                    //Move player Down
+                    if ((int)currentLane.laneID < 6)
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 3)];
+                    }
+                    break;
+                case GameInput.Direction.NE:
+                    //Move player up and right
+                    if (((int)currentLane.laneID < 8) & (((int)currentLane.laneID > 2) & ((int)currentLane.laneID != 5)))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 2)];
+                    }
+                    break;
+                case GameInput.Direction.SE:
+                    //Move player down and right
+                    if (((int)currentLane.laneID < 5) & ((int)currentLane.laneID != 2))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 4)];
+                    }
+                    break;
+                case GameInput.Direction.SW:
+                    //Move player down and left
+                    if (((int)currentLane.laneID < 6) & (((int)currentLane.laneID > 0) & ((int)currentLane.laneID != 3)))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 2)];
+                    }
+                    break;
+                case GameInput.Direction.NW:
+                    //Move player up and left
+                    if (((int)currentLane.laneID > 3) & ((int)currentLane.laneID != 6))
+                    {
+                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 4)];
+                    }
+                    break;
+
+            }
+            currentLane = LaneManager.laneData[(int)targetLane.laneID];
+            setShipForwardSpeed = 40;
+
+            if (shipPosition.z < 300)
+            {
+                restrictSwipe = true;
+            }
         }
-        currentLane = LaneManager.laneData[(int)targetLane.laneID];
     }
 
     private void MoveToLane()

@@ -36,6 +36,7 @@ public class LevelManager : MonoBehaviour {
     int numberOfRocks;
     int numberOfEnemies;
     int numberOfSegments;
+    private bool playerCanFire = false;
 
 	// Use this for initialization
 	void Start ()
@@ -111,6 +112,19 @@ public class LevelManager : MonoBehaviour {
             }
         }
 
+        if (Ship_Movement.restrictBullet == true)
+        {
+            GameInput.OnTap -= PlayerFire;
+        }
+        else
+        {
+            if (!playerCanFire)
+            {
+                GameInput.OnTap += PlayerFire;
+                playerCanFire = true;
+            }
+        }
+
         CleanUp();
     }
 
@@ -166,17 +180,11 @@ public class LevelManager : MonoBehaviour {
 
     public void PlayerFire(Vector3 position)
     {
-       
         bulletStartPos = player.GetComponent<Transform>().position;
-
         Transform bulletStart = player.GetComponent<Transform>();
-
         bulletStart.position = bulletStartPos;
-
         GameObject newBullet = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
-
         newBullet.transform.position = bulletStartPos;
-
         bulletObjects.Add(newBullet);
     }
 
