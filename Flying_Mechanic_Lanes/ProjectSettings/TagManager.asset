@@ -8,6 +8,8 @@ TagManager:
   - Obstacle
   - Bullet
   - Laser
+  - Collider
+  - ShootingTutorial
   layers:
   - Default
   - TransparentFX

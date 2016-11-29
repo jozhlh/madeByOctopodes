@@ -52,7 +52,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011166334320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: -5, y: 0, z: 300}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -131,10 +131,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d742e7774f28ba841b9cc81593e22b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLane: 4
-  zPosition: 10
+  inLane: 3
+  zPosition: 300
   obstacleLength: 1
-  player: {fileID: 0}
+  player: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   enemyBullet: {fileID: 1000011276323332, guid: a5eab7668dbd79143a474679f6138cdb,
     type: 2}
   cooldown: 2
