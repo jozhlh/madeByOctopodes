@@ -35,21 +35,25 @@ public class Ship_Movement : MonoBehaviour {
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
         gameSpeed = shipForwardSpeed;
+        StateManager.gameState = StateManager.States.play;
 	}
 
     // Update is called once per frame
     void Update ()
     {
-        if (transition > 1.0f)
+        if (StateManager.gameState == StateManager.States.play)
         {
-            shipForwardSpeed = setShipForwardSpeed;
-        }
-        else
-        {
-            transition += Time.deltaTime * 1 / animationDuration;
-        }
+            if (transition > 1.0f)
+            {
+                shipForwardSpeed = setShipForwardSpeed;
+            }
+            else
+            {
+                transition += Time.deltaTime * 1 / animationDuration;
+            }
 
-        MoveToLane();
+            MoveToLane();
+        }
     }
 
     void OnTriggerEnter(Collider other)

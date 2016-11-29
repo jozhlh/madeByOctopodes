@@ -160,7 +160,8 @@ public class LevelManager : MonoBehaviour {
             enemy.GetComponentInChildren<EnemyHitBox>().destroyThis = false;
             iterator++;
         }
-        sceneTransitionController.LoadMenu();
+        //sceneTransitionController.LoadMenu();
+        StateManager.gameState = StateManager.States.dead;
     }
 
     public void PlayerFire(Vector3 position)

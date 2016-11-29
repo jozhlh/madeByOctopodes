@@ -1,12 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerScore : MonoBehaviour {
 
 	public static int score;
 
 	[SerializeField]
-	private float scoringInterval = 50.0f;
+	private float scoringInterval = 1.0f;
+
+	[SerializeField]
+	private Text scoreText = null;
 
 	private float countdown;
 
@@ -20,11 +24,15 @@ public class PlayerScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		countdown -= Time.deltaTime;
-		if (countdown < 0)
+		if (StateManager.gameState == StateManager.States.play)
 		{
-			score++;
-			countdown = scoringInterval;
+			countdown -= Time.deltaTime;
+			if (countdown < 0)
+			{
+				score++;
+				countdown = scoringInterval;
+			}
+			scoreText.text = score.ToString();
 		}
 	}
 }

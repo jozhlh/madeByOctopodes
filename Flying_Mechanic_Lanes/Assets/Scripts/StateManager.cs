@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour {
 
-	public enum States {menu, dead, play};
+	public enum States {menu, dead, play, tutorial};
 
 	public static States gameState;
 
