@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public class ValleyWallGenerator : MonoBehaviour {
 
-    private float spawnZ = -200.0f;
+    private float spawnZ = -300.0f;
     private int lastPrefabIndex = 0;
 
     [SerializeField]
@@ -38,7 +38,7 @@ public class ValleyWallGenerator : MonoBehaviour {
 
     void Update()
     {
-        if(Ship_Movement.shipPosition.z > (spawnZ - tileOnScreen * tileLength))
+        if (Ship_Movement.shipPosition.z > (spawnZ - tileOnScreen * tileLength))
         {
             SpawnValleyWallLeft();
             SpawnValleyWallRight();
@@ -48,7 +48,17 @@ public class ValleyWallGenerator : MonoBehaviour {
         }
     }
 
-    private void SpawnValleyWallLeft(int prefabIndex = -1)
+    void OnTriggerEnter(Collider other)
+    {
+        if ((other.tag == "Obstacle") | (other.tag == "Laser"))
+        {
+            spawnZ = -300.0f;
+            lastPrefabIndex = 0;
+        }
+    }
+
+
+private void SpawnValleyWallLeft(int prefabIndex = -1)
     {
         GameObject go;
         Vector3 tilePosition = new Vector3(-1 * wallXOffset,  wallYOffset, 1 * spawnZ);

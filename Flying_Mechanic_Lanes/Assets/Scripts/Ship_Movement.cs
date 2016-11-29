@@ -40,13 +40,18 @@ public class Ship_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (transition > 1.0f)
+        if (transition < 1.0f)
         {
-            shipForwardSpeed = setShipForwardSpeed;
+            transition += Time.deltaTime * 1 / animationDuration;
+        }
+        else if (shipPosition.z == 70)
+        {
+            shipForwardSpeed = 00;
+           
         }
         else
         {
-            transition += Time.deltaTime * 1 / animationDuration;
+            shipForwardSpeed = setShipForwardSpeed;
         }
 
         MoveToLane();
@@ -63,7 +68,7 @@ public class Ship_Movement : MonoBehaviour {
 
     void ResetShip()
     {
-        shipPosition = new Vector3 (0, 0, 0);
+        shipPosition = new Vector3 (0, 0, -1);
         transform.position = shipPosition;
         targetLane = LaneManager.laneData[4];
         currentLane = targetLane;
