@@ -79,7 +79,20 @@ public class LevelManager : MonoBehaviour {
             enemyObjects.Add(enemies[ob].gameObject);
             enemyZStart[ob] = enemies[ob].zPosition;
         }
-        GameInput.OnTap += PlayerFire;
+        GameInput.ResetTap();
+        if (GameInput.CanAddToTap())
+        {
+            GameInput.OnTap += PlayerFire;
+            if (!GameInput.CanAddToTap())
+            {
+                Debug.Log("Added to tap");
+            }
+        }
+        else
+        {
+            Debug.Log("Error adding to tap");
+        }
+        
     }
 	
 	// Update is called once per frame
@@ -112,18 +125,23 @@ public class LevelManager : MonoBehaviour {
             }
         }
 
-        if (Ship_Movement.restrictBullet == true)
+        if (StateManager.gameState == StateManager.States.tutorial)
         {
-            GameInput.OnTap -= PlayerFire;
-        }
-        else
-        {
-            if (!playerCanFire)
+            if (Ship_Movement.restrictBullet == true)
             {
-                GameInput.OnTap += PlayerFire;
-                playerCanFire = true;
+                GameInput.OnTap -= PlayerFire;
+            }
+            else
+            {
+                if (!playerCanFire)
+                {
+                    GameInput.OnTap += PlayerFire;
+                    playerCanFire = true;
+                }
             }
         }
+        
+        
 
         CleanUp();
     }
@@ -180,6 +198,7 @@ public class LevelManager : MonoBehaviour {
 
     public void PlayerFire(Vector3 position)
     {
+        Debug.Log("fire");
         bulletStartPos = player.GetComponent<Transform>().position;
         Transform bulletStart = player.GetComponent<Transform>();
         bulletStart.position = bulletStartPos;

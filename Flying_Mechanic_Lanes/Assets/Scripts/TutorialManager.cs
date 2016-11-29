@@ -35,22 +35,22 @@ public class TutorialManager : MonoBehaviour {
 	}
 
 	public static void DisableUI()
-	{/*
+	{
 		if (shoot.enabled)
         {
             shoot.enabled = false;
         }
-        else if (horizontal.enabled)
+        if (horizontal.enabled)
         {
             TutorialManager.horizontal.enabled = false;
         }
-        else if (TutorialManager.shoot.enabled)
+        if (TutorialManager.shoot.enabled)
         {
             TutorialManager.vertical.enabled = false;
         }
-        else if (TutorialManager.shoot.enabled)
+        if (TutorialManager.shoot.enabled)
         {
             TutorialManager.diagonal.enabled = false;
-        }*/
+        }
 	}
 }

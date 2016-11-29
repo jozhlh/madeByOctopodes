@@ -31,50 +31,67 @@ public class Ship_Movement : MonoBehaviour {
     void Start () {
         currentLane = LaneManager.laneData[4];
         targetLane = currentLane;
-        GameInput.OnTap += HandleOnTap;
+        GameInput.ResetSwipe();
+        //GameInput.OnTap += HandleOnTap;
         GameInput.OnSwipe += HandleOnSwipe;
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
         gameSpeed = shipForwardSpeed;
-        if (TutorialManager.shoot.enabled)
+
+        if (StateManager.gameState == StateManager.States.tutorial)
         {
-            Debug.Log("disable shoot");
-            TutorialManager.shoot.enabled = false;
+            if (TutorialManager.shoot.enabled)
+            {
+                TutorialManager.shoot.enabled = false;
+            }
+            if (TutorialManager.horizontal.enabled)
+            {
+                TutorialManager.horizontal.enabled = false;
+            }
+            if (TutorialManager.vertical.enabled)
+            {
+                TutorialManager.vertical.enabled = false;
+            }
+            if (TutorialManager.diagonal.enabled)
+            {
+                TutorialManager.diagonal.enabled = false;
+            }
         }
-        else if (TutorialManager.horizontal.enabled)
-        {
-            TutorialManager.horizontal.enabled = false;
-        }
-        else if (TutorialManager.vertical.enabled)
-        {
-            TutorialManager.vertical.enabled = false;
-        }
-        else if (TutorialManager.diagonal.enabled)
-        {
-            TutorialManager.diagonal.enabled = false;
-        }
+        
 	}
 
     // Update is called once per frame
     void Update ()
     {
-        if ((StateManager.gameState == StateManager.States.play) | (StateManager.gameState == StateManager.States.tutorial))
+        if (StateManager.gameState == StateManager.States.play)
         {
             if (transition < 1.0f)
-                {
-                    transition += Time.deltaTime * 1 / animationDuration;
-                }
-                else
-                {
-                    shipForwardSpeed = setShipForwardSpeed;
-                }
+            {
+                transition += Time.deltaTime * 1 / animationDuration;
+            }
+            else
+            {
+                shipForwardSpeed = setShipForwardSpeed;
+            }
+            MoveToLane();
+        }
+        else if (StateManager.gameState == StateManager.States.tutorial)
+        {
+            if (transition < 1.0f)
+            {
+                transition += Time.deltaTime * 1 / animationDuration;
+            }
+            else
+            {
+                shipForwardSpeed = setShipForwardSpeed;
+            }
 
             if (shipPosition.z > 300)
-                {
-                    restrictSwipe = false;
-                    restrictBullet = false;
-                }
-                MoveToLane();
+            {
+                restrictSwipe = false;
+                restrictBullet = false;
+            }
+            MoveToLane();
         }
     }
 
@@ -86,31 +103,36 @@ public class Ship_Movement : MonoBehaviour {
             levelManager.ResetLevel();
         }
 
-        if (other.tag == "HorizontalTutorial")
+        if (StateManager.gameState == StateManager.States.tutorial)
         {
-            Debug.Log("horizontal enabled");
-            setShipForwardSpeed = 0;
-            restrictSwipe = false;
-            TutorialManager.horizontal.enabled = true;
-        }
-        else if (other.tag == "VerticalTutorial")
-        {
-            setShipForwardSpeed = 0;
-            restrictSwipe = false;
-            TutorialManager.vertical.enabled = true;
-        }
-        else if (other.tag == "DiagonalTutorial")
-        {
-            setShipForwardSpeed = 0;
-            restrictSwipe = false;
-            TutorialManager.diagonal.enabled = true;
-        }
-        else if (other.tag == "ShootingTutorial")
-        {
-            setShipForwardSpeed = 0;
-            restrictSwipe = false;
-            TutorialManager.shoot.enabled = true;
-        }
+            if (other.tag == "HorizontalTutorial")
+            {
+                Debug.Log("horizontal enabled");
+                setShipForwardSpeed = 0;
+                restrictSwipe = false;
+                TutorialManager.horizontal.enabled = true;
+            }
+            else if (other.tag == "VerticalTutorial")
+            {
+                setShipForwardSpeed = 0;
+                restrictSwipe = false;
+                TutorialManager.vertical.enabled = true;
+            }
+            else if (other.tag == "DiagonalTutorial")
+            {
+                setShipForwardSpeed = 0;
+                restrictSwipe = false;
+                TutorialManager.diagonal.enabled = true;
+            }
+            else if (other.tag == "ShootingTutorial")
+            {
+                setShipForwardSpeed = 0;
+                restrictSwipe = true;
+                restrictBullet = false;
+                TutorialManager.shoot.enabled = true;
+                GameInput.OnTap += HandleOnTap;
+            }
+        } 
     }
 
     void ResetShip()
@@ -125,15 +147,62 @@ public class Ship_Movement : MonoBehaviour {
     private void HandleOnTap(Vector3 position)
     {
         setShipForwardSpeed = 40;
+        TutorialManager.shoot.enabled = false;
         // Shoot bullet down lane
+        GameInput.OnTap -= HandleOnTap;
     }
 
     // Get the direction of any new swipe
     private void HandleOnSwipe(GameInput.Direction direction)
     {
-        if (restrictSwipe == false)
+        if (StateManager.gameState == StateManager.States.tutorial)
         {
-            switch (direction)
+            TutorialMovement(direction);
+        }
+        else if (StateManager.gameState == StateManager.States.play)
+        {
+            GameMovement(direction);
+            currentLane = LaneManager.laneData[(int)targetLane.laneID];
+        }
+        
+        
+    }
+
+    private void TutorialMovement(GameInput.Direction direction)
+    {
+        if (!restrictSwipe)
+        {
+            GameMovement(direction);
+            currentLane = LaneManager.laneData[(int)targetLane.laneID];
+            setShipForwardSpeed = 40;
+
+            if (shipPosition.z < 300)
+            {
+                restrictSwipe = true;
+                if (TutorialManager.shoot.enabled)
+                {
+                    Debug.Log("turn off shoot");
+                    TutorialManager.shoot.enabled = false;
+                }
+                else if (TutorialManager.horizontal.enabled)
+                {
+                    TutorialManager.horizontal.enabled = false;
+                }
+                else if (TutorialManager.vertical.enabled)
+                {
+                    TutorialManager.vertical.enabled = false;
+                }
+                else if (TutorialManager.diagonal.enabled)
+                {
+                    TutorialManager.diagonal.enabled = false;
+                }
+            }
+        }
+    }
+
+    private void GameMovement(GameInput.Direction direction)
+    {
+        switch (direction)
             {
                 case GameInput.Direction.W:
                     //Move player left
@@ -191,33 +260,7 @@ public class Ship_Movement : MonoBehaviour {
                         targetLane = LaneManager.laneData[((int)currentLane.laneID - 4)];
                     }
                     break;
-
             }
-            currentLane = LaneManager.laneData[(int)targetLane.laneID];
-            setShipForwardSpeed = 40;
-
-            if (shipPosition.z < 300)
-            {
-                restrictSwipe = true;
-                if (TutorialManager.shoot.enabled)
-                {
-                    Debug.Log("turn off shoot");
-                    TutorialManager.shoot.enabled = false;
-                }
-                else if (TutorialManager.horizontal.enabled)
-                {
-                    TutorialManager.horizontal.enabled = false;
-                }
-                else if (TutorialManager.vertical.enabled)
-                {
-                    TutorialManager.vertical.enabled = false;
-                }
-                else if (TutorialManager.diagonal.enabled)
-                {
-                    TutorialManager.diagonal.enabled = false;
-                }
-            }
-        }
     }
 
     private void MoveToLane()

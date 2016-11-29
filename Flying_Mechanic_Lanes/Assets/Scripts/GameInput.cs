@@ -90,6 +90,7 @@ public class GameInput : MonoBehaviour
             if (thisInput.speed < (sensitivity - thisInput.displacement))
             {
                 tap = true;
+                Debug.Log("We have a tap");
             }
             else
             {
@@ -103,6 +104,7 @@ public class GameInput : MonoBehaviour
         {
             if (tap && OnTap != null)
             {
+                Debug.Log("we have a tap and a function to call");
                 OnTap(Input.mousePosition);
             }
             else if (swipe && OnSwipe != null)
@@ -110,6 +112,28 @@ public class GameInput : MonoBehaviour
                 OnSwipe(direction);
             }
         }
+    }
+
+    public static void ResetSwipe()
+    {
+        OnSwipe = null;
+    }
+
+    public static void ResetTap()
+    {
+        if (OnTap != null)
+        {
+            OnTap = null;
+        }
+    }
+
+    public static bool CanAddToTap()
+    {
+        if (OnTap == null)
+        {
+            return true;
+        }
+        return false;
     }
 
     private Direction CalculateDirection(Vector3 input)
