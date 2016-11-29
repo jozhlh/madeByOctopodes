@@ -36,6 +36,23 @@ public class Ship_Movement : MonoBehaviour {
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
         gameSpeed = shipForwardSpeed;
+        if (TutorialManager.shoot.enabled)
+        {
+            Debug.Log("disable shoot");
+            TutorialManager.shoot.enabled = false;
+        }
+        else if (TutorialManager.horizontal.enabled)
+        {
+            TutorialManager.horizontal.enabled = false;
+        }
+        else if (TutorialManager.vertical.enabled)
+        {
+            TutorialManager.vertical.enabled = false;
+        }
+        else if (TutorialManager.diagonal.enabled)
+        {
+            TutorialManager.diagonal.enabled = false;
+        }
 	}
 
     // Update is called once per frame
@@ -69,10 +86,30 @@ public class Ship_Movement : MonoBehaviour {
             levelManager.ResetLevel();
         }
 
-        if ((other.tag == "ColliderTutorial") | (other.tag == "ShootingTutorial"))
+        if (other.tag == "HorizontalTutorial")
+        {
+            Debug.Log("horizontal enabled");
+            setShipForwardSpeed = 0;
+            restrictSwipe = false;
+            TutorialManager.horizontal.enabled = true;
+        }
+        else if (other.tag == "VerticalTutorial")
         {
             setShipForwardSpeed = 0;
             restrictSwipe = false;
+            TutorialManager.vertical.enabled = true;
+        }
+        else if (other.tag == "DiagonalTutorial")
+        {
+            setShipForwardSpeed = 0;
+            restrictSwipe = false;
+            TutorialManager.diagonal.enabled = true;
+        }
+        else if (other.tag == "ShootingTutorial")
+        {
+            setShipForwardSpeed = 0;
+            restrictSwipe = false;
+            TutorialManager.shoot.enabled = true;
         }
     }
 
@@ -98,7 +135,6 @@ public class Ship_Movement : MonoBehaviour {
         {
             switch (direction)
             {
-
                 case GameInput.Direction.W:
                     //Move player left
                     if (((int)currentLane.laneID != 0) & (((int)currentLane.laneID != 3) & ((int)currentLane.laneID != 6)))
@@ -163,6 +199,23 @@ public class Ship_Movement : MonoBehaviour {
             if (shipPosition.z < 300)
             {
                 restrictSwipe = true;
+                if (TutorialManager.shoot.enabled)
+                {
+                    Debug.Log("turn off shoot");
+                    TutorialManager.shoot.enabled = false;
+                }
+                else if (TutorialManager.horizontal.enabled)
+                {
+                    TutorialManager.horizontal.enabled = false;
+                }
+                else if (TutorialManager.vertical.enabled)
+                {
+                    TutorialManager.vertical.enabled = false;
+                }
+                else if (TutorialManager.diagonal.enabled)
+                {
+                    TutorialManager.diagonal.enabled = false;
+                }
             }
         }
     }

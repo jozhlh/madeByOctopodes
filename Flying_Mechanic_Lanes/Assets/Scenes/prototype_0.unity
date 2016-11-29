@@ -146,11 +146,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.z
@@ -221,7 +221,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.z
@@ -526,7 +526,7 @@ GameObject:
   - 114: {fileID: 778830472}
   m_Layer: 0
   m_Name: 'BoxColliderSwipeDiagonal '
-  m_TagString: Collider
+  m_TagString: DiagonalTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -618,7 +618,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
@@ -638,11 +638,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_RootOrder
@@ -678,11 +678,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.z
@@ -788,7 +788,7 @@ GameObject:
   - 114: {fileID: 1139016545}
   m_Layer: 0
   m_Name: 'BoxColliderSwipeHorizontal '
-  m_TagString: Collider
+  m_TagString: HorizontalTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1010,11 +1010,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1107,6 +1107,16 @@ Prefab:
       propertyPath: levelManager
       value: 
       objectReference: {fileID: 1222692398}
+    - target: {fileID: 114000012894090726, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1389661808}
+    - target: {fileID: 114000012894090726, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: scoringInterval
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   m_IsPrefabParent: 0
@@ -1119,11 +1129,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1139,11 +1149,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_RootOrder
@@ -1347,9 +1357,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013643243680, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011215694544, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012864721532, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010403558706, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1389661808 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010389468180, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
+    type: 2}
+  m_PrefabInternal: {fileID: 1184531279}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1391454676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,7 +1394,7 @@ GameObject:
   - 114: {fileID: 1391454677}
   m_Layer: 0
   m_Name: BoxColliderSwipeVertical
-  m_TagString: Collider
+  m_TagString: VerticalTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1412,11 +1444,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1432,11 +1464,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4000012528090732, guid: b642de5a781424b24b78d7515d767194, type: 2}
       propertyPath: m_RootOrder
@@ -1645,11 +1677,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4000010411575190, guid: 538b58f8431659f4c8fd23463558fb06, type: 2}
       propertyPath: m_LocalPosition.z

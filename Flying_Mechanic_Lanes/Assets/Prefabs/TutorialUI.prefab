@@ -56,6 +56,7 @@ GameObject:
   - 223: {fileID: 223000011460938248}
   - 114: {fileID: 114000013996198676}
   - 114: {fileID: 114000012731513052}
+  - 114: {fileID: 114000013181072690}
   m_Layer: 5
   m_Name: TutorialUI
   m_TagString: Untagged
@@ -216,6 +217,21 @@ MonoBehaviour:
   m_Text: 'Swipe
 
     left or right'
+--- !u!114 &114000013181072690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012069632382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668de8c26803c4e499f88f0507130f41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalText: {fileID: 114000012809541430}
+  verticalText: {fileID: 114000011907418616}
+  diagonalText: {fileID: 114000014289463002}
+  shootText: {fileID: 114000012000779698}
 --- !u!114 &114000013996198676
 MonoBehaviour:
   m_ObjectHideFlags: 1
