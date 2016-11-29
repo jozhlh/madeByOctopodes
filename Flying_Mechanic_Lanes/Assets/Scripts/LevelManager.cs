@@ -29,6 +29,9 @@ public class LevelManager : MonoBehaviour {
     [SerializeField]
     private GameObject playerBullet;
 
+    [SerializeField]
+    private SceneTransition sceneTransitionController = null;
+
     // int numberOfObstacles;
     int numberOfRocks;
     int numberOfEnemies;
@@ -170,8 +173,9 @@ public class LevelManager : MonoBehaviour {
             enemies[iterator].ResetEnemy();
             enemy.GetComponentInChildren<EnemyHitBox>().destroyThis = false;
             iterator++;
-            
         }
+        //sceneTransitionController.LoadMenu();
+        StateManager.gameState = StateManager.States.dead;
     }
 
     public void PlayerFire(Vector3 position)

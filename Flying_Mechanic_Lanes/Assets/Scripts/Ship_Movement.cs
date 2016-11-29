@@ -41,21 +41,24 @@ public class Ship_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        if (transition < 1.0f)
+        if ((StateManager.gameState == StateManager.States.play) | (StateManager.gameState == StateManager.States.tutorial))
         {
-            transition += Time.deltaTime * 1 / animationDuration;
-        }
-        else
-        {
-            shipForwardSpeed = setShipForwardSpeed;
-        }
+            if (transition < 1.0f)
+                {
+                    transition += Time.deltaTime * 1 / animationDuration;
+                }
+                else
+                {
+                    shipForwardSpeed = setShipForwardSpeed;
+                }
 
-       if (shipPosition.z > 300)
-        {
-            restrictSwipe = false;
-            restrictBullet = false;
+            if (shipPosition.z > 300)
+                {
+                    restrictSwipe = false;
+                    restrictBullet = false;
+                }
+                MoveToLane();
         }
-        MoveToLane();
     }
 
     void OnTriggerEnter(Collider other)
@@ -66,7 +69,7 @@ public class Ship_Movement : MonoBehaviour {
             levelManager.ResetLevel();
         }
 
-        if ((other.tag == "Collider")| (other.tag == "Laser"))
+        if ((other.tag == "ColliderTutorial") | (other.tag == "ShootingTutorial"))
         {
             setShipForwardSpeed = 0;
             restrictSwipe = false;

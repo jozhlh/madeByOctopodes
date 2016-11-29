@@ -5,6 +5,9 @@ public class EnemyHitBox : MonoBehaviour {
 
     public bool destroyThis = false;
 
+    [SerializeField]
+    private int enemyValue = 10;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,6 +20,10 @@ public class EnemyHitBox : MonoBehaviour {
         {
             // Kill enemy
             destroyThis = true;
+        }
+        if (other.tag == "Bullet")
+        {
+            PlayerScore.score += enemyValue;
         }
     }
 
