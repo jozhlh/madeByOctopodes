@@ -8,11 +8,11 @@ public class Rock : MonoBehaviour {
 
     [SerializeField]
     private float zPosition = 0.0f;
-    [SerializeField]
-    private float obstacleLength = 1.0f;
+ //   [SerializeField]
+ //   private float obstacleLength = 1.0f;
 
     private Vector3 obstaclePosition = new Vector3(0, 0, 0);
-    private Vector3 obstacleSize = new Vector3(1, 1, 1);
+ //   private Vector3 obstacleSize = new Vector3(1, 1, 1);
     public Vector3 rockRotation = new Vector3();
     [SerializeField]
     private float rotationSpeed = 10.0f;

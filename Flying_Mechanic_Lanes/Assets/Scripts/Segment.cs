@@ -29,7 +29,6 @@ public class Segment : MonoBehaviour {
         numOfObstacles = GetComponentsInChildren<Obstacle>().Length;
         obstacles = new Obstacle[numOfObstacles];
         obstacles = GetComponentsInChildren<Obstacle>();
-        Debug.Log("numberOfRocks: " + numOfObstacles);
         for (int ob = 0; ob < numOfObstacles; ob++)
         {
             obstacleObjects.Add(obstacles[ob].gameObject);
@@ -47,12 +46,12 @@ public class Segment : MonoBehaviour {
         }
 	}
 
-	public void ResetObstacles()
-	{
-		foreach (GameObject ob in obstacleObjects)
+    public void ResetObstacles()
+    {
+        foreach (GameObject ob in obstacleObjects)
         {
-            Debug.Log("Rock Set Active Called");
             ob.SetActive(true);
         }
-	}
+    }
+
 }

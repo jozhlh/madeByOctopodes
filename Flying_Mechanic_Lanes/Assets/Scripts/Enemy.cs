@@ -11,8 +11,8 @@ public class Enemy : MonoBehaviour {
 
     //[SerializeField]
     public float zPosition = 0.0f;
-    [SerializeField]
-    private float obstacleLength = 1.0f;
+ //   [SerializeField]
+  //  private float obstacleLength = 1.0f;
 
     [SerializeField]
     private Ship_Movement player = null;
@@ -54,7 +54,7 @@ public class Enemy : MonoBehaviour {
         {
             enemyPosition.z += (player.shipForwardSpeed * Time.deltaTime);
 
-            
+
             if (cooldownProgress < 0)
             {
                 Fire();
@@ -74,13 +74,13 @@ public class Enemy : MonoBehaviour {
 
         //TODO: Enemys to avoid obstacles
         // Raycast behind itself
-            // if obstacle within range
-                // raycast to all lanes within range
-                    // look through lanes to find empty lane
-                    // raycast sideways to target lane
-                    // if route clear
-                        // move to that lane
-        
+        // if obstacle within range
+        // raycast to all lanes within range
+        // look through lanes to find empty lane
+        // raycast sideways to target lane
+        // if route clear
+        // move to that lane
+
         gameObject.transform.position = enemyPosition;
 
     }
@@ -95,15 +95,12 @@ public class Enemy : MonoBehaviour {
             Destroy(bullet);
         }
         bulletObjects.Clear();
-  //      Debug.Log("Reset to position" + zPosition);
+        //      Debug.Log("Reset to position" + zPosition);
     }
 
     void Fire()
     {
-        Vector3 playerPos = new Vector3();
         Vector3 bulletStartPos = new Vector3();
-
-        playerPos = player.transform.position;
 
         bulletStartPos = GetComponent<Transform>().position;
 
@@ -114,9 +111,10 @@ public class Enemy : MonoBehaviour {
         GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform.position, transform.rotation);
 
         newBullet.transform.position = bulletStartPos;
-        newBullet.GetComponent<EnemyBullet>().targetLocation = playerPos;
+        newBullet.GetComponent<EnemyBullet>().targetLocation = Ship_Movement.shipPosition;
         newBullet.GetComponent<EnemyBullet>().startPos = bulletStartPos;
 
         bulletObjects.Add(newBullet);
     }
+
 }

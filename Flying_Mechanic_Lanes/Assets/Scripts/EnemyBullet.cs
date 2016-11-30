@@ -3,8 +3,7 @@ using System.Collections;
 
 public class EnemyBullet : MonoBehaviour {
 
-    [SerializeField]
-    private float bulletSpeed = 40.0f;
+    public float bulletSpeed = 40.0f;
 
     private Vector3 bulletPosition = new Vector3();
 
@@ -26,10 +25,9 @@ public class EnemyBullet : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        // Destroy bullet if it hits a wall
+        // Destroy bullet if it hits a wall or the player
         if ((other.tag == "Obstacle") | (other.tag == "Player"))
         {
-       //     Debug.Log("EnemyBullet hit " + other.tag);
             if (other.tag == "Player")
             {
                 // Reduce player's health
@@ -42,17 +40,11 @@ public class EnemyBullet : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        // gameObject.transform.Translate(0.0f, 0.0f, Time.deltaTime * bulletSpeed);
-        // Find the distance covered so far and what the % of the dis that is then move the enemy to the next step
-        float distCovered = (Time.time - timeStartedMoving) * bulletSpeed;
-        //float percentOfJourney = distCovered / Vector3.Distance(startPos, targetLocation);
-        //bulletPosition = Vector3.Lerp(startPos, targetLocation, percentOfJourney);
-
         bulletTrajectory = targetLocation - startPos;
 
         bulletPosition += (bulletTrajectory * Time.deltaTime);
 
-        bulletPosition.z += Time.deltaTime  * Ship_Movement.gameSpeed;
+        bulletPosition.z += Time.deltaTime * Ship_Movement.gameSpeed;
 
         if (bulletPosition.z > 60)
         {

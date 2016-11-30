@@ -86,7 +86,6 @@ public class GameInput : MonoBehaviour
         {
             thisInput.endPosition = Input.mousePosition;
             thisInput.CalculateInput();
-            float result = thisInput.speed + thisInput.displacement;
             if (thisInput.speed < (sensitivity - thisInput.displacement))
             {
                 tap = true;
@@ -110,6 +109,28 @@ public class GameInput : MonoBehaviour
                 OnSwipe(direction);
             }
         }
+    }
+
+    public static void ResetSwipe()
+    {
+        OnSwipe = null;
+    }
+
+    public static void ResetTap()
+    {
+        if (OnTap != null)
+        {
+            OnTap = null;
+        }
+    }
+
+    public static bool CanAddToTap()
+    {
+        if (OnTap == null)
+        {
+            return true;
+        }
+        return false;
     }
 
     private Direction CalculateDirection(Vector3 input)

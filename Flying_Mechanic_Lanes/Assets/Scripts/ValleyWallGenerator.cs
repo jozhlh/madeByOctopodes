@@ -6,18 +6,19 @@ using System.Collections.Generic;
 
 public class ValleyWallGenerator : MonoBehaviour {
 
-    private float spawnZ = -200.0f;
+    private float spawnZ = -300.0f;
     private int lastPrefabIndex = 0;
 
     [SerializeField]
     private float tileLength = 40.0f;
-    [SerializeField]
-    private int tileOnScreen = 8;
+ //   [SerializeField]
+  //  private int tileOnScreen = 8;
 
     public GameObject[] valleyWallPrefabs;
     public GameObject[] valleyFloorPrefabs;
 
     private List<GameObject> activeTiles;
+    private List<GameObject> toBeCleared;
 
     [SerializeField]
     private float wallGap = 5.0f;
@@ -31,6 +32,7 @@ public class ValleyWallGenerator : MonoBehaviour {
     void Start()
     {
         activeTiles = new List<GameObject>();
+        toBeCleared = new List<GameObject>();
         wallXOffset = ((valleyWallPrefabs[0].transform.localScale.x * 0.5f) + (LaneManager.laneSpacingHorizontal * 1.5f)) + wallGap;
         floorYOffset = (-1 * (LaneManager.laneSpacingVertical * 1.5f)) - floorGap;
         wallYOffset = floorYOffset + (valleyWallPrefabs[0].transform.localScale.y * 0.5f);
@@ -38,17 +40,42 @@ public class ValleyWallGenerator : MonoBehaviour {
 
     void Update()
     {
-        if(Ship_Movement.shipPosition.z > (spawnZ - tileOnScreen * tileLength))
-        {
             SpawnValleyWallLeft();
             SpawnValleyWallRight();
             SpawnValleyFloor();
             spawnZ += tileLength;
-            DeleteValleyWalls();
+            CleanUp();
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if ((other.tag == "Obstacle") | (other.tag == "Laser"))
+        {
+            spawnZ = -300.0f;
+            lastPrefabIndex = 0;
         }
     }
 
-    private void SpawnValleyWallLeft(int prefabIndex = -1)
+    void CleanUp()
+    {
+        foreach (GameObject wall in activeTiles.ToArray())
+        {
+            if (wall.transform.position.z < (Ship_Movement.shipPosition.z - tileLength))
+            {
+                toBeCleared.Add(wall);
+                activeTiles.Remove(wall);
+            }
+        }
+        foreach (GameObject wall in toBeCleared.ToArray())
+        {
+            toBeCleared.Remove(wall);
+            wall.SetActive(false);
+            Destroy(wall);
+        }
+    }
+
+
+private void SpawnValleyWallLeft(int prefabIndex = -1)
     {
         GameObject go;
         Vector3 tilePosition = new Vector3(-1 * wallXOffset,  wallYOffset, 1 * spawnZ);
@@ -80,26 +107,17 @@ public class ValleyWallGenerator : MonoBehaviour {
         activeTiles.Add(go);
     }
 
-
-    private void DeleteValleyWalls()
-    {
-        Destroy(activeTiles[0]);
-        activeTiles.RemoveAt(0);
-    }
-
     private int RandomPrefabIndex()
     {
         if (valleyWallPrefabs.Length <= 1)
         {
             return 0;
         }
-
         int randomIndex = lastPrefabIndex;
         while (randomIndex == lastPrefabIndex)
         {
             randomIndex = Random.Range(0, valleyWallPrefabs.Length);
         }
-
         lastPrefabIndex = randomIndex;
         return randomIndex;
     }
