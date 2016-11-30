@@ -51,7 +51,7 @@ public class EnemyBullet : MonoBehaviour {
 
         bulletPosition += (bulletTrajectory * Time.deltaTime);
 
-        bulletPosition.z += Time.deltaTime  * Ship_Movement.gameSpeed;
+        bulletPosition.z += Time.deltaTime * Ship_Movement.gameSpeed;
 
         if (bulletPosition.z > 60)
         {
