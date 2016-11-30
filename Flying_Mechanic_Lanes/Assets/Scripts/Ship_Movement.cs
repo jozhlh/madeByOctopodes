@@ -9,7 +9,9 @@ public class Ship_Movement : MonoBehaviour {
     private float setShipForwardSpeed = 40.0f;
     public float shipForwardSpeed = 1.0f;
     public static float gameSpeed;
-    private bool restrictSwipe = true;
+    private bool restrictSwipeVertical = true;
+    private bool restrictSwipeHorizontal = true;
+    private bool restrictSwipeDiagonal = true;
     static public bool restrictBullet = true;
     [SerializeField]
     private float shipMovementSpeed = 20.0f;
@@ -88,11 +90,15 @@ public class Ship_Movement : MonoBehaviour {
 
             if (shipPosition.z > 300)
             {
-                restrictSwipe = false;
+                restrictSwipeVertical = false;
+                restrictSwipeHorizontal = false;
+                restrictSwipeDiagonal = false;
                 restrictBullet = false;
             }
             MoveToLane();
         }
+
+        gameSpeed = shipForwardSpeed;
     }
 
     void OnTriggerEnter(Collider other)
@@ -109,25 +115,27 @@ public class Ship_Movement : MonoBehaviour {
             {
                 Debug.Log("horizontal enabled");
                 setShipForwardSpeed = 0;
-                restrictSwipe = false;
+                restrictSwipeHorizontal = false;
                 TutorialManager.horizontal.enabled = true;
             }
             else if (other.tag == "VerticalTutorial")
             {
                 setShipForwardSpeed = 0;
-                restrictSwipe = false;
+                restrictSwipeVertical = false;
                 TutorialManager.vertical.enabled = true;
             }
             else if (other.tag == "DiagonalTutorial")
             {
                 setShipForwardSpeed = 0;
-                restrictSwipe = false;
+                restrictSwipeDiagonal = false;
                 TutorialManager.diagonal.enabled = true;
             }
             else if (other.tag == "ShootingTutorial")
             {
                 setShipForwardSpeed = 0;
-                restrictSwipe = true;
+                restrictSwipeVertical = true;
+                restrictSwipeHorizontal = true;
+                restrictSwipeDiagonal = true;
                 restrictBullet = false;
                 TutorialManager.shoot.enabled = true;
                 GameInput.OnTap += HandleOnTap;
@@ -148,6 +156,9 @@ public class Ship_Movement : MonoBehaviour {
     {
         setShipForwardSpeed = 40;
         TutorialManager.shoot.enabled = false;
+        restrictSwipeHorizontal = false;
+        restrictSwipeVertical = false;
+        restrictSwipeDiagonal = false;
         // Shoot bullet down lane
         GameInput.OnTap -= HandleOnTap;
     }
@@ -170,18 +181,45 @@ public class Ship_Movement : MonoBehaviour {
 
     private void TutorialMovement(GameInput.Direction direction)
     {
-        if (!restrictSwipe)
+        if (!restrictSwipeHorizontal)
         {
-            GameMovement(direction);
-            currentLane = LaneManager.laneData[(int)targetLane.laneID];
-            setShipForwardSpeed = 40;
-
+            if ((direction == GameInput.Direction.E) | (direction == GameInput.Direction.W))
+            {
+                GameMovement(direction);
+                currentLane = LaneManager.laneData[(int)targetLane.laneID];
+                setShipForwardSpeed = 40;
+                restrictSwipeHorizontal = true;
+                TutorialManager.horizontal.enabled = false;
+            }
+        }
+        else if (!restrictSwipeVertical)
+        {
+            if ((direction == GameInput.Direction.N) | (direction == GameInput.Direction.S))
+            {
+                GameMovement(direction);
+                currentLane = LaneManager.laneData[(int)targetLane.laneID];
+                setShipForwardSpeed = 40;
+                restrictSwipeVertical = true;
+                TutorialManager.vertical.enabled = false;
+            }
+        }
+        else if (!restrictSwipeDiagonal)
+        {
+            if (((direction == GameInput.Direction.NE) | (direction == GameInput.Direction.NW)) | ((direction == GameInput.Direction.SE) | (direction == GameInput.Direction.SW)))
+            {
+                GameMovement(direction);
+                currentLane = LaneManager.laneData[(int)targetLane.laneID];
+                setShipForwardSpeed = 40;
+                restrictSwipeDiagonal = true;
+                TutorialManager.diagonal.enabled = false;
+            }
+        }
+        /*
             if (shipPosition.z < 300)
             {
-                restrictSwipe = true;
+                restrictSwipeHorizontal = true;
                 if (TutorialManager.shoot.enabled)
                 {
-                    Debug.Log("turn off shoot");
                     TutorialManager.shoot.enabled = false;
                 }
                 else if (TutorialManager.horizontal.enabled)
@@ -197,70 +235,70 @@ public class Ship_Movement : MonoBehaviour {
                     TutorialManager.diagonal.enabled = false;
                 }
             }
-        }
+        */
     }
 
     private void GameMovement(GameInput.Direction direction)
     {
         switch (direction)
+        {
+        case GameInput.Direction.W:
+            //Move player left
+            if (((int)currentLane.laneID != 0) & (((int)currentLane.laneID != 3) & ((int)currentLane.laneID != 6)))
             {
-                case GameInput.Direction.W:
-                    //Move player left
-                    if (((int)currentLane.laneID != 0) & (((int)currentLane.laneID != 3) & ((int)currentLane.laneID != 6)))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 1)];
-                    }
-                    break;
-                case GameInput.Direction.E:
-                    //Move player Right
-                    if (((int)currentLane.laneID != 2) & (((int)currentLane.laneID != 5) & ((int)currentLane.laneID != 8)))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 1)];
-                    }
-                    break;
-                case GameInput.Direction.N:
-                    //Move player Up
-                    if ((int)currentLane.laneID > 2)
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 3)];
-                    }
-                    break;
-                case GameInput.Direction.S:
-                    //Move player Down
-                    if ((int)currentLane.laneID < 6)
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 3)];
-                    }
-                    break;
-                case GameInput.Direction.NE:
-                    //Move player up and right
-                    if (((int)currentLane.laneID < 8) & (((int)currentLane.laneID > 2) & ((int)currentLane.laneID != 5)))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 2)];
-                    }
-                    break;
-                case GameInput.Direction.SE:
-                    //Move player down and right
-                    if (((int)currentLane.laneID < 5) & ((int)currentLane.laneID != 2))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 4)];
-                    }
-                    break;
-                case GameInput.Direction.SW:
-                    //Move player down and left
-                    if (((int)currentLane.laneID < 6) & (((int)currentLane.laneID > 0) & ((int)currentLane.laneID != 3)))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID + 2)];
-                    }
-                    break;
-                case GameInput.Direction.NW:
-                    //Move player up and left
-                    if (((int)currentLane.laneID > 3) & ((int)currentLane.laneID != 6))
-                    {
-                        targetLane = LaneManager.laneData[((int)currentLane.laneID - 4)];
-                    }
-                    break;
+                targetLane = LaneManager.laneData[((int)currentLane.laneID - 1)];
             }
+            break;
+        case GameInput.Direction.E:
+            //Move player Right
+            if (((int)currentLane.laneID != 2) & (((int)currentLane.laneID != 5) & ((int)currentLane.laneID != 8)))
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID + 1)];
+            }
+            break;
+        case GameInput.Direction.N:
+            //Move player Up
+            if ((int)currentLane.laneID > 2)
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID - 3)];
+            }
+            break;
+        case GameInput.Direction.S:
+            //Move player Down
+            if ((int)currentLane.laneID < 6)
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID + 3)];
+            }
+            break;
+        case GameInput.Direction.NE:
+            //Move player up and right
+            if (((int)currentLane.laneID < 8) & (((int)currentLane.laneID > 2) & ((int)currentLane.laneID != 5)))
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID - 2)];
+            }
+            break;
+        case GameInput.Direction.SE:
+            //Move player down and right
+            if (((int)currentLane.laneID < 5) & ((int)currentLane.laneID != 2))
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID + 4)];
+            }
+            break;
+        case GameInput.Direction.SW:
+            //Move player down and left
+            if (((int)currentLane.laneID < 6) & (((int)currentLane.laneID > 0) & ((int)currentLane.laneID != 3)))
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID + 2)];
+            }
+            break;
+        case GameInput.Direction.NW:
+            //Move player up and left
+            if (((int)currentLane.laneID > 3) & ((int)currentLane.laneID != 6))
+            {
+                targetLane = LaneManager.laneData[((int)currentLane.laneID - 4)];
+            }
+            break;
+        }
     }
 
     private void MoveToLane()

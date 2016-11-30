@@ -86,11 +86,9 @@ public class GameInput : MonoBehaviour
         {
             thisInput.endPosition = Input.mousePosition;
             thisInput.CalculateInput();
-            float result = thisInput.speed + thisInput.displacement;
             if (thisInput.speed < (sensitivity - thisInput.displacement))
             {
                 tap = true;
-                Debug.Log("We have a tap");
             }
             else
             {
@@ -104,7 +102,6 @@ public class GameInput : MonoBehaviour
         {
             if (tap && OnTap != null)
             {
-                Debug.Log("we have a tap and a function to call");
                 OnTap(Input.mousePosition);
             }
             else if (swipe && OnSwipe != null)

@@ -11,8 +11,8 @@ public class ValleyWallGenerator : MonoBehaviour {
 
     [SerializeField]
     private float tileLength = 40.0f;
-    [SerializeField]
-    private int tileOnScreen = 8;
+ //   [SerializeField]
+  //  private int tileOnScreen = 8;
 
     public GameObject[] valleyWallPrefabs;
     public GameObject[] valleyFloorPrefabs;

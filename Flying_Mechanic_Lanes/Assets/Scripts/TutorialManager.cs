@@ -42,15 +42,15 @@ public class TutorialManager : MonoBehaviour {
         }
         if (horizontal.enabled)
         {
-            TutorialManager.horizontal.enabled = false;
+            horizontal.enabled = false;
         }
-        if (TutorialManager.shoot.enabled)
+        if (vertical.enabled)
         {
-            TutorialManager.vertical.enabled = false;
+            vertical.enabled = false;
         }
-        if (TutorialManager.shoot.enabled)
+        if (diagonal.enabled)
         {
-            TutorialManager.diagonal.enabled = false;
+            diagonal.enabled = false;
         }
 	}
 }
