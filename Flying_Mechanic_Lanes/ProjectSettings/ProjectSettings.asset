@@ -355,8 +355,7 @@ PlayerSettings:
   psp2UseDebugIl2cppLibs: 0
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
-  scriptingDefineSymbols:
-    1: 
+  scriptingDefineSymbols: {}
   metroPackageName: Flying_Mechanic_Lanes
   metroPackageVersion: 
   metroCertificatePath: 
