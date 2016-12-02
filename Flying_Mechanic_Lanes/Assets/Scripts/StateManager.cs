@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class StateManager : MonoBehaviour {
 
-	public enum States {menu, dead, play, tutorial};
+	public enum States {menu, dead, play, tutorial, complete};
 
 	public static States gameState;
 
@@ -16,6 +16,7 @@ public class StateManager : MonoBehaviour {
 	void Start ()
 	{
 		gameState = States.menu;
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame

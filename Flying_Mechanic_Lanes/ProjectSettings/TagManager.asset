@@ -12,6 +12,7 @@ TagManager:
   - ShootingTutorial
   - VerticalTutorial
   - DiagonalTutorial
+  - StateManager
   layers:
   - Default
   - TransparentFX

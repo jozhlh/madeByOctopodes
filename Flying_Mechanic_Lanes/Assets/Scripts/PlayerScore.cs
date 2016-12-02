@@ -35,4 +35,9 @@ public class PlayerScore : MonoBehaviour {
 			scoreText.text = score.ToString();
 		}
 	}
+
+	public static void Reset()
+	{
+		score = 0;
+	}
 }

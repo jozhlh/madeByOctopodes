@@ -79,8 +79,13 @@ private void SpawnValleyWallLeft(int prefabIndex = -1)
     {
         GameObject go;
         Vector3 tilePosition = new Vector3(-1 * wallXOffset,  wallYOffset, 1 * spawnZ);
+        Vector3 tileRotation = new Vector3(0, 180, 0);
+        
         go = Instantiate(valleyWallPrefabs[RandomPrefabIndex()]) as GameObject;
         go.transform.SetParent(transform);
+        //go.transform.rotation.SetEulerAngles(tileRotation);
+        //go.transform.localRotation.SetEulerAngles(tileRotation);
+        go.transform.Rotate(tileRotation);
         go.transform.position = tilePosition;
         activeTiles.Add(go);
     }
