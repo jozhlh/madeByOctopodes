@@ -1,15 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!29 &1
-SceneSettings:
+OcclusionCullingSettings:
   m_ObjectHideFlags: 0
-  m_PVSData: 
-  m_PVSObjectsArray: []
-  m_PVSPortalsArray: []
+  serializedVersion: 2
   m_OcclusionBakeSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
-  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
-  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientSkyColor: {r: 0.11532223, g: 0.1570622, b: 0.5808823, a: 1}
+  m_AmbientEquatorColor: {r: 0.66619813, g: 0.7998543, b: 0.89705884, a: 1}
+  m_AmbientGroundColor: {r: 0.4297667, g: 0.36764705, b: 0.625, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 1
   m_SkyboxMaterial: {fileID: 2100000, guid: 3963fe4aa404fe749bf9fc5a5cc08e3c, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -79,16 +79,17 @@ NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
     serializedVersion: 2
+    agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    accuratePlacement: 0
     minRegionArea: 2
-    cellSize: 0.16666667
     manualCellSize: 0
+    cellSize: 0.16666667
+    accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &10204156
 Prefab:
@@ -368,11 +369,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 479237816}
-  - 114: {fileID: 479237815}
-  - 114: {fileID: 479237814}
+  - component: {fileID: 479237816}
+  - component: {fileID: 479237815}
+  - component: {fileID: 479237814}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -421,22 +422,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &625101218
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 625101222}
-  - 33: {fileID: 625101221}
-  - 64: {fileID: 625101220}
-  - 23: {fileID: 625101219}
-  - 114: {fileID: 625101223}
+  - component: {fileID: 625101222}
+  - component: {fileID: 625101221}
+  - component: {fileID: 625101220}
+  - component: {fileID: 625101219}
+  - component: {fileID: 625101223}
   m_Layer: 0
   m_Name: EndPlate
   m_TagString: Untagged
@@ -458,7 +459,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: 3fc36349a50b71243bbdd62f47642a7b, type: 2}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -466,7 +469,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -484,6 +487,8 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &625101221
 MeshFilter:
@@ -501,10 +506,10 @@ Transform:
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 66.7, z: 500}
   m_LocalScale: {x: 40, y: 0, z: 15}
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
 --- !u!114 &625101223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,11 +586,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 778830474}
-  - 65: {fileID: 778830473}
-  - 114: {fileID: 778830472}
+  - component: {fileID: 778830474}
+  - component: {fileID: 778830473}
+  - component: {fileID: 778830472}
   m_Layer: 0
   m_Name: 'BoxColliderSwipeDiagonal '
   m_TagString: DiagonalTutorial
@@ -625,10 +630,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 225}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1012976059}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &804154203
 Prefab:
   m_ObjectHideFlags: 0
@@ -792,10 +797,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1012976059}
-  - 114: {fileID: 1012976060}
+  - component: {fileID: 1012976059}
+  - component: {fileID: 1012976060}
   m_Layer: 0
   m_Name: Segment_Intro_0
   m_TagString: Untagged
@@ -812,7 +817,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1982358928}
   - {fileID: 1139016547}
@@ -826,6 +830,7 @@ Transform:
   - {fileID: 1752735590}
   m_Father: {fileID: 1649868875}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1012976060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -843,11 +848,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1139016547}
-  - 65: {fileID: 1139016546}
-  - 114: {fileID: 1139016545}
+  - component: {fileID: 1139016547}
+  - component: {fileID: 1139016546}
+  - component: {fileID: 1139016545}
   m_Layer: 0
   m_Name: 'BoxColliderSwipeHorizontal '
   m_TagString: HorizontalTutorial
@@ -887,10 +892,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 55}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1012976059}
   m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1142899233
 Prefab:
   m_ObjectHideFlags: 0
@@ -1148,12 +1153,12 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1346326330}
-  - 33: {fileID: 1346326329}
-  - 64: {fileID: 1346326328}
-  - 23: {fileID: 1346326327}
+  - component: {fileID: 1346326330}
+  - component: {fileID: 1346326329}
+  - component: {fileID: 1346326328}
+  - component: {fileID: 1346326327}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -1175,7 +1180,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
@@ -1183,7 +1190,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_SelectedWireframeHidden: 0
+  m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1201,6 +1208,8 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Convex: 0
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1346326329
 MeshFilter:
@@ -1218,10 +1227,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -7, z: 2091.7424}
   m_LocalScale: {x: 1, y: 1, z: 422.93558}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1362750470
 Prefab:
   m_ObjectHideFlags: 0
@@ -1343,11 +1352,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1391454679}
-  - 65: {fileID: 1391454678}
-  - 114: {fileID: 1391454677}
+  - component: {fileID: 1391454679}
+  - component: {fileID: 1391454678}
+  - component: {fileID: 1391454677}
   m_Layer: 0
   m_Name: BoxColliderSwipeVertical
   m_TagString: VerticalTutorial
@@ -1387,10 +1396,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 135}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1012976059}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1438233427
 Prefab:
   m_ObjectHideFlags: 0
@@ -1457,11 +1466,11 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 1752735590}
-  - 65: {fileID: 1752735592}
-  - 114: {fileID: 1752735591}
+  - component: {fileID: 1752735590}
+  - component: {fileID: 1752735592}
+  - component: {fileID: 1752735591}
   m_Layer: 0
   m_Name: BoxColliderShooting
   m_TagString: ShootingTutorial
@@ -1478,10 +1487,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 301.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1012976059}
   m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1752735591
 MonoBehaviour:
   m_ObjectHideFlags: 0
