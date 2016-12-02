@@ -70,7 +70,7 @@ public class Ship_Movement : MonoBehaviour {
     {
         if (reset)
         {
-            ResetShip();
+            //ResetShip();
             reset = false;
         }
         if (StateManager.gameState == StateManager.States.play)
