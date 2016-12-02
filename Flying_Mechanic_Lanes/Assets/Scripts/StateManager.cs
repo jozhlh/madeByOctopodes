@@ -16,6 +16,7 @@ public class StateManager : MonoBehaviour {
 	void Start ()
 	{
 		gameState = States.menu;
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame

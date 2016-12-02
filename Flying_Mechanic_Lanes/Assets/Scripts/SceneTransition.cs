@@ -18,7 +18,8 @@ public class SceneTransition : MonoBehaviour {
 
 	public void LoadMenu()
 	{
+		Destroy(GameObject.FindGameObjectWithTag("StateManager"));
 		SceneManager.LoadScene("menu_scene");
-		StateManager.gameState = StateManager.States.menu;
+		//StateManager.gameState = StateManager.States.menu;
 	}
 }
