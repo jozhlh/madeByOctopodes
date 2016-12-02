@@ -6,7 +6,7 @@ public class SceneTransition : MonoBehaviour {
 
 	public void LoadPrototypeLevel()
 	{
-		SceneManager.LoadScene("prototype_2");
+		SceneManager.LoadScene("prototype_1");
 		StateManager.gameState = StateManager.States.play;
 	}
 

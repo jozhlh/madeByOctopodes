@@ -24,6 +24,8 @@ public class Ship_Movement : MonoBehaviour {
     public static LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
     public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
 
+    private bool reset;
+
     void Awake ()
     {
         Application.targetFrameRate = 30;
@@ -39,6 +41,7 @@ public class Ship_Movement : MonoBehaviour {
         shipTransform = gameObject.GetComponent<Transform>();
         shipPosition = shipTransform.position;
         gameSpeed = shipForwardSpeed;
+        reset = false;
 
         if (StateManager.gameState == StateManager.States.tutorial)
         {
@@ -65,6 +68,11 @@ public class Ship_Movement : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
+        if (reset)
+        {
+            ResetShip();
+            reset = false;
+        }
         if (StateManager.gameState == StateManager.States.play)
         {
             if (transition < 1.0f)
@@ -83,6 +91,7 @@ public class Ship_Movement : MonoBehaviour {
             if (transition < 1.0f)
             {
                 transition += Time.deltaTime * 1 / animationDuration;
+                TutorialManager.DisableUI();
             }
             else
             {
@@ -98,6 +107,12 @@ public class Ship_Movement : MonoBehaviour {
             }
             MoveToLane();
         }
+        else if (StateManager.gameState == StateManager.States.tutorial)
+        {
+            shipPosition = shipTransform.position;
+            shipPosition.z += (shipForwardSpeed * Time.deltaTime);
+            transform.position = shipPosition;
+        }
 
         gameSpeed = shipForwardSpeed;
     }
@@ -106,7 +121,8 @@ public class Ship_Movement : MonoBehaviour {
     {
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
-            ResetShip();
+            //ResetShip();
+            reset = true;
             levelManager.ResetLevel();
         }
 
@@ -150,6 +166,7 @@ public class Ship_Movement : MonoBehaviour {
         transform.position = shipPosition;
         targetLane = LaneManager.laneData[4];
         currentLane = targetLane;
+        PlayerScore.Reset();
     }
 
     // Get the position of any new tap
