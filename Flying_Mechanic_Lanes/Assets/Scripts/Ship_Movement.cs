@@ -133,9 +133,9 @@ public class Ship_Movement : MonoBehaviour {
             else if (other.tag == "ShootingTutorial")
             {
                 setShipForwardSpeed = 0;
-                restrictSwipeVertical = true;
-                restrictSwipeHorizontal = true;
-                restrictSwipeDiagonal = true;
+                //restrictSwipeVertical = true;
+                //restrictSwipeHorizontal = true;
+                //restrictSwipeDiagonal = true;
                 restrictBullet = false;
                 TutorialManager.shoot.enabled = true;
                 GameInput.OnTap += HandleOnTap;

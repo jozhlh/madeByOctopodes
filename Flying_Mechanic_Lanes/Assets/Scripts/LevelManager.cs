@@ -9,17 +9,18 @@ public class LevelManager : MonoBehaviour {
     // List<GameObject> obstacleObjects = new List<GameObject>();
  //   [SerializeField]
  //   List<GameObject> rockObjects = new List<GameObject>();
-    [SerializeField]
-    List<GameObject> segmentObjects = new List<GameObject>();
-    List<GameObject> enemyObjects = new List<GameObject>();
-    List<GameObject> bulletObjects = new List<GameObject>();
 
-    List<GameObject> toBeCleared = new List<GameObject>();
 
-    Enemy[] enemies;
+    private List<GameObject> segmentObjects = new List<GameObject>();
+    private List<GameObject> enemyObjects = new List<GameObject>();
+    private List<GameObject> bulletObjects = new List<GameObject>();
+
+    private List<GameObject> toBeCleared = new List<GameObject>();
+
+    private Enemy[] enemies;
    // Obstacle[] obstacles;
    // Rock[] rocks;
-    Segment[] segments;
+    private Segment[] segments;
 
     private float[] enemyZStart;
 
