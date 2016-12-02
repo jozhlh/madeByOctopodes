@@ -29,10 +29,13 @@ public class Enemy : MonoBehaviour {
     private float cooldown = 2;
     private float cooldownProgress;
 
+    public Segment seg = new Segment();
+
     // Use this for initialization
     void Start()
     {
         cooldownProgress = cooldown;
+        seg = GetComponentInParent<Segment>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -69,7 +72,7 @@ public class Enemy : MonoBehaviour {
         }
         else
         {
-            enemyPosition.z = zPosition;
+            enemyPosition.z = zPosition + seg.transform.position.z;;
         }
 
         //TODO: Enemys to avoid obstacles

@@ -324,7 +324,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inLane: 4
   zPosition: 0
-  player: {fileID: 0}
+  player: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   enemyBullet: {fileID: 1000011276323332, guid: a5eab7668dbd79143a474679f6138cdb,
     type: 2}
   cooldown: 2
+  seg: {fileID: 0}

@@ -12,17 +12,17 @@ public class LevelManager : MonoBehaviour {
 
 
     private List<GameObject> segmentObjects = new List<GameObject>();
-    private List<GameObject> enemyObjects = new List<GameObject>();
+
     private List<GameObject> bulletObjects = new List<GameObject>();
 
     private List<GameObject> toBeCleared = new List<GameObject>();
 
-    private Enemy[] enemies;
+    
    // Obstacle[] obstacles;
    // Rock[] rocks;
     private Segment[] segments;
 
-    private float[] enemyZStart;
+    
 
     [SerializeField]
     private GameObject player;
@@ -35,7 +35,7 @@ public class LevelManager : MonoBehaviour {
 
     // int numberOfObstacles;
     int numberOfRocks;
-    int numberOfEnemies;
+    
     int numberOfSegments;
     private bool playerCanFire = false;
 
@@ -52,16 +52,6 @@ public class LevelManager : MonoBehaviour {
             segments[ob].AcquireObstacles();
         }
 
-        numberOfEnemies = GetComponentsInChildren<Enemy>().Length;
-        enemies = new Enemy[numberOfEnemies];
-        enemyZStart = new float[numberOfEnemies];
-        enemies = GetComponentsInChildren<Enemy>();
-        for (int ob = 0; ob < numberOfEnemies; ob++)
-        {
-            enemyObjects.Add(enemies[ob].gameObject);
-            enemyZStart[ob] = enemies[ob].zPosition;
-        }
-
         GameInput.ResetTap();
         if (GameInput.CanAddToTap())
         {
@@ -74,15 +64,7 @@ public class LevelManager : MonoBehaviour {
     {
         foreach (GameObject seg in segmentObjects)
         {         
-            seg.GetComponent<Segment>().CullObstacles(player.transform.position.z - (player.transform.localScale.z));
-        }
-
-        foreach (GameObject enemy in enemyObjects)
-        {
-            if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) < (player.transform.position.z - (player.transform.localScale.z / 2)))
-            {
-                enemy.SetActive(false);
-            }
+            seg.GetComponent<Segment>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
         }
 
         if (StateManager.gameState == StateManager.States.tutorial)
@@ -113,15 +95,7 @@ public class LevelManager : MonoBehaviour {
                 seg.GetComponent<Segment>().ResetObstacles();
             }
         }
-        int iterator = 0;
-        foreach (GameObject enemy in enemyObjects)
-        {
-            enemy.SetActive(true);
-            enemies[iterator].ResetEnemy();
-            enemy.GetComponentInChildren<EnemyHitBox>().destroyThis = false;
-            iterator++;
-        }
-
+        
         if (StateManager.gameState == StateManager.States.tutorial)
         {
             TutorialManager.DisableUI();
@@ -141,14 +115,11 @@ public class LevelManager : MonoBehaviour {
 
     public void CleanUp()
     {
-        foreach (GameObject enemy in enemyObjects)
+        foreach (GameObject seg in segmentObjects)
         {
-            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyThis)
-            {
-                enemy.SetActive(false);
-            }
+            seg.GetComponent<Segment>().CleanUpEnemies();
         }
-        
+
         foreach (GameObject bullet in bulletObjects)
         {
             if (bullet.GetComponent<PlayerBullet>().destroyThis)

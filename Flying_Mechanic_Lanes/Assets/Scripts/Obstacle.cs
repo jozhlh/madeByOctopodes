@@ -14,7 +14,7 @@ public class Obstacle : MonoBehaviour {
   //  [SerializeField]
   //  private float obstacleLength = 1.0f;
 
-    Segment seg = new Segment();
+    public Segment seg = new Segment();
 
     private Vector3 obstaclePosition = new Vector3(0, 0, 0);
 //private Vector3 obstacleSize = new Vector3(1, 1, 1);
