@@ -16,9 +16,9 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010412391500}
+  - component: {fileID: 4000010412391500}
   m_Layer: 0
   m_Name: Valley
   m_TagString: Untagged
@@ -31,10 +31,10 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000012410405594}
-  - 114: {fileID: 114000013431486696}
+  - component: {fileID: 4000012410405594}
+  - component: {fileID: 114000013431486696}
   m_Layer: 0
   m_Name: ValleyPrefabManager
   m_TagString: Untagged
@@ -51,11 +51,11 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000012410405594}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4000012410405594
 Transform:
   m_ObjectHideFlags: 1
@@ -65,10 +65,10 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -15.1, y: 2.9, z: -1.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010412391500}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000013431486696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +88,6 @@ MonoBehaviour:
   valleyFloorPrefabs:
   - {fileID: 1000012961928644, guid: 3436084958e26cb47ac0d3f32fb8403a, type: 2}
   - {fileID: 1000012961928644, guid: 12fbb11473b96414fb301af624c991ca, type: 2}
-  - {fileID: 1000012961928644, guid: 03651148bf3eaa843bc96ff7681f2454, type: 2}
+  - {fileID: 1000012961928644, guid: 3436084958e26cb47ac0d3f32fb8403a, type: 2}
   wallGap: 7
-  floorGap: 0
+  floorGap: 3
