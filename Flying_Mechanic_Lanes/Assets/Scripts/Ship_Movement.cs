@@ -134,9 +134,9 @@ public class Ship_Movement : MonoBehaviour {
             else if (other.tag == "ShootingTutorial")
             {
                 setShipForwardSpeed = 0;
-                //restrictSwipeVertical = true;
-                //restrictSwipeHorizontal = true;
-                //restrictSwipeDiagonal = true;
+                restrictSwipeVertical = false;
+                restrictSwipeHorizontal = false;
+                restrictSwipeDiagonal = false;
                 restrictBullet = false;
                 TutorialManager.shoot.enabled = true;
                 GameInput.OnTap += HandleOnTap;
@@ -184,7 +184,13 @@ public class Ship_Movement : MonoBehaviour {
     {
         if (transition > 1.0f)
         {
-            if (!restrictSwipeHorizontal)
+            if (!restrictSwipeDiagonal & (!restrictSwipeHorizontal & !restrictSwipeVertical))
+            {
+                GameMovement(direction);
+                currentLane = LaneManager.laneData[(int)targetLane.laneID];
+                setShipForwardSpeed = 40;
+            }
+            else if (!restrictSwipeHorizontal)
             {
                 if ((direction == GameInput.Direction.E) | (direction == GameInput.Direction.W))
                 {
@@ -217,6 +223,7 @@ public class Ship_Movement : MonoBehaviour {
                     TutorialManager.diagonal.enabled = false;
                 }
             }
+            
             /*
                 if (shipPosition.z < 300)
                 {
