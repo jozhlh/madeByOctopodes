@@ -3,76 +3,68 @@ using System.Collections;
 using System.Collections.Generic;
 
 [ExecuteInEditMode]
-public class Enemy : MonoBehaviour {
-
-    public LaneManager.PlayerLanes inLane;
-
-    List<GameObject> bulletObjects = new List<GameObject>();
-
-    //[SerializeField]
-    public float zPosition = 0.0f;
- //   [SerializeField]
-  //  private float obstacleLength = 1.0f;
-
+public class Enemy : MonoBehaviour
+{
+    [Header("Placement Settings")]
     [SerializeField]
+    // The position of the enemy in the segment
+    private float zPosition = 0.0f;
+    [SerializeField]
+    // The lane which the enemy is in
+    private LaneManager.PlayerLanes inLane;
+
+    [Header("Object References")]
+    [SerializeField]
+    // Refernce to the player object
     private Ship_Movement player = null;
-
     [SerializeField]
+    // Reference to the bullet prefab which will be created
     private GameObject enemyBullet = null;
 
-    private bool playerInRange = false;
-
-    private Vector3 enemyPosition = new Vector3(0, 0, 0);
-    //private Vector3 obstacleSize = new Vector3(1, 1, 1);
-
+    [Header("Attributes")]
     [SerializeField]
+    // The time between shots fired
     private float cooldown = 2;
+    // Whether the player is in range of the enemy
+    private bool playerInRange = false;
+    // The current position of this enemy
+    private Vector3 enemyPosition = new Vector3(0, 0, 0);
+    // The time until a shot can be fired again
     private float cooldownProgress;
-
-    public Segment seg = new Segment();
+    // A reference to all created bullets
+    private List<GameObject> bulletObjects = new List<GameObject>();
 
     // Use this for initialization
     void Start()
     {
         cooldownProgress = cooldown;
-        seg = GetComponentInParent<Segment>();
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            playerInRange = true;
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Get positional data according to the lane this enemy is in
         enemyPosition.x = LaneManager.laneData[(int)inLane].laneX;
         enemyPosition.y = LaneManager.laneData[(int)inLane].laneY;
+
+        // Advance cooldown
         cooldownProgress -= Time.deltaTime;
 
+        // If the player is in range, move the enemy, otherwise put it in starting position
         if (playerInRange)
         {
             enemyPosition.z += (player.shipForwardSpeed * Time.deltaTime);
 
-
+            // If the player is in range fire at the player
             if (cooldownProgress < 0)
             {
                 Fire();
                 cooldownProgress = cooldown;
             }
-            // fire at player
-            // if not on cooldown
-            // get player position
-            // calculate where player will be for collision
-            // shoot there
-            // start cooldown
         }
         else
         {
-            enemyPosition.z = zPosition + seg.transform.position.z;;
+            enemyPosition.z = zPosition + GetComponentInParent<Segment>().transform.position.z;;
         }
 
         //TODO: Enemys to avoid obstacles
@@ -85,9 +77,18 @@ public class Enemy : MonoBehaviour {
         // move to that lane
 
         gameObject.transform.position = enemyPosition;
-
     }
 
+    void OnTriggerEnter(Collider other)
+    {
+        // If player has entered detection range, start firing at it
+        if (other.tag == "Player")
+        {
+            playerInRange = true;
+        }
+    }
+
+    // Reset all variables and bullet objects
     public void ResetEnemy()
     {
         cooldownProgress = cooldown;
@@ -98,26 +99,25 @@ public class Enemy : MonoBehaviour {
             Destroy(bullet);
         }
         bulletObjects.Clear();
-        //      Debug.Log("Reset to position" + zPosition);
     }
 
+    // Instantiate a bullet object at this enemy's position
     void Fire()
     {
-        Vector3 bulletStartPos = new Vector3();
-
-        bulletStartPos = GetComponent<Transform>().position;
-
-        Transform bulletStart = GetComponent<Transform>();
-
-        bulletStart.position = bulletStartPos;
-
         GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform.position, transform.rotation);
 
-        newBullet.transform.position = bulletStartPos;
+        newBullet.transform.position = transform.position;
         newBullet.GetComponent<EnemyBullet>().targetLocation = Ship_Movement.shipPosition;
-        newBullet.GetComponent<EnemyBullet>().startPos = bulletStartPos;
+        newBullet.GetComponent<EnemyBullet>().startPos = transform.position;
 
+        // Add the created bullet to this enemy's list of bullets
         bulletObjects.Add(newBullet);
+    }
+
+    // Getter for zPosition
+    public float GetZPosition()
+    {
+        return zPosition;
     }
 
 }

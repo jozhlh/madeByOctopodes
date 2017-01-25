@@ -51,7 +51,7 @@ public class Segment : MonoBehaviour {
         {
 			
             enemyObjects.Add(enemies[ob].gameObject);
-            enemyZStart[ob] = enemies[ob].zPosition;
+            enemyZStart[ob] = enemies[ob].GetZPosition();
         }
 	}
 
