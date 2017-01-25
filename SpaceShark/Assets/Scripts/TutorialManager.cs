@@ -2,17 +2,15 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class TutorialManager : MonoBehaviour {
-
+public class TutorialManager : MonoBehaviour
+{
+    // References to Ui elements
 	[SerializeField]
 	private Text horizontalText = null;
-
 	[SerializeField]
 	private Text verticalText = null;
-
 	[SerializeField]
 	private Text diagonalText = null;
-
 	[SerializeField]
 	private Text shootText = null;
 
@@ -29,11 +27,7 @@ public class TutorialManager : MonoBehaviour {
 		shoot = shootText;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+    // Turns off all tutorial Ui
 	public static void DisableUI()
 	{
 		if (shoot.enabled)
