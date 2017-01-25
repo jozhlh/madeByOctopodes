@@ -40,6 +40,7 @@ public class Segment : MonoBehaviour {
         obstacles = GetComponentsInChildren<Obstacle>();
         for (int ob = 0; ob < numOfObstacles; ob++)
         {
+            obstacles[ob].PlaceObstacle();
             obstacleObjects.Add(obstacles[ob].gameObject);
         }
 

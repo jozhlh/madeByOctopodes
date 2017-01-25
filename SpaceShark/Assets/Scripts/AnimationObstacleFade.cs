@@ -63,7 +63,7 @@ public class AnimationObstacleFade : MonoBehaviour {
         float playerZ = Ship_Movement.shipPosition.z;
 
         // If the obstacle intersects with the top lane at any point, check if the player is in range
-        if (((int)thisObstacle.location < 5) | (((int)thisObstacle.location > 6) & ((int)thisObstacle.location < 10))) // NW_R, NW_D, N, NE_D, NE_L, SE_U, S, SW_U
+        if (((int)thisObstacle.GetLocation() < 5) | (((int)thisObstacle.GetLocation() > 6) & ((int)thisObstacle.GetLocation() < 10))) // NW_R, NW_D, N, NE_D, NE_L, SE_U, S, SW_U
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
             //TODO: Linearly Interpolate this value rather than clamping to give a smoother fade
@@ -83,7 +83,7 @@ public class AnimationObstacleFade : MonoBehaviour {
             }
         }
         // If the obstacle is just in the middle lane, check if the player is nin range
-        else if ((thisObstacle.location == LaneManager.ObstacleLocation.E) | (thisObstacle.location == LaneManager.ObstacleLocation.W)) // E, W
+        else if ((thisObstacle.GetLocation() == LaneManager.ObstacleLocation.E) | (thisObstacle.GetLocation() == LaneManager.ObstacleLocation.W)) // E, W
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
             //TODO: Linearly Interpolate this value rather than clamping to give a smoother fade

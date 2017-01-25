@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class InputData {
+// Class for storing data from user input
+public class InputData
+{
 
     public float duration;
     public Vector3 initialPosition;
@@ -9,17 +11,7 @@ public class InputData {
     public float speed;
     public float displacement;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-        
-	}
-
+    // Populate class data using known variables
     public void CalculateInput()
     {
         displacement = Vector3.Distance(initialPosition, endPosition);
