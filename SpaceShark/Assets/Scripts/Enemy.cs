@@ -107,8 +107,7 @@ public class Enemy : MonoBehaviour
         GameObject newBullet = (GameObject)Instantiate(enemyBullet, transform.position, transform.rotation);
 
         newBullet.transform.position = transform.position;
-        newBullet.GetComponent<EnemyBullet>().targetLocation = Ship_Movement.shipPosition;
-        newBullet.GetComponent<EnemyBullet>().startPos = transform.position;
+        newBullet.GetComponent<EnemyBullet>().Init(Ship_Movement.shipPosition, transform.position);
 
         // Add the created bullet to this enemy's list of bullets
         bulletObjects.Add(newBullet);
