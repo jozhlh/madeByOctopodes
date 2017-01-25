@@ -86,7 +86,7 @@ public class Segment : MonoBehaviour {
         {
             enemy.SetActive(true);
             enemies[iterator].ResetEnemy();
-            enemy.GetComponentInChildren<EnemyHitBox>().destroyThis = false;
+            enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy = false;
             iterator++;
         }
     }
@@ -95,7 +95,7 @@ public class Segment : MonoBehaviour {
 	{
 		 foreach (GameObject enemy in enemyObjects)
         {
-            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyThis)
+            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy)
             {
                 enemy.SetActive(false);
             }

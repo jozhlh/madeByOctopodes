@@ -29,7 +29,7 @@ public class PlayerBullet : MonoBehaviour {
             {
                 if (other.GetComponent<EnemyHitBox>())
                 {
-                    other.GetComponent<EnemyHitBox>().destroyThis = true;
+                    other.GetComponent<EnemyHitBox>().destroyEnemy = true;
                 }
                 else
                 {

@@ -1,37 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EnemyHitBox : MonoBehaviour {
-
-    public bool destroyThis = false;
-
-    [SerializeField]
-    private int enemyValue = 10;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
+public class EnemyHitBox : MonoBehaviour
+{ 
+    // Used for tracking whether the enemy has been hit and needs destroying
+    public bool destroyEnemy = false;
 
     void OnTriggerEnter(Collider other)
     {
-   //     Debug.Log("enemy hit by" + other.tag);
+        // If enemy is hit by a bullet or obstacle, destroy it and add score
         if ((other.tag == "Bullet") | (other.tag == "Obstacle"))
         {
             // Kill enemy
-            destroyThis = true;
+            destroyEnemy = true;
         }
         if (other.tag == "Bullet")
         {
-            PlayerScore.score += enemyValue;
+            PlayerScore.EnemyKilled();
         }
     }
-
-    // Update is called once per frame
-    void Update () {
-	
-        
-	}
-
-   
 }
