@@ -4,7 +4,6 @@ using System.Collections;
 // Class for storing data from user input
 public class InputData
 {
-
     public float duration;
     public Vector3 initialPosition;
     public Vector3 endPosition;
