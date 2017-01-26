@@ -2,11 +2,13 @@
 using System.Collections;
 
 [ExecuteInEditMode]
-public class LaneManager : MonoBehaviour {
-
+public class LaneManager : MonoBehaviour
+{
+    // Enums for player and obstacle lane placement / orientation
     public enum ObstacleLocation { NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_R, W };
     public enum PlayerLanes { NW, N, NE, W, C, E, SW, S, SE };
 
+    // Containers for positional information of each lane
     public struct ObstacleLocationInfo
     {
         public ObstacleLocation locationID;
@@ -23,47 +25,37 @@ public class LaneManager : MonoBehaviour {
         public float laneY;
     }
 
+    // All of the positional information for all lanes
     public static LaneInfo[] laneData = new LaneInfo[9];
+    public static ObstacleLocationInfo[] obstacleLocationData = new ObstacleLocationInfo[12];
 
+    [Header("Lane Size Adjustment")]
     [SerializeField]
+    // The width of an individual lane
     private float laneWidth = 2.0f;
     [SerializeField]
+    // The height of an individual lane
     private float laneHeight = 2.0f;
     [SerializeField]
+    // The length of the level
     private float laneLength = 60.0f;
 
 
-    public static float laneSpacingHorizontal;
-    public static float laneSpacingVertical;
-    public static float lengthOfLevel;
+    public static float laneSpacingHorizontal = laneWidth;
+    public static float laneSpacingVertical = laneHeight;
+    public static float lengthOfLevel = laneLength;
 
-
-
-    public static ObstacleLocationInfo[] obstacleLocationData = new ObstacleLocationInfo[12];
-
+    // When the lane manager is selected, draw a grid to show the lanes
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         laneSpacingHorizontal = laneWidth;
         laneSpacingVertical = laneHeight;
         lengthOfLevel = laneLength;
+        // For each lane, calculate the position and size of its boundaries
         for (int j = 0; j < 9; j++)
         {
-            if (j < 3)
-            {
-                laneData[j].laneX = (-laneSpacingHorizontal) + (j * laneSpacingHorizontal);
-                laneData[j].laneY = laneSpacingVertical;
-            }
-            else if (j < 6)
-            {
-                laneData[j].laneX = (-laneSpacingHorizontal) + ((j - 3) * laneSpacingHorizontal);
-                laneData[j].laneY = 0;
-            }
-            else
-            {
-                laneData[j].laneX = (-laneSpacingHorizontal) + ((j - 6) * laneSpacingHorizontal);
-                laneData[j].laneY = -laneSpacingVertical;
-            }
+            laneData[j] = CalculateLaneData(j);
             Gizmos.DrawWireCube(new Vector3(laneData[j].laneX, laneData[j].laneY, laneLength / 2), new Vector3(laneSpacingHorizontal, laneSpacingVertical, laneLength));
         }
     }
@@ -74,17 +66,7 @@ public class LaneManager : MonoBehaviour {
         InitialiseObstaclePositions();
     }
 
-    // Use this for initialization
-    void Start () {
-
-        
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
+    // For each lane, calculate the position of its boundaries
     private void InitialiseLanes()
     {
         laneSpacingHorizontal = laneWidth;
@@ -92,30 +74,36 @@ public class LaneManager : MonoBehaviour {
         lengthOfLevel = laneLength;
         for (int i = 0; i < 9; i++)
         {
-            laneData[i].laneID = (PlayerLanes)i;
-            if (i < 3)
-            {
-                laneData[i].laneX = (-laneSpacingHorizontal) + (i * laneSpacingHorizontal);
-                laneData[i].laneY = laneSpacingVertical;
-            }
-            else if (i < 6)
-            {
-                laneData[i].laneX = (-laneSpacingHorizontal) + ((i - 3) * laneSpacingHorizontal);
-                laneData[i].laneY = 0;
-            }
-            else
-            {
-                laneData[i].laneX = (-laneSpacingHorizontal) + ((i - 6) * laneSpacingHorizontal);
-                laneData[i].laneY = -laneSpacingVertical;
-            }
+            laneData[i] = CalculateLaneData(i);
         }
- //       currentLane = lane[4];
-//        targetLane = currentLane;
     }
 
+    // Calcuate the positional information of a lane
+    private LaneInfo CalculateLaneData(int laneNum)
+    {
+        LaneInfo lane = new LaneInfo();
+        lane.laneID = laneNum;
+        if (laneNum < 3)
+        {
+            lane[laneNum].laneX = (-laneSpacingHorizontal) + (laneNum * laneSpacingHorizontal);
+            lane[laneNum].laneY = laneSpacingVertical;
+        }
+        else if (laneNum < 6)
+        {
+            lane[laneNum].laneX = (-laneSpacingHorizontal) + ((ilaneNum - 3) * laneSpacingHorizontal);
+            lane[laneNum].laneY = 0;
+        }
+        else
+        {
+            lane[laneNum].laneX = (-laneSpacingHorizontal) + ((laneNum - 6) * laneSpacingHorizontal);
+            lane[laneNum].laneY = -laneSpacingVertical;
+        }
+        return lane;
+    }
+
+    // Calcuate the positional information of an obstacle in each lane
     private void InitialiseObstaclePositions()
     {
-        // NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_L, W
         float offset = 0.0f;
         for (int i = 0; i < 12; i++)
         {
@@ -169,8 +157,6 @@ public class LaneManager : MonoBehaviour {
             {
                 obstacleLocationData[i].yPos = -1.0f * laneHeight;
             }
-
-           
         }
     }
 }
