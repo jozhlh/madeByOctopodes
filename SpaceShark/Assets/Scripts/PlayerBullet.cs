@@ -1,30 +1,42 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerBullet : MonoBehaviour {
+public class PlayerBullet : MonoBehaviour
+{
+    // Whether the bullet will need destroying
+    public bool destroyThis = false;
 
+    [Header("Bullet Variables")]
     [SerializeField]
     private float bulletSpeed = 40.0f;
     [SerializeField]
     private float bulletCulling = 100.0f;
 
-    private Vector3 bulletPosition;
+    private Vector3 bulletPosition = new Vector3(0, 0, 0);
 
-    public bool destroyThis = false;
+    // Update is called once per frame
+    void Update ()
+    {
+        // Move the bullet forwards according to its speed
+        bulletPosition = gameObject.transform.position;
+        bulletPosition.z += Time.deltaTime * bulletSpeed;
 
-    // Use this for initialization
-    void Start () {
-        bulletPosition = new Vector3();
-        
-	}
+        // Destroy the bullet if it has reached its culling range
+        if (bulletPosition.z > (Ship_Movement.shipPosition.z + bulletCulling))
+        {
+            destroyThis = true;
+        }
+
+        gameObject.transform.position = bulletPosition;
+    }
 
     void OnTriggerEnter(Collider other)
     {
-        // Destroy bullet if it hits a wall
+        // Destroy bullet if it hits a wall or enemy
         if ((other.tag == "Obstacle") | (other.tag == "Enemy"))
         {
             destroyThis = true;
-            // Debug.Log("Bullet hit" + other.tag);
+            // Check whether it was the enemy's detection box or hit box that was collided with
             if (other.tag == "Enemy")
             {
                 if (other.GetComponent<EnemyHitBox>())
@@ -34,28 +46,9 @@ public class PlayerBullet : MonoBehaviour {
                 else
                 {
                     destroyThis = false;
-                }  
-            } 
+                }
+            }
         }
     }
 
-    // Update is called once per frame
-    void Update () {
-
-        // gameObject.transform.Translate(0.0f, 0.0f, Time.deltaTime * bulletSpeed);
-        bulletPosition = gameObject.transform.position;
-        bulletPosition.z += Time.deltaTime * bulletSpeed;
-
-        if (bulletPosition.z > (Ship_Movement.shipPosition.z + bulletCulling))
-        {
-            destroyThis = true;
-        }
-
-        gameObject.transform.position = bulletPosition;
-
-
-
-    }
-
-   
 }

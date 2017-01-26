@@ -4,6 +4,27 @@ using System.Collections;
 [ExecuteInEditMode]
 public class LaneManager : MonoBehaviour {
 
+    public enum ObstacleLocation { NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_R, W };
+    public enum PlayerLanes { NW, N, NE, W, C, E, SW, S, SE };
+
+    public struct ObstacleLocationInfo
+    {
+        public ObstacleLocation locationID;
+        public float xPos;
+        public float yPos;
+        public float zRot;
+        public float scale;
+    }
+
+    public struct LaneInfo
+    {
+        public PlayerLanes laneID;
+        public float laneX;
+        public float laneY;
+    }
+
+    public static LaneInfo[] laneData = new LaneInfo[9];
+
     [SerializeField]
     private float laneWidth = 2.0f;
     [SerializeField]
@@ -16,27 +37,7 @@ public class LaneManager : MonoBehaviour {
     public static float laneSpacingVertical;
     public static float lengthOfLevel;
 
-    public enum PlayerLanes { NW, N, NE, W, C, E, SW, S, SE };
 
-    public struct LaneInfo
-    {
-        public PlayerLanes laneID;
-        public float laneX;
-        public float laneY;
-    }
-
-    public static LaneInfo[] laneData = new LaneInfo[9];
-
-    public enum ObstacleLocation {NW_R, NW_D, N, NE_D, NE_L, E, SE_L, SE_U, S, SW_U, SW_R, W}
-
-    public struct ObstacleLocationInfo
-    {
-        public ObstacleLocation locationID;
-        public float xPos;
-        public float yPos;
-        public float zRot;
-        public float scale;
-    }
 
     public static ObstacleLocationInfo[] obstacleLocationData = new ObstacleLocationInfo[12];
 

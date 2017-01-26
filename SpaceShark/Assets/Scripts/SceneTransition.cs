@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class SceneTransition : MonoBehaviour {
+public class SceneTransition : MonoBehaviour
+{
 
 	public void LoadPrototypeLevel()
 	{
@@ -16,10 +17,10 @@ public class SceneTransition : MonoBehaviour {
 		StateManager.gameState = StateManager.States.tutorial;
 	}
 
+    // Load menu and destroy state manager, as it will persist otherwise, duplicating
 	public void LoadMenu()
 	{
 		Destroy(GameObject.FindGameObjectWithTag("StateManager"));
 		SceneManager.LoadScene("menu_scene");
-		//StateManager.gameState = StateManager.States.menu;
 	}
 }
