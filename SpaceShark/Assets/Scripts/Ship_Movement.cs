@@ -1,28 +1,35 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Ship_Movement : MonoBehaviour {
-
-    private float transition = 0.0f;
-    private float animationDuration = 2.0f;
-    [SerializeField]
-    private float setShipForwardSpeed = 40.0f;
-    public float shipForwardSpeed = 1.0f;
+public class Ship_Movement : MonoBehaviour
+{
     public static float gameSpeed;
-    private bool restrictSwipeVertical = true;
-    private bool restrictSwipeHorizontal = true;
-    private bool restrictSwipeDiagonal = true;
-    static public bool restrictBullet = true;
-    [SerializeField]
-    private float shipMovementSpeed = 20.0f;
-
-    [SerializeField]
-    private LevelManager levelManager = null;
-
-    private Transform shipTransform;
+    public static bool restrictBullet = true;
     public static Vector3 shipPosition = new Vector3(0, 0, 0);
     public static LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
     public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
+
+    [SerializeField]
+    private float setShipForwardSpeed = 40.0f;
+    [SerializeField]
+    private float shipMovementSpeed = 20.0f;
+    [SerializeField]
+    private LevelManager levelManager = null;
+    private float transition = 0.0f;
+    private float animationDuration = 2.0f;
+
+    public float shipForwardSpeed = 1.0f;
+
+    private bool restrictSwipeVertical = true;
+    private bool restrictSwipeHorizontal = true;
+    private bool restrictSwipeDiagonal = true;
+
+
+
+
+
+    private Transform shipTransform;
+
 
     private bool reset;
 
