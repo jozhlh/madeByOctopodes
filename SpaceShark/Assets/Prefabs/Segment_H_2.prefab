@@ -1365,7 +1365,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010091010900}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 640}
+  m_LocalPosition: {x: 0, y: 0, z: 1760}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000010961892506}
@@ -2927,9 +2927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 10
   zPosition: 111.5
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000010310454910
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2941,13 +2941,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000010490748562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2959,13 +2958,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000010512305378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2977,13 +2975,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000010710203928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2995,13 +2992,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d742e7774f28ba841b9cc81593e22b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLane: 3
   zPosition: 140
-  player: {fileID: 0}
+  inLane: 3
+  player: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   enemyBullet: {fileID: 1000011276323332, guid: a5eab7668dbd79143a474679f6138cdb,
     type: 2}
   cooldown: 2
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000010736006796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3013,9 +3009,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 6
   zPosition: 20
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000011158775252
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3027,8 +3023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e19027e031d44d795fc8752f6981cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacleObjects: []
-  enemyObjects: []
 --- !u!114 &114000011254313366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3040,13 +3034,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000011550504300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3058,9 +3051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 7
   zPosition: 92
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000011892368546
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3072,13 +3065,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000011903420802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3090,13 +3082,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000012203642024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3108,9 +3099,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 10
   zPosition: 160
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000012551787784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3122,13 +3113,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d742e7774f28ba841b9cc81593e22b85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inLane: 0
   zPosition: 50
-  player: {fileID: 0}
+  inLane: 0
+  player: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   enemyBullet: {fileID: 1000011276323332, guid: a5eab7668dbd79143a474679f6138cdb,
     type: 2}
   cooldown: 2
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000012750573158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3140,9 +3130,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 5
   zPosition: 49.9
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000012769241318
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3154,9 +3144,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 0
   zPosition: 14
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000013095012514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3168,9 +3158,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 8
   zPosition: 92
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000013282091132
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3182,8 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba081b4354bc854fabf947b39238dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyThis: 0
-  enemyValue: 10
+  destroyEnemy: 0
 --- !u!114 &114000013677858758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3195,13 +3184,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114000014009166176
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3213,8 +3201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ba081b4354bc854fabf947b39238dc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyThis: 0
-  enemyValue: 10
+  destroyEnemy: 0
 --- !u!114 &114000014024571694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3226,9 +3213,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 4
   zPosition: 160
-  seg: {fileID: 114000011158775252}
 --- !u!114 &114000014145207044
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3240,10 +3227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 1, g: 0, b: 1, a: 1}
-  transparency: 1
   lowestTransparency: 0.6
   playerDistanceTop: 40
   playerDistanceMid: 20
+  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
