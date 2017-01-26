@@ -1,91 +1,75 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+[ExecuteInEditMode]
 
 public class LevelManager : MonoBehaviour {
 
-    public Vector3 bulletStartPos = new Vector3(0, 0, 0);
-
-    // List<GameObject> obstacleObjects = new List<GameObject>();
- //   [SerializeField]
- //   List<GameObject> rockObjects = new List<GameObject>();
-
-
     private List<GameObject> segmentObjects = new List<GameObject>();
-
     private List<GameObject> bulletObjects = new List<GameObject>();
-
     private List<GameObject> toBeCleared = new List<GameObject>();
-
-    
-   // Obstacle[] obstacles;
-   // Rock[] rocks;
+    private bool playerCanFire = false;
     private Segment[] segments;
-
     
 
     [SerializeField]
     private GameObject player;
-
     [SerializeField]
     private GameObject playerBullet;
+    [SerializeField]
+    private Vector3 bulletOffset =  new Vector3(0,0,0);
 
-  //  [SerializeField]
- //   private SceneTransition sceneTransitionController = null;
+    public int numberOfSegments;
+    public Vector3 bulletStartPos = new Vector3(0, 0, 0);
 
-    // int numberOfObstacles;
-    int numberOfRocks;
-    
-    int numberOfSegments;
-    private bool playerCanFire = false;
-
-	// Use this for initialization
-	void Start ()
+    // Initialization
+    void Start ()
     {
-        playerCanFire = false;
-        numberOfSegments = GetComponentsInChildren<Segment>().Length;
-        segments = new Segment[numberOfSegments];
-        segments = GetComponentsInChildren<Segment>();
-        for (int ob = 0; ob < numberOfSegments; ob++)
-        {
-            segmentObjects.Add(segments[ob].gameObject);
-            segments[ob].AcquireObstacles();
-        }
+            playerCanFire = false;
+            numberOfSegments = GetComponentsInChildren<Segment>().Length;
+            segments = new Segment[numberOfSegments];
+            segments = GetComponentsInChildren<Segment>();
 
-        GameInput.ResetTap();
-        if (GameInput.CanAddToTap())
-        {
-            GameInput.OnTap += PlayerFire;
-        }     
+            for (int ob = 0; ob < numberOfSegments; ob++)
+            {
+                segmentObjects.Add(segments[ob].gameObject);
+                segments[ob].AcquireObstacles();
+            }
+
+            GameInput.ResetTap();
+            if (GameInput.CanAddToTap())
+            {
+                GameInput.OnTap += PlayerFire;
+            }
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-        foreach (GameObject seg in segmentObjects)
-        {         
-            seg.GetComponent<Segment>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
-        }
-
-        if (StateManager.gameState == StateManager.States.tutorial)
-        {
-            if (Ship_Movement.restrictBullet == true)
+            foreach (GameObject seg in segmentObjects)
             {
-                GameInput.OnTap -= PlayerFire;
+                seg.GetComponent<Segment>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
             }
-            else
+
+            if (StateManager.gameState == StateManager.States.tutorial)         //when game is in tutorial level restrict player capabilities 
             {
-                if (!playerCanFire)
+                if (Ship_Movement.restrictBullet == true)
                 {
-                    GameInput.OnTap += PlayerFire;
-                    playerCanFire = true;
+                    GameInput.OnTap -= PlayerFire;
+                }
+                else
+                {
+                    if (!playerCanFire)                                         //renable player capabilities 
+                    {
+                        GameInput.OnTap += PlayerFire;
+                        playerCanFire = true;
+                    }
                 }
             }
-        }
-
-        CleanUp();
+            CleanUp();
     }
 
+    //Reset
     public void ResetLevel()
     {
         if (segmentObjects.Count > 0)
@@ -107,36 +91,39 @@ public class LevelManager : MonoBehaviour {
 
     public void PlayerFire(Vector3 position)
     {
+        //Fire bullet from left cannon
         bulletStartPos = player.GetComponent<Transform>().position;
-        GameObject newBullet = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
-        newBullet.transform.position = bulletStartPos;
-        bulletObjects.Add(newBullet);
+        GameObject bulletLeft = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
+        bulletLeft.transform.position = bulletStartPos + bulletOffset;
+        bulletObjects.Add(bulletLeft);
+
+        //Fire bullet from right cannon 
+        GameObject bulletRight = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
+        bulletOffset.x = -1 * bulletOffset.x;
+        bulletRight.transform.position = bulletStartPos + bulletOffset;
+        bulletObjects.Add(bulletRight);
     }
 
     public void CleanUp()
     {
-        foreach (GameObject seg in segmentObjects)
+        foreach (GameObject seg in segmentObjects)              //Clean up enemies 
         {
             seg.GetComponent<Segment>().CleanUpEnemies();
         }
 
-        foreach (GameObject bullet in bulletObjects)
+        foreach (GameObject bullet in bulletObjects)            //Add bullets to clearence list
         {
             if (bullet.GetComponent<PlayerBullet>().destroyThis)
             {
                 toBeCleared.Add(bullet);
             }
         }
-
-        foreach (GameObject bullet in toBeCleared)
+        foreach (GameObject bullet in toBeCleared)                 //Destroy bullets 
         {
             bulletObjects.Remove(bullet);
             bullet.SetActive(false);
             Destroy(bullet);
         }
-
         toBeCleared.Clear();
     }
-
-    
 }

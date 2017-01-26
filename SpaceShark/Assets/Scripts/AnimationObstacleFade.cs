@@ -38,6 +38,9 @@ public class AnimationObstacleFade : MonoBehaviour {
     // Used for updating the rendering with the correct shader
     private Material mat = null;
 
+    float tParam = 0.0f;
+    float speed = 0.8f;
+
     // Use this for initialization
     void Start ()
     {
@@ -71,10 +74,15 @@ public class AnimationObstacleFade : MonoBehaviour {
             {
                 playerInRange = true;
                 transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceTop;
-                if (transparency < lowestTransparency)
-                {
-                    transparency = lowestTransparency;
-                }
+               // if (transparency < lowestTransparency)
+              //  {
+                   // transparency = lowestTransparency;
+                    if (tParam < 1)
+                    {
+                        tParam += Time.deltaTime * speed;                                   //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                        transparency = Mathf.Lerp(transparency, lowestTransparency, tParam);
+                    }
+              //  }
             }
             else
             {
@@ -91,10 +99,15 @@ public class AnimationObstacleFade : MonoBehaviour {
             {
                 playerInRange = true;
                 transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceMid;
-                if (transparency < lowestTransparency)
-                {
-                    transparency = lowestTransparency;
-                }
+                //if (transparency < lowestTransparency)
+                //{
+                    // transparency = lowestTransparency;
+                    if (tParam < 1)
+                    {
+                        tParam += Time.deltaTime * speed;                                   //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                        transparency = Mathf.Lerp(transparency, lowestTransparency, tParam);
+                    }
+                //}
             }
             else 
             {
