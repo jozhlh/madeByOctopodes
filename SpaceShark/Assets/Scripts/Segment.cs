@@ -5,12 +5,18 @@ using System.Collections.Generic;
 public class Segment : MonoBehaviour
 {
     // Containers for the children of the segment
-	private List<GameObject> obstacleObjects = new List<GameObject>();
-    private List<GameObject> enemyObjects = new List<GameObject>();
+	private List<GameObject> obstacleObjects = null;
+    private List<GameObject> enemyObjects = null;
     private Obstacle[] obstacles;
     private Enemy[] enemies;
 	private int numOfObstacles;
 	private int numberOfEnemies;
+
+    void Start()
+    {
+        obstacleObjects = new List<GameObject>();
+        enemyObjects = new List<GameObject>();
+    }
 
 	public void AcquireObstacles()
 	{

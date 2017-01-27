@@ -31,7 +31,7 @@ public class Ship_Movement : MonoBehaviour
     // How long the intro animation lasts
     private float introDuration = 2.0f;
     // The starting speed of the player, and the speed at any point thereafter
-    private float currentSpeed = 1.0f;
+    private float currentSpeed = 3.0f;
 
     // Restrict players movement in the tutorial
     private bool restrictSwipeVertical = true;
@@ -53,7 +53,7 @@ public class Ship_Movement : MonoBehaviour
         GameInput.ResetSwipe();
         //GameInput.OnTap += HandleOnTap;
         GameInput.OnSwipe += HandleOnSwipe;
-        shipPosition = gameObject.GetComponent<Transform>().position;
+        shipPosition = gameObject.transform.position;
         gameSpeed = currentSpeed;
         reset = false;
 
@@ -89,10 +89,9 @@ public class Ship_Movement : MonoBehaviour
         }
         if (StateManager.gameState == StateManager.States.play)
         {
-            if (introProgress < 1.0f)
+            if (introProgress < introDuration)
             {
-                introProgress += Time.deltaTime * 1 / introDuration;
-        
+                introProgress += Time.deltaTime;
             }
             else
             {
@@ -102,9 +101,9 @@ public class Ship_Movement : MonoBehaviour
         }
         else if (StateManager.gameState == StateManager.States.tutorial)
         {
-            if (introProgress < 1.0f)
+            if (introProgress < introDuration)
             {
-                introProgress += Time.deltaTime * 1 / introDuration;
+                introProgress += Time.deltaTime;
                 TutorialManager.DisableUI();
             }
             else
@@ -123,7 +122,7 @@ public class Ship_Movement : MonoBehaviour
         }
         else if (StateManager.gameState == StateManager.States.tutorial)
         {
-            shipPosition = gameObject.GetComponent<Transform>().position;
+            shipPosition = gameObject.transform.position;
             shipPosition.z += (currentSpeed * Time.deltaTime);
             transform.position = shipPosition;
         }
@@ -180,6 +179,7 @@ public class Ship_Movement : MonoBehaviour
         transform.position = shipPosition;
         targetLane = LaneManager.laneData[4];
         currentLane = targetLane;
+        introProgress = 0.0f;
         PlayerScore.Reset();
     }
 
@@ -349,7 +349,7 @@ public class Ship_Movement : MonoBehaviour
     private void MoveToLane()
     {
       
-        shipPosition = gameObject.GetComponent<Transform>().position;
+        shipPosition = gameObject.transform.position;
         shipPosition.z += (currentSpeed * Time.deltaTime);
         if ((shipPosition.x != targetLane.laneX) | (shipPosition.y != targetLane.laneY))
         {

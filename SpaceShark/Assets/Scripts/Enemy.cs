@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour
         // If the player is in range, move the enemy, otherwise put it in starting position
         if (playerInRange)
         {
-            enemyPosition.z += (player.shipForwardSpeed * Time.deltaTime);
+            enemyPosition.z += (Ship_Movement.gameSpeed * Time.deltaTime);
 
             // If the player is in range fire at the player
             if (cooldownProgress < 0)
@@ -64,7 +64,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            enemyPosition.z = zPosition + GetComponentInParent<Segment>().transform.position.z;;
+            enemyPosition.z = zPosition + GetComponentInParent<Segment>().gameObject.transform.position.z;;
         }
 
         //TODO: Enemys to avoid obstacles
