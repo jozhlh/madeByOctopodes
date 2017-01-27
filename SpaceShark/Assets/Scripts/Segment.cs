@@ -4,7 +4,37 @@ using System.Collections.Generic;
 [ExecuteInEditMode]
 public class Segment : MonoBehaviour
 {
+    public struct ElementContainer { public GameObject prefab; GameSettings.LevelTypes level;};
+    public struct EnemyContainer
+    {
+        public GameObject model;
+        public LaneManager.PlayerLanes lane;
+        public float zPosition;
+
+        public void SetModel(GameObject mod){model = mod;}
+        public void SetLane(LaneManager.PlayerLanes lan){lane = lan;}
+        public void SetPos(float pos){zPosition = pos;}
+    };
+    public struct ObstacleContainer {GameObject model; LaneManager.ObstacleLocation lane; float zPosition; };
+
+    [SerializeField]
+    private GameSettings.LevelTypes levelType;
+
+    [Header("Enemy And Obstacle Prefabs")]
+    [SerializeField]
+    private ElementContainer[] enemyPrefabs = new ElementContainer[GameSettings.numberOfLevelTypes];
+    [SerializeField]
+    private ElementContainer[] obstaclePrefabs = new ElementContainer[GameSettings.numberOfLevelTypes];
+
+
+    [SerializeField]
+    private List<EnemyContainer> placedEnemies = null;
+    [SerializeField]
+    private List<ObstacleContainer> placedObstacles = null;
+
+
     // Containers for the children of the segment
+    [SerializeField]
 	private List<GameObject> obstacleObjects = null;
     private List<GameObject> enemyObjects = null;
     private Obstacle[] obstacles;
@@ -16,6 +46,19 @@ public class Segment : MonoBehaviour
     {
         obstacleObjects = new List<GameObject>();
         enemyObjects = new List<GameObject>();
+    }
+
+    private void UpdateEnemyModels()
+    {
+        if (placedEnemies.Count > 0)
+        {
+            foreach (EnemyContainer placedEnemy in placedEnemies)
+            {
+                placedEnemy.SetModel(enemyPrefabs[(int)levelType].prefab);
+                
+                
+            }
+        }
     }
 
 	public void AcquireObstacles()

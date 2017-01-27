@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameSettings : MonoBehaviour
 {
+	public enum LevelTypes {Lava, Grass, Desert, Ice, Cave};
+	public static int numberOfLevelTypes = 5;
 	public static float sensitivity;
 	public static float gameSpeed;
 	public static float laneMoveSpeed;
