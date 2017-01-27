@@ -96,22 +96,25 @@ public class AnimationObstacleFade : MonoBehaviour
         // If the object is fading, update the alpha value of the material, otherwise apply the solid material
         if (playerInRange)
         {
-			for (int i = 0; i < numberOfRenderers; i++)
-			{
-				attachedRenderers[i].material = fadeMaterial;
-				mat = attachedRenderers[i].material;
-				targetColour.a = transparency;
-            	mat.SetColor("_Color", targetColour);
-			}
+            for (int i = 0; i < numberOfRenderers; i++)
+            {
+                //if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().canFade)
+                //{
+                    attachedRenderers[i].material = fadeMaterial;
+                    mat = attachedRenderers[i].material;
+                    targetColour.a = transparency;
+                    mat.SetColor("_Color", targetColour);
+                //}
+            }
         }
         else
         {
             //TODO: currently assigning solidMaterial each frame for every object, could be optimised
             for (int i = 0; i < numberOfRenderers; i++)
-			{
-				attachedRenderers[i].material = solidMaterial;
-				mat = attachedRenderers[i].material;
-			}
+            {
+                attachedRenderers[i].material = solidMaterial;
+                mat = attachedRenderers[i].material;
+            }
         }
     }
 }

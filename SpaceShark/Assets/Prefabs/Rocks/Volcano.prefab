@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4000012965530996}
   - component: {fileID: 33000010425223432}
   - component: {fileID: 23000011732687562}
+  - component: {fileID: 114673568876987850}
   m_Layer: 0
   m_Name: pCylinder4
   m_TagString: Untagged
@@ -102,6 +103,7 @@ GameObject:
   - component: {fileID: 4000013629534054}
   - component: {fileID: 33000012549383782}
   - component: {fileID: 23000012020927700}
+  - component: {fileID: 114885040044522856}
   m_Layer: 0
   m_Name: pCylinder3
   m_TagString: Untagged
@@ -144,8 +146,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013253202686}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
+  m_LocalPosition: {x: -1.9843025, y: 7.22937, z: -14.665347}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4000010356852444}
@@ -308,9 +310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdb78e0eda6305746afe002aa6922c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  placeObstacle: 0
   location: 0
-  zPosition: 5
-  seg: {fileID: 0}
+  zPosition: 69.2
 --- !u!114 &114000010921951340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -324,8 +326,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
-  targetColour: {r: 0.52156866, g: 0.6431373, b: 0.8117648, a: 1}
-  transparency: 1
-  lowestTransparency: 0.6
-  playerDistanceTop: 40
-  playerDistanceMid: 20
+  targetColour: {r: 1, g: 0, b: 1, a: 1}
+--- !u!114 &114673568876987850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010691918354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 1
+--- !u!114 &114885040044522856
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014107172312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 0
