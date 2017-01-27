@@ -23,10 +23,6 @@ public class GameInput : MonoBehaviour
     private const float DiagonalThresholdLo = 0.462f;
     private const float DiagonalThresholdHi = 0.887f;
 
-    [Header("Input Adjustment")]
-    [SerializeField]
-    // Used for distinguishing between a swipe or a tap
-    private float sensitivity = 200.0f;
     // Start position of an input
     private Vector3 mStartPosition;
     // Start time of an input
@@ -90,7 +86,7 @@ public class GameInput : MonoBehaviour
             thisInput.endPosition = Input.mousePosition;
             thisInput.CalculateInput();
             // If the displacement was under the sensitivity threshold, it is a tap
-            if (thisInput.speed < (sensitivity - thisInput.displacement))
+            if (thisInput.speed < (GameSettings.sensitivity - thisInput.displacement))
             {
                 tap = true;
             }

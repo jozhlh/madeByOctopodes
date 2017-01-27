@@ -1,19 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationObstacleFade : MonoBehaviour {
-
-    [Header("Fade Distance Settings")]
-    [SerializeField]
-    // The lowest level the alpha value will lerp to
-    private float lowestTransparency = 0.2f;     
-    [SerializeField]
-    // The distance from the player an obstacle in the top lane will begin to fade out
-    private float playerDistanceTop = 10.0f;
-    [SerializeField]
-    // The distance from the player an obstacle in the middle lane will begin to fade out
-    private float playerDistanceMid = 5.0f;
-
+public class AnimationObstacleFade : MonoBehaviour
+{
     [Header("Shader Settings")]
     [SerializeField]
     // A material with a diffuse shader
@@ -70,11 +59,11 @@ public class AnimationObstacleFade : MonoBehaviour {
         if (((int)thisObstacle.GetLocation() < 5) | (((int)thisObstacle.GetLocation() > 6) & ((int)thisObstacle.GetLocation() < 10))) // NW_R, NW_D, N, NE_D, NE_L, SE_U, S, SW_U
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
-            if ((zPos - playerZ) < playerDistanceTop)
+            if ((zPos - playerZ) < GameSettings.playerDistanceTop)
             {
                 playerInRange = true;
-                tParam = 1.0f - ((zPos - playerZ) / playerDistanceTop);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
-                transparency = Mathf.Lerp(1.0f, lowestTransparency, tParam);
+                tParam = 1.0f - ((zPos - playerZ) / GameSettings.playerDistanceTop);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                transparency = Mathf.Lerp(1.0f, GameSettings.lowestTransparency, tParam);
             }
             else
             {
@@ -86,11 +75,11 @@ public class AnimationObstacleFade : MonoBehaviour {
         else if ((thisObstacle.GetLocation() == LaneManager.ObstacleLocation.E) | (thisObstacle.GetLocation() == LaneManager.ObstacleLocation.W)) // E, W
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
-            if ((zPos - playerZ) < playerDistanceMid)
+            if ((zPos - playerZ) < GameSettings.playerDistanceMid)
             {
                 playerInRange = true;
-                tParam = 1.0f - ((zPos - playerZ) / playerDistanceMid);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
-                transparency = Mathf.Lerp(1.0f, lowestTransparency, tParam);
+                tParam = 1.0f - ((zPos - playerZ) / GameSettings.playerDistanceMid);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                transparency = Mathf.Lerp(1.0f, GameSettings.lowestTransparency, tParam);
             }
             else 
             {

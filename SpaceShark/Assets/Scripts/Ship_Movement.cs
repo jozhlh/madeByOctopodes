@@ -14,15 +14,6 @@ public class Ship_Movement : MonoBehaviour
     // The lane which the player is moving to
     public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
 
-    [Header("Ship Movement")]
-    [SerializeField]
-    // How fast the player moves
-    private float setMovementSpeed = 40.0f;
-    private float movementSpeed = 40.0f;
-    [SerializeField]
-    // How quickly the player changes lanes
-    private float laneChangeSpeed = 20.0f;
-
     [Header("Game Object References")]
     [SerializeField]
     private LevelManager levelManager = null;
@@ -37,6 +28,8 @@ public class Ship_Movement : MonoBehaviour
     private float introDuration = 2.0f;
     // The starting speed of the player, and the speed at any point thereafter
     private float currentSpeed = 3.0f;
+    // How fast the player moves
+    private float movementSpeed = 40.0f;
 
     // Restrict players movement in the tutorial
     private bool restrictSwipeVertical = true;
@@ -60,7 +53,7 @@ public class Ship_Movement : MonoBehaviour
         currentLane = LaneManager.laneData[4];
         targetLane = currentLane;
         shipPosition = gameObject.transform.position;
-        movementSpeed = setMovementSpeed;
+        movementSpeed = GameSettings.gameSpeed;
         gameSpeed = currentSpeed;
 
         // Disable all player input at start of tutorial
@@ -179,7 +172,7 @@ public class Ship_Movement : MonoBehaviour
     // For tutorial, when player taps after being shown shoot ui, unrestrict all movement
     private void HandleOnTap(Vector3 position)
     {
-        movementSpeed = setMovementSpeed;
+        movementSpeed = GameSettings.gameSpeed;
         TutorialManager.shoot.enabled = false;
         restrictSwipeHorizontal = false;
         restrictSwipeVertical = false;
@@ -211,7 +204,7 @@ public class Ship_Movement : MonoBehaviour
             {
                 GameMovement(direction);
                 currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                movementSpeed = setMovementSpeed;
+                movementSpeed = GameSettings.gameSpeed;
             }
             else if (!restrictSwipeHorizontal)
             {
@@ -219,7 +212,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = setMovementSpeed;
+                    movementSpeed = GameSettings.gameSpeed;
                     restrictSwipeHorizontal = true;
                     TutorialManager.horizontal.enabled = false;
                 }
@@ -230,7 +223,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = setMovementSpeed;
+                    movementSpeed = GameSettings.gameSpeed;
                     restrictSwipeVertical = true;
                     TutorialManager.vertical.enabled = false;
                 }
@@ -241,7 +234,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = setMovementSpeed;
+                    movementSpeed = GameSettings.gameSpeed;
                     restrictSwipeDiagonal = true;
                     TutorialManager.diagonal.enabled = false;
                 }
@@ -325,8 +318,8 @@ public class Ship_Movement : MonoBehaviour
         if ((shipPosition.x != targetLane.laneX) | (shipPosition.y != targetLane.laneY))
         {
             // Move toward the target position
-            shipPosition.x = Mathf.SmoothStep(shipPosition.x, targetLane.laneX, Time.deltaTime * laneChangeSpeed);
-            shipPosition.y = Mathf.SmoothStep(shipPosition.y, targetLane.laneY, Time.deltaTime * laneChangeSpeed);
+            shipPosition.x = Mathf.SmoothStep(shipPosition.x, targetLane.laneX, Time.deltaTime * GameSettings.laneMoveSpeed);
+            shipPosition.y = Mathf.SmoothStep(shipPosition.y, targetLane.laneY, Time.deltaTime * GameSettings.laneMoveSpeed);
         }
         // Set the updated position
         transform.position = shipPosition;

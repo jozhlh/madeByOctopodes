@@ -21,10 +21,6 @@ public class Enemy : MonoBehaviour
     // Reference to the bullet prefab which will be created
     private GameObject enemyBullet = null;
 
-    [Header("Attributes")]
-    [SerializeField]
-    // The time between shots fired
-    private float cooldown = 2;
     // Whether the player is in range of the enemy
     private bool playerInRange = false;
     // The current position of this enemy
@@ -37,7 +33,7 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        cooldownProgress = cooldown;
+        cooldownProgress = GameSettings.cooldown;
     }
 
     // Update is called once per frame
@@ -59,7 +55,7 @@ public class Enemy : MonoBehaviour
             if (cooldownProgress < 0)
             {
                 Fire();
-                cooldownProgress = cooldown;
+                cooldownProgress = GameSettings.cooldown;
             }
         }
         else
@@ -91,7 +87,7 @@ public class Enemy : MonoBehaviour
     // Reset all variables and bullet objects
     public void ResetEnemy()
     {
-        cooldownProgress = cooldown;
+        cooldownProgress = GameSettings.cooldown;
         enemyPosition.z = zPosition;
         playerInRange = false;
         foreach (GameObject bullet in bulletObjects)
