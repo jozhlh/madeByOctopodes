@@ -17,6 +17,7 @@ public class Ship_Movement : MonoBehaviour
     [Header("Ship Movement")]
     [SerializeField]
     // How fast the player moves
+    private float setMovementSpeed = 40.0f;
     private float movementSpeed = 40.0f;
     [SerializeField]
     // How quickly the player changes lanes
@@ -25,6 +26,10 @@ public class Ship_Movement : MonoBehaviour
     [Header("Game Object References")]
     [SerializeField]
     private LevelManager levelManager = null;
+
+    [Header("Tutorial Settings")]
+    [SerializeField]
+    private float unrestrictedMovementDistance = 300.0f;
     
     // How far the player is through the intro intro animation
     private float introProgress = 0.0f;
@@ -55,6 +60,7 @@ public class Ship_Movement : MonoBehaviour
         currentLane = LaneManager.laneData[4];
         targetLane = currentLane;
         shipPosition = gameObject.transform.position;
+        movementSpeed = setMovementSpeed;
         gameSpeed = currentSpeed;
 
         // Disable all player input at start of tutorial
@@ -112,34 +118,30 @@ public class Ship_Movement : MonoBehaviour
             }
 
             // Remove input restricitions past the last helper UI
-            if (shipPosition.z > 300)
+            if (shipPosition.z > unrestrictedMovementDistance)
             {
                 restrictSwipeVertical = false;
                 restrictSwipeHorizontal = false;
                 restrictSwipeDiagonal = false;
                 restrictBullet = false;
             }
+            // Move the player
             MoveToLane();
-        }
-        else if (StateManager.gameState == StateManager.States.tutorial)
-        {
-            shipPosition = gameObject.transform.position;
-            shipPosition.z += (currentSpeed * Time.deltaTime);
-            transform.position = shipPosition;
         }
 
         gameSpeed = currentSpeed;
     }
 
+    // If the player collides with an object, respond according to what the object was
     void OnTriggerEnter(Collider other)
     {
+        // Player loses after hitting a bullet or wall
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
-            //ResetShip();
-            //reset = true;
             levelManager.ResetLevel();
         }
 
+        // Bring up tutorial Ui when the player hits the respective triggers
         if (StateManager.gameState == StateManager.States.tutorial)
         {
             if (other.tag == "HorizontalTutorial")
@@ -174,10 +176,10 @@ public class Ship_Movement : MonoBehaviour
         } 
     }
 
-    // Get the position of any new tap
+    // For tutorial, when player taps after being shown shoot ui, unrestrict all movement
     private void HandleOnTap(Vector3 position)
     {
-        movementSpeed = 40;
+        movementSpeed = setMovementSpeed;
         TutorialManager.shoot.enabled = false;
         restrictSwipeHorizontal = false;
         restrictSwipeVertical = false;
@@ -198,19 +200,18 @@ public class Ship_Movement : MonoBehaviour
             GameMovement(direction);
             currentLane = LaneManager.laneData[(int)targetLane.laneID];
         }
-        
-        
     }
 
+    // Allow movement as long as it is not restricted
     private void TutorialMovement(GameInput.Direction direction)
     {
-        if (introProgress > 1.0f)
+        if (introProgress > introDuration)
         {
             if (!restrictSwipeDiagonal & (!restrictSwipeHorizontal & !restrictSwipeVertical))
             {
                 GameMovement(direction);
                 currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                movementSpeed = 40;
+                movementSpeed = setMovementSpeed;
             }
             else if (!restrictSwipeHorizontal)
             {
@@ -218,7 +219,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = 40;
+                    movementSpeed = setMovementSpeed;
                     restrictSwipeHorizontal = true;
                     TutorialManager.horizontal.enabled = false;
                 }
@@ -229,7 +230,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = 40;
+                    movementSpeed = setMovementSpeed;
                     restrictSwipeVertical = true;
                     TutorialManager.vertical.enabled = false;
                 }
@@ -240,40 +241,18 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    movementSpeed = 40;
+                    movementSpeed = setMovementSpeed;
                     restrictSwipeDiagonal = true;
                     TutorialManager.diagonal.enabled = false;
                 }
             }
-            
-            /*
-                if (shipPosition.z < 300)
-                {
-                    restrictSwipeHorizontal = true;
-                    if (TutorialManager.shoot.enabled)
-                    {
-                        TutorialManager.shoot.enabled = false;
-                    }
-                    else if (TutorialManager.horizontal.enabled)
-                    {
-                        TutorialManager.horizontal.enabled = false;
-                    }
-                    else if (TutorialManager.vertical.enabled)
-                    {
-                        TutorialManager.vertical.enabled = false;
-                    }
-                    else if (TutorialManager.diagonal.enabled)
-                    {
-                        TutorialManager.diagonal.enabled = false;
-                    }
-                }
-            */
         }
     }
 
+    // Set a new target lane based on player swipes, move player
     private void GameMovement(GameInput.Direction direction)
     {
-        if (introProgress > 1.0f)
+        if (introProgress > introDuration)
         {
             switch (direction)
             {
@@ -337,7 +316,7 @@ public class Ship_Movement : MonoBehaviour
         }
     }
 
-    // Mpves the player forward and toward a different lane if necessary
+    // Moves the player forward and toward a different lane if necessary
     private void MoveToLane()
     {
         // Get current position
