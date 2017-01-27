@@ -41,9 +41,9 @@ public class LaneManager : MonoBehaviour
     private float laneLength = 60.0f;
 
 
-    public static float laneSpacingHorizontal = laneWidth;
-    public static float laneSpacingVertical = laneHeight;
-    public static float lengthOfLevel = laneLength;
+    public static float laneSpacingHorizontal = 0.0f;
+    public static float laneSpacingVertical = 0.0f;
+    public static float lengthOfLevel = 0.0f;
 
     // When the lane manager is selected, draw a grid to show the lanes
     void OnDrawGizmosSelected()
@@ -82,21 +82,21 @@ public class LaneManager : MonoBehaviour
     private LaneInfo CalculateLaneData(int laneNum)
     {
         LaneInfo lane = new LaneInfo();
-        lane.laneID = laneNum;
+        lane.laneID = (PlayerLanes)laneNum;
         if (laneNum < 3)
         {
-            lane[laneNum].laneX = (-laneSpacingHorizontal) + (laneNum * laneSpacingHorizontal);
-            lane[laneNum].laneY = laneSpacingVertical;
+            lane.laneX = (-laneSpacingHorizontal) + (laneNum * laneSpacingHorizontal);
+            lane.laneY = laneSpacingVertical;
         }
         else if (laneNum < 6)
         {
-            lane[laneNum].laneX = (-laneSpacingHorizontal) + ((ilaneNum - 3) * laneSpacingHorizontal);
-            lane[laneNum].laneY = 0;
+            lane.laneX = (-laneSpacingHorizontal) + ((laneNum - 3) * laneSpacingHorizontal);
+            lane.laneY = 0;
         }
         else
         {
-            lane[laneNum].laneX = (-laneSpacingHorizontal) + ((laneNum - 6) * laneSpacingHorizontal);
-            lane[laneNum].laneY = -laneSpacingVertical;
+            lane.laneX = (-laneSpacingHorizontal) + ((laneNum - 6) * laneSpacingHorizontal);
+            lane.laneY = -laneSpacingVertical;
         }
         return lane;
     }

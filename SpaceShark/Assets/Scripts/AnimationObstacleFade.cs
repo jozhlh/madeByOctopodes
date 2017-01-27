@@ -64,25 +64,17 @@ public class AnimationObstacleFade : MonoBehaviour {
     {
         // Get current position in level
         float playerZ = Ship_Movement.shipPosition.z;
-
+        // Get the obstacles position in the level
+        float zPos = thisObstacle.gameObject.transform.position.z;
         // If the obstacle intersects with the top lane at any point, check if the player is in range
         if (((int)thisObstacle.GetLocation() < 5) | (((int)thisObstacle.GetLocation() > 6) & ((int)thisObstacle.GetLocation() < 10))) // NW_R, NW_D, N, NE_D, NE_L, SE_U, S, SW_U
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
-            //TODO: Linearly Interpolate this value rather than clamping to give a smoother fade
-            if ((thisObstacle.GetzPosition() - playerZ) < playerDistanceTop)
+            if ((zPos - playerZ) < playerDistanceTop)
             {
                 playerInRange = true;
-                transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceTop;
-               // if (transparency < lowestTransparency)
-              //  {
-                   // transparency = lowestTransparency;
-                    if (tParam < 1)
-                    {
-                        tParam += Time.deltaTime * speed;                                   //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
-                        transparency = Mathf.Lerp(transparency, lowestTransparency, tParam);
-                    }
-              //  }
+                tParam = 1.0f - ((zPos - playerZ) / playerDistanceTop);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                transparency = Mathf.Lerp(1.0f, lowestTransparency, tParam);
             }
             else
             {
@@ -94,20 +86,11 @@ public class AnimationObstacleFade : MonoBehaviour {
         else if ((thisObstacle.GetLocation() == LaneManager.ObstacleLocation.E) | (thisObstacle.GetLocation() == LaneManager.ObstacleLocation.W)) // E, W
         {
             // If the player is in range of this obstacle, get the current fade value, otherwise set the fade value to 1.0f
-            //TODO: Linearly Interpolate this value rather than clamping to give a smoother fade
-            if ((thisObstacle.GetzPosition() - playerZ) < playerDistanceMid)
+            if ((zPos - playerZ) < playerDistanceMid)
             {
                 playerInRange = true;
-                transparency = (thisObstacle.GetzPosition() - playerZ) / playerDistanceMid;
-                //if (transparency < lowestTransparency)
-                //{
-                    // transparency = lowestTransparency;
-                    if (tParam < 1)
-                    {
-                        tParam += Time.deltaTime * speed;                                   //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
-                        transparency = Mathf.Lerp(transparency, lowestTransparency, tParam);
-                    }
-                //}
+                tParam = 1.0f - ((zPos - playerZ) / playerDistanceMid);                                  //This will increment tParam based on Time.deltaTime multiplied by a speed multiplier
+                transparency = Mathf.Lerp(1.0f, lowestTransparency, tParam);
             }
             else 
             {

@@ -3,34 +3,42 @@ using System.Collections;
 
 public class Ship_Movement : MonoBehaviour
 {
+    // Speed that the player is moving, accessible from other scripts
     public static float gameSpeed;
+    // Restrict player from shooting in the tutorial
     public static bool restrictBullet = true;
+    // The ship's current transform position, accessible from other scripts
     public static Vector3 shipPosition = new Vector3(0, 0, 0);
+    // The current lane that the player is in
     public static LaneManager.LaneInfo currentLane = new LaneManager.LaneInfo();
+    // The lane which the player is moving to
     public static LaneManager.LaneInfo targetLane = new LaneManager.LaneInfo();
 
+    [Header("Ship Movement")]
     [SerializeField]
-    private float setShipForwardSpeed = 40.0f;
+    // How fast the player moves
+    private float movementSpeed = 40.0f;
     [SerializeField]
-    private float shipMovementSpeed = 20.0f;
+    // How quickly the player changes lanes
+    private float laneChangeSpeed = 20.0f;
+
+    [Header("Game Object References")]
     [SerializeField]
     private LevelManager levelManager = null;
-    private float transition = 0.0f;
-    private float animationDuration = 2.0f;
+    
+    // How far the player is through the intro intro animation
+    private float introProgress = 0.0f;
+    // How long the intro animation lasts
+    private float introDuration = 2.0f;
+    // The starting speed of the player, and the speed at any point thereafter
+    private float currentSpeed = 1.0f;
 
-    public float shipForwardSpeed = 1.0f;
-
+    // Restrict players movement in the tutorial
     private bool restrictSwipeVertical = true;
     private bool restrictSwipeHorizontal = true;
     private bool restrictSwipeDiagonal = true;
 
-
-
-
-
-    private Transform shipTransform;
-
-
+    // Whether the player needs resetting
     private bool reset;
 
     void Awake ()
@@ -45,9 +53,8 @@ public class Ship_Movement : MonoBehaviour
         GameInput.ResetSwipe();
         //GameInput.OnTap += HandleOnTap;
         GameInput.OnSwipe += HandleOnSwipe;
-        shipTransform = gameObject.GetComponent<Transform>();
-        shipPosition = shipTransform.position;
-        gameSpeed = shipForwardSpeed;
+        shipPosition = gameObject.GetComponent<Transform>().position;
+        gameSpeed = currentSpeed;
         reset = false;
 
         if (StateManager.gameState == StateManager.States.tutorial)
@@ -82,27 +89,27 @@ public class Ship_Movement : MonoBehaviour
         }
         if (StateManager.gameState == StateManager.States.play)
         {
-            if (transition < 1.0f)
+            if (introProgress < 1.0f)
             {
-                transition += Time.deltaTime * 1 / animationDuration;
+                introProgress += Time.deltaTime * 1 / introDuration;
         
             }
             else
             {
-                shipForwardSpeed = setShipForwardSpeed;
+                currentSpeed = movementSpeed;
             }
             MoveToLane();
         }
         else if (StateManager.gameState == StateManager.States.tutorial)
         {
-            if (transition < 1.0f)
+            if (introProgress < 1.0f)
             {
-                transition += Time.deltaTime * 1 / animationDuration;
+                introProgress += Time.deltaTime * 1 / introDuration;
                 TutorialManager.DisableUI();
             }
             else
             {
-                shipForwardSpeed = setShipForwardSpeed;
+                currentSpeed = movementSpeed;
             }
 
             if (shipPosition.z > 300)
@@ -116,12 +123,12 @@ public class Ship_Movement : MonoBehaviour
         }
         else if (StateManager.gameState == StateManager.States.tutorial)
         {
-            shipPosition = shipTransform.position;
-            shipPosition.z += (shipForwardSpeed * Time.deltaTime);
+            shipPosition = gameObject.GetComponent<Transform>().position;
+            shipPosition.z += (currentSpeed * Time.deltaTime);
             transform.position = shipPosition;
         }
 
-        gameSpeed = shipForwardSpeed;
+        gameSpeed = currentSpeed;
     }
 
     void OnTriggerEnter(Collider other)
@@ -138,25 +145,25 @@ public class Ship_Movement : MonoBehaviour
             if (other.tag == "HorizontalTutorial")
             {
                 Debug.Log("horizontal enabled");
-                setShipForwardSpeed = 0;
+                movementSpeed = 0;
                 restrictSwipeHorizontal = false;
                 TutorialManager.horizontal.enabled = true;
             }
             else if (other.tag == "VerticalTutorial")
             {
-                setShipForwardSpeed = 0;
+                movementSpeed = 0;
                 restrictSwipeVertical = false;
                 TutorialManager.vertical.enabled = true;
             }
             else if (other.tag == "DiagonalTutorial")
             {
-                setShipForwardSpeed = 0;
+                movementSpeed = 0;
                 restrictSwipeDiagonal = false;
                 TutorialManager.diagonal.enabled = true;
             }
             else if (other.tag == "ShootingTutorial")
             {
-                setShipForwardSpeed = 0;
+                movementSpeed = 0;
                 restrictSwipeVertical = false;
                 restrictSwipeHorizontal = false;
                 restrictSwipeDiagonal = false;
@@ -179,7 +186,7 @@ public class Ship_Movement : MonoBehaviour
     // Get the position of any new tap
     private void HandleOnTap(Vector3 position)
     {
-        setShipForwardSpeed = 40;
+        movementSpeed = 40;
         TutorialManager.shoot.enabled = false;
         restrictSwipeHorizontal = false;
         restrictSwipeVertical = false;
@@ -206,13 +213,13 @@ public class Ship_Movement : MonoBehaviour
 
     private void TutorialMovement(GameInput.Direction direction)
     {
-        if (transition > 1.0f)
+        if (introProgress > 1.0f)
         {
             if (!restrictSwipeDiagonal & (!restrictSwipeHorizontal & !restrictSwipeVertical))
             {
                 GameMovement(direction);
                 currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                setShipForwardSpeed = 40;
+                movementSpeed = 40;
             }
             else if (!restrictSwipeHorizontal)
             {
@@ -220,7 +227,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    setShipForwardSpeed = 40;
+                    movementSpeed = 40;
                     restrictSwipeHorizontal = true;
                     TutorialManager.horizontal.enabled = false;
                 }
@@ -231,7 +238,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    setShipForwardSpeed = 40;
+                    movementSpeed = 40;
                     restrictSwipeVertical = true;
                     TutorialManager.vertical.enabled = false;
                 }
@@ -242,7 +249,7 @@ public class Ship_Movement : MonoBehaviour
                 {
                     GameMovement(direction);
                     currentLane = LaneManager.laneData[(int)targetLane.laneID];
-                    setShipForwardSpeed = 40;
+                    movementSpeed = 40;
                     restrictSwipeDiagonal = true;
                     TutorialManager.diagonal.enabled = false;
                 }
@@ -275,7 +282,7 @@ public class Ship_Movement : MonoBehaviour
 
     private void GameMovement(GameInput.Direction direction)
     {
-        if (transition > 1.0f)
+        if (introProgress > 1.0f)
         {
             switch (direction)
             {
@@ -342,13 +349,13 @@ public class Ship_Movement : MonoBehaviour
     private void MoveToLane()
     {
       
-        shipPosition = shipTransform.position;
-        shipPosition.z += (shipForwardSpeed * Time.deltaTime);
+        shipPosition = gameObject.GetComponent<Transform>().position;
+        shipPosition.z += (currentSpeed * Time.deltaTime);
         if ((shipPosition.x != targetLane.laneX) | (shipPosition.y != targetLane.laneY))
         {
             // Move toward the target position
-            shipPosition.x = Mathf.SmoothStep(shipPosition.x, targetLane.laneX, Time.deltaTime * shipMovementSpeed);
-            shipPosition.y = Mathf.SmoothStep(shipPosition.y, targetLane.laneY, Time.deltaTime * shipMovementSpeed);
+            shipPosition.x = Mathf.SmoothStep(shipPosition.x, targetLane.laneX, Time.deltaTime * laneChangeSpeed);
+            shipPosition.y = Mathf.SmoothStep(shipPosition.y, targetLane.laneY, Time.deltaTime * laneChangeSpeed);
         }
         // Set the updated position
         transform.position = shipPosition;
