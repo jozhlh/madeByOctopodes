@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" SchemaVersion="75">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="Pickup 2" ID="{46D23B61-C2CD-42E8-BFB5-5C204D38A334}" ShortID="984330274" Type="SoundFX">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Pickup 2" ID="{111409EE-AC3E-4422-B942-57C547515D62}" ShortID="919481620">
+							<Language>SFX</Language>
+							<AudioFile>Pickup 2.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Pickup 2" ID="{111409EE-AC3E-4422-B942-57C547515D62}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

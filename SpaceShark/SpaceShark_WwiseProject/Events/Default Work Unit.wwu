@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" SchemaVersion="75">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Item1" ID="{10E09BE0-0DCD-417A-8390-2D888DD8FA42}">
+					<ChildrenList>
+						<Action Name="Play" ID="{992E36F5-2C59-4B3C-BF11-8AA9E5A77F5A}" ShortID="483409655" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A952CE2A-12FE-4B51-BB65-B51F966641DE}" Global="false">
+									<ObjectRef Name="Pickup 2" ID="{46D23B61-C2CD-42E8-BFB5-5C204D38A334}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
