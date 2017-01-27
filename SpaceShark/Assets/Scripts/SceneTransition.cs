@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
-
 	public void LoadPrototypeLevel()
 	{
 		SceneManager.LoadScene("prototype_1");
@@ -22,5 +21,11 @@ public class SceneTransition : MonoBehaviour
 	{
 		Destroy(GameObject.FindGameObjectWithTag("StateManager"));
 		SceneManager.LoadScene("menu_scene");
+	}
+
+	public void LoadLevel(string targetLevel)
+	{
+		SceneManager.LoadScene(targetLevel);
+		StateManager.gameState = StateManager.States.play;
 	}
 }

@@ -1515,12 +1515,22 @@ Prefab:
     - target: {fileID: 114763202397061854, guid: 26d114f79e9c44008ad8182a2c2028ab,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadPrototypeLevel
+      value: LoadLevel
       objectReference: {fileID: 0}
     - target: {fileID: 114396768650711846, guid: 26d114f79e9c44008ad8182a2c2028ab,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763202397061854, guid: 26d114f79e9c44008ad8182a2c2028ab,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114763202397061854, guid: 26d114f79e9c44008ad8182a2c2028ab,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: prototype_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 26d114f79e9c44008ad8182a2c2028ab, type: 2}
