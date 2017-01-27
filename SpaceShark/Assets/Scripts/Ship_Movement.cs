@@ -38,25 +38,26 @@ public class Ship_Movement : MonoBehaviour
     private bool restrictSwipeHorizontal = true;
     private bool restrictSwipeDiagonal = true;
 
-    // Whether the player needs resetting
-    private bool reset;
-
+    // Set frame rate to 30
     void Awake ()
     {
         Application.targetFrameRate = 30;
     }
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        // Initialiseinput
+        GameInput.ResetSwipe();
+        GameInput.OnSwipe += HandleOnSwipe;
+
+        // Initialise ship
         currentLane = LaneManager.laneData[4];
         targetLane = currentLane;
-        GameInput.ResetSwipe();
-        //GameInput.OnTap += HandleOnTap;
-        GameInput.OnSwipe += HandleOnSwipe;
         shipPosition = gameObject.transform.position;
         gameSpeed = currentSpeed;
-        reset = false;
 
+        // Disable all player input at start of tutorial
         if (StateManager.gameState == StateManager.States.tutorial)
         {
             if (TutorialManager.shoot.enabled)
@@ -76,19 +77,15 @@ public class Ship_Movement : MonoBehaviour
                 TutorialManager.diagonal.enabled = false;
             }
         }
-        
 	}
 
     // Update is called once per frame
     void Update ()
     {
-        if (reset)
-        {
-            //ResetShip();
-            reset = false;
-        }
+        // If the game is in progress, move ship
         if (StateManager.gameState == StateManager.States.play)
         {
+            // If the game has just started, do intro camera movement
             if (introProgress < introDuration)
             {
                 introProgress += Time.deltaTime;
@@ -97,10 +94,13 @@ public class Ship_Movement : MonoBehaviour
             {
                 currentSpeed = movementSpeed;
             }
+            // Move the player
             MoveToLane();
         }
+        // If the tutorial is in progress
         else if (StateManager.gameState == StateManager.States.tutorial)
         {
+            // If the tutorial has just started, do intro camera movement
             if (introProgress < introDuration)
             {
                 introProgress += Time.deltaTime;
@@ -111,6 +111,7 @@ public class Ship_Movement : MonoBehaviour
                 currentSpeed = movementSpeed;
             }
 
+            // Remove input restricitions past the last helper UI
             if (shipPosition.z > 300)
             {
                 restrictSwipeVertical = false;
@@ -135,7 +136,7 @@ public class Ship_Movement : MonoBehaviour
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
             //ResetShip();
-            reset = true;
+            //reset = true;
             levelManager.ResetLevel();
         }
 
@@ -171,16 +172,6 @@ public class Ship_Movement : MonoBehaviour
                 GameInput.OnTap += HandleOnTap;
             }
         } 
-    }
-
-    void ResetShip()
-    {
-        shipPosition = new Vector3 (0, 0, -1);
-        transform.position = shipPosition;
-        targetLane = LaneManager.laneData[4];
-        currentLane = targetLane;
-        introProgress = 0.0f;
-        PlayerScore.Reset();
     }
 
     // Get the position of any new tap
@@ -346,9 +337,10 @@ public class Ship_Movement : MonoBehaviour
         }
     }
 
+    // Mpves the player forward and toward a different lane if necessary
     private void MoveToLane()
     {
-      
+        // Get current position
         shipPosition = gameObject.transform.position;
         shipPosition.z += (currentSpeed * Time.deltaTime);
         if ((shipPosition.x != targetLane.laneX) | (shipPosition.y != targetLane.laneY))
@@ -360,5 +352,4 @@ public class Ship_Movement : MonoBehaviour
         // Set the updated position
         transform.position = shipPosition;
     } 
-
 }
