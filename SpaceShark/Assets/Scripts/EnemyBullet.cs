@@ -3,15 +3,16 @@ using System.Collections;
 
 public class EnemyBullet : MonoBehaviour {
 
-    [SerializeField]
-    // How quickly the bullet moves toward the player
-    private float bulletSpeed = 40.0f;
+    //[SerializeField]
+    //// How quickly the bullet moves toward the player
+    //private float bulletSpeed = 40.0f;
 
     // Positional data
     private Vector3 bulletPosition = new Vector3();
     private Vector3 bulletTrajectory = new Vector3();
 
     // Status data
+    //TODO: Enemy bullet is never destroyed, these variables are not used
     private bool destroyThis = false;
     private float timeStartedMoving;
 

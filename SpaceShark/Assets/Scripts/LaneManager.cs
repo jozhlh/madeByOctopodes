@@ -39,11 +39,16 @@ public class LaneManager : MonoBehaviour
     [SerializeField]
     // The length of the level
     private float laneLength = 60.0f;
+    [SerializeField]
+    // The length of the level
+    private bool recalculateLane = false;
 
 
     public static float laneSpacingHorizontal = 0.0f;
     public static float laneSpacingVertical = 0.0f;
     public static float lengthOfLevel = 0.0f;
+
+    
 
     // When the lane manager is selected, draw a grid to show the lanes
     void OnDrawGizmosSelected()
@@ -64,6 +69,16 @@ public class LaneManager : MonoBehaviour
     {
         InitialiseLanes();
         InitialiseObstaclePositions();
+    }
+
+    void Update()
+    {
+        if(recalculateLane)
+        {
+            InitialiseLanes();
+            InitialiseObstaclePositions();
+            recalculateLane = false;
+        }
     }
 
     // For each lane, calculate the position of its boundaries

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class GameSettings : MonoBehaviour
 {
 	public enum LevelTypes {Lava, Grass, Desert, Ice, Cave};
@@ -13,7 +14,8 @@ public class GameSettings : MonoBehaviour
 	public static float playerDistanceTop;
 	public static float playerDistanceMid;
 	public static float cooldown;
-
+    public static GameObject enemy;
+    public static GameObject obstacle;
 
 	[Header("Input")]
 	[SerializeField]
@@ -25,7 +27,10 @@ public class GameSettings : MonoBehaviour
 	[SerializeField]
 	private float laneChangeSpeed = 10.0f;
 
-	[Header("Obstacle Fade")]
+    [Header("Obstacles")]
+    [SerializeField]
+    // The obstacle prefab for this level
+    private GameObject obstaclePrefab;
 	[SerializeField]
     // The lowest level the alpha value will lerp to
     private float lowestPossibleTransparency = 0.2f;     
@@ -37,7 +42,10 @@ public class GameSettings : MonoBehaviour
     private float fadeDistanceMid = 20.0f;
 
 	[Header("Enemy")]
-	[SerializeField]
+    [SerializeField]
+    // The enemy prefab for this level
+    private GameObject enemyPrefab;
+    [SerializeField]
 	private float firingCooldown = 2.0f;
 
 	// Use this for initialization
@@ -50,6 +58,8 @@ public class GameSettings : MonoBehaviour
 		playerDistanceTop = fadeDistanceTop;
 		playerDistanceMid = fadeDistanceMid;
 		cooldown = firingCooldown;
+        enemy = enemyPrefab;
+        obstacle = obstaclePrefab;
 	}
 	
 	// Update is called once per frame

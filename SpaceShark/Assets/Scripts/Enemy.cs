@@ -14,9 +14,9 @@ public class Enemy : MonoBehaviour
     private LaneManager.PlayerLanes inLane;
 
     [Header("Object References")]
-    [SerializeField]
-    // Refernce to the player object
-    private Ship_Movement player = null;
+    //[SerializeField]
+    //// Refernce to the player object
+    //private Ship_Movement player = null;
     [SerializeField]
     // Reference to the bullet prefab which will be created
     private GameObject enemyBullet = null;
@@ -60,7 +60,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            enemyPosition.z = zPosition + GetComponentInParent<Segment>().gameObject.transform.position.z;;
+            //enemyPosition.z = zPosition + GetComponentInParent<Segment>().gameObject.transform.position.z;
+            enemyPosition.z = zPosition + GetComponentInParent<SegmentData>().gameObject.transform.position.z;
         }
 
         //TODO: Enemys to avoid obstacles
@@ -109,10 +110,26 @@ public class Enemy : MonoBehaviour
         bulletObjects.Add(newBullet);
     }
 
+    // Setters
+    public void SetzPosition(float zPos)
+    {
+        zPosition = zPos;
+    }
+
+    public void SetLocation(LaneManager.PlayerLanes lane)
+    {
+        inLane = lane;
+    }
+
     // Getter for zPosition
     public float GetZPosition()
     {
         return zPosition;
+    }
+
+    public bool IsPlayerInRange()
+    {
+        return playerInRange;
     }
 
 }

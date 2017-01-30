@@ -26,9 +26,8 @@ public class AnimationObstacleFade : MonoBehaviour
     private Renderer[] attachedRenderers = null;
     // Used for updating the rendering with the correct shader
     private Material mat = null;
-
+    // Used for lerping the fade value
     float tParam = 0.0f;
-    float speed = 0.8f;
 
     // Use this for initialization
     void Start ()

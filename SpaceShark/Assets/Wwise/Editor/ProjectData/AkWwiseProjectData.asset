@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
-  - PhysicalPath: Events/Default Work Unit.wwu
+  - PhysicalPath: Events\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: 871023360
-    m_lastTimePart2: -1999354183
+    m_lastTimePsrt1: 722705094
+    m_lastTimePart2: -1999353707
     List:
     - Name: Item1
-      Path: Default Work Unit/Item1
+      Path: Default Work Unit\Item1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -30,35 +30,35 @@ MonoBehaviour:
       Guid: e09be010cd0d7a4183902d888dd8fa42
       maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0F6A9059-8098-420B-B302-7E8368CB6947}'
-    m_lastTimePsrt1: 871023360
-    m_lastTimePart2: -1999354183
+    m_lastTimePsrt1: 723259607
+    m_lastTimePart2: -1999353707
     List: []
   StateWwu:
-  - PhysicalPath: States/Default Work Unit.wwu
+  - PhysicalPath: States\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BD3CD14C-4141-4DDB-8778-C6319B997069}'
-    m_lastTimePsrt1: 871023360
-    m_lastTimePart2: -1999354183
+    m_lastTimePsrt1: 723585212
+    m_lastTimePart2: -1999353707
     List: []
   SwitchWwu:
-  - PhysicalPath: Switches/Default Work Unit.wwu
+  - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}'
-    m_lastTimePsrt1: 871023360
-    m_lastTimePart2: -1999354183
+    m_lastTimePsrt1: 723605263
+    m_lastTimePart2: -1999353707
     List: []
   BankWwu:
-  - PhysicalPath: SoundBanks/Default Work Unit.wwu
+  - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{584A89B9-C19F-4DC7-92E9-511AC3B1CE48}'
-    m_lastTimePsrt1: 871023360
-    m_lastTimePart2: -1999354183
+    m_lastTimePsrt1: 723460137
+    m_lastTimePart2: -1999353707
     List:
     - Name: Soundbank1
-      Path: Default Work Unit/Soundbank1
+      Path: Default Work Unit\Soundbank1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12

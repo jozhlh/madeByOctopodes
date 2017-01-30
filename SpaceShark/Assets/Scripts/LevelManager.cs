@@ -6,10 +6,12 @@ using System.Collections.Generic;
 public class LevelManager : MonoBehaviour {
 
     private List<GameObject> segmentObjects = new List<GameObject>();
+    private List<GameObject> segmentDataObjects = new List<GameObject>();
     private List<GameObject> bulletObjects = new List<GameObject>();
     private List<GameObject> toBeCleared = new List<GameObject>();
     private bool playerCanFire = false;
     private Segment[] segments;
+    private SegmentData[] segmentData;
     
 
     [SerializeField]
@@ -25,33 +27,50 @@ public class LevelManager : MonoBehaviour {
     // Initialization
     void Start ()
     {
-            playerCanFire = false;
-            numberOfSegments = GetComponentsInChildren<Segment>().Length;
-            segments = new Segment[numberOfSegments];
-            segments = GetComponentsInChildren<Segment>();
+        playerCanFire = false;
+        // Old Implementation
+        //numberOfSegments = GetComponentsInChildren<Segment>().Length;
+        //segments = new Segment[numberOfSegments];
+        //segments = GetComponentsInChildren<Segment>();
 
-            for (int ob = 0; ob < numberOfSegments; ob++)
-            {
-                segmentObjects.Add(segments[ob].gameObject);
-                segments[ob].AcquireObstacles();
-            }
+        //for (int ob = 0; ob < numberOfSegments; ob++)
+        //{
+        //    segmentObjects.Add(segments[ob].gameObject);
+        //    segments[ob].AcquireObstacles();
+        //}
 
-            GameInput.ResetTap();
-            if (GameInput.CanAddToTap())
-            {
-                GameInput.OnTap += PlayerFire;
-            }
+        // New Implementation
+        numberOfSegments = GetComponentsInChildren<SegmentData>().Length;
+        segmentData = new SegmentData[numberOfSegments];
+        segmentData = GetComponentsInChildren<SegmentData>();
+
+        for (int ob = 0; ob < numberOfSegments; ob++)
+        {
+            segmentDataObjects.Add(segmentData[ob].gameObject);
+            segmentData[ob].PlaceSegment();
+        }
+
+        GameInput.ResetTap();
+        if (GameInput.CanAddToTap())
+        {
+            GameInput.OnTap += PlayerFire;
+        }
     }
 	
 	// Update is called once per frame
 	void Update ()
     {
-            foreach (GameObject seg in segmentObjects)
-            {
-                seg.GetComponent<Segment>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
-            }
+        //foreach (GameObject seg in segmentObjects)
+        //{
+        //    seg.GetComponent<Segment>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
+        //}
 
-            if (StateManager.gameState == StateManager.States.tutorial)         //when game is in tutorial level restrict player capabilities 
+        foreach (GameObject seg in segmentDataObjects)
+        {
+            seg.GetComponent<SegmentData>().UpdateSegment(player.transform.position.z - (player.transform.localScale.z));
+        }
+
+        if (StateManager.gameState == StateManager.States.tutorial)         //when game is in tutorial level restrict player capabilities 
             {
                 if (Ship_Movement.restrictBullet == true)
                 {
@@ -72,14 +91,22 @@ public class LevelManager : MonoBehaviour {
     //Reset
     public void ResetLevel()
     {
-        if (segmentObjects.Count > 0)
+        //if (segmentObjects.Count > 0)
+        //{
+        //    foreach (GameObject seg in segmentObjects)
+        //    {
+        //        seg.GetComponent<Segment>().ResetObstacles();
+        //    }
+        //}
+
+        if (segmentDataObjects.Count > 0)
         {
-            foreach (GameObject seg in segmentObjects)
+            foreach (GameObject seg in segmentDataObjects)
             {
-                seg.GetComponent<Segment>().ResetObstacles();
+                seg.GetComponent<SegmentData>().ResetObstacles();
             }
         }
-        
+
         if (StateManager.gameState == StateManager.States.tutorial)
         {
             TutorialManager.DisableUI();
@@ -106,9 +133,14 @@ public class LevelManager : MonoBehaviour {
 
     public void CleanUp()
     {
-        foreach (GameObject seg in segmentObjects)              //Clean up enemies 
+        //foreach (GameObject seg in segmentObjects)              //Clean up enemies 
+        //{
+        //    seg.GetComponent<Segment>().CleanUpEnemies();
+        //}
+
+        foreach (GameObject seg in segmentDataObjects)              //Clean up enemies 
         {
-            seg.GetComponent<Segment>().CleanUpEnemies();
+            seg.GetComponent<SegmentData>().CleanUpEnemies();
         }
 
         foreach (GameObject bullet in bulletObjects)            //Add bullets to clearence list

@@ -54,7 +54,11 @@ MonoBehaviour:
   swipeOrTapSensitivity: 200
   speed: 40
   laneChangeSpeed: 10
+  obstaclePrefab: {fileID: 1000013253202686, guid: b642de5a781424b24b78d7515d767194,
+    type: 2}
   lowestPossibleTransparency: 0.2
   fadeDistanceTop: 40
   fadeDistanceMid: 20
+  enemyPrefab: {fileID: 1000013111624904, guid: 538b58f8431659f4c8fd23463558fb06,
+    type: 2}
   firingCooldown: 2
