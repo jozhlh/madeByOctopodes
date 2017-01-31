@@ -7,11 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/menu_scene.unity
+  - enabled: 0
+    path: Assets/Scenes/DeprecatedScenes/prototype_0.unity
+  - enabled: 0
+    path: Assets/Scenes/DeprecatedScenes/prototype_1.unity
+  - enabled: 0
+    path: Assets/Scenes/DeprecatedScenes/prototype_2.unity
   - enabled: 1
-    path: Assets/Scenes/prototype_0.unity
+    path: Assets/Scenes/prototype_Lava.unity
   - enabled: 1
-    path: Assets/Scenes/prototype_1.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_2.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_Josh.unity
+    path: Assets/Scenes/prototype_Tutorial.unity

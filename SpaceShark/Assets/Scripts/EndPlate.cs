@@ -1,23 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class EndPlate : MonoBehaviour {
+public class EndPlate : MonoBehaviour
+{
+    public static float horizon;
 
-    private Transform endPlate;
-    private Vector3 planePosition = new Vector3(0, 0, 0);
-
+    [SerializeField]
+    private float endplateDistance = 500.0f;
 
     // Use this for initialization
-    void Start () {
-	
+    void Start ()
+    {
+        horizon = endplateDistance;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-        endPlate = gameObject.GetComponent<Transform>();
-        planePosition = endPlate.position;
-        planePosition.z = Ship_Movement.shipPosition.z + 500;
-        endPlate.position = planePosition;
-	}
+        transform.position = new Vector3(transform.position.x, transform.position.y, Ship_Movement.shipPosition.z + endplateDistance);
+    }
 }

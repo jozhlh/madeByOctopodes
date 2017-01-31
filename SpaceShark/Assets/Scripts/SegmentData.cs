@@ -6,12 +6,12 @@ using UnityEngine;
 public class SegmentData : MonoBehaviour
 {
     [Header("Models")]
-    [SerializeField]
-    // The obstacle prefab for this level
-    private GameObject obstacle = null;
-    [SerializeField]
-    // The enemy prefab for this level
-    private GameObject enemy = null;
+    //[SerializeField]
+    //// The obstacle prefab for this level
+    //private GameObject obstacle = null;
+    //[SerializeField]
+    //// The enemy prefab for this level
+    //private GameObject enemy = null;
     [SerializeField]
     // The mesh which is used to show the obstacle's position
     private Mesh obMesh = null;
@@ -94,19 +94,21 @@ public class SegmentData : MonoBehaviour
         ClearScene();
         foreach (ObstacleData ob in obstacleTemplates)
         {
-            GameObject newOb = Instantiate(obstacle, transform);
+            GameObject newOb = Instantiate(GameSettings.obstacle, transform);
             newOb.GetComponent<Obstacle>().PlaceObstacle(ob);
             obstacleObjects.Add(newOb);
         }
 
         foreach (EnemyData en in enemyTemplates)
         {
-            GameObject newEn = Instantiate(enemy, transform);
-            newEn.GetComponent<Enemy>().SetzPosition(en.zPosition);
+            GameObject newEn = Instantiate(GameSettings.enemy, transform);
+            newEn.GetComponent<Enemy>().SetzPosition(en.zPosition + transform.position.z);
             newEn.GetComponent<Enemy>().SetLocation(en.lane);
             newEn.GetComponent<Enemy>().ResetEnemy();
             enemyObjects.Add(newEn);
         }
+
+        ResetObstacles();
     }
 
     // If an object is behind the player, cull it

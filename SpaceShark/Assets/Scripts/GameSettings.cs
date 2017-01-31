@@ -48,18 +48,23 @@ public class GameSettings : MonoBehaviour
     [SerializeField]
 	private float firingCooldown = 2.0f;
 
+    void Awake()
+    {
+        sensitivity = swipeOrTapSensitivity;
+        gameSpeed = speed;
+        laneMoveSpeed = laneChangeSpeed;
+        lowestTransparency = lowestPossibleTransparency;
+        playerDistanceTop = fadeDistanceTop;
+        playerDistanceMid = fadeDistanceMid;
+        cooldown = firingCooldown;
+        enemy = enemyPrefab;
+        obstacle = obstaclePrefab;
+    }
+
 	// Use this for initialization
 	void Start ()
 	{
-		sensitivity = swipeOrTapSensitivity;
-		gameSpeed = speed;
-		laneMoveSpeed = laneChangeSpeed;
-		lowestTransparency = lowestPossibleTransparency;
-		playerDistanceTop = fadeDistanceTop;
-		playerDistanceMid = fadeDistanceMid;
-		cooldown = firingCooldown;
-        enemy = enemyPrefab;
-        obstacle = obstaclePrefab;
+
 	}
 	
 	// Update is called once per frame

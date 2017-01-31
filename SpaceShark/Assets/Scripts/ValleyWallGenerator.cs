@@ -40,11 +40,14 @@ public class ValleyWallGenerator : MonoBehaviour
 
     void Update()
     {
-        SpawnValleyWallLeft();
-        SpawnValleyWallRight();
-        SpawnValleyFloor();
-        spawnZ += tileLength;       //move the spawn position forwards the length of one tile 
-        CleanUp();
+        if (spawnZ < (EndPlate.horizon + Ship_Movement.shipPosition.z))
+        {
+            SpawnValleyWallLeft();
+            SpawnValleyWallRight();
+            SpawnValleyFloor();
+            spawnZ += tileLength;       //move the spawn position forwards the length of one tile 
+            CleanUp();
+        }
     }
 
     //reset alll assets 

@@ -26,8 +26,10 @@ public class Ship_Movement : MonoBehaviour
     private float introProgress = 0.0f;
     // How long the intro animation lasts
     private float introDuration = 2.0f;
+    [SerializeField]
     // The starting speed of the player, and the speed at any point thereafter
     private float currentSpeed = 3.0f;
+    [SerializeField]
     // How fast the player moves
     private float movementSpeed = 40.0f;
 

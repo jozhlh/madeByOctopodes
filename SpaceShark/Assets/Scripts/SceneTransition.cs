@@ -6,14 +6,15 @@ public class SceneTransition : MonoBehaviour
 {
 	public void LoadPrototypeLevel()
 	{
-		SceneManager.LoadScene("prototype_Josh");
+		SceneManager.LoadScene("prototype_Lava");
 		StateManager.gameState = StateManager.States.play;
 	}
 
 	public void LoadTutorialLevel()
 	{
-		SceneManager.LoadScene("prototype_0");
-		StateManager.gameState = StateManager.States.tutorial;
+        StateManager.gameState = StateManager.States.tutorial;
+        SceneManager.LoadScene("prototype_Tutorial");
+
 	}
 
     // Load menu and destroy state manager, as it will persist otherwise, duplicating
@@ -25,7 +26,7 @@ public class SceneTransition : MonoBehaviour
 
 	public void LoadLevel(string targetLevel)
 	{
-		SceneManager.LoadScene(targetLevel);
-		StateManager.gameState = StateManager.States.play;
+        StateManager.gameState = StateManager.States.play;
+        SceneManager.LoadScene(targetLevel);
 	}
 }
