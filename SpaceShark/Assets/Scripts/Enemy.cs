@@ -60,7 +60,6 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            //enemyPosition.z = zPosition + GetComponentInParent<Segment>().gameObject.transform.position.z;
             enemyPosition.z = zPosition + GetComponentInParent<SegmentData>().gameObject.transform.position.z;
         }
 

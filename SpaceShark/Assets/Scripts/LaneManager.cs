@@ -47,7 +47,8 @@ public class LaneManager : MonoBehaviour
     public static float laneSpacingHorizontal = 0.0f;
     public static float laneSpacingVertical = 0.0f;
     public static float lengthOfLevel = 0.0f;
-
+    public const int lengthOfSegment = 160;
+    public static bool recalc = false;
     
 
     // When the lane manager is selected, draw a grid to show the lanes
@@ -73,6 +74,11 @@ public class LaneManager : MonoBehaviour
 
     void Update()
     {
+        if (recalc)
+        {
+            recalculateLane = true;
+            recalc = false;
+        }
         if(recalculateLane)
         {
             InitialiseLanes();
@@ -173,5 +179,10 @@ public class LaneManager : MonoBehaviour
                 obstacleLocationData[i].yPos = -1.0f * laneHeight;
             }
         }
+    }
+
+    public static void Recalculate()
+    {
+        recalc = true;
     }
 }

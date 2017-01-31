@@ -3,112 +3,99 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteInEditMode]
-public class SegmentData : MonoBehaviour {
-
+public class SegmentData : MonoBehaviour
+{
+    [Header("Models")]
     [SerializeField]
+    // The obstacle prefab for this level
     private GameObject obstacle = null;
     [SerializeField]
-    private List<ObstacleData> obstacleTemplates = null;
-    private List<GameObject> obstacleObjects = null;
-
-    [SerializeField]
+    // The enemy prefab for this level
     private GameObject enemy = null;
     [SerializeField]
+    // The mesh which is used to show the obstacle's position
+    private Mesh obMesh = null;
+
+    [Header("Obstacles")]
+    [SerializeField]
+    // The data used to populate the segment with obstacles
+    private List<ObstacleData> obstacleTemplates = new List<ObstacleData>();
+    // The obstacles which currently populate the segment
+    private List<GameObject> obstacleObjects = new List<GameObject>();
+
+    [Header("Enemies")]
+    [SerializeField]
+    // The data used to populate the segment with enemies
     private List<EnemyData> enemyTemplates = null;
-    private List<GameObject> enemyObjects = null;
+    // The enemies which currently populate the segment
+    private List<GameObject> enemyObjects = new List<GameObject>();
 
-    [SerializeField]
-    private bool clearObjectsFromScene = false;
-    [SerializeField]
-    private bool placeObjectsInScene = false;
-
-    void Start()
+    // When the segment is selected, draw a grid to show the lanes, draw all children of the segment
+    void OnDrawGizmosSelected()
     {
-        obstacleObjects = new List<GameObject>();
-        enemyObjects = new List<GameObject>();
-   //     obstacleTemplates = new List<ObstacleData>();
+        // Calculate lane sizes and positions and draw them in magenta
+        LaneManager.Recalculate();
+        Gizmos.color = Color.magenta;
+        for (int j = 0; j < 9; j++)
+        {
+            Gizmos.DrawWireCube(new Vector3(LaneManager.laneData[j].laneX, LaneManager.laneData[j].laneY, (LaneManager.lengthOfSegment / 2) + transform.position.z), new Vector3(LaneManager.laneSpacingHorizontal, LaneManager.laneSpacingVertical, LaneManager.lengthOfSegment));
+        }
+
+        // Calculate obstacle positions and draw them in cyan using the provided mesh
+        Gizmos.color = Color.cyan;
+        Vector3 obstaclePosition = new Vector3(0, 0, 0);
+        Quaternion obstacleRotation = new Quaternion();
+        Vector3 obstacleSize = new Vector3(200, 800, 200);
+        foreach (ObstacleData ob in obstacleTemplates)
+        {
+            obstaclePosition.x = LaneManager.obstacleLocationData[(int)ob.lane].xPos;
+            obstaclePosition.y = LaneManager.obstacleLocationData[(int)ob.lane].yPos;
+            obstaclePosition.z = ob.zPosition + transform.position.z;
+            obstacleRotation = Quaternion.Euler(0, 0, LaneManager.obstacleLocationData[(int)ob.lane].zRot);
+            Gizmos.DrawMesh(obMesh, obstaclePosition, obstacleRotation, obstacleSize);
+        }
+
+        // Calculate the enemy positions and draw them as a red sphere
+        Gizmos.color = Color.red;
+        foreach (EnemyData en in enemyTemplates)
+        {
+            obstaclePosition.x = LaneManager.laneData[(int)en.lane].laneX;
+            obstaclePosition.y = LaneManager.laneData[(int)en.lane].laneY;
+            obstaclePosition.z = en.zPosition + transform.position.z;
+            Gizmos.DrawSphere(obstaclePosition, LaneManager.laneSpacingVertical * 0.5f);
+        }
     }
 
-    void Update()
-    {
-        // If designer selects clearObjectsFromScene from inspector, the scene will be cleared of this segment's objects
-        if (clearObjectsFromScene)
-        {
-            ClearScene();
-            clearObjectsFromScene = false;
-        }
-        // If designer selects placeObjectsInScene from inspector, the scene will be populated with this segment's objects
-        if (placeObjectsInScene)
-        {
-            PlaceSegment();
-            placeObjectsInScene = false;
-        }
-        int count = obstacleTemplates.Count;
-        if (obstacleObjects.Count == count)
-        {
-            for (int i = 0; i < count; i++)
-            {
-                obstacleObjects[i].GetComponent<Obstacle>().SetzPosition(obstacleTemplates[i].zPosition);
-                obstacleObjects[i].GetComponent<Obstacle>().SetLocation(obstacleTemplates[i].lane);
-                // obstacleObjects[i].GetComponent<Obstacle>().SetzPosition(obstacleTemplates[i].zPosition);
-            }
-        }
-     //   else { Debug.Log("Inconsistent Lists"); }
-
-
-        //count = enemyTemplates.Count;
-        //for (int i = 0; i < count; i++)
-        //{
-        //   // if (!enemyObjects[i].GetComponent<Enemy>().IsPlayerInRange())
-        //    //{
-        //        enemyObjects[i].GetComponent<Enemy>().SetzPosition(enemyTemplates[i].zPosition);
-        //        enemyObjects[i].GetComponent<Enemy>().SetLocation(enemyTemplates[i].lane);
-        //   // }
-            
-        //    // obstacleObjects[i].GetComponent<Obstacle>().SetzPosition(obstacleTemplates[i].zPosition);
-        //}
-
-
-        UpdateSegment();
-    }
-
+    // If the segement has already been populated with children, remove them from the segment and the scene
     private void ClearScene()
-    {
-        foreach (GameObject ob in obstacleObjects)
-        {
-            DestroyImmediate(ob);
-        }
-        obstacleObjects.Clear();
-
-        foreach (GameObject ob in enemyObjects)
-        {
-            DestroyImmediate(ob);
-        }
-        enemyObjects.Clear();
-    }
-
-    public void UpdateSegment()
     {
         if (obstacleObjects.Count > 0)
         {
             foreach (GameObject ob in obstacleObjects)
             {
-                if (ob.GetComponent<Obstacle>())
-                {
-                    ob.GetComponent<Obstacle>().PlaceObstacle();
-                }
+                DestroyImmediate(ob);
             }
+            obstacleObjects.Clear();
+        }
+
+        if (enemyObjects.Count > 0)
+        {
+            foreach (GameObject ob in enemyObjects)
+            {
+                DestroyImmediate(ob);
+            }
+            enemyObjects.Clear();
         }
     }
 
+    // Remove all children of the segment from the scene, then populate the segment
     public void PlaceSegment()
     {
+        ClearScene();
         foreach (ObstacleData ob in obstacleTemplates)
         {
             GameObject newOb = Instantiate(obstacle, transform);
-            newOb.GetComponent<Obstacle>().SetzPosition(ob.zPosition);
-            newOb.GetComponent<Obstacle>().SetLocation(ob.lane);
-            newOb.GetComponent<Obstacle>().PlaceObstacle();
+            newOb.GetComponent<Obstacle>().PlaceObstacle(ob);
             obstacleObjects.Add(newOb);
         }
 
@@ -118,7 +105,7 @@ public class SegmentData : MonoBehaviour {
             newEn.GetComponent<Enemy>().SetzPosition(en.zPosition);
             newEn.GetComponent<Enemy>().SetLocation(en.lane);
             newEn.GetComponent<Enemy>().ResetEnemy();
-            obstacleObjects.Add(newEn);
+            enemyObjects.Add(newEn);
         }
     }
 

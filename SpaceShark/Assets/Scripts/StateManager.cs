@@ -15,7 +15,8 @@ public class StateManager : MonoBehaviour
 	{
         // Set starting game state to menu scene
 		gameState = States.menu;
+        //gameState = States.play;
         // Make sure the state manager persists across all scenes
-		DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 	}
 }

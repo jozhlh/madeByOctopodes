@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class Obstacle : MonoBehaviour
 {
     [SerializeField]
@@ -16,50 +16,27 @@ public class Obstacle : MonoBehaviour
     private float zPosition = 0.0f;
 
     // The segment the obstacle belongs to
-   // private Segment seg = new Segment();
-
     private SegmentData seg = null;
 
     // Use this for initialization
     void Start ()
     {
-  //      seg = GetComponentInParent<Segment>();
         seg = GetComponentInParent<SegmentData>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // If designer selects placeObstacle from inspector, the obstacle will be moved to its correct location
-        //if (placeObstacle)
-        //{
-            PlaceObstacle();
-        //    placeObstacle = false;
-       // }
     }
 
     // Places the obstacle in the correct position in the scene according to the designer's desired location
-    public void PlaceObstacle()
+    public void PlaceObstacle(ObstacleData posInfo)
     {
+        location = posInfo.lane;
+        zPosition = posInfo.zPosition;
         seg = GetComponentInParent<SegmentData>();
         Vector3 obstaclePosition = new Vector3(0, 0, 0);
-        obstaclePosition.x = LaneManager.obstacleLocationData[(int)location].xPos;
-        obstaclePosition.y = LaneManager.obstacleLocationData[(int)location].yPos;
-        obstaclePosition.z = zPosition + seg.transform.position.z;
+        obstaclePosition.x = LaneManager.obstacleLocationData[(int)posInfo.lane].xPos;
+        obstaclePosition.y = LaneManager.obstacleLocationData[(int)posInfo.lane].yPos;
+        obstaclePosition.z = posInfo.zPosition + seg.transform.position.z;
 
         gameObject.transform.position = obstaclePosition;
-        gameObject.transform.eulerAngles = new Vector3(0, 0, LaneManager.obstacleLocationData[(int)location].zRot);
-    }
-
-    // Setters
-    public void SetzPosition(float zPos)
-    {
-        zPosition = zPos;
-    }
-
-    public void SetLocation(LaneManager.ObstacleLocation inLane)
-    {
-        location = inLane;
+        gameObject.transform.eulerAngles = new Vector3(0, 0, LaneManager.obstacleLocationData[(int)posInfo.lane].zRot);
     }
 
     // Getters

@@ -33,7 +33,7 @@ public class Segment : MonoBehaviour
         // For each obstacle in the segment, set their position in the scene, store a reference to the gameObject
         for (int ob = 0; ob < numOfObstacles; ob++)
         {
-            obstacles[ob].PlaceObstacle();
+            //obstacles[ob].PlaceObstacle();
             obstacleObjects.Add(obstacles[ob].gameObject);
         }
         // Get enemies placed in the segment
