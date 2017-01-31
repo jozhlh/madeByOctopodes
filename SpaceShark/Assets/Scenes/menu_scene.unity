@@ -563,6 +563,11 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: prototype_Lava
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011517152574, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_Text
+      value: Space Shark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b58ab39591f7e483582e5139c37ba7f4, type: 2}
   m_IsPrefabParent: 0
