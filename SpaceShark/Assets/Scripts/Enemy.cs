@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         cooldownProgress = GameSettings.cooldown;
+        playerInRange = false;
     }
 
     // Update is called once per frame
