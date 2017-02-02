@@ -111,6 +111,9 @@ public class LevelManager : MonoBehaviour
         bulletOffset.x = -1 * bulletOffset.x;
         bulletRight.transform.position = bulletStartPos + bulletOffset;
         bulletObjects.Add(bulletRight);
+
+        GetComponent<FireTrigger>().ActivateTrigger();
+        //customTriggers.CustomTrigger();
     }
 
     // Destroy or disable any expired game objects

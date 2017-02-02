@@ -38,6 +38,8 @@ public class Ship_Movement : MonoBehaviour
     private bool restrictSwipeHorizontal = true;
     private bool restrictSwipeDiagonal = true;
 
+    //private AkSoundEngine wwise = new AkSoundEngine();
+
     // Set frame rate to 30
     void Awake ()
     {
@@ -50,6 +52,7 @@ public class Ship_Movement : MonoBehaviour
         // Initialiseinput
         GameInput.ResetSwipe();
         GameInput.OnSwipe += HandleOnSwipe;
+
 
         // Initialise ship
         currentLane = LaneManager.laneData[4];
@@ -195,7 +198,10 @@ public class Ship_Movement : MonoBehaviour
             GameMovement(direction);
             currentLane = LaneManager.laneData[(int)targetLane.laneID];
         }
+
+        GetComponent<SwipeTrigger>().ActivateTrigger();
     }
+
 
     // Allow movement as long as it is not restricted
     private void TutorialMovement(GameInput.Direction direction)

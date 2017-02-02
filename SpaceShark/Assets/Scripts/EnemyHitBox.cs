@@ -12,6 +12,7 @@ public class EnemyHitBox : MonoBehaviour
         if ((other.tag == "Bullet") | (other.tag == "Obstacle"))
         {
             // Kill enemy
+            GetComponent<EnemyDeathTrigger>().ActivateTrigger();
             destroyEnemy = true;
         }
         if (other.tag == "Bullet")

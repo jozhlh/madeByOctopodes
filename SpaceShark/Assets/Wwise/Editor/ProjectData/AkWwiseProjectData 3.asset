@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3361b1ce373f3422eb2852034941a6f8, type: 3}
-  m_Name: AkWwiseProjectData
+  m_Name: AkWwiseProjectData 3
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
@@ -66,10 +66,7 @@ MonoBehaviour:
         ObjectType: 7
       ID: 1647770721
       Guid: badeb9fe2b4832429cce8b18c14ad111
-  ExpandedItems:
-  - /SpaceShark_WwiseProject
-  - /SpaceShark_WwiseProject/Events
-  - /SpaceShark_WwiseProject/Events/Default Work Unit
+  ExpandedItems: []
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1
