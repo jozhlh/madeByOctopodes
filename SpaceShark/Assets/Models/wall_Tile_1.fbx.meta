@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3d82c2ae1408b41d7b94d1eab0924fa3
-timeCreated: 1480687339
+guid: b8e35e98bc9bf4e51838927d6ba2e707
+timeCreated: 1486128207
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -9,8 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: pCube3
-    9500000: //RootNode
+    4300000: pCube4
   materials:
     importMaterials: 1
     materialName: 0
@@ -57,6 +56,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -67,9 +67,12 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

@@ -82,12 +82,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileLength: 40
   valleyWallPrefabs:
-  - {fileID: 1000012940374068, guid: cccf8d1d550025a4389a3e209a01661a, type: 2}
-  - {fileID: 1000012092982500, guid: a63b8db36b1fc8c449bbda289f8fa952, type: 2}
-  - {fileID: 1000011205362902, guid: 654c19bcb8a140646b67b6b1fe1d11ef, type: 2}
+  - {fileID: 1004868614571198, guid: f3d2b8df5cbbe45c18fd8b24037fefd4, type: 2}
+  - {fileID: 1004868614571198, guid: f3d2b8df5cbbe45c18fd8b24037fefd4, type: 2}
+  - {fileID: 1004868614571198, guid: f3d2b8df5cbbe45c18fd8b24037fefd4, type: 2}
   valleyFloorPrefabs:
-  - {fileID: 1000012961928644, guid: 3436084958e26cb47ac0d3f32fb8403a, type: 2}
-  - {fileID: 1000012961928644, guid: 12fbb11473b96414fb301af624c991ca, type: 2}
-  - {fileID: 1000012961928644, guid: 3436084958e26cb47ac0d3f32fb8403a, type: 2}
+  - {fileID: 1583009714766802, guid: 83ec9b2945c784edf8249f7816cfcfb6, type: 2}
+  - {fileID: 1583009714766802, guid: 83ec9b2945c784edf8249f7816cfcfb6, type: 2}
+  - {fileID: 1583009714766802, guid: 83ec9b2945c784edf8249f7816cfcfb6, type: 2}
   wallGap: 7
-  floorGap: 3
+  wallY: -4.5
+  floorGap: -5
