@@ -2,14 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VolcanoEruptionAnimBehaviourController : MonoBehaviour
+public class VolcanoEruptionController : MonoBehaviour
 {
-	public GameObject preEruption = null;
-	public GameObject erupted = null;
+    // The animator attached to the game object
+    private Animator animator = null;
 
-	public void VolcanoFinishedErupting()
-	{
-		preEruption.SetActive(false);
-		erupted.SetActive(true);
-	}
+    void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
+    void Update()
+    {
+        float playerDistance = gameObject.transform.position.z - Ship_Movement.shipPosition.z;
+
+       // Debug.Log("player dist: " + playerDistance);
+       // Debug.Log("range: " + GameSettings.eruptionRange);
+
+        if (playerDistance < GameSettings.eruptionRange)
+        {
+         //   Debug.Log("range");
+            animator.SetBool("ReadyToErupt", true);
+        }
+        else
+        {
+            animator.SetBool("ReadyToErupt", false);
+        }
+    }
 }

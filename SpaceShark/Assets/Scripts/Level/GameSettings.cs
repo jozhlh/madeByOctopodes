@@ -13,6 +13,7 @@ public class GameSettings : MonoBehaviour
 	public static float lowestTransparency;
 	public static float playerDistanceTop;
 	public static float playerDistanceMid;
+    public static float eruptionRange;
 	public static float cooldown;
     public static GameObject enemy;
     public static GameObject obstacle;
@@ -40,8 +41,11 @@ public class GameSettings : MonoBehaviour
     [SerializeField]
     // The distance from the player an obstacle in the middle lane will begin to fade out
     private float fadeDistanceMid = 20.0f;
+    [SerializeField]
+    // The distance from the player an obstacle will erupt
+    private float eruptionDistance = 100.0f;
 
-	[Header("Enemy")]
+    [Header("Enemy")]
     [SerializeField]
     // The enemy prefab for this level
     private GameObject enemyPrefab;
@@ -61,6 +65,7 @@ public class GameSettings : MonoBehaviour
         lowestTransparency = lowestPossibleTransparency;
         playerDistanceTop = fadeDistanceTop;
         playerDistanceMid = fadeDistanceMid;
+        eruptionRange = eruptionDistance;
         cooldown = firingCooldown;
         enemy = enemyPrefab;
         obstacle = obstaclePrefab;
