@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4535758647654010}
   - component: {fileID: 33430149371657284}
   - component: {fileID: 23948722953070142}
+  - component: {fileID: 114598682531657472}
   m_Layer: 0
   m_Name: Leaves
   m_TagString: Untagged
@@ -68,6 +69,7 @@ GameObject:
   - component: {fileID: 4886761090931518}
   - component: {fileID: 33325951683496218}
   - component: {fileID: 23893388794614240}
+  - component: {fileID: 114353626481702860}
   m_Layer: 0
   m_Name: Vines
   m_TagString: Untagged
@@ -103,6 +105,7 @@ GameObject:
   - component: {fileID: 4624128623854672}
   - component: {fileID: 33479713763554458}
   - component: {fileID: 23469201740343180}
+  - component: {fileID: 114901824021948408}
   m_Layer: 0
   m_Name: tree_base
   m_TagString: Untagged
@@ -319,6 +322,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 10, z: 2}
   m_Center: {x: 0, y: 4.5, z: -2}
+--- !u!114 &114353626481702860
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1700763595568458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 1
+--- !u!114 &114598682531657472
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1253930313263858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 1
 --- !u!114 &114720180000861284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -333,6 +360,18 @@ MonoBehaviour:
   solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
+--- !u!114 &114901824021948408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933183274330470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 1
 --- !u!114 &114935099288809362
 MonoBehaviour:
   m_ObjectHideFlags: 1

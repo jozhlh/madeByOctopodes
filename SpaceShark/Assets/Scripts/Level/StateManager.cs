@@ -24,8 +24,8 @@ public class StateManager : MonoBehaviour
 		else
 		{*/
 			gameState = States.menu;
-		//}
-		
+        //}
+       
         //gameState = States.play;
         // Make sure the state manager persists across all scenes
         DontDestroyOnLoad(gameObject);

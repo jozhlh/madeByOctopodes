@@ -97,13 +97,13 @@ public class AnimationObstacleFade : MonoBehaviour
         {
             for (int i = 0; i < numberOfRenderers; i++)
             {
-                //if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().canFade)
-                //{
+                if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().canFade)
+                {
                     attachedRenderers[i].material = fadeMaterial;
                     mat = attachedRenderers[i].material;
                     targetColour.a = transparency;
                     mat.SetColor("_Color", targetColour);
-                //}
+                }
             }
         }
         else

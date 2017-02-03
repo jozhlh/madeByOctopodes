@@ -37,6 +37,7 @@ GameObject:
   - component: {fileID: 4508522491738124}
   - component: {fileID: 33197614084715546}
   - component: {fileID: 23764249592970476}
+  - component: {fileID: 114386561169571974}
   m_Layer: 0
   m_Name: Volcano_base
   m_TagString: Untagged
@@ -54,6 +55,7 @@ GameObject:
   - component: {fileID: 4042824192577226}
   - component: {fileID: 33020034250462778}
   - component: {fileID: 23056833739282942}
+  - component: {fileID: 114227982153941070}
   m_Layer: 0
   m_Name: Lava_stream
   m_TagString: Untagged
@@ -269,6 +271,30 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114227982153941070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1439080133528316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 1
+--- !u!114 &114386561169571974
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1138451153481672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd9b459e50474b22ba02c06a7c69745, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canFade: 0
 --- !u!114 &114434102476384126
 MonoBehaviour:
   m_ObjectHideFlags: 1

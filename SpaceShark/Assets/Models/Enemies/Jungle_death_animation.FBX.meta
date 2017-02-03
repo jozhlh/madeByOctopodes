@@ -167,7 +167,8 @@ ModelImporter:
     4300058: Jungle_death002
     4300060: Jungle_death001
     4300062: Jungle_Death
-    7400000: Take 001
+    7400000: Dying
+    7400002: Dead
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -189,7 +190,195 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dying
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jungle_Death
+        weight: 1
+      - path: Jungle_death001
+        weight: 1
+      - path: Jungle_death002
+        weight: 1
+      - path: Jungle_death003
+        weight: 1
+      - path: Jungle_death004
+        weight: 1
+      - path: Jungle_death005
+        weight: 1
+      - path: Jungle_death006
+        weight: 1
+      - path: Jungle_death007
+        weight: 1
+      - path: Jungle_death008
+        weight: 1
+      - path: Jungle_death009
+        weight: 1
+      - path: Jungle_death010
+        weight: 1
+      - path: Jungle_death011
+        weight: 1
+      - path: Jungle_death012
+        weight: 1
+      - path: Jungle_death013
+        weight: 1
+      - path: Jungle_death014
+        weight: 1
+      - path: Jungle_death015
+        weight: 1
+      - path: Jungle_death016
+        weight: 1
+      - path: Jungle_death017
+        weight: 1
+      - path: Jungle_death018
+        weight: 1
+      - path: Jungle_death019
+        weight: 1
+      - path: Jungle_death020
+        weight: 1
+      - path: Jungle_death021
+        weight: 1
+      - path: Jungle_death022
+        weight: 1
+      - path: Jungle_death023
+        weight: 1
+      - path: Jungle_death024
+        weight: 1
+      - path: Jungle_death025
+        weight: 1
+      - path: Jungle_death026
+        weight: 1
+      - path: Jungle_death027
+        weight: 1
+      - path: Jungle_death028
+        weight: 1
+      - path: Jungle_death029
+        weight: 1
+      - path: Jungle_death030
+        weight: 1
+      - path: Jungle_death031
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dead
+      takeName: Take 001
+      firstFrame: 29.6
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Jungle_Death
+        weight: 1
+      - path: Jungle_death001
+        weight: 1
+      - path: Jungle_death002
+        weight: 1
+      - path: Jungle_death003
+        weight: 1
+      - path: Jungle_death004
+        weight: 1
+      - path: Jungle_death005
+        weight: 1
+      - path: Jungle_death006
+        weight: 1
+      - path: Jungle_death007
+        weight: 1
+      - path: Jungle_death008
+        weight: 1
+      - path: Jungle_death009
+        weight: 1
+      - path: Jungle_death010
+        weight: 1
+      - path: Jungle_death011
+        weight: 1
+      - path: Jungle_death012
+        weight: 1
+      - path: Jungle_death013
+        weight: 1
+      - path: Jungle_death014
+        weight: 1
+      - path: Jungle_death015
+        weight: 1
+      - path: Jungle_death016
+        weight: 1
+      - path: Jungle_death017
+        weight: 1
+      - path: Jungle_death018
+        weight: 1
+      - path: Jungle_death019
+        weight: 1
+      - path: Jungle_death020
+        weight: 1
+      - path: Jungle_death021
+        weight: 1
+      - path: Jungle_death022
+        weight: 1
+      - path: Jungle_death023
+        weight: 1
+      - path: Jungle_death024
+        weight: 1
+      - path: Jungle_death025
+        weight: 1
+      - path: Jungle_death026
+        weight: 1
+      - path: Jungle_death027
+        weight: 1
+      - path: Jungle_death028
+        weight: 1
+      - path: Jungle_death029
+        weight: 1
+      - path: Jungle_death030
+        weight: 1
+      - path: Jungle_death031
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

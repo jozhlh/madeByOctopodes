@@ -29,6 +29,8 @@ public class SegmentData : MonoBehaviour
     private List<EnemyData> enemyTemplates = null;
     // The enemies which currently populate the segment
     private List<GameObject> enemyObjects = new List<GameObject>();
+    // The dead enemy fragments
+    private List<GameObject> deadEnemyObjects = new List<GameObject>();
 
     // When the segment is selected, draw a grid to show the lanes, draw all children of the segment
     void OnDrawGizmosSelected()
@@ -86,6 +88,15 @@ public class SegmentData : MonoBehaviour
             }
             enemyObjects.Clear();
         }
+
+        if (deadEnemyObjects.Count > 0)
+        {
+            foreach (GameObject ob in deadEnemyObjects)
+            {
+                DestroyImmediate(ob);
+            }
+            deadEnemyObjects.Clear();
+        }
     }
 
     // Remove all children of the segment from the scene, then populate the segment
@@ -122,9 +133,18 @@ public class SegmentData : MonoBehaviour
             }
         }
 
-        foreach (GameObject enemy in enemyObjects)
+        //foreach (GameObject enemy in enemyObjects)
+        //{
+        //    if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) < playerBoundary)
+        //    {
+        //        Debug.Log("Deactivate");
+        //        enemy.SetActive(false);
+        //    }
+        //}
+
+        foreach (GameObject enemy in deadEnemyObjects)
         {
-            if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) < playerBoundary)
+            if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) > EndPlate.horizon)
             {
                 enemy.SetActive(false);
             }
@@ -146,7 +166,17 @@ public class SegmentData : MonoBehaviour
             enemy.GetComponent<Enemy>().ResetEnemy();
             //enemies[iterator].ResetEnemy();
             enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy = false;
+            enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed = false;
             iterator++;
+        }
+
+        if (deadEnemyObjects.Count > 0)
+        {
+            foreach (GameObject ob in deadEnemyObjects)
+            {
+                Destroy(ob);
+            }
+            deadEnemyObjects.Clear();
         }
     }
 
@@ -155,9 +185,13 @@ public class SegmentData : MonoBehaviour
     {
         foreach (GameObject enemy in enemyObjects)
         {
-            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy)
+            if (enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy & !enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed)
             {
+                deadEnemyObjects.Add(Instantiate(GameSettings.enemyDeath, enemy.transform.position, enemy.transform.rotation));
+                enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed = true;
+                //Debug.Log("Deactivate");
                 enemy.SetActive(false);
+                //GetComponent<Animator>().
             }
         }
     }

@@ -350,6 +350,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 15666840}
     m_Modifications:
+    - target: {fileID: 114653683062463834, guid: 3a9ee45495da04a42bf1de7ae87ff71e,
+        type: 2}
+      propertyPath: enemyTemplates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4886197809937408, guid: 3a9ee45495da04a42bf1de7ae87ff71e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -385,6 +390,16 @@ Prefab:
     - target: {fileID: 1281880153858294, guid: 3a9ee45495da04a42bf1de7ae87ff71e, type: 2}
       propertyPath: m_Name
       value: Segment_E_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653683062463834, guid: 3a9ee45495da04a42bf1de7ae87ff71e,
+        type: 2}
+      propertyPath: enemyTemplates.Array.data[0].lane
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653683062463834, guid: 3a9ee45495da04a42bf1de7ae87ff71e,
+        type: 2}
+      propertyPath: enemyTemplates.Array.data[0].zPosition
+      value: 76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3a9ee45495da04a42bf1de7ae87ff71e, type: 2}
@@ -553,53 +568,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012737035826, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
     type: 2}
   m_PrefabInternal: {fileID: 91375650}
---- !u!1001 &99778760
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -2.068419
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 2.937123
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -8.963544
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4494276543202864, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-      propertyPath: m_RootOrder
-      value: 17
-      objectReference: {fileID: 0}
-    - target: {fileID: 95114163008369772, guid: aa75ee042d0a54087ab0424b17701484,
-        type: 2}
-      propertyPath: m_ApplyRootMotion
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: aa75ee042d0a54087ab0424b17701484, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &139094356 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4342837036520602, guid: 9d0c7ed94fcb4914c80843e6f0dfb53d,
@@ -727,6 +695,17 @@ Prefab:
       propertyPath: obstaclePrefab
       value: 
       objectReference: {fileID: 1997964464290208, guid: aa75ee042d0a54087ab0424b17701484,
+        type: 2}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: eruptionDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: enemyDeathPrefab
+      value: 
+      objectReference: {fileID: 1573080449986518, guid: 017246965a9b1cb4aba1bc78ed7d8835,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}

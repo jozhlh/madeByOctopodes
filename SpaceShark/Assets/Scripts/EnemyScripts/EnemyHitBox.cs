@@ -6,6 +6,8 @@ public class EnemyHitBox : MonoBehaviour
     // Used for tracking whether the enemy has been hit and needs destroying
     public bool destroyEnemy = false;
 
+    public bool enemyDestroyed = false;
+
     void OnTriggerEnter(Collider other)
     {
         // If enemy is hit by a bullet or obstacle, destroy it and add score

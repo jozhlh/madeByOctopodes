@@ -677,7 +677,8 @@ ModelImporter:
     4300262: Death102
     4300264: Death103
     4300266: Death111
-    7400000: Take 001
+    7400000: Dying
+    7400002: Dead
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -699,7 +700,603 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Dying
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Death001
+        weight: 1
+      - path: Death002
+        weight: 1
+      - path: Death003
+        weight: 1
+      - path: Death004
+        weight: 1
+      - path: Death005
+        weight: 1
+      - path: Death006
+        weight: 1
+      - path: Death007
+        weight: 1
+      - path: Death008
+        weight: 1
+      - path: Death009
+        weight: 1
+      - path: Death010
+        weight: 1
+      - path: Death011
+        weight: 1
+      - path: Death012
+        weight: 1
+      - path: Death013
+        weight: 1
+      - path: Death014
+        weight: 1
+      - path: Death015
+        weight: 1
+      - path: Death016
+        weight: 1
+      - path: Death017
+        weight: 1
+      - path: Death018
+        weight: 1
+      - path: Death019
+        weight: 1
+      - path: Death020
+        weight: 1
+      - path: Death021
+        weight: 1
+      - path: Death022
+        weight: 1
+      - path: Death023
+        weight: 1
+      - path: Death024
+        weight: 1
+      - path: Death025
+        weight: 1
+      - path: Death026
+        weight: 1
+      - path: Death027
+        weight: 1
+      - path: Death028
+        weight: 1
+      - path: Death029
+        weight: 1
+      - path: Death030
+        weight: 1
+      - path: Death031
+        weight: 1
+      - path: Death032
+        weight: 1
+      - path: Death033
+        weight: 1
+      - path: Death034
+        weight: 1
+      - path: Death035
+        weight: 1
+      - path: Death036
+        weight: 1
+      - path: Death037
+        weight: 1
+      - path: Death038
+        weight: 1
+      - path: Death039
+        weight: 1
+      - path: Death040
+        weight: 1
+      - path: Death041
+        weight: 1
+      - path: Death042
+        weight: 1
+      - path: Death043
+        weight: 1
+      - path: Death044
+        weight: 1
+      - path: Death045
+        weight: 1
+      - path: Death046
+        weight: 1
+      - path: Death047
+        weight: 1
+      - path: Death048
+        weight: 1
+      - path: Death049
+        weight: 1
+      - path: Death050
+        weight: 1
+      - path: Death051
+        weight: 1
+      - path: Death052
+        weight: 1
+      - path: Death053
+        weight: 1
+      - path: Death054
+        weight: 1
+      - path: Death055
+        weight: 1
+      - path: Death056
+        weight: 1
+      - path: Death057
+        weight: 1
+      - path: Death058
+        weight: 1
+      - path: Death059
+        weight: 1
+      - path: Death060
+        weight: 1
+      - path: Death061
+        weight: 1
+      - path: Death062
+        weight: 1
+      - path: Death063
+        weight: 1
+      - path: Death064
+        weight: 1
+      - path: Death065
+        weight: 1
+      - path: Death066
+        weight: 1
+      - path: Death067
+        weight: 1
+      - path: Death068
+        weight: 1
+      - path: Death069
+        weight: 1
+      - path: Death070
+        weight: 1
+      - path: Death071
+        weight: 1
+      - path: Death072
+        weight: 1
+      - path: Death073
+        weight: 1
+      - path: Death074
+        weight: 1
+      - path: Death075
+        weight: 1
+      - path: Death076
+        weight: 1
+      - path: Death077
+        weight: 1
+      - path: Death078
+        weight: 1
+      - path: Death079
+        weight: 1
+      - path: Death080
+        weight: 1
+      - path: Death081
+        weight: 1
+      - path: Death082
+        weight: 1
+      - path: Death083
+        weight: 1
+      - path: Death084
+        weight: 1
+      - path: Death085
+        weight: 1
+      - path: Death086
+        weight: 1
+      - path: Death087
+        weight: 1
+      - path: Death088
+        weight: 1
+      - path: Death089
+        weight: 1
+      - path: Death090
+        weight: 1
+      - path: Death091
+        weight: 1
+      - path: Death092
+        weight: 1
+      - path: Death093
+        weight: 1
+      - path: Death094
+        weight: 1
+      - path: Death095
+        weight: 1
+      - path: Death096
+        weight: 1
+      - path: Death097
+        weight: 1
+      - path: Death098
+        weight: 1
+      - path: Death099
+        weight: 1
+      - path: Death100
+        weight: 1
+      - path: Death101
+        weight: 1
+      - path: Death102
+        weight: 1
+      - path: Death103
+        weight: 1
+      - path: Death104
+        weight: 1
+      - path: Death105
+        weight: 1
+      - path: Death106
+        weight: 1
+      - path: Death107
+        weight: 1
+      - path: Death108
+        weight: 1
+      - path: Death109
+        weight: 1
+      - path: Death110
+        weight: 1
+      - path: Death111
+        weight: 1
+      - path: Death112
+        weight: 1
+      - path: Death113
+        weight: 1
+      - path: Death114
+        weight: 1
+      - path: Death115
+        weight: 1
+      - path: Death116
+        weight: 1
+      - path: Death117
+        weight: 1
+      - path: Death118
+        weight: 1
+      - path: Death119
+        weight: 1
+      - path: Death120
+        weight: 1
+      - path: Death121
+        weight: 1
+      - path: Death122
+        weight: 1
+      - path: Death123
+        weight: 1
+      - path: Death124
+        weight: 1
+      - path: Death125
+        weight: 1
+      - path: Death126
+        weight: 1
+      - path: Death127
+        weight: 1
+      - path: Death128
+        weight: 1
+      - path: Death129
+        weight: 1
+      - path: Death130
+        weight: 1
+      - path: Death131
+        weight: 1
+      - path: Death132
+        weight: 1
+      - path: Death133
+        weight: 1
+      - path: pPyramid003
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Dead
+      takeName: Take 001
+      firstFrame: 29
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Death001
+        weight: 1
+      - path: Death002
+        weight: 1
+      - path: Death003
+        weight: 1
+      - path: Death004
+        weight: 1
+      - path: Death005
+        weight: 1
+      - path: Death006
+        weight: 1
+      - path: Death007
+        weight: 1
+      - path: Death008
+        weight: 1
+      - path: Death009
+        weight: 1
+      - path: Death010
+        weight: 1
+      - path: Death011
+        weight: 1
+      - path: Death012
+        weight: 1
+      - path: Death013
+        weight: 1
+      - path: Death014
+        weight: 1
+      - path: Death015
+        weight: 1
+      - path: Death016
+        weight: 1
+      - path: Death017
+        weight: 1
+      - path: Death018
+        weight: 1
+      - path: Death019
+        weight: 1
+      - path: Death020
+        weight: 1
+      - path: Death021
+        weight: 1
+      - path: Death022
+        weight: 1
+      - path: Death023
+        weight: 1
+      - path: Death024
+        weight: 1
+      - path: Death025
+        weight: 1
+      - path: Death026
+        weight: 1
+      - path: Death027
+        weight: 1
+      - path: Death028
+        weight: 1
+      - path: Death029
+        weight: 1
+      - path: Death030
+        weight: 1
+      - path: Death031
+        weight: 1
+      - path: Death032
+        weight: 1
+      - path: Death033
+        weight: 1
+      - path: Death034
+        weight: 1
+      - path: Death035
+        weight: 1
+      - path: Death036
+        weight: 1
+      - path: Death037
+        weight: 1
+      - path: Death038
+        weight: 1
+      - path: Death039
+        weight: 1
+      - path: Death040
+        weight: 1
+      - path: Death041
+        weight: 1
+      - path: Death042
+        weight: 1
+      - path: Death043
+        weight: 1
+      - path: Death044
+        weight: 1
+      - path: Death045
+        weight: 1
+      - path: Death046
+        weight: 1
+      - path: Death047
+        weight: 1
+      - path: Death048
+        weight: 1
+      - path: Death049
+        weight: 1
+      - path: Death050
+        weight: 1
+      - path: Death051
+        weight: 1
+      - path: Death052
+        weight: 1
+      - path: Death053
+        weight: 1
+      - path: Death054
+        weight: 1
+      - path: Death055
+        weight: 1
+      - path: Death056
+        weight: 1
+      - path: Death057
+        weight: 1
+      - path: Death058
+        weight: 1
+      - path: Death059
+        weight: 1
+      - path: Death060
+        weight: 1
+      - path: Death061
+        weight: 1
+      - path: Death062
+        weight: 1
+      - path: Death063
+        weight: 1
+      - path: Death064
+        weight: 1
+      - path: Death065
+        weight: 1
+      - path: Death066
+        weight: 1
+      - path: Death067
+        weight: 1
+      - path: Death068
+        weight: 1
+      - path: Death069
+        weight: 1
+      - path: Death070
+        weight: 1
+      - path: Death071
+        weight: 1
+      - path: Death072
+        weight: 1
+      - path: Death073
+        weight: 1
+      - path: Death074
+        weight: 1
+      - path: Death075
+        weight: 1
+      - path: Death076
+        weight: 1
+      - path: Death077
+        weight: 1
+      - path: Death078
+        weight: 1
+      - path: Death079
+        weight: 1
+      - path: Death080
+        weight: 1
+      - path: Death081
+        weight: 1
+      - path: Death082
+        weight: 1
+      - path: Death083
+        weight: 1
+      - path: Death084
+        weight: 1
+      - path: Death085
+        weight: 1
+      - path: Death086
+        weight: 1
+      - path: Death087
+        weight: 1
+      - path: Death088
+        weight: 1
+      - path: Death089
+        weight: 1
+      - path: Death090
+        weight: 1
+      - path: Death091
+        weight: 1
+      - path: Death092
+        weight: 1
+      - path: Death093
+        weight: 1
+      - path: Death094
+        weight: 1
+      - path: Death095
+        weight: 1
+      - path: Death096
+        weight: 1
+      - path: Death097
+        weight: 1
+      - path: Death098
+        weight: 1
+      - path: Death099
+        weight: 1
+      - path: Death100
+        weight: 1
+      - path: Death101
+        weight: 1
+      - path: Death102
+        weight: 1
+      - path: Death103
+        weight: 1
+      - path: Death104
+        weight: 1
+      - path: Death105
+        weight: 1
+      - path: Death106
+        weight: 1
+      - path: Death107
+        weight: 1
+      - path: Death108
+        weight: 1
+      - path: Death109
+        weight: 1
+      - path: Death110
+        weight: 1
+      - path: Death111
+        weight: 1
+      - path: Death112
+        weight: 1
+      - path: Death113
+        weight: 1
+      - path: Death114
+        weight: 1
+      - path: Death115
+        weight: 1
+      - path: Death116
+        weight: 1
+      - path: Death117
+        weight: 1
+      - path: Death118
+        weight: 1
+      - path: Death119
+        weight: 1
+      - path: Death120
+        weight: 1
+      - path: Death121
+        weight: 1
+      - path: Death122
+        weight: 1
+      - path: Death123
+        weight: 1
+      - path: Death124
+        weight: 1
+      - path: Death125
+        weight: 1
+      - path: Death126
+        weight: 1
+      - path: Death127
+        weight: 1
+      - path: Death128
+        weight: 1
+      - path: Death129
+        weight: 1
+      - path: Death130
+        weight: 1
+      - path: Death131
+        weight: 1
+      - path: Death132
+        weight: 1
+      - path: Death133
+        weight: 1
+      - path: pPyramid003
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []

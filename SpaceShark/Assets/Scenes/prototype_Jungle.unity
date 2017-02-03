@@ -630,6 +630,12 @@ Prefab:
       value: 
       objectReference: {fileID: 1809846085328238, guid: dfa98f0c7a0514d1d8710b60118b92ad,
         type: 2}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: enemyDeathPrefab
+      value: 
+      objectReference: {fileID: 1609873448720744, guid: 921cf3943ceb8054a94f51ff5784dee5,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
   m_IsPrefabParent: 0

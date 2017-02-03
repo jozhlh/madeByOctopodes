@@ -15,7 +15,9 @@ public class GameSettings : MonoBehaviour
 	public static float playerDistanceMid;
     public static float eruptionRange;
 	public static float cooldown;
+    public static float fragmentSpeed;
     public static GameObject enemy;
+    public static GameObject enemyDeath;
     public static GameObject obstacle;
 
 	[Header("Input")]
@@ -50,7 +52,14 @@ public class GameSettings : MonoBehaviour
     // The enemy prefab for this level
     private GameObject enemyPrefab;
     [SerializeField]
+    // The enemy prefab for this level
+    private GameObject enemyDeathPrefab;
+    [SerializeField]
+    // The enemy's rate of fire
 	private float firingCooldown = 2.0f;
+    [SerializeField]
+    // Speed at which the fragments fall;
+    private float fragmentFallSpeed = 9.8f;
 
     [Header("Debug")]
     [SerializeField]
@@ -67,7 +76,9 @@ public class GameSettings : MonoBehaviour
         playerDistanceMid = fadeDistanceMid;
         eruptionRange = eruptionDistance;
         cooldown = firingCooldown;
+        fragmentSpeed = fragmentFallSpeed;
         enemy = enemyPrefab;
+        enemyDeath = enemyDeathPrefab;
         obstacle = obstaclePrefab;
     }
 
