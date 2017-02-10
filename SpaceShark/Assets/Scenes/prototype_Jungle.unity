@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.85294116, g: 0.5151276, b: 0.13797575, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientEquatorColor: {r: 1, g: 0.13, b: 0.13, a: 1}
   m_AmbientGroundColor: {r: 0.397, g: 0, b: 0, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 1
+  m_AmbientMode: 3
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -817,6 +817,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyWallPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1004868614571198, guid: b6ab2a7a3b98940bd9d0a6471d4ec4d1,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyWallPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1004868614571198, guid: b6ab2a7a3b98940bd9d0a6471d4ec4d1,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyWallPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1004868614571198, guid: b6ab2a7a3b98940bd9d0a6471d4ec4d1,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
   m_IsPrefabParent: 0

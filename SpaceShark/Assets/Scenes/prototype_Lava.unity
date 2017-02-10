@@ -852,6 +852,24 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1783161462221796, guid: f86c60bff6262481aafd0d32b7d73a6c,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1933042390811696, guid: df7003d970fdd48478bdecad0cfa7f72,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1377782539388536, guid: f07a8228a93614473a5ef188eef5c10b,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
   m_IsPrefabParent: 0

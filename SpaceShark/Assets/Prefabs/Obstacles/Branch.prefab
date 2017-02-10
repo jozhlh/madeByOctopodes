@@ -134,7 +134,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809846085328238}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -1.9843025, y: 7.22937, z: -14.665347}
+  m_LocalPosition: {x: -8.539114, y: 3.7283907, z: -26.463928}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4099277409715932}
@@ -334,6 +334,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFade: 1
+  accent: 1
+  baseColour: 0
 --- !u!114 &114598682531657472
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,6 +348,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFade: 1
+  accent: 1
+  baseColour: 0
 --- !u!114 &114720180000861284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -357,8 +361,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56175c8940d574f8ab7d790dbc4dc262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  solidMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  baseMaterial: {fileID: 2100000, guid: 19531b272b10447e78a09da74b1e4616, type: 2}
+  accentMaterial: {fileID: 2100000, guid: d4af79f64368844ae9dc5d067689e935, type: 2}
+  fadeMaterial: {fileID: 2100000, guid: 0278cfc6f2c5f4f8a83e9fae2e106e3d, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114901824021948408
 MonoBehaviour:
@@ -372,6 +377,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFade: 1
+  accent: 0
+  baseColour: 1
 --- !u!114 &114935099288809362
 MonoBehaviour:
   m_ObjectHideFlags: 1

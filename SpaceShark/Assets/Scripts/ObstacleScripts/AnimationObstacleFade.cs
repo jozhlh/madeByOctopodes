@@ -6,7 +6,10 @@ public class AnimationObstacleFade : MonoBehaviour
     [Header("Shader Settings")]
     [SerializeField]
     // A material with a diffuse shader
-    private Material solidMaterial = null;
+    private Material baseMaterial = null;
+    [SerializeField]
+    // A material with a diffuse shader
+    private Material accentMaterial = null;
     [SerializeField]
     // A material with the fade shader
     private Material fadeMaterial = null;
@@ -41,7 +44,15 @@ public class AnimationObstacleFade : MonoBehaviour
         // Apply the opaque mobile shader to all objects in children
 		for (int i = 0; i < numberOfRenderers; i++)
 		{
-			attachedRenderers[i].material = solidMaterial;
+            if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().accent)
+            {
+                attachedRenderers[i].material = accentMaterial;
+            }
+            else
+            {
+                attachedRenderers[i].material = baseMaterial;
+            }
+			//attachedRenderers[i].material = solidMaterial;
 			mat = attachedRenderers[i].material;
 			mat.SetColor("_Color", targetColour);
 		}
@@ -111,8 +122,16 @@ public class AnimationObstacleFade : MonoBehaviour
             //TODO: currently assigning solidMaterial each frame for every object, could be optimised
             for (int i = 0; i < numberOfRenderers; i++)
             {
-                attachedRenderers[i].material = solidMaterial;
-                mat = attachedRenderers[i].material;
+                if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().accent)
+                {
+                    attachedRenderers[i].material = accentMaterial;
+                    mat = attachedRenderers[i].material;
+                }
+                else
+                {
+                    attachedRenderers[i].material = baseMaterial;
+                    mat = attachedRenderers[i].material;
+                }
             }
         }
     }
