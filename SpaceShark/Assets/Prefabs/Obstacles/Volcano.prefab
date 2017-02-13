@@ -326,7 +326,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMaterial: {fileID: 2100000, guid: 1d0d0effe75fd4c2a9e02320dd90afa0, type: 2}
   accentMaterial: {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  baseFadeMaterial: {fileID: 2100000, guid: 16e730bdfe222b24c8c89484389f57cb, type: 2}
+  accentFadeMaterial: {fileID: 2100000, guid: 954d6911ee11145bca8f70a25a4bc1d0, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114877065962550156
 MonoBehaviour:

@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 1397148763533512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.12, z: -2}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children:
   - {fileID: 4730724076800708}
   m_Father: {fileID: 4452763702134452}
@@ -363,7 +363,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseMaterial: {fileID: 2100000, guid: 19531b272b10447e78a09da74b1e4616, type: 2}
   accentMaterial: {fileID: 2100000, guid: d4af79f64368844ae9dc5d067689e935, type: 2}
-  fadeMaterial: {fileID: 2100000, guid: 0278cfc6f2c5f4f8a83e9fae2e106e3d, type: 2}
+  baseFadeMaterial: {fileID: 2100000, guid: 0278cfc6f2c5f4f8a83e9fae2e106e3d, type: 2}
+  accentFadeMaterial: {fileID: 2100000, guid: 486abcf5385764e51bec21041ffddad4, type: 2}
   targetColour: {r: 1, g: 0, b: 1, a: 1}
 --- !u!114 &114901824021948408
 MonoBehaviour:

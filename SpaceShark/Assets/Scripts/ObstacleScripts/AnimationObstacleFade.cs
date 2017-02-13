@@ -12,7 +12,10 @@ public class AnimationObstacleFade : MonoBehaviour
     private Material accentMaterial = null;
     [SerializeField]
     // A material with the fade shader
-    private Material fadeMaterial = null;
+    private Material baseFadeMaterial = null;
+    [SerializeField]
+    // A material with the fade shader
+    private Material accentFadeMaterial = null;
     [SerializeField]
     // Used for holding the correct transparency value
     private Color targetColour = Color.magenta;
@@ -110,17 +113,28 @@ public class AnimationObstacleFade : MonoBehaviour
             {
                 if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().canFade)
                 {
-                    attachedRenderers[i].material = fadeMaterial;
-                    mat = attachedRenderers[i].material;
-                    targetColour.a = transparency;
-                    mat.SetColor("_Color", targetColour);
+                    if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().accent)
+                    {
+                        attachedRenderers[i].material = accentFadeMaterial;
+                        mat = attachedRenderers[i].material;
+                        targetColour.a = transparency;
+                        mat.SetColor("_Color", targetColour);
+                    }
+                    else
+                    {
+                        attachedRenderers[i].material = baseFadeMaterial;
+                        mat = attachedRenderers[i].material;
+                        targetColour.a = transparency;
+                        mat.SetColor("_Color", targetColour);
+                    }
+                    
                 }
             }
         }
         else
         {
             //TODO: currently assigning solidMaterial each frame for every object, could be optimised
-            for (int i = 0; i < numberOfRenderers; i++)
+            /*for (int i = 0; i < numberOfRenderers; i++)
             {
                 if (attachedRenderers[i].gameObject.GetComponent<FadePermissions>().accent)
                 {
@@ -132,7 +146,7 @@ public class AnimationObstacleFade : MonoBehaviour
                     attachedRenderers[i].material = baseMaterial;
                     mat = attachedRenderers[i].material;
                 }
-            }
+            }*/
         }
     }
 }
