@@ -678,6 +678,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1609873448720744, guid: 921cf3943ceb8054a94f51ff5784dee5,
         type: 2}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: fadeDistanceTop
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: fadeDistanceMid
+      value: 40
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
   m_IsPrefabParent: 0
@@ -834,6 +844,24 @@ Prefab:
       propertyPath: valleyWallPrefabs.Array.data[2]
       value: 
       objectReference: {fileID: 1004868614571198, guid: b6ab2a7a3b98940bd9d0a6471d4ec4d1,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1783161462221796, guid: b0fc357f240c446da8003481480e7d31,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1933042390811696, guid: 89060929e75774618be7104250b92c64,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1783161462221796, guid: b0fc357f240c446da8003481480e7d31,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
