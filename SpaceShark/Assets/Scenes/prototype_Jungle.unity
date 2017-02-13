@@ -795,6 +795,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010412391500, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -855,13 +860,30 @@ Prefab:
         type: 2}
       propertyPath: valleyFloorPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 1933042390811696, guid: 89060929e75774618be7104250b92c64,
+      objectReference: {fileID: 1783161462221796, guid: c14e9d79869234981a56a9098749947f,
         type: 2}
     - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
         type: 2}
       propertyPath: valleyFloorPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 1783161462221796, guid: b0fc357f240c446da8003481480e7d31,
+      objectReference: {fileID: 1783161462221796, guid: 214c2bc41081a4994a421b8e0b648632,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: floorGap
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1783161462221796, guid: eb21ee42dbdec4ecbbe56e5bb3339834,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1783161462221796, guid: 5c0584ba3223a45b988414cb765f0244,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
@@ -2479,7 +2501,12 @@ Prefab:
     - target: {fileID: 114000012527605602, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd,
         type: 2}
       propertyPath: recalculateLane
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012527605602, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd,
+        type: 2}
+      propertyPath: offset
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd, type: 2}

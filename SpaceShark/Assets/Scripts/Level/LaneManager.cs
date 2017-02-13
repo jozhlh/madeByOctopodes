@@ -43,6 +43,11 @@ public class LaneManager : MonoBehaviour
     // The length of the level
     private bool recalculateLane = false;
 
+    [Header("Obstacle Placement")]
+    [SerializeField]
+    // The offset of the obstacle (how close it is to a wall)
+    private float offset = 3.5f;
+
 
     public static float laneSpacingHorizontal = 0.0f;
     public static float laneSpacingVertical = 0.0f;
@@ -125,7 +130,7 @@ public class LaneManager : MonoBehaviour
     // Calcuate the positional information of an obstacle in each lane
     private void InitialiseObstaclePositions()
     {
-        float offset = 0.0f;
+        //float offset = 4.0f;
         for (int i = 0; i < 12; i++)
         {
             obstacleLocationData[i].locationID = (ObstacleLocation)i;
