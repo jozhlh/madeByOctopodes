@@ -89,10 +89,10 @@ public class GameSettings : MonoBehaviour
 		{
 			StateManager.gameState = StateManager.States.play;
 		}
-		else
-		{
-			StateManager.gameState = StateManager.States.menu;
-		}
+		//else
+		//{
+		//	StateManager.gameState = StateManager.States.menu;
+		//}
 	}
 	
 	// Update is called once per frame

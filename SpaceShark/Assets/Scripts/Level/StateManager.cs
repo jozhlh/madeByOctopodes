@@ -22,9 +22,10 @@ public class StateManager : MonoBehaviour
 			gameState = States.play;
 		}
 		else
-		{*/
+		{
 			gameState = States.menu;
-        //}
+        }*/
+		gameState = States.menu;
        
         //gameState = States.play;
         // Make sure the state manager persists across all scenes

@@ -166,6 +166,7 @@ GameObject:
   m_Component:
   - component: {fileID: 15666840}
   - component: {fileID: 15666839}
+  - component: {fileID: 15666841}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -206,6 +207,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &15666841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 15666838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a983b32d62db1484ab627f122f6dcd99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &238206273 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b,
@@ -250,6 +262,23 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: testing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: enemyDeathPrefab
+      value: 
+      objectReference: {fileID: 1573080449986518, guid: 017246965a9b1cb4aba1bc78ed7d8835,
+        type: 2}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: enemyPrefab
+      value: 
+      objectReference: {fileID: 1474706802270056, guid: ebdab7076ce2d4be8b91a25b6af54e22,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
   m_IsPrefabParent: 0
@@ -301,6 +330,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010412391500, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -336,8 +370,38 @@ Prefab:
     - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
         type: 2}
       propertyPath: floorGap
-      value: 1.5
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1877225474993792, guid: 91f5e1ab195704a328ed5f296dda02de,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[4]
+      value: 
+      objectReference: {fileID: 1634842799681798, guid: f8640e1a740d242569db137ddd79433b,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 1933042390811696, guid: df7003d970fdd48478bdecad0cfa7f72,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1226142250755318, guid: 6be31caa2c0e74cffa23b6f35fbd9c3c,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyFloorPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1167064806092152, guid: 462348c7b535f4481a6a4d513ca012a0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
   m_IsPrefabParent: 0
@@ -1218,7 +1282,12 @@ Prefab:
     - target: {fileID: 114000012527605602, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd,
         type: 2}
       propertyPath: recalculateLane
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012527605602, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd,
+        type: 2}
+      propertyPath: offset
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7edcc7b075f2e764bb3e4ef1dde2abdd, type: 2}
