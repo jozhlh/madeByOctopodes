@@ -11,7 +11,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: made by octopodes
-  productName: Space Shark v0.0
+  productName: Space Shark
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.18039216, g: 0.1882353, b: 0.21568628, a: 1}
@@ -435,6 +435,7 @@ PlayerSettings:
   webGLCompressionFormat: 1
   scriptingDefineSymbols:
     1: 
+    7: 3
   platformArchitecture:
     iOS: 2
   scriptingBackend:
