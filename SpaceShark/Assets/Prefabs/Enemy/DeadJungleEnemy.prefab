@@ -359,6 +359,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4269826934356958}
+  - component: {fileID: 114955136647774312}
   m_Layer: 0
   m_Name: DeadJungleEnemy
   m_TagString: Untagged
@@ -443,7 +444,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4913123946660998}
   - component: {fileID: 95751432886602136}
-  - component: {fileID: 114435436834196880}
   m_Layer: 0
   m_Name: Jungle_death_animation
   m_TagString: Untagged
@@ -2295,12 +2295,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114435436834196880
+--- !u!114 &114955136647774312
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1736616339831680}
+  m_GameObject: {fileID: 1609873448720744}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af6540acb03061f4e9f299aebc47d9ca, type: 3}

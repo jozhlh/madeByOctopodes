@@ -144,9 +144,18 @@ public class SegmentData : MonoBehaviour
 
         foreach (GameObject enemy in deadEnemyObjects)
         {
-            if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) > EndPlate.horizon)
+            if (enemy.activeInHierarchy)
             {
-                enemy.SetActive(false);
+                if ((enemy.transform.position.z) > EndPlate.horizon)
+                {
+                    Debug.Log("Destroy Carcass");
+                    enemy.SetActive(false);
+                }
+                if ((enemy.transform.position.y) < -5.0f)
+                {
+                    Debug.Log("Destroy Carcass");
+                    enemy.SetActive(false);
+                }
             }
         }
     }
@@ -188,6 +197,7 @@ public class SegmentData : MonoBehaviour
             if (enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy & !enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed)
             {
                 deadEnemyObjects.Add(Instantiate(GameSettings.enemyDeath, enemy.transform.position, enemy.transform.rotation));
+                Debug.Log("Spawn Carcass");
                 enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed = true;
                 //Debug.Log("Deactivate");
                 enemy.SetActive(false);

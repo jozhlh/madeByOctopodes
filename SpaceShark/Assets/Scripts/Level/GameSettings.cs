@@ -16,6 +16,9 @@ public class GameSettings : MonoBehaviour
     public static float eruptionRange;
 	public static float cooldown;
     public static float fragmentSpeed;
+    public static float fallTime;
+    public static float fallPeriod;
+    public static bool blowBack;
     public static GameObject enemy;
     public static GameObject enemyDeath;
     public static GameObject obstacle;
@@ -60,6 +63,15 @@ public class GameSettings : MonoBehaviour
     [SerializeField]
     // Speed at which the fragments fall;
     private float fragmentFallSpeed = 9.8f;
+    [SerializeField]
+    // Direction of enemy destruction
+    private bool blastBackward = true;
+    [SerializeField]
+    // Time before fragments start to fall
+    private float fallDelay = 1.0f;
+    [SerializeField]
+    // How quickly fragments fall after one another
+    private float fallSpread = 1.0f;
 
     [Header("Debug")]
     [SerializeField]
@@ -67,6 +79,30 @@ public class GameSettings : MonoBehaviour
     private bool testing = true;
 
     void Awake()
+    {
+        Init();
+    }
+
+	// Use this for initialization
+	void Start ()
+	{
+        if (testing)
+		{
+			StateManager.gameState = StateManager.States.play;
+		}
+        Init();
+		//else
+		//{
+		//	StateManager.gameState = StateManager.States.menu;
+		//}
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+
+    void Init()
     {
         sensitivity = swipeOrTapSensitivity;
         gameSpeed = speed;
@@ -80,23 +116,8 @@ public class GameSettings : MonoBehaviour
         enemy = enemyPrefab;
         enemyDeath = enemyDeathPrefab;
         obstacle = obstaclePrefab;
+        blowBack = blastBackward;
+        fallTime = fallDelay;
+        fallPeriod = fallSpread;
     }
-
-	// Use this for initialization
-	void Start ()
-	{
-        if (testing)
-		{
-			StateManager.gameState = StateManager.States.play;
-		}
-		//else
-		//{
-		//	StateManager.gameState = StateManager.States.menu;
-		//}
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }

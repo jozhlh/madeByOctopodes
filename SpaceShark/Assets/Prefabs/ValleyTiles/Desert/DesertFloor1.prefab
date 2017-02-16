@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4952291192083904}
   - component: {fileID: 95787350452992692}
   m_Layer: 0
-  m_Name: LavaFloor1
+  m_Name: DesertFloor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,7 +113,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 29c5508c59ff848879f32b8b031bef48, type: 2}
+  - {fileID: 2100000, guid: 9ea3af830a7a544278e92ab3abcc2337, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -27,6 +27,7 @@ public class SceneTransition : MonoBehaviour
 	public void LoadLevel(string targetLevel)
 	{
         StateManager.gameState = StateManager.States.play;
-        SceneManager.LoadScene(targetLevel);
+        //SceneManager.LoadScene(targetLevel);
+        SceneManager.LoadSceneAsync(targetLevel);
 	}
 }

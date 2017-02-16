@@ -9,103 +9,103 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1933042390811696}
+  m_RootGameObject: {fileID: 1474706802270056}
   m_IsPrefabParent: 1
---- !u!1 &1163934895236332
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4840116601908176}
-  m_Layer: 0
-  m_Name: _UNKNOWN_REF_NODE_fosterParent1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1600647134673442
+--- !u!1 &1304174502521918
 GameObject:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4167870927404042}
-  - component: {fileID: 33436652953198356}
-  - component: {fileID: 23083417343531312}
+  - component: {fileID: 4376441928522532}
+  - component: {fileID: 33002416665500706}
+  - component: {fileID: 23908949302515738}
   m_Layer: 0
-  m_Name: RyansTestMesh2
+  m_Name: Desert_Enemy_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1933042390811696
+--- !u!1 &1474706802270056
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4692990705277912}
-  - component: {fileID: 95622458865344238}
+  - component: {fileID: 4579816741405454}
+  - component: {fileID: 114390006445380876}
+  m_Layer: 2
+  m_Name: DeadDesertEnemy
+  m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1769492009745058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4108783140445854}
   m_Layer: 0
-  m_Name: LavaFloor1alt1
+  m_Name: enemy_lava
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4167870927404042
+--- !u!4 &4108783140445854
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600647134673442}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_GameObject: {fileID: 1769492009745058}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children:
+  - {fileID: 4376441928522532}
+  m_Father: {fileID: 4579816741405454}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!4 &4376441928522532
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1304174502521918}
+  m_LocalRotation: {x: -0.7071074, y: -0.000000061817296, z: 0.00000006181718, w: 0.7071062}
+  m_LocalPosition: {x: -0, y: 0, z: 0.00000064821324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4840116601908176}
+  m_Father: {fileID: 4108783140445854}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4692990705277912
+--- !u!4 &4579816741405454
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1933042390811696}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1474706802270056}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6717758, y: 3.8613634, z: -13.96454}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4840116601908176}
+  - {fileID: 4108783140445854}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!4 &4840116601908176
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1163934895236332}
-  m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -2.7326171, z: -0.0000013401495}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4167870927404042}
-  m_Father: {fileID: 4692990705277912}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23083417343531312
+--- !u!23 &23908949302515738
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600647134673442}
+  m_GameObject: {fileID: 1304174502521918}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -113,7 +113,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: fa9a7008a3e174c90b02b8a1732912d2, type: 2}
+  - {fileID: 2100000, guid: 621d324a77655c14bbdcd1c281d27f21, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -131,27 +131,21 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!33 &33436652953198356
+--- !u!33 &33002416665500706
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600647134673442}
-  m_Mesh: {fileID: 4300000, guid: de330a19840d84fe189d9dbd351a3fa4, type: 3}
---- !u!95 &95622458865344238
-Animator:
-  serializedVersion: 3
+  m_GameObject: {fileID: 1304174502521918}
+  m_Mesh: {fileID: 4300000, guid: ef6dc5d4dab14ce47a4de186563cbd74, type: 3}
+--- !u!114 &114390006445380876
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1933042390811696}
+  m_GameObject: {fileID: 1474706802270056}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: de330a19840d84fe189d9dbd351a3fa4, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af6540acb03061f4e9f299aebc47d9ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

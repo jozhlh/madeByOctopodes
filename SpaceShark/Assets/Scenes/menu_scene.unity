@@ -504,17 +504,22 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 587924182}
-    - target: {fileID: 223000011074428946, guid: b58ab39591f7e483582e5139c37ba7f4,
+    - target: {fileID: 114000010534859084, guid: b58ab39591f7e483582e5139c37ba7f4,
         type: 2}
-      propertyPath: m_Camera
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1719075136}
+      objectReference: {fileID: 587924182}
     - target: {fileID: 114110224603391318, guid: b58ab39591f7e483582e5139c37ba7f4,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 587924182}
-    - target: {fileID: 114000010534859084, guid: b58ab39591f7e483582e5139c37ba7f4,
+    - target: {fileID: 223000011074428946, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1719075136}
+    - target: {fileID: 114450171520282900, guid: b58ab39591f7e483582e5139c37ba7f4,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

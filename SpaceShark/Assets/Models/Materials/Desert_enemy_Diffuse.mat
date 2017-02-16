@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: LavaWallMaterial
+  m_Name: Desert_enemy_Diffuse
   m_Shader: {fileID: 10703, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: 285dced6c104e460495916c87c5510f7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6b942152c82231f4c91d852966876bf3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -104,9 +104,6 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _Shininess
-      second: 0.7
-    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -124,7 +121,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
+      second: {r: 0.5882353, g: 0.5882353, b: 0.5882353, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

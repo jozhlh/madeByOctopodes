@@ -183,7 +183,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.15, y: 2.45, z: 1}
+  m_Size: {x: 2.15, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65369578778200210
 BoxCollider:
@@ -227,6 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyEnemy: 0
+  enemyDestroyed: 0
 --- !u!114 &114119711562505104
 MonoBehaviour:
   m_ObjectHideFlags: 1
