@@ -6,8 +6,8 @@ using UnityEngine;
 public class ObstacleData
 {
     public LaneManager.ObstacleLocation lane = LaneManager.ObstacleLocation.W;
-    private const int buf = 20;
-    private const int segmentLength = 160;
+    private const int buf = 50;
+    private const int segmentLength = LaneManager.lengthOfSegment;
     [Range(buf, LaneManager.lengthOfSegment)]
     public int zPosition = 0;
 }
@@ -16,8 +16,8 @@ public class ObstacleData
 public class EnemyData
 {
     public LaneManager.PlayerLanes lane = LaneManager.PlayerLanes.S;
-    private const int buf = 20;
-    private const int segmentLength = 160;
+    private const int buf = 50;
+    private const int segmentLength = LaneManager.lengthOfSegment;
     [Range(buf, LaneManager.lengthOfSegment)]
     public int zPosition = 0;
 }

@@ -52,7 +52,7 @@ public class LaneManager : MonoBehaviour
     public static float laneSpacingHorizontal = 0.0f;
     public static float laneSpacingVertical = 0.0f;
     public static float lengthOfLevel = 0.0f;
-    public const int lengthOfSegment = 160;
+    public const int lengthOfSegment = 500;
     public static bool recalc = false;
     
 
