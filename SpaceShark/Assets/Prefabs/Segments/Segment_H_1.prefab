@@ -54,17 +54,17 @@ MonoBehaviour:
   obMesh: {fileID: 4300000, guid: 016d30bd6e083495cbe78086c8e2fad2, type: 3}
   obstacleTemplates:
   - lane: 0
-    zPosition: 40
-  - lane: 5
-    zPosition: 35
-  - lane: 7
-    zPosition: 85
-  - lane: 9
-    zPosition: 95
-  - lane: 8
-    zPosition: 150
-  - lane: 4
     zPosition: 125
+  - lane: 5
+    zPosition: 141
+  - lane: 7
+    zPosition: 235
+  - lane: 9
+    zPosition: 328
+  - lane: 8
+    zPosition: 500
+  - lane: 4
+    zPosition: 425
   - lane: 10
-    zPosition: 150
+    zPosition: 500
   enemyTemplates: []

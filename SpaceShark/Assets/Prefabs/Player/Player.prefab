@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1000013144991384}
-  tracerOffset: 2
-  dashLength: 5
-  defaultTracerLength: 200
+  tracerOffset: 5
+  dashLength: 10
+  defaultTracerLength: 500
 --- !u!114 &114000012894090726
 MonoBehaviour:
   m_ObjectHideFlags: 1
