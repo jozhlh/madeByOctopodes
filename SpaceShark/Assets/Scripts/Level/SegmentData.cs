@@ -189,6 +189,14 @@ public class SegmentData : MonoBehaviour
         }
     }
 
+    public void ClearEnemies()
+    {
+        foreach (GameObject enemy in enemyObjects)
+        {
+            enemy.SetActive(false);
+        }
+    }
+
     // Destroy any enemies that have been killed
     public void CleanUpEnemies()
     {
