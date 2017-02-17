@@ -78,6 +78,19 @@ public class LevelManager : MonoBehaviour
         CleanUp();
     }
 
+    public void ClearLevel()
+    {
+        if (segmentDataObjects.Count > 0)
+        {
+            foreach (GameObject seg in segmentDataObjects)
+            {
+                seg.GetComponent<SegmentData>().ClearEnemies();
+            }
+        }
+
+         StateManager.gameState = StateManager.States.dead;
+    }
+
     // Set any inactive objects or enemies to active
     public void ResetLevel()
     {

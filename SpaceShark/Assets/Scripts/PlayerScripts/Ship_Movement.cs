@@ -136,7 +136,8 @@ public class Ship_Movement : MonoBehaviour
         // Player loses after hitting a bullet or wall
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
-            levelManager.ResetLevel();
+           // levelManager.ResetLevel();
+            levelManager.ClearLevel();
         }
 
         // Bring up tutorial Ui when the player hits the respective triggers
