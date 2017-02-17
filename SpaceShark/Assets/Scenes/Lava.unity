@@ -642,7 +642,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: eruptionDistance
-      value: 100
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
@@ -679,6 +679,16 @@ Prefab:
         type: 2}
       propertyPath: laneChangeSpeed
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: speed
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: enemyDetectionRange
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
@@ -854,6 +864,21 @@ Prefab:
     - target: {fileID: 4886197809937408, guid: c64eecf666a661844a335e87ec8986f3, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653683062463834, guid: c64eecf666a661844a335e87ec8986f3,
+        type: 2}
+      propertyPath: obstacleTemplates.Array.data[0].zPosition
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653683062463834, guid: c64eecf666a661844a335e87ec8986f3,
+        type: 2}
+      propertyPath: obstacleTemplates.Array.data[1].zPosition
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 114653683062463834, guid: c64eecf666a661844a335e87ec8986f3,
+        type: 2}
+      propertyPath: obstacleTemplates.Array.data[2].zPosition
+      value: 370
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c64eecf666a661844a335e87ec8986f3, type: 2}

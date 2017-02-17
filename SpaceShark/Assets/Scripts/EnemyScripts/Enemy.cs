@@ -35,6 +35,8 @@ public class Enemy : MonoBehaviour
     {
         cooldownProgress = GameSettings.cooldown;
         playerInRange = false;
+        Vector3 bound = GetComponent<BoxCollider>().size;
+        GetComponent<BoxCollider>().size = new Vector3(bound.x, bound.y, 2.0f * GameSettings.detectionRange);
     }
 
     // Update is called once per frame

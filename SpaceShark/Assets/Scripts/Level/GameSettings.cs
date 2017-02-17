@@ -18,10 +18,16 @@ public class GameSettings : MonoBehaviour
     public static float fragmentSpeed;
     public static float fallTime;
     public static float fallPeriod;
+    public static float detectionRange;
+    //public static float segmentLength;
     public static bool blowBack;
     public static GameObject enemy;
     public static GameObject enemyDeath;
     public static GameObject obstacle;
+
+    //[Header("Level")]
+    //[SerializeField]
+    //private float lengthOfASegment;
 
 	[Header("Input")]
 	[SerializeField]
@@ -57,6 +63,9 @@ public class GameSettings : MonoBehaviour
     [SerializeField]
     // The enemy prefab for this level
     private GameObject enemyDeathPrefab;
+    [SerializeField]
+    // The distance from the player the enemy will activate
+    private float enemyDetectionRange;
     [SerializeField]
     // The enemy's rate of fire
 	private float firingCooldown = 2.0f;
@@ -119,5 +128,7 @@ public class GameSettings : MonoBehaviour
         blowBack = blastBackward;
         fallTime = fallDelay;
         fallPeriod = fallSpread;
+        detectionRange = enemyDetectionRange;
+        //segmentLength = lengthOfASegment;
     }
 }

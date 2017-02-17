@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
         float zPos = 0.0f;
         for (int ob = 0; ob < numberOfSegments; ob++)
         {
-            zPos = ob * 160.0f;
+            zPos = ob * LaneManager.lengthOfSegment;
             segmentData[ob].gameObject.transform.position = new Vector3 (0,0,zPos);
             segmentDataObjects.Add(segmentData[ob].gameObject);
             segmentData[ob].PlaceSegment();
