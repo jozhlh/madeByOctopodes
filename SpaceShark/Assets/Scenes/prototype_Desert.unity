@@ -189,9 +189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238206273}
-  playerBullet: {fileID: 1000011063893666, guid: 73c0f3b6e5190df44a2bd7dcb1743c0f,
-    type: 2}
-  bulletOffset: {x: -1.25, y: -0.4, z: 1.5}
 --- !u!4 &15666840
 Transform:
   m_ObjectHideFlags: 0
@@ -1240,6 +1237,53 @@ Transform:
   m_PrefabParentObject: {fileID: 4886197809937408, guid: efc14a6ecdccd0a44b36017baeab3cf4,
     type: 2}
   m_PrefabInternal: {fileID: 1059393636}
+--- !u!1001 &1086331807
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736361967359682, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 238206273}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1109381782
 Prefab:
   m_ObjectHideFlags: 0
