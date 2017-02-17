@@ -148,12 +148,12 @@ public class SegmentData : MonoBehaviour
             {
                 if ((enemy.transform.position.z) > EndPlate.horizon)
                 {
-                    Debug.Log("Destroy Carcass");
+                    //Debug.Log("Destroy Carcass");
                     enemy.SetActive(false);
                 }
                 if ((enemy.transform.position.y) < -5.0f)
                 {
-                    Debug.Log("Destroy Carcass");
+                    //Debug.Log("Destroy Carcass");
                     enemy.SetActive(false);
                 }
             }

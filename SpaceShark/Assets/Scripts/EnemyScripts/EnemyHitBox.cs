@@ -20,6 +20,7 @@ public class EnemyHitBox : MonoBehaviour
         if (other.tag == "Bullet")
         {
             PlayerScore.EnemyKilled();
+            other.GetComponent<PlayerBullet>().destroyThis = true;
         }
     }
 }

@@ -728,7 +728,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: enemyDetectionRange
-      value: 100
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
