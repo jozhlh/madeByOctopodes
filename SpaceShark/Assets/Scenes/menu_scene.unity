@@ -528,6 +528,36 @@ Prefab:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 224474135689421678, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011833555240, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000011833555240, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 224598811074128392, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224598811074128392, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 224000012274782266, guid: b58ab39591f7e483582e5139c37ba7f4,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -175
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b58ab39591f7e483582e5139c37ba7f4, type: 2}
   m_IsPrefabParent: 0
