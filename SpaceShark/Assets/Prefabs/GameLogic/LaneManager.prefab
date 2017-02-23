@@ -133,7 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fcc7d54c1863664db09fecd6b3d196f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  laneWidth: 5
-  laneHeight: 3
+  laneWidth: 3
+  laneHeight: 4
   laneLength: 1000
   recalculateLane: 0
+  offset: 3
