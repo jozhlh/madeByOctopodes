@@ -19,10 +19,47 @@ public class SoundManager : MonoBehaviour {
 		
 	}
 
-	// Play Event
+	// Play Events
+	
 	public void PlayEvent(string eventName, GameObject go)
+	
 	{
 		AkSoundEngine.PostEvent (eventName, go);
 	}
 
+	// Stop Events
+
+	public void StopEvent(string eventName, int fadeOut, GameObject go)
+	
+	{
+		uint eventID;
+		eventID=AkSoundEngine.GetIDFromString (eventName);
+		AkSoundEngine.ExecuteActionOnEvent (eventID, AkActionOnEventType.AkActionOnEventType_Stop,go,fadeOut, AkCurveInterpolation_Sine);
+
+	}
+	public void StopAllEvents()
+	{
+		AkSoundEngine.StopAll ();
+	}
+
+	// Switch States
+
+	public void SetFloor(GameObject player, string material)
+	{
+		if (material == "Metal")
+		{
+			AkSoundEngine.SetSwitch("Material", "Metal", player);
+		}
+		if (material == "Wood")
+		{
+			AkSoundEngine.SetSwitch("Material", "Wood", player);
+		}
+	}
+	
+	// RTPCs
+
+	public void SetHealth(GameObject player, float health)
+	{
+		AkSoundEngine.SetRTPCValue ("Health", health);
+	}
 }

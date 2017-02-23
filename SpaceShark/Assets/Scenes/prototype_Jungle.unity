@@ -1734,6 +1734,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 114058029087499928, guid: a2d0b81c757174b5bb68ea4bf795e737,
+        type: 2}
+      propertyPath: soundbankName
+      value: Jungle Soundbank
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2d0b81c757174b5bb68ea4bf795e737, type: 2}
   m_IsPrefabParent: 0
