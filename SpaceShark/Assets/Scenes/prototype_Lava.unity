@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238206273}
+  soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
+    type: 2}
 --- !u!4 &15666840
 Transform:
   m_ObjectHideFlags: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   triggerList: b703a634
   useOtherObject: 0
   valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -2143004183
+  eventID: -1547397162
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -664,7 +666,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: swipeOrTapSensitivity
-      value: 1100
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}

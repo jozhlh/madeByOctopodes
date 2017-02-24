@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2151963113	Item1			\Default Work Unit\Item1	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	919481620	Pickup 2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\Pickup 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pickup 2		265912
+

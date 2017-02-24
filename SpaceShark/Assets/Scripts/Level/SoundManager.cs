@@ -11,7 +11,7 @@ public class SoundManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Import Soundbank
-		AkSoundEngine.LoadBank(soundbankName, AkSoundEngine.AK_DEFAULT_POOL_ID,out bankID);	
+		AkSoundEngine.LoadBank("Soundbank1", AkSoundEngine.AK_DEFAULT_POOL_ID,out bankID);	
 	}
 	
 	// Update is called once per frame
@@ -34,7 +34,7 @@ public class SoundManager : MonoBehaviour {
 	{
 		uint eventID;
 		eventID=AkSoundEngine.GetIDFromString (eventName);
-		AkSoundEngine.ExecuteActionOnEvent (eventID, AkActionOnEventType.AkActionOnEventType_Stop,go,fadeOut, AkCurveInterpolation_Sine);
+		AkSoundEngine.ExecuteActionOnEvent (eventID, AkActionOnEventType.AkActionOnEventType_Stop,go,fadeOut, AkCurveInterpolation.AkCurveInterpolation_Sine);
 
 	}
 	public void StopAllEvents()

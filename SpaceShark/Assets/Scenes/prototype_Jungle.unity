@@ -218,6 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238206273}
+  soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
+    type: 2}
 --- !u!4 &15666840
 Transform:
   m_ObjectHideFlags: 0
@@ -258,7 +260,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 15666838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b34c9cff3fd545d88fd213f0142d67d, type: 3}
   m_Name: 
@@ -266,7 +268,7 @@ MonoBehaviour:
   triggerList: b703a634
   useOtherObject: 0
   valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -2143004183
+  eventID: -1547397162
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0
@@ -282,7 +284,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 15666838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9311d286a4bbc47fe990d1d0689c3fbb, type: 3}
   m_Name: 
@@ -516,6 +518,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012737035826, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
     type: 2}
   m_PrefabInternal: {fileID: 91375650}
+--- !u!1 &150614585 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
+    type: 2}
+  m_PrefabInternal: {fileID: 1580450972}
 --- !u!1 &238206273 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b,
@@ -1323,6 +1330,11 @@ Prefab:
       propertyPath: m_Name
       value: Soundbank1
       objectReference: {fileID: 0}
+    - target: {fileID: 114389990425117272, guid: 44d56bcbc9a1a43a891b994ad8f7cf4e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d56bcbc9a1a43a891b994ad8f7cf4e, type: 2}
   m_IsPrefabParent: 0
@@ -1511,6 +1523,37 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 238206273}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: playerBullet
+      value: 
+      objectReference: {fileID: 1000011063893666, guid: 73c0f3b6e5190df44a2bd7dcb1743c0f,
+        type: 2}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: bulletOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: bulletOffset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: bulletOffset.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114357937553029800, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: soundManager
+      value: 
+      objectReference: {fileID: 150614585}
+    - target: {fileID: 114229301823803668, guid: 97148dce6608f4624a91c21f97ee9440,
+        type: 2}
+      propertyPath: eventID
+      value: -1547397162
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 97148dce6608f4624a91c21f97ee9440, type: 2}
   m_IsPrefabParent: 0
@@ -1563,7 +1606,31 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1908682896}
-    m_RemovedComponents: []
+    - target: {fileID: 114187794906087030, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: eventID
+      value: -1547397162
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187794906087030, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114201225120982758, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114339311875474578, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114155206258976098, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+    - {fileID: 114187794906087030, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+    - {fileID: 114201225120982758, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
+    - {fileID: 114339311875474578, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1346326326
@@ -1733,11 +1800,6 @@ Prefab:
     - target: {fileID: 4341540986867888, guid: a2d0b81c757174b5bb68ea4bf795e737, type: 2}
       propertyPath: m_RootOrder
       value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 114058029087499928, guid: a2d0b81c757174b5bb68ea4bf795e737,
-        type: 2}
-      propertyPath: soundbankName
-      value: Jungle Soundbank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2d0b81c757174b5bb68ea4bf795e737, type: 2}

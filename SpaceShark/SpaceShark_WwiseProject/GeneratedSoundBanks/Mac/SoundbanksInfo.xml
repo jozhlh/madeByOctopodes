@@ -21,12 +21,43 @@
 			<ShortName>Soundbank1</ShortName>
 			<Path>Soundbank1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2151963113" Name="Item1" ObjectPath="\Events\Default Work Unit\Item1"/>
+				<Event Id="3249137159" Name="enemyDeath" ObjectPath="\Events\Default Work Unit\enemyDeath"/>
+				<Event Id="2446068219" Name="enemyFire" ObjectPath="\Events\Default Work Unit\enemyFire"/>
+				<Event Id="2747570134" Name="playerFire" ObjectPath="\Events\Default Work Unit\playerFire"/>
+				<Event Id="1585024601" Name="shipEngine" ObjectPath="\Events\Default Work Unit\shipEngine"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="919481620" Language="SFX">
-					<ShortName>Pickup 2.wav</ShortName>
-					<Path>SFX/Pickup 2_9E69E797.wem</Path>
+				<File Id="43393310" Language="SFX">
+					<ShortName>EnemyDeathExplosionLayer1.wav</ShortName>
+					<Path>SFX/EnemyDeathExplosionLayer1_9E69E797.wem</Path>
+				</File>
+				<File Id="74238188" Language="SFX">
+					<ShortName>Cannon1.wav</ShortName>
+					<Path>SFX/Cannon1_9E69E797.wem</Path>
+				</File>
+				<File Id="396115666" Language="SFX">
+					<ShortName>ShipEnginesLoop.wav</ShortName>
+					<Path>SFX/ShipEnginesLoop_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="560663328" Language="SFX">
+					<ShortName>EnemyDeathGlassLayer1.wav</ShortName>
+					<Path>SFX/EnemyDeathGlassLayer1_9E69E797.wem</Path>
+				</File>
+				<File Id="840083219" Language="SFX">
+					<ShortName>ShipEnginesIntro.wav</ShortName>
+					<Path>SFX/ShipEnginesIntro_9E69E797.wem</Path>
+				</File>
+				<File Id="907585816" Language="SFX">
+					<ShortName>Cannon2.wav</ShortName>
+					<Path>SFX/Cannon2_9E69E797.wem</Path>
+				</File>
+				<File Id="966113440" Language="SFX">
+					<ShortName>EnemyDeathGlassLayer3.wav</ShortName>
+					<Path>SFX/EnemyDeathGlassLayer3_9E69E797.wem</Path>
+				</File>
+				<File Id="1027588360" Language="SFX">
+					<ShortName>EnemyDeathGlassLayer2.wav</ShortName>
+					<Path>SFX/EnemyDeathGlassLayer2_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

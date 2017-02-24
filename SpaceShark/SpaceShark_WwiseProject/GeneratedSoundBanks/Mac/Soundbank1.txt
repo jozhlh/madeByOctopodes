@@ -1,6 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
-	2151963113	Item1			\Default Work Unit\Item1	
+	1585024601	shipEngine			\Default Work Unit\shipEngine	
+	2446068219	enemyFire			\Default Work Unit\enemyFire	
+	2747570134	playerFire			\Default Work Unit\playerFire	
+	3249137159	enemyDeath			\Default Work Unit\enemyDeath	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	919481620	Pickup 2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\Pickup 2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Pickup 2		265912
+	43393310	EnemyDeathExplosionLayer1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\EnemyDeathExplosionLayer1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathExplosionLayer1		403928
+	74238188	Cannon1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\Cannon1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyCannon\Cannon1		466596
+	396115666	ShipEnginesLoop	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\ShipEnginesLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShipEngines\ShipEnginesLoop		473564
+	560663328	EnemyDeathGlassLayer1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\EnemyDeathGlassLayer1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer1		348224
+	840083219	ShipEnginesIntro	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\ShipEnginesIntro_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShipEngines\ShipEnginesIntro		306444
+	907585816	Cannon2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\Cannon2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyCannon\Cannon2		536228
+	966113440	EnemyDeathGlassLayer3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\EnemyDeathGlassLayer3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer3		146292
+	1027588360	EnemyDeathGlassLayer2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Mac\SFX\EnemyDeathGlassLayer2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer2		146292
 

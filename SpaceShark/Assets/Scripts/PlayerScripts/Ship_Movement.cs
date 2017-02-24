@@ -21,6 +21,10 @@ public class Ship_Movement : MonoBehaviour
     [Header("Tutorial Settings")]
     [SerializeField]
     private float unrestrictedMovementDistance = 300.0f;
+
+    [SerializeField]
+    // Reference to the sound manager in the scene
+    private GameObject soundManager;
     
     // How far the player is through the intro intro animation
     private float introProgress = 0.0f;
@@ -37,6 +41,7 @@ public class Ship_Movement : MonoBehaviour
     private bool restrictSwipeVertical = true;
     private bool restrictSwipeHorizontal = true;
     private bool restrictSwipeDiagonal = true;
+
 
     //private AkSoundEngine wwise = new AkSoundEngine();
 
@@ -81,6 +86,9 @@ public class Ship_Movement : MonoBehaviour
                 TutorialManager.diagonal.enabled = false;
             }
         }
+
+        // Start intro swoosh sound
+        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject); 
 	}
 
     // Update is called once per frame
@@ -98,6 +106,8 @@ public class Ship_Movement : MonoBehaviour
             {
                 currentSpeed = movementSpeed;
             }
+
+            
             // Move the player
             MoveToLane();
         }
@@ -200,7 +210,7 @@ public class Ship_Movement : MonoBehaviour
             currentLane = LaneManager.laneData[(int)targetLane.laneID];
         }
 
-        GetComponent<SwipeTrigger>().ActivateTrigger();
+        //GetComponent<SwipeTrigger>().ActivateTrigger();
     }
 
 

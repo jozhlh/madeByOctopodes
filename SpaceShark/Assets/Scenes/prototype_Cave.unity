@@ -106,8 +106,6 @@ GameObject:
   m_Component:
   - component: {fileID: 15666840}
   - component: {fileID: 15666839}
-  - component: {fileID: 15666842}
-  - component: {fileID: 15666841}
   - component: {fileID: 15666843}
   m_Layer: 0
   m_Name: LevelManager
@@ -129,6 +127,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 238206273}
+  soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
+    type: 2}
 --- !u!4 &15666840
 Transform:
   m_ObjectHideFlags: 0
@@ -172,48 +172,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &15666841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 15666838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b34c9cff3fd545d88fd213f0142d67d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: b703a634
-  useOtherObject: 0
-  valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -2143004183
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  multiPositionTypeLabel: 0
-  multiPositionArray: []
---- !u!114 &15666842
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 15666838}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9311d286a4bbc47fe990d1d0689c3fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 0
-  listenerMask: 1
-  isStaticObject: 0
-  m_posOffsetData: {fileID: 0}
 --- !u!114 &15666843
 MonoBehaviour:
   m_ObjectHideFlags: 0
