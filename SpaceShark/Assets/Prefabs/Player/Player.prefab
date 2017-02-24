@@ -306,6 +306,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 0}
   unrestrictedMovementDistance: 300
+  soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
+    type: 2}
   currentSpeed: 3
   movementSpeed: 40
 --- !u!114 &114155206258976098
@@ -333,7 +335,7 @@ MonoBehaviour:
   triggerList: 0bac619a
   useOtherObject: 0
   valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -2143004183
+  eventID: -1547397162
   soundEmitterObject: {fileID: 0}
   enableActionOnEvent: 0
   actionOnEventType: 0

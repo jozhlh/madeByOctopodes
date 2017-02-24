@@ -12,6 +12,10 @@ public class LevelManager : MonoBehaviour
     // Reference to the player in the scene
     private GameObject player;
 
+    [SerializeField]
+    // Reference to the sound manager in the scene
+    private GameObject soundManager;
+
     // Initialization
     void Start ()
     {
@@ -52,6 +56,8 @@ public class LevelManager : MonoBehaviour
         }
 
          StateManager.gameState = StateManager.States.dead;
+         // Stop engine sounds
+         soundManager.GetComponent<SoundManager>().StopEvent("shipEngine", 0, gameObject);
     }
 
     // Set any inactive objects or enemies to active

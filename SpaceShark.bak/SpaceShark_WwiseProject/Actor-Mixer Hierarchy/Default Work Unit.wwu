@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" SchemaVersion="75">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" PersistMode="Standalone">
+			<ChildrenList>
+				<RandomSequenceContainer Name="ShipEngines" ID="{8BFD878B-16C0-4E3E-8A7F-2470838A4749}" ShortID="633691298">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-9</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="ShipEnginesIntro" ID="{0037B561-65D0-4726-8A2A-A50171705A29}" ShortID="172969807" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ShipEnginesIntro" ID="{26111981-3681-473F-BF37-9FE1D26C7698}" ShortID="840083219">
+									<Language>SFX</Language>
+									<AudioFile>ShipEnginesIntro.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ShipEnginesIntro" ID="{26111981-3681-473F-BF37-9FE1D26C7698}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ShipEnginesLoop" ID="{B5316A7C-CD7E-4EE4-A956-925D004BE5E5}" ShortID="316881736" Type="SoundFX">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ShipEnginesLoop" ID="{BC69313F-9788-49F9-9061-538F3063FE9E}" ShortID="396115666">
+									<Language>SFX</Language>
+									<AudioFile>ShipEnginesLoop.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ShipEnginesLoop" ID="{BC69313F-9788-49F9-9061-538F3063FE9E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<Playlist>
+						<ItemRef Name="ShipEnginesIntro" ID="{0037B561-65D0-4726-8A2A-A50171705A29}"/>
+						<ItemRef Name="ShipEnginesLoop" ID="{B5316A7C-CD7E-4EE4-A956-925D004BE5E5}"/>
+					</Playlist>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Cannon" ID="{53444340-9D1F-4306-96C9-1EE5EA2B0C89}" ShortID="22907926">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A45690E9-0C1F-4A2C-AA68-33C7D700B8C7}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="25"/>
+											<Property Name="Min" Type="Real64" Value="-25"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-3</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cannon2" ID="{0CFE6A04-C5B4-45B6-B81D-E12EE0385011}" ShortID="836403032" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cannon2" ID="{B3E56651-79A8-43A4-BDFF-78B51E8C0096}" ShortID="907585816">
+									<Language>SFX</Language>
+									<AudioFile>Cannon2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cannon2" ID="{B3E56651-79A8-43A4-BDFF-78B51E8C0096}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cannon1" ID="{349BD230-3189-4F80-AB4B-180CFB072EDB}" ShortID="340032294" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cannon1" ID="{63703EAE-56F8-4648-ACFF-1A1AF6B8DDF0}" ShortID="74238188">
+									<Language>SFX</Language>
+									<AudioFile>Cannon1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cannon1" ID="{63703EAE-56F8-4648-ACFF-1A1AF6B8DDF0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<BlendContainer Name="EnemyDeath" ID="{67D4B60F-C89C-4D90-B1AD-579CC604230E}" ShortID="939812771">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="EnemyDeathExplosionLayer1" ID="{385DCE6E-90DD-459B-A8DD-916D3A57F891}" ShortID="124931249" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{99AD9AF8-9B4E-4415-A6A7-FC21FF808BC8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="25"/>
+													<Property Name="Min" Type="Real64" Value="-25"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EnemyDeathExplosionLayer1" ID="{70446C6C-E05B-4156-B1C7-AA1273F5F0BB}" ShortID="43393310">
+									<Language>SFX</Language>
+									<AudioFile>EnemyDeathExplosionLayer1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EnemyDeathExplosionLayer1" ID="{70446C6C-E05B-4156-B1C7-AA1273F5F0BB}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EnemyDeathGlassLayer1" ID="{D490E8F8-04F4-45DC-AB8B-9F84D8D343E1}" ShortID="962113239" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EnemyDeathGlassLayer1" ID="{2D6FF44E-6525-4769-B50F-4C3B9072B0D0}" ShortID="560663328">
+									<Language>SFX</Language>
+									<AudioFile>EnemyDeathGlassLayer1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EnemyDeathGlassLayer1" ID="{2D6FF44E-6525-4769-B50F-4C3B9072B0D0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EnemyDeathGlassLayer2" ID="{991D9AB5-8415-4469-B353-344D080C1D06}" ShortID="505633640" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EnemyDeathGlassLayer2" ID="{79336F3B-4827-4215-8EB0-F288FA41E5BF}" ShortID="1027588360">
+									<Language>SFX</Language>
+									<AudioFile>EnemyDeathGlassLayer2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EnemyDeathGlassLayer2" ID="{79336F3B-4827-4215-8EB0-F288FA41E5BF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="EnemyDeathGlassLayer3" ID="{82F840AA-6F43-4BC8-9CC1-A4B1BDAA6217}" ShortID="783658034" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="EnemyDeathGlassLayer3" ID="{2A836947-9645-4A8E-9C74-505D3E382ECF}" ShortID="966113440">
+									<Language>SFX</Language>
+									<AudioFile>EnemyDeathGlassLayer3.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="EnemyDeathGlassLayer3" ID="{2A836947-9645-4A8E-9C74-505D3E382ECF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+				<RandomSequenceContainer Name="EnemyCannon" ID="{F213FE35-CBF7-45BF-86B6-3779B34544B3}" ShortID="746217828">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>60</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{7AFD0B2F-620F-4F79-998A-D6D40D2AC9BF}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="25"/>
+											<Property Name="Min" Type="Real64" Value="-25"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-7</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Cannon2" ID="{CD88869E-740B-4AD2-9ED1-B12E3C5C8473}" ShortID="123317903" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cannon2" ID="{A27D654E-9C75-4732-B274-3585FA9D94CC}" ShortID="843369735">
+									<Language>SFX</Language>
+									<AudioFile>Cannon2.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="907585816"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cannon2" ID="{A27D654E-9C75-4732-B274-3585FA9D94CC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Cannon1" ID="{4A322B8C-B857-4E85-B834-49A45262835F}" ShortID="236043734" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Cannon1" ID="{1D19EBD8-5864-42C3-836C-21DD3A6F6104}" ShortID="597144178">
+									<Language>SFX</Language>
+									<AudioFile>Cannon1.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="74238188"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Cannon1" ID="{1D19EBD8-5864-42C3-836C-21DD3A6F6104}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
