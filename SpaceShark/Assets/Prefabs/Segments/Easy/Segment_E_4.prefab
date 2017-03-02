@@ -59,6 +59,4 @@ MonoBehaviour:
   - lane: 7
     zPosition: 100
   - lane: 0
-    zPosition: 250
-  - lane: 1
-    zPosition: 450
+    zPosition: 380

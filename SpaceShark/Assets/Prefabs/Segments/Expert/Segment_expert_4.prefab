@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1136267313782482}
+  m_RootGameObject: {fileID: 1983412168365666}
   m_IsPrefabParent: 1
---- !u!1 &1136267313782482
+--- !u!1 &1983412168365666
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4379798202958354}
-  - component: {fileID: 114019258696929950}
+  - component: {fileID: 4597257339056932}
+  - component: {fileID: 114600241196463628}
   m_Layer: 0
-  m_Name: Segment_H_0
+  m_Name: Segment_expert_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4379798202958354
+--- !u!4 &4597257339056932
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1136267313782482}
+  m_GameObject: {fileID: 1983412168365666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114019258696929950
+--- !u!114 &114600241196463628
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1136267313782482}
+  m_GameObject: {fileID: 1983412168365666}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0833848eee07704a9d54a8ed54da81f, type: 3}
@@ -56,19 +56,19 @@ MonoBehaviour:
   - lane: 9
     zPosition: 80
   - lane: 7
-    zPosition: 88
-  - lane: 10
-    zPosition: 142
+    zPosition: 320
+  enemyTemplates:
+  - lane: 4
+    zPosition: 76
   - lane: 5
-    zPosition: 220
-  - lane: 8
-    zPosition: 300
-  - lane: 6
-    zPosition: 387
+    zPosition: 103
   - lane: 0
-    zPosition: 410
-  - lane: 9
+    zPosition: 136
+  - lane: 2
+    zPosition: 255
+  - lane: 5
+    zPosition: 282
+  - lane: 7
+    zPosition: 394
+  - lane: 5
     zPosition: 500
-  - lane: 8
-    zPosition: 500
-  enemyTemplates: []
