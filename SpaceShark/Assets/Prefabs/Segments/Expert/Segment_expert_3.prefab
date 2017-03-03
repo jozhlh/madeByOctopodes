@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1119445659644580}
+  m_RootGameObject: {fileID: 1246682736840074}
   m_IsPrefabParent: 1
---- !u!1 &1119445659644580
+--- !u!1 &1246682736840074
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4453911692202850}
-  - component: {fileID: 114306304141565068}
+  - component: {fileID: 4866969121166382}
+  - component: {fileID: 114819733162840016}
   m_Layer: 0
-  m_Name: Segment_E_1
+  m_Name: Segment_expert_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4453911692202850
+--- !u!4 &4866969121166382
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1119445659644580}
+  m_GameObject: {fileID: 1246682736840074}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114306304141565068
+--- !u!114 &114819733162840016
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1119445659644580}
+  m_GameObject: {fileID: 1246682736840074}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0833848eee07704a9d54a8ed54da81f, type: 3}
@@ -53,10 +53,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obMesh: {fileID: 4300000, guid: 016d30bd6e083495cbe78086c8e2fad2, type: 3}
   obstacleTemplates:
-  - lane: 9
-    zPosition: 200
-  enemyTemplates:
-  - lane: 2
-    zPosition: 133
+  - lane: 10
+    zPosition: 80
   - lane: 4
-    zPosition: 358
+    zPosition: 320
+  enemyTemplates:
+  - lane: 6
+    zPosition: 76
+  - lane: 3
+    zPosition: 103
+  - lane: 4
+    zPosition: 136
+  - lane: 6
+    zPosition: 255
+  - lane: 5
+    zPosition: 282
+  - lane: 6
+    zPosition: 394
+  - lane: 3
+    zPosition: 500
