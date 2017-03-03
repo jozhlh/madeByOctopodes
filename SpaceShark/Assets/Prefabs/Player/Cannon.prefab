@@ -83,6 +83,8 @@ MonoBehaviour:
     type: 2}
   playerBullet: {fileID: 1000011063893666, guid: 73c0f3b6e5190df44a2bd7dcb1743c0f,
     type: 2}
+  explosionEffect: {fileID: 1522650916272822, guid: e2992faaaf69e424d9f5799987033539,
+    type: 2}
   bulletOffset: {x: -1.25, y: -0.4, z: 1.5}
 --- !u!114 &114616726579450192
 MonoBehaviour:

@@ -5,11 +5,14 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour {
 
 	private uint bankID;
+	private uint initBankID;
 	[SerializeField]
 	private string soundbankName;
 
 	// Use this for initialization
 	void Start () {
+		// Import Soundbank
+		AkSoundEngine.LoadBank("Init", AkSoundEngine.AK_DEFAULT_POOL_ID,out initBankID);	
 		// Import Soundbank
 		AkSoundEngine.LoadBank("Soundbank1", AkSoundEngine.AK_DEFAULT_POOL_ID,out bankID);	
 	}

@@ -100,6 +100,8 @@ MonoBehaviour:
   - /SpaceShark_WwiseProject
   - /SpaceShark_WwiseProject/Events
   - /SpaceShark_WwiseProject/Events/Default Work Unit
+  - /SpaceShark_WwiseProject/SoundBanks
+  - /SpaceShark_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
   m_lastPopulateTimePart2: 0
   autoPopulateEnabled: 1

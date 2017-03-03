@@ -973,6 +973,10 @@ Prefab:
       propertyPath: m_Name
       value: Soundbank1
       objectReference: {fileID: 0}
+    - target: {fileID: 1869682864858052, guid: 44d56bcbc9a1a43a891b994ad8f7cf4e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 44d56bcbc9a1a43a891b994ad8f7cf4e, type: 2}
   m_IsPrefabParent: 0
@@ -1370,6 +1374,11 @@ Prefab:
     - target: {fileID: 4341540986867888, guid: a2d0b81c757174b5bb68ea4bf795e737, type: 2}
       propertyPath: m_RootOrder
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114058029087499928, guid: a2d0b81c757174b5bb68ea4bf795e737,
+        type: 2}
+      propertyPath: soundbankName
+      value: Soundbank1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a2d0b81c757174b5bb68ea4bf795e737, type: 2}
