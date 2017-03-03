@@ -13,6 +13,10 @@ public class LevelManager : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
+    // Reference to the player in the scene
+    private GameObject playerExplosion;
+
+    [SerializeField]
     // Reference to the sound manager in the scene
     private GameObject soundManager;
 
@@ -31,6 +35,8 @@ public class LevelManager : MonoBehaviour
             segmentDataObjects.Add(segmentData[ob].gameObject);
             segmentData[ob].PlaceSegment();
         }
+
+        player.SetActive(true);
     }
 	
 	// Update is called once per frame
@@ -56,8 +62,13 @@ public class LevelManager : MonoBehaviour
         }
 
          StateManager.gameState = StateManager.States.dead;
-         // Stop engine sounds
-         soundManager.GetComponent<SoundManager>().StopEvent("shipEngine", 0, gameObject);
+
+        player.SetActive(false);
+
+        GameObject explosion = Instantiate(playerExplosion, player.transform.position, transform.rotation);
+        Destroy(explosion, 2.0f);
+        // Stop engine sounds
+        soundManager.GetComponent<SoundManager>().StopEvent("shipEngine", 0, player);
     }
 
     // Set any inactive objects or enemies to active
