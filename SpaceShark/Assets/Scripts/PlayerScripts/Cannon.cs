@@ -16,6 +16,11 @@ public class Cannon : MonoBehaviour
 	[SerializeField]
     // Reference to the bullet prefab which the player fires
     private GameObject playerBullet;
+
+    [SerializeField]
+    // Reference to the bullet prefab which the player fires
+    private GameObject explosionEffect;
+
     [SerializeField]
     // The distance from the player's transform to the gun on the model (-1.25, -0.4, 1.5)
     private Vector3 bulletOffset =  new Vector3(0,0,0);
@@ -101,6 +106,8 @@ public class Cannon : MonoBehaviour
         // Destroy bullets 
         foreach (GameObject bullet in toBeCleared)                 
         {
+            GameObject explosion = Instantiate (explosionEffect, bullet.transform.position, transform.rotation);
+            Destroy(explosion, 2.0f);
             bulletObjects.Remove(bullet);
             bullet.SetActive(false);
             Destroy(bullet);
