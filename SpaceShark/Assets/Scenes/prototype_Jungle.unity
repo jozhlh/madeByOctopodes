@@ -1576,6 +1576,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: goalObject
+      value: 
+      objectReference: {fileID: 1688769965}
     m_RemovedComponents:
     - {fileID: 114155206258976098, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
     - {fileID: 114187794906087030, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
@@ -1843,6 +1848,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d4d7d3641c7d242eca7365ecce7fd191, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1688769965 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012190698124, guid: d4d7d3641c7d242eca7365ecce7fd191,
+    type: 2}
+  m_PrefabInternal: {fileID: 1688769964}
 --- !u!1 &1696175798
 GameObject:
   m_ObjectHideFlags: 0
