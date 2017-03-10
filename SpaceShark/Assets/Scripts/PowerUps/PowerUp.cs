@@ -9,6 +9,8 @@ public class PowerUp : MonoBehaviour
 
 	[SerializeField]
 	protected float totalDuration = 0.0f;
+	[SerializeField]
+	protected GameObject player = null;
 
 	private bool playerCanUse = false;
 	protected bool inUse = false;

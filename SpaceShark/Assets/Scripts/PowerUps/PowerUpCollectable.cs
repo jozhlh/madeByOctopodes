@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerUpCollectable : MonoBehaviour
 {
 	[SerializeField]
-	private GameObject player = null;
+	private PowerUpManager powerUpManager = null;
 
 	// Use this for initialization
 	void Start ()
@@ -28,7 +28,9 @@ public class PowerUpCollectable : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			// Give player power up
-			player.GetComponent<PowerUpManager>().SelectPowerUp();
+			powerUpManager.SelectPowerUp();
+			Destroy(gameObject);
 		}
+		
 	}
 }

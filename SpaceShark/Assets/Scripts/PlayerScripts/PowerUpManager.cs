@@ -15,6 +15,8 @@ public class PowerUpManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		availablePowerUps = GetComponents<PowerUp>();
+		powerUpUi.SetActive(false);
+		equippedPowerUp = -1;
 	}
 	
 	// Update is called once per frame
@@ -25,7 +27,7 @@ public class PowerUpManager : MonoBehaviour {
 
 	public void SelectPowerUp()
 	{
-		if (equippedPowerUp > -1)
+		if (equippedPowerUp < 0)
 		{
 			int chosenPowerUp = Random.Range(0, availablePowerUps.Length);
 			availablePowerUps[chosenPowerUp].GiveToPlayer();

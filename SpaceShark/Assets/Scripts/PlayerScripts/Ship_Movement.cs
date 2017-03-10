@@ -156,13 +156,17 @@ public class Ship_Movement : MonoBehaviour
            // levelManager.ResetLevel();
            if (sheilded)
            {
+               Debug.Log("Hit Sheild");
                sheilded = false;
            }
-           else if 
+           else if (invincible)
            {
 
            }
-            levelManager.ClearLevel();
+           else
+           {
+                levelManager.ClearLevel();
+           }
         }
 
         // Bring up tutorial Ui when the player hits the respective triggers
@@ -367,5 +371,10 @@ public class Ship_Movement : MonoBehaviour
     public void SetSheild()
     {
         sheilded = true;
+    }
+
+    public void SetInincible(bool invincibility)
+    {
+        invincible = invincibility;
     }
 }
