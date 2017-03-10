@@ -32,6 +32,9 @@ public class Ship_Movement : MonoBehaviour
     private float introProgress = 0.0f;
     // How long the intro animation lasts
     private float introDuration = 2.0f;
+    // How far the player is through the level
+    private float levelProgress;
+
     [SerializeField]
     // The starting speed of the player, and the speed at any point thereafter
     private float currentSpeed = 3.0f;
@@ -44,7 +47,8 @@ public class Ship_Movement : MonoBehaviour
     private bool restrictSwipeHorizontal = true;
     private bool restrictSwipeDiagonal = true;
 
-    private float levelProgress;
+    private bool sheilded = false;
+    private bool invincible = false;
 
     //private AkSoundEngine wwise = new AkSoundEngine();
 
@@ -150,6 +154,14 @@ public class Ship_Movement : MonoBehaviour
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
            // levelManager.ResetLevel();
+           if (sheilded)
+           {
+               sheilded = false;
+           }
+           else if 
+           {
+
+           }
             levelManager.ClearLevel();
         }
 
@@ -351,4 +363,9 @@ public class Ship_Movement : MonoBehaviour
         // Send level progress RTPC to wwise 
         //soundManager.GetComponent<SoundManager>().SetLevelProgress(gameObject, levelProgress); 
     } 
+
+    public void SetSheild()
+    {
+        sheilded = true;
+    }
 }
