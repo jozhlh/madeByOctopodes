@@ -663,7 +663,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: swipeOrTapSensitivity
-      value: 1100
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
@@ -1372,9 +1372,68 @@ Prefab:
       propertyPath: goalObject
       value: 
       objectReference: {fileID: 1688769965}
+    - target: {fileID: 114965998278617158, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114275804853123150, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1099485945 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1827079784657110, guid: e0173837cf210c14d9e0245149716d2b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1099485944}
+--- !u!114 &1099485946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099485945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de00292afe7b4ff8a3160998b175600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  totalDuration: 5
+  player: {fileID: 238206273}
+--- !u!114 &1099485947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099485945}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253bf86e7ad914470bf9f18e5228642f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  totalDuration: 5
+  player: {fileID: 238206273}
+  scoreMultiplier: 5
+--- !u!114 &1099485950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099485945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc0bbab4db77430790a99abef2f8886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 0}
+  totalDuration: 5
+  player: {fileID: 238206273}
+  speedMultiplier: 0.2
 --- !u!1001 &1101333837
 Prefab:
   m_ObjectHideFlags: 0

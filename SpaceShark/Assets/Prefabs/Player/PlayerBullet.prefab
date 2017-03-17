@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyThis: 0
-  bulletSpeed: 200
+  bulletSpeed: 1.6
   bulletCulling: 300
 --- !u!136 &136319695136694592
 CapsuleCollider:

@@ -49,6 +49,10 @@ public class Ship_Movement : MonoBehaviour
 
     private bool sheilded = false;
     private bool invincible = false;
+    private bool alteredSpeed = false;
+    private float invincibilityTimer = 0.0f;
+    private float speedTimer = 0.0f;
+    
 
     //private AkSoundEngine wwise = new AkSoundEngine();
 
@@ -142,6 +146,27 @@ public class Ship_Movement : MonoBehaviour
             }
             // Move the player
             MoveToLane();
+        }
+
+        if (invincible)
+        {
+            invincibilityTimer -= Time.deltaTime;
+            if (invincibilityTimer < 0)
+            {
+                invincible = false;
+                Debug.Log("Invincibility Finished");
+            }
+        }
+
+        if (alteredSpeed)
+        {
+            speedTimer -= Time.deltaTime;
+            if(speedTimer < 0)
+            {
+                alteredSpeed = false;
+                currentSpeed = GameSettings.gameSpeed;
+                movementSpeed = GameSettings.gameSpeed;
+            }
         }
 
         gameSpeed = currentSpeed;
@@ -373,8 +398,17 @@ public class Ship_Movement : MonoBehaviour
         sheilded = true;
     }
 
-    public void SetInincible(bool invincibility)
+    public void SetInvincible(float duration)
     {
-        invincible = invincibility;
+        invincible = true;
+        invincibilityTimer = duration;
+    }
+
+    public void ChangeSpeed(float speedMultiplier, float duration)
+    {
+        currentSpeed = GameSettings.gameSpeed * speedMultiplier;
+        movementSpeed = GameSettings.gameSpeed * speedMultiplier;
+        alteredSpeed = true;
+        speedTimer = duration;
     }
 }
