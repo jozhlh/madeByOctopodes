@@ -81,7 +81,7 @@ MonoBehaviour:
   player: {fileID: 0}
   soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
     type: 2}
-  playerBullet: {fileID: 1000011063893666, guid: 73c0f3b6e5190df44a2bd7dcb1743c0f,
+  playerBullet: {fileID: 1509040808667636, guid: 821a847be57c84f42a23948202d7bed5,
     type: 2}
   explosionEffect: {fileID: 1522650916272822, guid: e2992faaaf69e424d9f5799987033539,
     type: 2}

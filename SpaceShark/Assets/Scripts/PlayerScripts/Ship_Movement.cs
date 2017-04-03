@@ -17,8 +17,13 @@ public class Ship_Movement : MonoBehaviour
     [Header("Game Object References")]
     [SerializeField]
     private LevelManager levelManager = null;
+    //[SerializeField]
+    //private GameObject goalObject = null;
     [SerializeField]
-    private GameObject goalObject = null;
+    private GameObject invincibilityObject = null;
+    [SerializeField]
+    private GameObject sheildObject = null;
+
 
     [Header("Tutorial Settings")]
     [SerializeField]
@@ -52,6 +57,7 @@ public class Ship_Movement : MonoBehaviour
     private bool alteredSpeed = false;
     private float invincibilityTimer = 0.0f;
     private float speedTimer = 0.0f;
+    private CollisionRay collision;
     
 
     //private AkSoundEngine wwise = new AkSoundEngine();
@@ -76,6 +82,7 @@ public class Ship_Movement : MonoBehaviour
         shipPosition = gameObject.transform.position;
         movementSpeed = GameSettings.gameSpeed;
         gameSpeed = currentSpeed;
+        collision = GetComponent<CollisionRay>();
 
         // Disable all player input at start of tutorial
         if (StateManager.gameState == StateManager.States.tutorial)
@@ -99,8 +106,11 @@ public class Ship_Movement : MonoBehaviour
         }
 
         // Start intro swoosh sound
-        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject); 
-	}
+        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
+
+        sheildObject.SetActive(false);
+        invincibilityObject.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update ()
@@ -118,7 +128,8 @@ public class Ship_Movement : MonoBehaviour
                 currentSpeed = movementSpeed;
             }
 
-            
+           
+
             // Move the player
             MoveToLane();
         }
@@ -153,6 +164,7 @@ public class Ship_Movement : MonoBehaviour
             invincibilityTimer -= Time.deltaTime;
             if (invincibilityTimer < 0)
             {
+                invincibilityObject.SetActive(false);
                 invincible = false;
                 Debug.Log("Invincibility Finished");
             }
@@ -172,26 +184,25 @@ public class Ship_Movement : MonoBehaviour
         gameSpeed = currentSpeed;
     }
 
-    // If the player collides with an object, respond according to what the object was
+    //If the player collides with an object, respond according to what the object was
     void OnTriggerEnter(Collider other)
     {
         // Player loses after hitting a bullet or wall
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
-           // levelManager.ResetLevel();
-           if (sheilded)
-           {
-               Debug.Log("Hit Sheild");
-               sheilded = false;
-           }
-           else if (invincible)
-           {
+            if (sheilded)
+            {
+                sheildObject.SetActive(false);
+                sheilded = false;
+            }
+            else if (invincible)
+            {
 
-           }
-           else
-           {
+            }
+            else
+            {
                 levelManager.ClearLevel();
-           }
+            }
         }
 
         // Bring up tutorial Ui when the player hits the respective triggers
@@ -226,7 +237,7 @@ public class Ship_Movement : MonoBehaviour
                 TutorialManager.shoot.enabled = true;
                 GameInput.OnTap += HandleOnTap;
             }
-        } 
+        }
     }
 
     // For tutorial, when player taps after being shown shoot ui, unrestrict all movement
@@ -253,8 +264,6 @@ public class Ship_Movement : MonoBehaviour
             GameMovement(direction);
             currentLane = LaneManager.laneData[(int)targetLane.laneID];
         }
-
-        //GetComponent<SwipeTrigger>().ActivateTrigger();
     }
 
 
@@ -386,20 +395,17 @@ public class Ship_Movement : MonoBehaviour
         }
         // Set the updated position
         transform.position = shipPosition;
-
-        levelProgress = shipPosition.z / goalObject.GetComponent<Transform>().position.z;
-
-        // Send level progress RTPC to wwise 
-        //soundManager.GetComponent<SoundManager>().SetLevelProgress(gameObject, levelProgress); 
     } 
 
     public void SetSheild()
     {
+        sheildObject.SetActive(true);
         sheilded = true;
     }
 
     public void SetInvincible(float duration)
     {
+        invincibilityObject.SetActive(true);
         invincible = true;
         invincibilityTimer = duration;
     }

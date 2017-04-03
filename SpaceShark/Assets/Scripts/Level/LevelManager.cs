@@ -5,9 +5,6 @@ using System.Collections.Generic;
 public class LevelManager : MonoBehaviour
 {
     // Holds references to the segments in the scene
-   // private SegmentData[] segmentData;
-  //  private List<GameObject> segmentDataObjects = new List<GameObject>();
-
     private List<GameObject> activeSegments = new List<GameObject>();
 
     [Header("Segment Prefabs")]
@@ -25,6 +22,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] veryHardSegments = null;
+    [SerializeField]
+    private GameObject goalObject = null;
 
     [SerializeField]
     private const int totalSegments = 30;
@@ -72,18 +71,6 @@ public class LevelManager : MonoBehaviour
     // Initialization
     void Start ()
     {
-        // Get references to the segments in the level, and populate them all
-        //int numberOfSegments = GetComponentsInChildren<SegmentData>().Length;
-        //segmentData = new SegmentData[numberOfSegments];
-        //segmentData = GetComponentsInChildren<SegmentData>();
-        //float zPos = 0.0f;
-        //for (int ob = 0; ob < numberOfSegments; ob++)
-        //{
-        //    zPos = ob * LaneManager.lengthOfSegment;
-        //    segmentData[ob].gameObject.transform.position = new Vector3 (0,0,zPos);
-        //    segmentDataObjects.Add(segmentData[ob].gameObject);
-        //    segmentData[ob].PlaceSegment();
-        //}
         Init();
         player.SetActive(true);
     }
@@ -101,6 +88,8 @@ public class LevelManager : MonoBehaviour
         CleanUp();
     }
 
+
+   
     private void SpawnSegment(int prefabIndex = -1)
     {
         GameObject go;
@@ -132,22 +121,20 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-           go = Instantiate(veryEasySegments[RandomPrefabIndex(veryEasySegments.Length)], segmentPosition, transform.rotation, transform);
+            go = Instantiate(goalObject, segmentPosition, transform.rotation, transform);
+            spawnZ += spawnZ;
+            return;
         }
         
-        //go.transform.SetParent(transform);
-        //go.transform.position = segmentPosition;
         activeSegments.Add(go);                    //add segment to active list
 
         if (powerUpCounter < 1)
         {
-            Debug.Log(powerUpCounter +" power up created");
             go.GetComponent<SegmentData>().PlaceSegment(true);
             powerUpCounter = powerUpFrequency;  
         }
         else
         {
-            Debug.Log(powerUpCounter +" till powerup");
             go.GetComponent<SegmentData>().PlaceSegment(false);
             powerUpCounter--;
         }
@@ -194,21 +181,6 @@ public class LevelManager : MonoBehaviour
 
     public void Init()
     {
-       // if (activeSegments.Count > 0)
-       // {
-       //     List<GameObject> deadSegs = new List<GameObject>();
-       //     foreach (GameObject seg in activeSegments)
-       //     {
-        //        activeSegments.Remove(seg);
-        //        deadSegs.Add(seg);
-        //    }
-        //    foreach(GameObject seg in deadSegs)
-        //    {
-         //       Destroy(seg);
-         //   }
-         //   deadSegs.Clear();
-         //   activeSegments.Clear();
-       // }
         spawnZ = startOffset;
         lastPrefabIndex = 0;
         powerUpCounter = powerUpFrequency;

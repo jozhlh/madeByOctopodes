@@ -70,17 +70,25 @@ public class Cannon : MonoBehaviour
 
 	public void PlayerFire(Vector3 position)
     {
-        // Fire bullet from left cannon
-        Vector3 bulletStartPos = player.GetComponent<Transform>().position;
-        GameObject bulletLeft = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
-        bulletLeft.transform.position = bulletStartPos + bulletOffset;
-        bulletObjects.Add(bulletLeft);
+        //// Fire bullet from left cannon
+        //Vector3 bulletStartPos = player.GetComponent<Transform>().position;
+        //GameObject bulletLeft = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
+        //bulletLeft.transform.position = bulletStartPos + bulletOffset;
+        //bulletObjects.Add(bulletLeft);
 
-        // Fire bullet from right cannon 
-        GameObject bulletRight = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
-        bulletOffset.x = -1 * bulletOffset.x;
-        bulletRight.transform.position = bulletStartPos + bulletOffset;
-        bulletObjects.Add(bulletRight);
+        //// Fire bullet from right cannon 
+        //GameObject bulletRight = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
+        //bulletOffset.x = -1 * bulletOffset.x;
+        //bulletRight.transform.position = bulletStartPos + bulletOffset;
+        //bulletObjects.Add(bulletRight);
+
+        // Fire Bullets Object
+        Vector3 bulletStartPos = player.GetComponent<Transform>().position;
+        GameObject bulletDuo = (GameObject)Instantiate(playerBullet, transform.position, transform.rotation);
+        bulletStartPos.y += bulletOffset.y;
+        bulletStartPos.z += bulletOffset.z;
+        bulletDuo.transform.position = bulletStartPos;
+        bulletObjects.Add(bulletDuo);
 
         //GetComponent<FireTrigger>().ActivateTrigger();
         //customTriggers.CustomTrigger();

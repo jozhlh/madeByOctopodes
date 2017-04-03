@@ -15,10 +15,9 @@ public class EnemyHitBox : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // If enemy is hit by a bullet or obstacle, destroy it and add score
-        if ((other.tag == "Bullet") | (other.tag == "Obstacle"))
+        if (other.tag == "Obstacle")
         {
             // Kill enemy
-            GetComponent<EnemyDeathTrigger>().ActivateTrigger();
             destroyEnemy = true;
 
             // Wwise Enemy Death Trigger
@@ -27,7 +26,16 @@ public class EnemyHitBox : MonoBehaviour
         if (other.tag == "Bullet")
         {
             PlayerScore.EnemyKilled();
-            other.GetComponent<PlayerBullet>().destroyThis = true;
+            if (other.GetComponent<PlayerBullet>() != null)
+            {
+                other.GetComponent<PlayerBullet>().destroyThis = true;
+            }
+            destroyEnemy = true;
+
+            // Wwise Enemy Death Trigger
+            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
         }
     }
+
+
 }

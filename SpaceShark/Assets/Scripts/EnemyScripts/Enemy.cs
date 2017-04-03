@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 
-//[ExecuteInEditMode]
 public class Enemy : MonoBehaviour
 {
     [Header("Placement Settings")]
@@ -14,9 +13,6 @@ public class Enemy : MonoBehaviour
     private LaneManager.PlayerLanes inLane;
 
     [Header("Object References")]
-    //[SerializeField]
-    //// Refernce to the player object
-    //private Ship_Movement player = null;
     [SerializeField]
     // Reference to the bullet prefab which will be created
     private GameObject enemyBullet = null;
@@ -40,8 +36,6 @@ public class Enemy : MonoBehaviour
     {
         cooldownProgress = GameSettings.cooldown;
         playerInRange = false;
-        Vector3 bound = GetComponent<BoxCollider>().size;
-        GetComponent<BoxCollider>().size = new Vector3(bound.x, bound.y, 2.0f * GameSettings.detectionRange);
     }
 
     // Update is called once per frame
@@ -85,15 +79,6 @@ public class Enemy : MonoBehaviour
         if (Ship_Movement.shipPosition.z > (transform.position.z - GameSettings.detectionRange))
         {
             playerInRange = true;
-        }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        // If player has entered detection range, start firing at it
-        if (other.tag == "Player")
-        {
-           // player in range
         }
     }
 

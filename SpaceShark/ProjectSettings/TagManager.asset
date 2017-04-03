@@ -13,6 +13,7 @@ TagManager:
   - VerticalTutorial
   - DiagonalTutorial
   - StateManager
+  - EnemyHitbox
   layers:
   - Default
   - TransparentFX
@@ -22,10 +23,10 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Obstacle
+  - PowerUp
   - 
   - 
   - 
