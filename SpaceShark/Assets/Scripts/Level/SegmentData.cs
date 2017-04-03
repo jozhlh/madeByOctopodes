@@ -112,8 +112,8 @@ public class SegmentData : MonoBehaviour
 
         foreach (EnemyData en in enemyTemplates)
         {
-            GameObject newEn = Instantiate(GameSettings.enemy, transform);
-            newEn.GetComponent<Enemy>().SetzPosition(en.zPosition);
+            GameObject newEn = Instantiate(GameSettings.enemy, transform.position + new Vector3(0,0,50), transform.rotation, transform);
+            newEn.GetComponent<Enemy>().SetzPosition(en.zPosition + transform.position.z);
             newEn.GetComponent<Enemy>().SetLocation(en.lane);
             newEn.GetComponent<Enemy>().ResetEnemy();
             enemyObjects.Add(newEn);
