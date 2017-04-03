@@ -9,17 +9,17 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1463148839740286}
+  m_RootGameObject: {fileID: 1984562130654704}
   m_IsPrefabParent: 1
---- !u!1 &1463148839740286
+--- !u!1 &1984562130654704
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4811753493849996}
-  - component: {fileID: 114970155088514700}
+  - component: {fileID: 4896002698655736}
+  - component: {fileID: 114635651217862104}
   m_Layer: 0
   m_Name: Segment_M_11
   m_TagString: Untagged
@@ -27,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4811753493849996
+--- !u!4 &4896002698655736
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1463148839740286}
+  m_GameObject: {fileID: 1984562130654704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114970155088514700
+--- !u!114 &114635651217862104
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1463148839740286}
+  m_GameObject: {fileID: 1984562130654704}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0833848eee07704a9d54a8ed54da81f, type: 3}
@@ -53,18 +53,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obMesh: {fileID: 4300000, guid: 016d30bd6e083495cbe78086c8e2fad2, type: 3}
   obstacleTemplates:
-  - lane: 11
-    zPosition: 70
   - lane: 8
-    zPosition: 213
+    zPosition: 401
   enemyTemplates:
-  - lane: 8
-    zPosition: 83
-  - lane: 7
-    zPosition: 115
-  - lane: 5
-    zPosition: 223
-  - lane: 4
-    zPosition: 305
+  - lane: 3
+    zPosition: 160
+  - lane: 1
+    zPosition: 316
   - lane: 0
-    zPosition: 397
+    zPosition: 363

@@ -55,8 +55,4 @@ MonoBehaviour:
   obstacleTemplates:
   - lane: 8
     zPosition: 150
-  - lane: 0
-    zPosition: 348
-  - lane: 7
-    zPosition: 500
   enemyTemplates: []
