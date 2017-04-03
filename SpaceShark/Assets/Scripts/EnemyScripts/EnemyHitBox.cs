@@ -15,7 +15,7 @@ public class EnemyHitBox : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // If enemy is hit by a bullet or obstacle, destroy it and add score
-        if ((other.tag == "Bullet") | (other.tag == "Obstacle"))
+        if ((other.tag == "Bullet") || (other.tag == "Obstacle"))
         {
             // Kill enemy
             GetComponent<EnemyDeathTrigger>().ActivateTrigger();
@@ -27,7 +27,37 @@ public class EnemyHitBox : MonoBehaviour
         if (other.tag == "Bullet")
         {
             PlayerScore.EnemyKilled();
-            other.GetComponent<PlayerBullet>().destroyThis = true;
+            if (other.GetComponent<PlayerBullet>() != null)
+            {
+                other.GetComponent<PlayerBullet>().destroyThis = true;
+            }
+        }
+    }
+
+    /// <summary>
+    /// OnTriggerStay is called once per frame for every Collider other
+    /// that is touching the trigger.
+    /// </summary>
+    /// <param name="other">The other Collider involved in this collision.</param>
+    void OnTriggerStay(Collider other)
+    {
+        // If enemy is hit by a bullet or obstacle, destroy it and add score
+        if ((other.tag == "Bullet") || (other.tag == "Obstacle"))
+        {
+            // Kill enemy
+            GetComponent<EnemyDeathTrigger>().ActivateTrigger();
+            destroyEnemy = true;
+
+            // Wwise Enemy Death Trigger
+            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
+        }
+        if (other.tag == "Bullet")
+        {
+            PlayerScore.EnemyKilled();
+            if (other.GetComponent<PlayerBullet>() != null)
+            {
+                other.GetComponent<PlayerBullet>().destroyThis = true;
+            }
         }
     }
 }

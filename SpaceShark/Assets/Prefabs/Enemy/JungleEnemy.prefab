@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114787486420116782}
   m_Layer: 0
   m_Name: enemy_jungle
-  m_TagString: Untagged
+  m_TagString: EnemyHitbox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 4930249903241826}
   - component: {fileID: 65753634783197222}
   - component: {fileID: 114348576561892728}
+  - component: {fileID: 54909302404240660}
   m_Layer: 2
   m_Name: JungleEnemy
   m_TagString: Enemy
@@ -409,6 +410,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1754270845234388}
   m_Mesh: {fileID: 4300002, guid: 2b90ba2377e8b46c29fab88da8e53e34, type: 3}
+--- !u!54 &54909302404240660
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1824652245266456}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!65 &65753634783197222
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -450,6 +466,7 @@ MonoBehaviour:
     type: 2}
   soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
     type: 2}
+  playerInRange: 0
 --- !u!114 &114434501016764110
 MonoBehaviour:
   m_ObjectHideFlags: 1

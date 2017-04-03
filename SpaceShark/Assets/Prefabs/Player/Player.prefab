@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 114006374863663550}
   - component: {fileID: 114109567859955106}
   - component: {fileID: 114253653995557062}
+  - component: {fileID: 114433366715496300}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -402,6 +403,24 @@ MonoBehaviour:
   - {fileID: 114006374863663550}
   - {fileID: 114109567859955106}
   - {fileID: 114253653995557062}
+--- !u!114 &114433366715496300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827079784657110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c03e488fd653142a7bcb71b814c43414, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  totalDuration: 5
+  player: {fileID: 1000013144991384}
+  duration: 5
+  speed: 180
+  energyField: {fileID: 1040395797218378, guid: c31835203e8a142d39de4dcf1f2fbcd1,
+    type: 2}
 --- !u!114 &114965998278617158
 MonoBehaviour:
   m_ObjectHideFlags: 1
