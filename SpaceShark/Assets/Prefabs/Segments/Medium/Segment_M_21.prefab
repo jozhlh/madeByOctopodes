@@ -53,10 +53,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obMesh: {fileID: 4300000, guid: 016d30bd6e083495cbe78086c8e2fad2, type: 3}
   obstacleTemplates:
-  - lane: 5
+  - lane: 11
     zPosition: 273
   enemyTemplates:
-  - lane: 5
+  - lane: 7
     zPosition: 160
-  - lane: 1
+  - lane: 4
     zPosition: 316
