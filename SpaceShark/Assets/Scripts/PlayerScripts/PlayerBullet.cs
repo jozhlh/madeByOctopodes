@@ -19,7 +19,7 @@ public class PlayerBullet : MonoBehaviour
     {
         // Move the bullet forwards according to its speed
         bulletPosition = gameObject.transform.position;
-        bulletPosition.z += Time.deltaTime * bulletSpeed;
+        bulletPosition.z += Time.deltaTime * (bulletSpeed * Ship_Movement.gameSpeed);
 
         // Destroy the bullet if it has reached its culling range
         if (bulletPosition.z > (Ship_Movement.shipPosition.z + bulletCulling))

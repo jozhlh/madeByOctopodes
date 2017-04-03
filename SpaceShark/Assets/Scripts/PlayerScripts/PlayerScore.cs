@@ -21,6 +21,12 @@ public class PlayerScore : MonoBehaviour
     // Progress to the next scoring interval
 	private float countdown;
 
+	// Track score multiplier
+	private float multiplier = 1.0f;
+	private float baseMultiplier = 1.0f;
+	private bool boosted = false;
+	private float boostCountdown = 0.0f;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -42,6 +48,16 @@ public class PlayerScore : MonoBehaviour
 			}
 			scoreText.text = score.ToString();
 		}
+
+		if (boosted)
+		{
+			boostCountdown -= Time.deltaTime;
+			if (boostCountdown < 0)
+			{
+				boosted = false;
+				multiplier = baseMultiplier;
+			}
+		}
 	}
 
     // Resets the score when the player dies
@@ -55,4 +71,11 @@ public class PlayerScore : MonoBehaviour
     {
         score += enemyScoreValue;
     }
+
+	public void ScoreBoost(float boostVal, float boostDuration)
+	{
+		boosted = true;
+		multiplier = boostVal;
+		boostCountdown = boostDuration;
+	}
 }
