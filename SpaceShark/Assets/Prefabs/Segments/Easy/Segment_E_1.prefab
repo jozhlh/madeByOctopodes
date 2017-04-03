@@ -58,5 +58,3 @@ MonoBehaviour:
   enemyTemplates:
   - lane: 0
     zPosition: 0
-  - lane: 0
-    zPosition: 0

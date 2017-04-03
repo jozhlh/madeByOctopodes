@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4631598384075024}
   - component: {fileID: 114497030148678430}
   m_Layer: 0
-  m_Name: Segment_M_9
+  m_Name: Segment_H_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,16 +55,10 @@ MonoBehaviour:
   obstacleTemplates:
   - lane: 8
     zPosition: 70
-  - lane: 7
-    zPosition: 213
   enemyTemplates:
   - lane: 0
     zPosition: 83
   - lane: 3
-    zPosition: 115
+    zPosition: 207
   - lane: 5
-    zPosition: 223
-  - lane: 4
-    zPosition: 305
-  - lane: 6
-    zPosition: 397
+    zPosition: 375

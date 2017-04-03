@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4358851890595218}
   - component: {fileID: 114195967717428308}
   m_Layer: 0
-  m_Name: Segment_H_6
+  m_Name: Segment_expert_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,22 +57,12 @@ MonoBehaviour:
     zPosition: 80
   - lane: 11
     zPosition: 194
-  - lane: 5
-    zPosition: 261
   enemyTemplates:
   - lane: 4
     zPosition: 76
   - lane: 3
     zPosition: 149
   - lane: 8
-    zPosition: 189
+    zPosition: 314
   - lane: 0
-    zPosition: 235
-  - lane: 2
-    zPosition: 269
-  - lane: 6
-    zPosition: 308
-  - lane: 3
-    zPosition: 341
-  - lane: 4
-    zPosition: 434
+    zPosition: 371
