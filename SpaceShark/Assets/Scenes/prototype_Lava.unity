@@ -296,52 +296,6 @@ GameObject:
   m_PrefabParentObject: {fileID: 1000012737035826, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
     type: 2}
   m_PrefabInternal: {fileID: 91375650}
---- !u!1001 &223927763
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000010633296802, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_RootOrder
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 1000011276323332, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: a5eab7668dbd79143a474679f6138cdb, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &238206273 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1000013144991384, guid: e0173837cf210c14d9e0245149716d2b,
@@ -489,7 +443,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: speed
-      value: 100
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}

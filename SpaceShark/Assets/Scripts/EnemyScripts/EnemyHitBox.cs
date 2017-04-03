@@ -15,10 +15,10 @@ public class EnemyHitBox : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // If enemy is hit by a bullet or obstacle, destroy it and add score
-        if ((other.tag == "Bullet") || (other.tag == "Obstacle"))
+        if (other.tag == "Obstacle")
         {
             // Kill enemy
-            GetComponent<EnemyDeathTrigger>().ActivateTrigger();
+           // GetComponent<EnemyDeathTrigger>().ActivateTrigger();
             destroyEnemy = true;
 
             // Wwise Enemy Death Trigger
@@ -31,6 +31,10 @@ public class EnemyHitBox : MonoBehaviour
             {
                 other.GetComponent<PlayerBullet>().destroyThis = true;
             }
+            destroyEnemy = true;
+
+            // Wwise Enemy Death Trigger
+            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
         }
     }
 
@@ -39,25 +43,25 @@ public class EnemyHitBox : MonoBehaviour
     /// that is touching the trigger.
     /// </summary>
     /// <param name="other">The other Collider involved in this collision.</param>
-    void OnTriggerStay(Collider other)
-    {
-        // If enemy is hit by a bullet or obstacle, destroy it and add score
-        if ((other.tag == "Bullet") || (other.tag == "Obstacle"))
-        {
-            // Kill enemy
-            GetComponent<EnemyDeathTrigger>().ActivateTrigger();
-            destroyEnemy = true;
+    //void OnTriggerStay(Collider other)
+    //{
+    //    // If enemy is hit by a bullet or obstacle, destroy it and add score
+    //    if ((other.tag == "Bullet") || (other.tag == "Obstacle"))
+    //    {
+    //        // Kill enemy
+    //        //GetComponent<EnemyDeathTrigger>().ActivateTrigger();
+    //        destroyEnemy = true;
 
-            // Wwise Enemy Death Trigger
-            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
-        }
-        if (other.tag == "Bullet")
-        {
-            PlayerScore.EnemyKilled();
-            if (other.GetComponent<PlayerBullet>() != null)
-            {
-                other.GetComponent<PlayerBullet>().destroyThis = true;
-            }
-        }
-    }
+    //        // Wwise Enemy Death Trigger
+    //        soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
+    //    }
+    //    if (other.tag == "Bullet")
+    //    {
+    //        PlayerScore.EnemyKilled();
+    //        if (other.GetComponent<PlayerBullet>() != null)
+    //        {
+    //            other.GetComponent<PlayerBullet>().destroyThis = true;
+    //        }
+    //    }
+    //}
 }

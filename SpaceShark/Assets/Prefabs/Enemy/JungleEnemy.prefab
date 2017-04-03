@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4667696218894498}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Jungle_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,14 +34,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4246370636812870}
-  - component: {fileID: 65766606381104016}
-  - component: {fileID: 114864098428381876}
-  - component: {fileID: 114434501016764110}
-  - component: {fileID: 114541175345518982}
-  - component: {fileID: 114787486420116782}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy_jungle
-  m_TagString: EnemyHitbox
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -56,7 +51,7 @@ GameObject:
   - component: {fileID: 4997070136036502}
   - component: {fileID: 33676484469976932}
   - component: {fileID: 23890558518965716}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cone001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +68,7 @@ GameObject:
   - component: {fileID: 4305360113979046}
   - component: {fileID: 33085181070348600}
   - component: {fileID: 23712918564302624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Box001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +85,7 @@ GameObject:
   - component: {fileID: 4805828472773586}
   - component: {fileID: 33987126011007204}
   - component: {fileID: 23757571848668108}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cone003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,10 +100,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4930249903241826}
+  - component: {fileID: 54909302404240660}
   - component: {fileID: 65753634783197222}
   - component: {fileID: 114348576561892728}
-  - component: {fileID: 54909302404240660}
-  m_Layer: 2
+  - component: {fileID: 114482473728405840}
+  - component: {fileID: 114033799092359310}
+  m_Layer: 9
   m_Name: JungleEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -125,7 +122,7 @@ GameObject:
   - component: {fileID: 4410031031049656}
   - component: {fileID: 33853406748738008}
   - component: {fileID: 23131471160368740}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cone004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +137,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4212944983031100}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: JungleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,20 +432,24 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 30}
+  m_Size: {x: 2.5, y: 2.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65766606381104016
-BoxCollider:
+--- !u!114 &114033799092359310
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156946318315364}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1824652245266456}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.15, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!114 &114348576561892728
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,63 +468,12 @@ MonoBehaviour:
   soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
     type: 2}
   playerInRange: 0
---- !u!114 &114434501016764110
+--- !u!114 &114482473728405840
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156946318315364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe399b5172374d6f8b5c0fac17acf3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114541175345518982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156946318315364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab79562a7452c4ddeb3e577401360b49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 91650659
-  useOtherObject: 0
-  valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -1547397162
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
---- !u!114 &114787486420116782
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156946318315364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9311d286a4bbc47fe990d1d0689c3fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 0
-  listenerMask: 1
-  isStaticObject: 0
-  m_posOffsetData: {fileID: 0}
---- !u!114 &114864098428381876
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1156946318315364}
+  m_GameObject: {fileID: 1824652245266456}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ba081b4354bc854fabf947b39238dc9, type: 3}

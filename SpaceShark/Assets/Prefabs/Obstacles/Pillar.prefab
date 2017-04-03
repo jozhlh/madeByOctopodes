@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33491579014114222}
   - component: {fileID: 23110772135070542}
   - component: {fileID: 114860932733811734}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Desert_pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4108280094534658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,10 +52,11 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4452763702134452}
-  - component: {fileID: 114935099288809362}
+  - component: {fileID: 54754076679597588}
   - component: {fileID: 65104003377095202}
+  - component: {fileID: 114935099288809362}
   - component: {fileID: 114720180000861284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pillar
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -141,6 +142,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000768872319066}
   m_Mesh: {fileID: 4300000, guid: 3e3eee0ce136949908cf3ea6ab4294ff, type: 3}
+--- !u!54 &54754076679597588
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809846085328238}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 1
 --- !u!65 &65104003377095202
 BoxCollider:
   m_ObjectHideFlags: 1

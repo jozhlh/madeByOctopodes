@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4343377072517660}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: LavaEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,10 +34,12 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4579816741405454}
+  - component: {fileID: 54606089007994000}
   - component: {fileID: 65369578778200210}
   - component: {fileID: 114242516562328302}
-  - component: {fileID: 54606089007994000}
-  m_Layer: 2
+  - component: {fileID: 114154787371833256}
+  - component: {fileID: 114348712919583070}
+  m_Layer: 9
   m_Name: LavaEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -52,14 +54,9 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4108783140445854}
-  - component: {fileID: 65140038454668020}
-  - component: {fileID: 114104716933490640}
-  - component: {fileID: 114119711562505104}
-  - component: {fileID: 114856583776605882}
-  - component: {fileID: 114064682424149668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy_lava
-  m_TagString: EnemyHitbox
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +71,7 @@ GameObject:
   - component: {fileID: 4032712861448518}
   - component: {fileID: 33877331500640044}
   - component: {fileID: 23886120870611288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Lava_Enemy_mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,18 +186,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &65140038454668020
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1769492009745058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.15, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65369578778200210
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -211,32 +196,14 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 30}
+  m_Size: {x: 2.5, y: 2.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114064682424149668
+--- !u!114 &114154787371833256
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1769492009745058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9311d286a4bbc47fe990d1d0689c3fbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_positionOffsetData:
-    positionOffset: {x: 0, y: 0, z: 0}
-    KeepMe: 0
-  isEnvironmentAware: 0
-  listenerMask: 1
-  isStaticObject: 0
-  m_posOffsetData: {fileID: 0}
---- !u!114 &114104716933490640
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1769492009745058}
+  m_GameObject: {fileID: 1474706802270056}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ba081b4354bc854fabf947b39238dc9, type: 3}
@@ -246,17 +213,6 @@ MonoBehaviour:
     type: 2}
   destroyEnemy: 0
   enemyDestroyed: 0
---- !u!114 &114119711562505104
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1769492009745058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fe399b5172374d6f8b5c0fac17acf3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114242516562328302
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -275,25 +231,19 @@ MonoBehaviour:
   soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
     type: 2}
   playerInRange: 0
---- !u!114 &114856583776605882
+--- !u!114 &114348712919583070
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1769492009745058}
+  m_GameObject: {fileID: 1474706802270056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab79562a7452c4ddeb3e577401360b49, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: 91650659
-  useOtherObject: 0
-  valueGuid: e09be010cd0d7a4183902d888dd8fa42
-  eventID: -1547397162
-  soundEmitterObject: {fileID: 0}
-  enableActionOnEvent: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  transitionDuration: 0
-  m_callbackData: {fileID: 0}
-  playingId: 0
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1

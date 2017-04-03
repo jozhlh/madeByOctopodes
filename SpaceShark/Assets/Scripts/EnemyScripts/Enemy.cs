@@ -40,8 +40,8 @@ public class Enemy : MonoBehaviour
     {
         cooldownProgress = GameSettings.cooldown;
         playerInRange = false;
-        Vector3 bound = GetComponent<BoxCollider>().size;
-        GetComponent<BoxCollider>().size = new Vector3(bound.x, bound.y, 2.0f * GameSettings.detectionRange);
+        //Vector3 bound = GetComponent<BoxCollider>().size;
+        //GetComponent<BoxCollider>().size = new Vector3(bound.x, bound.y, 2.0f * GameSettings.detectionRange);
     }
 
     // Update is called once per frame
@@ -88,14 +88,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        // If player has entered detection range, start firing at it
-        if (other.tag == "Player")
-        {
-           // player in range
-        }
-    }
+    //void OnTriggerEnter(Collider other)
+    //{
+    //    // If player has entered detection range, start firing at it
+    //    if (other.tag == "Player")
+    //    {
+    //       // player in range
+    //    }
+    //}
 
     // Reset all variables and bullet objects
     public void ResetEnemy()

@@ -13,6 +13,12 @@ public class PlayerBullet : MonoBehaviour
     private float bulletCulling = 100.0f;
 
     private Vector3 bulletPosition = new Vector3(0, 0, 0);
+    private CollisionRay collision;
+
+    void Start()
+    {
+        collision = GetComponent<CollisionRay>();
+    }
 
     // Update is called once per frame
     void Update ()
@@ -28,6 +34,8 @@ public class PlayerBullet : MonoBehaviour
         }
 
         gameObject.transform.position = bulletPosition;
+
+        //Collisions();
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,15 +47,24 @@ public class PlayerBullet : MonoBehaviour
             // Check whether it was the enemy's detection box or hit box that was collided with
             if (other.tag == "Enemy")
             {
-                if (other.GetComponent<EnemyHitBox>())
-                {
-                    other.GetComponent<EnemyHitBox>().destroyEnemy = true;
-                }
-                else
-                {
-                    destroyThis = false;
-                }
+                other.GetComponent<EnemyHitBox>().destroyEnemy = true;
             }
+        }
+    }
+
+    void Collisions()
+    {
+        // Destroy bullet if it hits a wall or enemy
+        if (collision.CheckCollisionDownLane("Obstacle"))
+        {
+            destroyThis = true;
+        }
+
+        // Check whether it was the enemy's hit box that was collided with
+        if (collision.CheckCollisionDownLane("Enemy"))
+        {
+            collision.LastGameObjectHit().GetComponent<EnemyHitBox>().destroyEnemy = true;
+            destroyThis = true;
         }
     }
 

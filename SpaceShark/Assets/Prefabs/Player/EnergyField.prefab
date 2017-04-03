@@ -19,12 +19,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4301190326675344}
+  - component: {fileID: 54444044374400330}
   - component: {fileID: 65988224894275618}
-  - component: {fileID: 198229284589899412}
   - component: {fileID: 199124115195525230}
   - component: {fileID: 114921510409404068}
-  - component: {fileID: 54444044374400330}
-  m_Layer: 0
+  - component: {fileID: 198229284589899412}
+  - component: {fileID: 114417897386349786}
+  m_Layer: 8
   m_Name: EnergyField
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -71,6 +72,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 20, y: 20, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114417897386349786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1040395797218378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!114 &114921510409404068
 MonoBehaviour:
   m_ObjectHideFlags: 1

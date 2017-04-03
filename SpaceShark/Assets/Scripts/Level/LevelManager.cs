@@ -101,6 +101,8 @@ public class LevelManager : MonoBehaviour
         CleanUp();
     }
 
+
+   
     private void SpawnSegment(int prefabIndex = -1)
     {
         GameObject go;
@@ -141,13 +143,13 @@ public class LevelManager : MonoBehaviour
 
         if (powerUpCounter < 1)
         {
-            Debug.Log(powerUpCounter +" power up created");
+           // Debug.Log(powerUpCounter +" power up created");
             go.GetComponent<SegmentData>().PlaceSegment(true);
             powerUpCounter = powerUpFrequency;  
         }
         else
         {
-            Debug.Log(powerUpCounter +" till powerup");
+           // Debug.Log(powerUpCounter +" till powerup");
             go.GetComponent<SegmentData>().PlaceSegment(false);
             powerUpCounter--;
         }
