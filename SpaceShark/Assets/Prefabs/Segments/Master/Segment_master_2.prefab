@@ -70,3 +70,6 @@ MonoBehaviour:
     zPosition: 282
   - lane: 2
     zPosition: 394
+  powerUp:
+    lane: 4
+    zPosition: 169
