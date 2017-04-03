@@ -28,7 +28,7 @@ public class PowerUpCollectable : MonoBehaviour
 		if (other.tag == "Player")
 		{
 			// Give player power up
-			powerUpManager.SelectPowerUp();
+			other.GetComponentInChildren<PowerUpManager>().SelectPowerUp();
 			Destroy(gameObject);
 		}
 		

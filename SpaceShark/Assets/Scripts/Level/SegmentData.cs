@@ -32,6 +32,10 @@ public class SegmentData : MonoBehaviour
     // The dead enemy fragments
     private List<GameObject> deadEnemyObjects = new List<GameObject>();
 
+    [Header("Power Ups")]
+    [SerializeField]
+    private PowerUpData powerUp = null;
+
     // When the segment is selected, draw a grid to show the lanes, draw all children of the segment
     void OnDrawGizmosSelected()
     {
@@ -66,6 +70,12 @@ public class SegmentData : MonoBehaviour
             obstaclePosition.z = en.zPosition + transform.position.z;
             Gizmos.DrawSphere(obstaclePosition, LaneManager.laneSpacingVertical * 0.5f);
         }
+
+        Gizmos.color = Color.magenta;
+        obstaclePosition.x = LaneManager.laneData[(int)powerUp.lane].laneX;
+        obstaclePosition.y = LaneManager.laneData[(int)powerUp.lane].laneY;    
+        obstaclePosition.z = powerUp.zPosition + transform.position.z;
+        Gizmos.DrawSphere(obstaclePosition, LaneManager.laneSpacingVertical * 0.5f);
     }
 
     // If the segement has already been populated with children, remove them from the segment and the scene
@@ -100,7 +110,7 @@ public class SegmentData : MonoBehaviour
     }
 
     // Remove all children of the segment from the scene, then populate the segment
-    public void PlaceSegment()
+    public void PlaceSegment(bool powerUpActive)
     {
         ClearScene();
         foreach (ObstacleData ob in obstacleTemplates)
@@ -117,6 +127,15 @@ public class SegmentData : MonoBehaviour
             newEn.GetComponent<Enemy>().SetLocation(en.lane);
             newEn.GetComponent<Enemy>().ResetEnemy();
             enemyObjects.Add(newEn);
+        }
+
+        if (powerUpActive)
+        {
+            Vector3 powerUpPos = new Vector3(0,0,0);
+            powerUpPos.x = LaneManager.laneData[(int)powerUp.lane].laneX;
+            powerUpPos.y = LaneManager.laneData[(int)powerUp.lane].laneY;
+            powerUpPos.z = powerUp.zPosition + transform.position.z;
+            GameObject powerUpObject = Instantiate(GameSettings.powerUpCollectable, powerUpPos, transform.rotation, transform);
         }
 
         ResetObstacles();

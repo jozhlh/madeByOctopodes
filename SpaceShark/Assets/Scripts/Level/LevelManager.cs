@@ -28,6 +28,9 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private const int totalSegments = 30;
+    [SerializeField]
+    private int powerUpFrequency = 2;
+    private int powerUpCounter = 2;
 
     [Header("Difficulty Curve")]
     [SerializeField]
@@ -92,7 +95,7 @@ public class LevelManager : MonoBehaviour
         if (spawnZ < (EndPlate.horizon + Ship_Movement.shipPosition.z))
         {
             SpawnSegment();
-            spawnZ += LaneManager.lengthOfSegment;       //move the spawn position forwards the length of one tile 
+            spawnZ += LaneManager.lengthOfSegment;       //move the spawn position forwards the length of one tile
         }
         
         CleanUp();
@@ -135,7 +138,19 @@ public class LevelManager : MonoBehaviour
         //go.transform.SetParent(transform);
         //go.transform.position = segmentPosition;
         activeSegments.Add(go);                    //add segment to active list
-        go.GetComponent<SegmentData>().PlaceSegment();
+
+        if (powerUpCounter < 1)
+        {
+            Debug.Log(powerUpCounter +" power up created");
+            go.GetComponent<SegmentData>().PlaceSegment(true);
+            powerUpCounter = powerUpFrequency;  
+        }
+        else
+        {
+            Debug.Log(powerUpCounter +" till powerup");
+            go.GetComponent<SegmentData>().PlaceSegment(false);
+            powerUpCounter--;
+        }
     }
 
     //this function will return a random prefab to be placed 
@@ -196,6 +211,7 @@ public class LevelManager : MonoBehaviour
        // }
         spawnZ = startOffset;
         lastPrefabIndex = 0;
+        powerUpCounter = powerUpFrequency;
         veryEasyToSpawn = veryEasyNum;
         easyToSpawn = easyNum;
         mediumToSpawn = mediumNum;
