@@ -17,8 +17,8 @@ public class Ship_Movement : MonoBehaviour
     [Header("Game Object References")]
     [SerializeField]
     private LevelManager levelManager = null;
-    [SerializeField]
-    private GameObject goalObject = null;
+    //[SerializeField]
+    //private GameObject goalObject = null;
 
     [Header("Tutorial Settings")]
     [SerializeField]
@@ -492,11 +492,6 @@ public class Ship_Movement : MonoBehaviour
         }
         // Set the updated position
         transform.position = shipPosition;
-
-        levelProgress = shipPosition.z / goalObject.GetComponent<Transform>().position.z;
-
-        // Send level progress RTPC to wwise 
-        //soundManager.GetComponent<SoundManager>().SetLevelProgress(gameObject, levelProgress); 
     } 
 
     public void SetSheild()

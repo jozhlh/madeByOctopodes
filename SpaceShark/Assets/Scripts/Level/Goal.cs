@@ -7,8 +7,16 @@ public class Goal : MonoBehaviour {
     // Reference to the sound manager in the scene
     private GameObject soundManager;
 
+    void Update()
+    {
+        float levelProgress = Ship_Movement.shipPosition.z / transform.position.z;
+
+        // Send level progress RTPC to wwise 
+        //soundManager.GetComponent<SoundManager>().SetLevelProgress(gameObject, levelProgress); 
+    }
+
     // When player reaches this, Level is complete
-	void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Player")
 		{

@@ -25,6 +25,8 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField]
     private GameObject[] veryHardSegments = null;
+    [SerializeField]
+    private GameObject goalObject = null;
 
     [SerializeField]
     private const int totalSegments = 30;
@@ -134,7 +136,10 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-           go = Instantiate(veryEasySegments[RandomPrefabIndex(veryEasySegments.Length)], segmentPosition, transform.rotation, transform);
+          // go = Instantiate(veryEasySegments[RandomPrefabIndex(veryEasySegments.Length)], segmentPosition, transform.rotation, transform);
+            go = Instantiate(goalObject, segmentPosition, transform.rotation, transform);
+            spawnZ += spawnZ;
+            return;
         }
         
         //go.transform.SetParent(transform);
