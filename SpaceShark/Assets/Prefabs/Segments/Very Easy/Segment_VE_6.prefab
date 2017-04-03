@@ -9,30 +9,30 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1385182874019678}
+  m_RootGameObject: {fileID: 1213384334139426}
   m_IsPrefabParent: 1
---- !u!1 &1385182874019678
+--- !u!1 &1213384334139426
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4841229359624392}
-  - component: {fileID: 114943250087247358}
+  - component: {fileID: 4001833334975300}
+  - component: {fileID: 114293159797416894}
   m_Layer: 0
-  m_Name: Segment_M_12
+  m_Name: Segment_VE_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4841229359624392
+--- !u!4 &4001833334975300
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1385182874019678}
+  m_GameObject: {fileID: 1213384334139426}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -40,23 +40,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114943250087247358
+--- !u!114 &114293159797416894
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1385182874019678}
+  m_GameObject: {fileID: 1213384334139426}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0833848eee07704a9d54a8ed54da81f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obMesh: {fileID: 4300000, guid: 016d30bd6e083495cbe78086c8e2fad2, type: 3}
-  obstacleTemplates:
-  - lane: 9
-    zPosition: 401
+  obstacleTemplates: []
   enemyTemplates:
-  - lane: 5
-    zPosition: 160
-  - lane: 2
-    zPosition: 316
+  - lane: 8
+    zPosition: 250
