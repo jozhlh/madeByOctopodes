@@ -31,7 +31,7 @@ public class PowerUpManager : MonoBehaviour
 		if (equippedPowerUp < 0)
 		{
 			int chosenPowerUp = Random.Range(0, availablePowerUps.Length);
-			chosenPowerUp = 4;
+			//chosenPowerUp = 0;
 			Debug.Log("Available PowerUps: " + availablePowerUps.Length);
 			Debug.Log("power up: " + chosenPowerUp);
 			availablePowerUps[chosenPowerUp].GiveToPlayer();

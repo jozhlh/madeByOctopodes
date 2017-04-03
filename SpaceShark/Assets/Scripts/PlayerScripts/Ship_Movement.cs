@@ -19,6 +19,11 @@ public class Ship_Movement : MonoBehaviour
     private LevelManager levelManager = null;
     //[SerializeField]
     //private GameObject goalObject = null;
+    [SerializeField]
+    private GameObject invincibilityObject = null;
+    [SerializeField]
+    private GameObject sheildObject = null;
+
 
     [Header("Tutorial Settings")]
     [SerializeField]
@@ -101,8 +106,11 @@ public class Ship_Movement : MonoBehaviour
         }
 
         // Start intro swoosh sound
-        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject); 
-	}
+        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
+
+        sheildObject.SetActive(false);
+        invincibilityObject.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update ()
@@ -156,6 +164,7 @@ public class Ship_Movement : MonoBehaviour
             invincibilityTimer -= Time.deltaTime;
             if (invincibilityTimer < 0)
             {
+                invincibilityObject.SetActive(false);
                 invincible = false;
                 Debug.Log("Invincibility Finished");
             }
@@ -175,14 +184,14 @@ public class Ship_Movement : MonoBehaviour
         gameSpeed = currentSpeed;
     }
 
-    void FixedUpdate()
-    {
-        // If the game is in progress, move ship
-        if (StateManager.gameState == StateManager.States.play)
-        {
-            CheckCollisions();
-        }
-    }
+    //void FixedUpdate()
+    //{
+    //    // If the game is in progress, move ship
+    //    if (StateManager.gameState == StateManager.States.play)
+    //    {
+    //        CheckCollisions();
+    //    }
+    //}
 
     //If the player collides with an object, respond according to what the object was
     void OnTriggerEnter(Collider other)
@@ -194,7 +203,8 @@ public class Ship_Movement : MonoBehaviour
             // levelManager.ResetLevel();
             if (sheilded)
             {
-                Debug.Log("Hit Sheild");
+                sheildObject.SetActive(false);
+               // Debug.Log("Hit Sheild");
                 sheilded = false;
             }
             else if (invincible)
@@ -496,11 +506,13 @@ public class Ship_Movement : MonoBehaviour
 
     public void SetSheild()
     {
+        sheildObject.SetActive(true);
         sheilded = true;
     }
 
     public void SetInvincible(float duration)
     {
+        invincibilityObject.SetActive(true);
         invincible = true;
         invincibilityTimer = duration;
     }
