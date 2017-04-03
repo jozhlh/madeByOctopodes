@@ -123,6 +123,9 @@ GameObject:
   - component: {fileID: 4670589239870652}
   - component: {fileID: 114275804853123150}
   - component: {fileID: 114965998278617158}
+  - component: {fileID: 114006374863663550}
+  - component: {fileID: 114109567859955106}
+  - component: {fileID: 114253653995557062}
   m_Layer: 0
   m_Name: PowerUpManager
   m_TagString: Untagged
@@ -338,6 +341,50 @@ MonoBehaviour:
     type: 2}
   currentSpeed: 3
   movementSpeed: 40
+--- !u!114 &114006374863663550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827079784657110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4de00292afe7b4ff8a3160998b175600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  totalDuration: 5
+  player: {fileID: 1000013144991384}
+--- !u!114 &114109567859955106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827079784657110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 253bf86e7ad914470bf9f18e5228642f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  totalDuration: 5
+  player: {fileID: 1000013144991384}
+  scoreMultiplier: 5
+--- !u!114 &114253653995557062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1827079784657110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdc0bbab4db77430790a99abef2f8886, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uiIcon: {fileID: 0}
+  totalDuration: 5
+  player: {fileID: 1000013144991384}
+  speedMultiplier: 0.2
 --- !u!114 &114275804853123150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -350,7 +397,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpUi: {fileID: 0}
-  availablePowerUps: []
+  availablePowerUps:
+  - {fileID: 114965998278617158}
+  - {fileID: 114006374863663550}
+  - {fileID: 114109567859955106}
+  - {fileID: 114253653995557062}
 --- !u!114 &114965998278617158
 MonoBehaviour:
   m_ObjectHideFlags: 1

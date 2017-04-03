@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-[ExecuteInEditMode]
+//[ExecuteInEditMode]
 public class Enemy : MonoBehaviour
 {
     [Header("Placement Settings")]
@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     private GameObject soundManager;
 
     // Whether the player is in range of the enemy
+    [SerializeField]
     private bool playerInRange = false;
     // The current position of this enemy
     private Vector3 enemyPosition = new Vector3(0, 0, 0);
@@ -80,6 +81,11 @@ public class Enemy : MonoBehaviour
         // move to that lane
 
         gameObject.transform.position = enemyPosition;
+
+        if (Ship_Movement.shipPosition.z > (transform.position.z - GameSettings.detectionRange))
+        {
+            playerInRange = true;
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -87,7 +93,7 @@ public class Enemy : MonoBehaviour
         // If player has entered detection range, start firing at it
         if (other.tag == "Player")
         {
-            playerInRange = true;
+           // player in range
         }
     }
 

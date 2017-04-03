@@ -24,6 +24,7 @@ public class GameSettings : MonoBehaviour
     public static GameObject enemy;
     public static GameObject enemyDeath;
     public static GameObject obstacle;
+    public static GameObject powerUpCollectable;
 
     //[Header("Level")]
     //[SerializeField]
@@ -38,6 +39,8 @@ public class GameSettings : MonoBehaviour
 	private float speed = 40.0f;
 	[SerializeField]
 	private float laneChangeSpeed = 10.0f;
+    [SerializeField]
+    private GameObject powerUpPrefab;
 
     [Header("Obstacles")]
     [SerializeField]
@@ -129,6 +132,7 @@ public class GameSettings : MonoBehaviour
         fallTime = fallDelay;
         fallPeriod = fallSpread;
         detectionRange = enemyDetectionRange;
+        powerUpCollectable = powerUpPrefab;
         //segmentLength = lengthOfASegment;
     }
 }

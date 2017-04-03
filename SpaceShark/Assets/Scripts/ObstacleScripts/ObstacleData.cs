@@ -21,3 +21,13 @@ public class EnemyData
     [Range(buf, LaneManager.lengthOfSegment)]
     public int zPosition = 0;
 }
+
+[System.Serializable]
+public class PowerUpData
+{
+    public LaneManager.PlayerLanes lane = LaneManager.PlayerLanes.S;
+    private const int buf = 50;
+    private const int segmentLength = LaneManager.lengthOfSegment;
+    [Range(buf, LaneManager.lengthOfSegment)]
+    public int zPosition = 0;
+}
