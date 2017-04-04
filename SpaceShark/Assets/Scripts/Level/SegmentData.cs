@@ -6,12 +6,6 @@ using UnityEngine;
 public class SegmentData : MonoBehaviour
 {
     [Header("Models")]
-    //[SerializeField]
-    //// The obstacle prefab for this level
-    //private GameObject obstacle = null;
-    //[SerializeField]
-    //// The enemy prefab for this level
-    //private GameObject enemy = null;
     [SerializeField]
     // The mesh which is used to show the obstacle's position
     private Mesh obMesh = null;
@@ -152,15 +146,6 @@ public class SegmentData : MonoBehaviour
             }
         }
 
-        //foreach (GameObject enemy in enemyObjects)
-        //{
-        //    if ((enemy.transform.position.z + (enemy.transform.localScale.z / 2)) < playerBoundary)
-        //    {
-        //        Debug.Log("Deactivate");
-        //        enemy.SetActive(false);
-        //    }
-        //}
-
         foreach (GameObject enemy in deadEnemyObjects)
         {
             if (enemy.activeInHierarchy)
@@ -192,7 +177,6 @@ public class SegmentData : MonoBehaviour
         {
             enemy.SetActive(true);
             enemy.GetComponent<Enemy>().ResetEnemy();
-            //enemies[iterator].ResetEnemy();
             enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy = false;
             enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed = false;
             iterator++;
@@ -224,11 +208,8 @@ public class SegmentData : MonoBehaviour
             if (enemy.GetComponentInChildren<EnemyHitBox>().destroyEnemy & !enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed)
             {
                 deadEnemyObjects.Add(Instantiate(GameSettings.enemyDeath, enemy.transform.position, enemy.transform.rotation));
-                Debug.Log("Spawn Carcass");
                 enemy.GetComponentInChildren<EnemyHitBox>().enemyDestroyed = true;
-                //Debug.Log("Deactivate");
                 enemy.SetActive(false);
-                //GetComponent<Animator>().
             }
         }
     }

@@ -184,27 +184,15 @@ public class Ship_Movement : MonoBehaviour
         gameSpeed = currentSpeed;
     }
 
-    //void FixedUpdate()
-    //{
-    //    // If the game is in progress, move ship
-    //    if (StateManager.gameState == StateManager.States.play)
-    //    {
-    //        CheckCollisions();
-    //    }
-    //}
-
     //If the player collides with an object, respond according to what the object was
     void OnTriggerEnter(Collider other)
     {
         // Player loses after hitting a bullet or wall
         if ((other.tag == "Obstacle") | (other.tag == "Laser"))
         {
-            Debug.Log("Hit");
-            // levelManager.ResetLevel();
             if (sheilded)
             {
                 sheildObject.SetActive(false);
-               // Debug.Log("Hit Sheild");
                 sheilded = false;
             }
             else if (invincible)
@@ -252,99 +240,6 @@ public class Ship_Movement : MonoBehaviour
         }
     }
 
-    // If the player collides with an object, respond according to what the object was
-    void CheckCollisions()
-    {
-        //// Player loses after hitting a bullet or wall
-        //if (collision.CheckCollisionDownLane("Obstacle"))
-        //{
-        //    Debug.Log("Player Hit Obstacle");
-        //    // levelManager.ResetLevel();
-        //    if (sheilded)
-        //    {
-        //        Debug.Log("Hit Sheild");
-        //        sheilded = false;
-        //    }
-        //    else if (invincible)
-        //    {
-
-        //    }
-        //    else
-        //    {
-        //        Debug.Log("Clearing Level");
-        //        levelManager.ClearLevel();
-        //    }
-        //}
-        //else if (collision.CheckCollisionDownLane("Laser"))
-        //{
-        //    Debug.Log("Hit Laserr");
-        //    if (sheilded)
-        //    {
-        //        Debug.Log("Hit Sheild");
-        //        sheilded = false;
-        //    }
-        //    else if (invincible)
-        //    {
-
-        //    }
-        //    else
-        //    {
-        //        levelManager.ClearLevel();
-        //    }
-        //}
-
-        // Bring up tutorial Ui when the player hits the respective triggers
-        //if (StateManager.gameState == StateManager.States.tutorial)
-        //{
-        //    if (other.tag == "HorizontalTutorial")
-        //    {
-        //        Debug.Log("horizontal enabled");
-        //        movementSpeed = 0;
-        //        restrictSwipeHorizontal = false;
-        //        TutorialManager.horizontal.enabled = true;
-        //    }
-        //    else if (other.tag == "VerticalTutorial")
-        //    {
-        //        movementSpeed = 0;
-        //        restrictSwipeVertical = false;
-        //        TutorialManager.vertical.enabled = true;
-        //    }
-        //    else if (other.tag == "DiagonalTutorial")
-        //    {
-        //        movementSpeed = 0;
-        //        restrictSwipeDiagonal = false;
-        //        TutorialManager.diagonal.enabled = true;
-        //    }
-        //    else if (other.tag == "ShootingTutorial")
-        //    {
-        //        movementSpeed = 0;
-        //        restrictSwipeVertical = false;
-        //        restrictSwipeHorizontal = false;
-        //        restrictSwipeDiagonal = false;
-        //        restrictBullet = false;
-        //        TutorialManager.shoot.enabled = true;
-        //        GameInput.OnTap += HandleOnTap;
-        //    }
-        //}
-    }
-
-    public void HitByBullet()
-    {
-        if (sheilded)
-        {
-            Debug.Log("Hit Sheild");
-            sheilded = false;
-        }
-        else if (invincible)
-        {
-
-        }
-        else
-        {
-            levelManager.ClearLevel();
-        }
-    }
-
     // For tutorial, when player taps after being shown shoot ui, unrestrict all movement
     private void HandleOnTap(Vector3 position)
     {
@@ -369,8 +264,6 @@ public class Ship_Movement : MonoBehaviour
             GameMovement(direction);
             currentLane = LaneManager.laneData[(int)targetLane.laneID];
         }
-
-        //GetComponent<SwipeTrigger>().ActivateTrigger();
     }
 
 

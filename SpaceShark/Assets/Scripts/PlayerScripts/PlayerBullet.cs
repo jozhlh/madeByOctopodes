@@ -32,10 +32,7 @@ public class PlayerBullet : MonoBehaviour
         {
             destroyThis = true;
         }
-
         gameObject.transform.position = bulletPosition;
-
-        //Collisions();
     }
 
     void OnTriggerEnter(Collider other)
@@ -51,21 +48,4 @@ public class PlayerBullet : MonoBehaviour
             }
         }
     }
-
-    void Collisions()
-    {
-        // Destroy bullet if it hits a wall or enemy
-        if (collision.CheckCollisionDownLane("Obstacle"))
-        {
-            destroyThis = true;
-        }
-
-        // Check whether it was the enemy's hit box that was collided with
-        if (collision.CheckCollisionDownLane("Enemy"))
-        {
-            collision.LastGameObjectHit().GetComponent<EnemyHitBox>().destroyEnemy = true;
-            destroyThis = true;
-        }
-    }
-
 }
