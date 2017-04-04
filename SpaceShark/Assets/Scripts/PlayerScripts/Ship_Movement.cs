@@ -57,7 +57,6 @@ public class Ship_Movement : MonoBehaviour
     private bool alteredSpeed = false;
     private float invincibilityTimer = 0.0f;
     private float speedTimer = 0.0f;
-    private CollisionRay collision;
     
 
     //private AkSoundEngine wwise = new AkSoundEngine();
@@ -82,7 +81,6 @@ public class Ship_Movement : MonoBehaviour
         shipPosition = gameObject.transform.position;
         movementSpeed = GameSettings.gameSpeed;
         gameSpeed = currentSpeed;
-        collision = GetComponent<CollisionRay>();
 
         // Disable all player input at start of tutorial
         if (StateManager.gameState == StateManager.States.tutorial)
@@ -194,13 +192,16 @@ public class Ship_Movement : MonoBehaviour
             {
                 sheildObject.SetActive(false);
                 sheilded = false;
+                // stop a collision double firing - causing the bullet to still kill the player
+                SetInvincible(0.05f);
             }
             else if (invincible)
             {
-
+                
             }
             else
             {
+                
                 levelManager.ClearLevel();
             }
         }

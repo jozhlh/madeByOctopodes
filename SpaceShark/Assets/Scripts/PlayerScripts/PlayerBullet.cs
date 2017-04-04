@@ -13,12 +13,6 @@ public class PlayerBullet : MonoBehaviour
     private float bulletCulling = 100.0f;
 
     private Vector3 bulletPosition = new Vector3(0, 0, 0);
-    private CollisionRay collision;
-
-    void Start()
-    {
-        collision = GetComponent<CollisionRay>();
-    }
 
     // Update is called once per frame
     void Update ()
