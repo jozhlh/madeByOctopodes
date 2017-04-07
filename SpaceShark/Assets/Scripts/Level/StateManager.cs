@@ -29,6 +29,11 @@ public class StateManager : MonoBehaviour
        
         //gameState = States.play;
         // Make sure the state manager persists across all scenes
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
+	}
+
+	public void SetToPlay()
+	{
+		gameState = States.play;
 	}
 }
