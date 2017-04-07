@@ -22,6 +22,8 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField]
     private GameObject invincibilityObject = null;
     [SerializeField]
+    private Material invincibilityMesh = null;
+    [SerializeField]
     private GameObject sheildObject = null;
 
 
@@ -160,6 +162,15 @@ public class Ship_Movement : MonoBehaviour
         if (invincible)
         {
             invincibilityTimer -= Time.deltaTime;
+            float floor = 0.1f;
+            float ceiling = 0.9f;
+            float emission = floor + Mathf.PingPong (Time.time * 1.5f, ceiling - floor);
+            Color baseColor = Color.yellow; //Replace this with whatever you want for your base color at emission level '1'
+ 
+            Color finalColor = baseColor * Mathf.LinearToGammaSpace (emission);
+ 
+            invincibilityMesh.SetColor ("_EmissionColor", finalColor);
+            //invincibilityMesh.
             if (invincibilityTimer < 0)
             {
                 invincibilityObject.SetActive(false);
