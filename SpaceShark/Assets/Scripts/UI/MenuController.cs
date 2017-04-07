@@ -20,6 +20,7 @@ public class MenuController : MonoBehaviour
 	private Vector3 currentAngle = new Vector3(0.0f, 0.0f, 0.0f);
 	[SerializeField]
 	private float rotationSpeed = 10.0f;
+	int selectedPlanet = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -28,6 +29,7 @@ public class MenuController : MonoBehaviour
         GameInput.OnSwipe += HandleOnSwipe;
 		PlacePlanets();
 		currentAngle = transform.eulerAngles;
+		HidePlayButtons();
 	}
 	
 	void PlacePlanets()
@@ -38,11 +40,14 @@ public class MenuController : MonoBehaviour
 		Quaternion zeroRotation = Quaternion.Euler(0,0,0);
 		foreach (GameObject planet in levels )
 		{
+			planet.GetComponent<MenuPlanet>().Deselect();
 			planet.transform.Translate(0,0,-radius);
-			planet.transform.RotateAround(transform.position, transform.up, iterator * placementAngle);
+			planet.transform.RotateAround(transform.position, transform.up, -iterator * placementAngle);
 			planet.transform.localRotation = zeroRotation;
 			iterator++;
 		}
+		selectedPlanet = 0;
+		levels[selectedPlanet].GetComponent<MenuPlanet>().Select();
 	}
 
 	void RotateClockwise()
@@ -52,6 +57,14 @@ public class MenuController : MonoBehaviour
 		{
 			targetAngle.y -= 360;
 		}
+		HidePlayButtons();
+		levels[selectedPlanet].GetComponent<MenuPlanet>().Deselect();
+		selectedPlanet++;
+		if (selectedPlanet > (levels.Count - 1))
+		{
+			selectedPlanet = 0;
+		}
+		levels[selectedPlanet].GetComponent<MenuPlanet>().Select();
 	}
 
 	void RotateAntiClockwise()
@@ -61,6 +74,14 @@ public class MenuController : MonoBehaviour
 		{
 			targetAngle.y += 360;
 		}
+		HidePlayButtons();
+		levels[selectedPlanet].GetComponent<MenuPlanet>().Deselect();
+		selectedPlanet--;
+		if (selectedPlanet < 0)
+		{
+			selectedPlanet = (levels.Count - 1);
+		}
+		levels[selectedPlanet].GetComponent<MenuPlanet>().Select();
 	}
 
 	// Update is called once per frame
@@ -82,9 +103,9 @@ public class MenuController : MonoBehaviour
              Mathf.LerpAngle(currentAngle.y, targetAngle.y, rotationSpeed*Time.deltaTime),
              Mathf.LerpAngle(currentAngle.z, targetAngle.z, rotationSpeed*Time.deltaTime));
  
-         transform.eulerAngles = currentAngle;
+        transform.eulerAngles = currentAngle;
 		Quaternion zeroRotation = Quaternion.Euler(-currentAngle);
-		 foreach (GameObject planet in levels )
+		foreach (GameObject planet in levels )
 		{
 			//planet.transform.rotation.eulerAngles = currentAngle;
 			planet.transform.localRotation = zeroRotation;
@@ -107,4 +128,12 @@ public class MenuController : MonoBehaviour
 				break;
 		}
     }
+
+	private void HidePlayButtons()
+	{
+		foreach (GameObject planet in levels)
+		{
+			planet.GetComponent<MenuPlanet>().HidePlayButton();
+		}
+	}
 }
