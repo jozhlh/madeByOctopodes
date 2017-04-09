@@ -7,5 +7,6 @@ public class LoadingScene : Singleton<LoadingScene>
 	public static void UnloadLoadingScene()
 	{
 		GameObject.Destroy(instance.gameObject);
+		
 	}
 }

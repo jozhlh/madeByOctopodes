@@ -26,19 +26,22 @@ public class PlayerScore : MonoBehaviour
 	private float baseMultiplier = 1.0f;
 	private bool boosted = false;
 	private float boostCountdown = 0.0f;
+	private StateManager state = null;
 
 	// Use this for initialization
 	void Start ()
     {
 		score = 0;
 		countdown = scoringInterval;
+		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+		scoreText.text = "";
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
         // Increment score whilst the player is in game
-		if (StateManager.gameState == StateManager.States.play)
+		if (state.GetState() == StateManager.States.play)
 		{
 			countdown -= Time.deltaTime;
 			if (countdown < 0)

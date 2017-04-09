@@ -8,8 +8,18 @@ public class ScreenManager : MonoBehaviour
 	[SerializeField]
 	private Fader m_blackScreenCover;
 	[SerializeField]
-	private float m_minDuration = 1.5f;
+	private CanvasFader m_canvasCover;
+	[SerializeField]
+	private float m_minDuration = 3.0f;
+
+	private StateManager state = null;
 	
+	void Start()
+	{
+		//StartCoroutine(m_canvasCover.FadeOut());
+		state = GetComponent<StateManager>();
+	}
+
 	void Update()
 	{/* 
 		if (Input.GetMouseButtonDown(0))
@@ -25,6 +35,11 @@ public class ScreenManager : MonoBehaviour
 	
 	public IEnumerator LoadSceneAsync(string sceneName)
 	{
+		if (m_canvasCover)
+		{
+			m_canvasCover.gameObject.SetActive(true);
+			StartCoroutine(m_canvasCover.FadeIn());
+		}
 		// Fade to black
 		yield return StartCoroutine(m_blackScreenCover.FadeIn());
 		
@@ -38,6 +53,8 @@ public class ScreenManager : MonoBehaviour
 		
 		float endTime = Time.time + m_minDuration;
 		
+		Debug.Log("Showing Loading Screen");
+
 		// Load level async
 		yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
 		
@@ -46,14 +63,29 @@ public class ScreenManager : MonoBehaviour
 			yield return null;
 		
 		// Play music or perform other misc tasks
+		Debug.Log("Loading Time Up");
 		
 		// Fade to black
 		yield return StartCoroutine(m_blackScreenCover.FadeIn());
 		
 		// !!! unload loading screen
 		LoadingScene.UnloadLoadingScene();
+
+		Debug.Log("Deleted Loading Scene");
+
+		if (state.GetState() == StateManager.States.menu)
+		{
+			Debug.Log("Setting To Play");
+			state.SetToPlay();
+		}
+		else
+		{
+			state.SetToMenu();
+		}
 		
 		// Fade to new screen
 		yield return StartCoroutine(m_blackScreenCover.FadeOut());
+
+		//Destroy(gameObject);
 	}
 }

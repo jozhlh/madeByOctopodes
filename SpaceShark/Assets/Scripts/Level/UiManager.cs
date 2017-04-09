@@ -8,11 +8,17 @@ public class UiManager : MonoBehaviour {
 	private GameObject deathUI;
 	[SerializeField]
 	private GameObject victoryUI;
+	private StateManager state = null;
+
+	void Start()
+	{
+		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+	}
 
 	// Update is called once per frame
 	void Update ()
 	{
-		switch (StateManager.gameState)
+		switch (state.GetState())
 		{
             // If the player is dead show death UI
 			case StateManager.States.dead:

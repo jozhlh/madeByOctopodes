@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
-{
+{/* 
 	public void LoadPrototypeLevel()
 	{
 		SceneManager.LoadScene("prototype_Lava");
@@ -29,5 +29,5 @@ public class SceneTransition : MonoBehaviour
         StateManager.gameState = StateManager.States.play;
         //SceneManager.LoadScene(targetLevel);
         SceneManager.LoadSceneAsync(targetLevel);
-	}
+	}*/
 }

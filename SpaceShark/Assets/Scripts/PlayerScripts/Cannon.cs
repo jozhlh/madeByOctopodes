@@ -28,6 +28,7 @@ public class Cannon : MonoBehaviour
     private List<GameObject> bulletObjects = new List<GameObject>();
     // Whether the player is able to shhot
     private bool playerCanFire = false;
+    private StateManager state = null;
 
 	// Use this for initialization
 	void Start () 
@@ -39,13 +40,14 @@ public class Cannon : MonoBehaviour
         {
             GameInput.OnTap += PlayerFire;
         }
+        state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
 		// When game is in tutorial level restrict player capabilities 
-        if (StateManager.gameState == StateManager.States.tutorial)         
+        if (state.GetState() == StateManager.States.tutorial)         
         {
             if (Ship_Movement.restrictBullet == true)
             {
@@ -61,7 +63,7 @@ public class Cannon : MonoBehaviour
                 }
             }
         }
-		else if (StateManager.gameState == StateManager.States.dead)
+		else if (state.GetState() == StateManager.States.dead)
 		{
 			GameInput.ResetTap();
 		}

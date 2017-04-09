@@ -8,7 +8,7 @@ public class StateManager : MonoBehaviour
 	public enum States {menu, dead, play, tutorial, complete};
 
     // Current game state
-	public static States gameState;
+	private States gameState;
 
 	[SerializeField]
 	private bool testing = true;
@@ -17,23 +17,50 @@ public class StateManager : MonoBehaviour
 	void Start ()
 	{
         // Set starting game state to menu scene
-		/*if (testing)
+		if (testing)
 		{
-			gameState = States.play;
+			SetToPlay();
 		}
 		else
 		{
-			gameState = States.menu;
-        }*/
-		gameState = States.menu;
+			SetToMenu();
+        }
+		//gameState = States.menu;
        
         //gameState = States.play;
         // Make sure the state manager persists across all scenes
         //DontDestroyOnLoad(gameObject);
 	}
 
+	
+	void Update()
+	{
+		//Debug.Log(GetState());
+	}
+
 	public void SetToPlay()
 	{
+		Debug.Log("Play Set");
 		gameState = States.play;
+	}
+
+	public void SetToMenu()
+	{
+		gameState = States.menu;
+	}
+	
+	public void SetToComplete()
+	{
+		gameState = States.complete;
+	}
+
+	public void SetToDead()
+	{
+		gameState = States.dead;
+	}
+
+	public States GetState()
+	{
+		return gameState;
 	}
 }
