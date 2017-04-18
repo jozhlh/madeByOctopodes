@@ -548,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de00292afe7b4ff8a3160998b175600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: f6ba0cb4874164a9ba19c07561c5b03e, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
 --- !u!114 &114109567859955106
@@ -562,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253bf86e7ad914470bf9f18e5228642f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: ea5449f3557ab489888176a6ee3ee255, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   scoreMultiplier: 5
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc0bbab4db77430790a99abef2f8886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 0}
+  uiIcon: {fileID: 21300000, guid: ddfae25ed5599440a89874dde487af4b, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   speedMultiplier: 0.2
@@ -593,6 +593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpUi: {fileID: 0}
+  powerUpIcon: {fileID: 0}
   availablePowerUps:
   - {fileID: 114965998278617158}
   - {fileID: 114006374863663550}
@@ -609,8 +610,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22e446bff5e042dea94df15bfe82a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  deviance: 0.5
 --- !u!114 &114355160936458678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -638,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03e488fd653142a7bcb71b814c43414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  uiIcon: {fileID: 21300000, guid: 1128728ea2f0e4d07b412036fb49b8b1, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   duration: 5
@@ -656,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc403c66005349c080b5470ede59af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: ca6a889fc19774bdb8aeb6eb68e10eb5, type: 3}
   totalDuration: 0
   player: {fileID: 1000013144991384}
 --- !u!120 &120000013302740228

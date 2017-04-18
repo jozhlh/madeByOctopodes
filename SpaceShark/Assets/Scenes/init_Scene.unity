@@ -308,6 +308,11 @@ Prefab:
       propertyPath: testing
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114384715450516784, guid: 22b1cd6aa28d44655b31e191b3a27a37,
+        type: 2}
+      propertyPath: m_minDuration
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 22b1cd6aa28d44655b31e191b3a27a37, type: 2}
   m_IsPrefabParent: 0

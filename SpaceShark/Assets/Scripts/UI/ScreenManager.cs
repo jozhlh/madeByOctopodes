@@ -10,7 +10,7 @@ public class ScreenManager : MonoBehaviour
 	[SerializeField]
 	private CanvasFader m_canvasCover;
 	[SerializeField]
-	private float m_minDuration = 3.0f;
+	private float m_minDuration = 2.0f;
 
 	private StateManager state = null;
 	

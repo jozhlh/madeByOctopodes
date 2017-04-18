@@ -9,6 +9,8 @@ public class PowerUpManager : MonoBehaviour
 	[SerializeField]
 	private GameObject powerUpUi = null;
 	[SerializeField]
+	private GameObject powerUpIcon = null;
+	[SerializeField]
 	private PowerUp[] availablePowerUps;
 
 	private int equippedPowerUp = -1;
@@ -35,7 +37,7 @@ public class PowerUpManager : MonoBehaviour
 			//chosenPowerUp = 1;
 			equippedPowerUp = chosenPowerUp;
 			powerUpUi.SetActive(true);
-			powerUpUi.GetComponent<Image>().sprite = availablePowerUps[chosenPowerUp].uiIcon;
+			powerUpIcon.GetComponent<Image>().sprite = availablePowerUps[chosenPowerUp].uiIcon;
 		}
 	}
 
