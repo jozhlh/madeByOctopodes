@@ -14,7 +14,7 @@ public class ScreenManager : MonoBehaviour
 
 	private StateManager state = null;
 	
-	void Start()
+	void Awake()
 	{
 		//StartCoroutine(m_canvasCover.FadeOut());
 		state = GetComponent<StateManager>();
@@ -30,6 +30,10 @@ public class ScreenManager : MonoBehaviour
 
 	public void LoadScene(string sceneName)
 	{
+		if (state.GetState() != StateManager.States.loadMenu)
+		{
+			state.SetToLoadLevel();
+		}
 		StartCoroutine(LoadSceneAsync(sceneName));
 	}
 	
@@ -73,15 +77,16 @@ public class ScreenManager : MonoBehaviour
 
 		Debug.Log("Deleted Loading Scene");
 
-		if (state.GetState() == StateManager.States.menu)
+		if (state.GetState() == StateManager.States.loadLevel)
 		{
 			Debug.Log("Setting To Play");
 			state.SetToPlay();
 		}
-		else
+		if (state.GetState() == StateManager.States.loadMenu)
 		{
 			state.SetToMenu();
 		}
+		
 		
 		// Fade to new screen
 		yield return StartCoroutine(m_blackScreenCover.FadeOut());

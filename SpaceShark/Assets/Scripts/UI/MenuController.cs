@@ -6,6 +6,13 @@ using UnityEngine;
 public class MenuController : MonoBehaviour
 {
 	[SerializeField]
+	private GameObject ui = null;
+	[SerializeField]
+	private GameObject stars = null;
+	//[SerializeField]
+	private StateManager state = null;
+
+	[SerializeField]
 	private List<GameObject> levels = new List<GameObject>();
 
 	[SerializeField]
@@ -20,16 +27,19 @@ public class MenuController : MonoBehaviour
 	private Vector3 currentAngle = new Vector3(0.0f, 0.0f, 0.0f);
 	[SerializeField]
 	private float rotationSpeed = 10.0f;
+	[SerializeField]
 	int selectedPlanet = 0;
 
 	// Use this for initialization
 	void Start () {
 		// Initialiseinput
+		ui.SetActive(false);
         GameInput.ResetSwipe();
         GameInput.OnSwipe += HandleOnSwipe;
 		PlacePlanets();
 		currentAngle = transform.eulerAngles;
 		HidePlayButtons();
+		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
 	}
 	
 	void PlacePlanets()
@@ -87,6 +97,16 @@ public class MenuController : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
+		if (state.GetState() == StateManager.States.menu)
+		{
+			ui.SetActive(true);
+			stars.SetActive(true);
+		}
+		else
+		{
+			ui.SetActive(false);
+			stars.SetActive(false);
+		}
 		if (clock)
 		{
 			RotateClockwise();

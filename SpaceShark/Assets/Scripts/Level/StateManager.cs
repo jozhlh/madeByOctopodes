@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class StateManager : MonoBehaviour
 {
     // Possible game states
-	public enum States {menu, dead, play, tutorial, complete};
+	public enum States {menu, dead, play, tutorial, complete, loadMenu, loadLevel};
 
     // Current game state
 	private States gameState;
@@ -17,14 +17,14 @@ public class StateManager : MonoBehaviour
 	void Start ()
 	{
         // Set starting game state to menu scene
-		if (testing)
-		{
-			SetToPlay();
-		}
-		else
-		{
-			SetToMenu();
-        }
+		//if (testing)
+		//{
+		//	SetToPlay();
+		//}
+		//else
+		//{
+		//	SetToMenu();
+        //}
 		//gameState = States.menu;
        
         //gameState = States.play;
@@ -57,6 +57,16 @@ public class StateManager : MonoBehaviour
 	public void SetToDead()
 	{
 		gameState = States.dead;
+	}
+
+	public void SetToLoadLevel()
+	{
+		gameState = States.loadLevel;
+	}
+
+	public void SetToLoadMenu()
+	{
+		gameState = States.loadMenu;
 	}
 
 	public States GetState()
