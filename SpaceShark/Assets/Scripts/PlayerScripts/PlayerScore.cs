@@ -19,11 +19,14 @@ public class PlayerScore : MonoBehaviour
 	private Text scoreText = null;
     [SerializeField]
     private Text multiplierText = null;
-
+    [SerializeField]
+    private Text boostText = null;
+    [SerializeField]
+    private Text boostText1 = null;
 
 
     // Progress to the next scoring interval
-	private float countdown;
+    private float countdown;
 
 	// Track score multiplier
 	private static int boostMultiplier = 1;
@@ -42,6 +45,8 @@ public class PlayerScore : MonoBehaviour
 		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
 		scoreText.text = "";
         multiplierText.text = "";
+        boostText.text = "";
+        boostText1.text = "";
         scoreMultiplier = 1;
 	}
 	
@@ -68,7 +73,9 @@ public class PlayerScore : MonoBehaviour
 			{
 				boosted = false;
 				boostMultiplier = baseMultiplier;
-			}
+                boostText.text = "";
+                boostText1.text = "";
+            }
 		}
 	}
 
@@ -99,7 +106,10 @@ public class PlayerScore : MonoBehaviour
 		boosted = true;
 		boostMultiplier = boostVal;
 		boostCountdown = boostDuration;
-	}
+        boostText.text = "Double Points";
+        boostText1.text = "Double Points";
+
+    }
 
     public static void BulletMissed()
     {

@@ -30,7 +30,8 @@ public class GameSettings : MonoBehaviour
     //[SerializeField]
     //private float lengthOfASegment;
 
-	[Header("Input")]
+
+    [Header("Input")]
 	[SerializeField]
 	private float swipeOrTapSensitivity = 200.0f;
 
