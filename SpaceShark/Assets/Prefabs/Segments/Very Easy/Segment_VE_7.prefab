@@ -56,3 +56,6 @@ MonoBehaviour:
   enemyTemplates:
   - lane: 6
     zPosition: 364
+  powerUp:
+    lane: 7
+    zPosition: 207
