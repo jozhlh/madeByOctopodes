@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4365548781499278}
   - component: {fileID: 95548727281370388}
   m_Layer: 0
-  m_Name: LavaFloor3
+  m_Name: DesertFloor3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
