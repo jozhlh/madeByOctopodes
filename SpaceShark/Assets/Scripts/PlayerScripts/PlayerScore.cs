@@ -58,7 +58,7 @@ public class PlayerScore : MonoBehaviour
 				countdown = scoringInterval;
 			}
 			scoreText.text = score.ToString();
-            multiplierText.text = scoreMultiplier.ToString();
+            multiplierText.text = ("X " + scoreMultiplier.ToString());
 		}
 
 		if (boosted)
