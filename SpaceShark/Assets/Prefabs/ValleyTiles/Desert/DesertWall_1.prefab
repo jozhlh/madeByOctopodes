@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4374384195867390}
   m_Layer: 0
-  m_Name: DesertWall_1
+  m_Name: LavaWall_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9b51f288448014032b59b218b6425343, type: 2}
+  - {fileID: 2100000, guid: 1a41a64a5655e734d87526e593acade7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
