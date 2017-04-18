@@ -4,6 +4,30 @@ using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
+	[SerializeField]
+	private ScreenManager screenManager = null;
+
+	/// <summary>
+	/// Start is called on the frame when a script is enabled just before
+	/// any of the Update methods is called the first time.
+	/// </summary>
+	void Start()
+	{
+	   screenManager = GameObject.Find("ScreenManager").GetComponent<ScreenManager>();
+	}
+
+	public void LoadScreenManagerLevel(string levelName)
+	{
+		screenManager.gameObject.GetComponent<StateManager>().SetToLoadLevel();
+		screenManager.LoadScene(levelName);
+	}
+
+	public void LoadScreenManagerMenu()
+	{
+		screenManager.gameObject.GetComponent<StateManager>().SetToLoadMenu();
+		screenManager.LoadScene("splash_scene");
+	}
+	/* 
 	public void LoadPrototypeLevel()
 	{
 		SceneManager.LoadScene("prototype_Lava");
@@ -29,5 +53,5 @@ public class SceneTransition : MonoBehaviour
         StateManager.gameState = StateManager.States.play;
         //SceneManager.LoadScene(targetLevel);
         SceneManager.LoadSceneAsync(targetLevel);
-	}
+	}*/
 }

@@ -118,7 +118,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1564538320161706
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 4313797486733956}
   - component: {fileID: 33244919552305732}
   - component: {fileID: 23975033629946858}
+  - component: {fileID: 114297933504877166}
   m_Layer: 8
   m_Name: Player_mesh_final-2
   m_TagString: Untagged
@@ -243,7 +244,6 @@ Transform:
   m_Children:
   - {fileID: 4000011106437696}
   - {fileID: 4313797486733956}
-  - {fileID: 4139326781440120}
   - {fileID: 4670589239870652}
   - {fileID: 4364263220110790}
   - {fileID: 4356731026033604}
@@ -269,14 +269,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1564538320161706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children:
   - {fileID: 4131067754555328}
   - {fileID: 4829898321867556}
-  m_Father: {fileID: 4000014097590258}
-  m_RootOrder: 2
+  m_Father: {fileID: 4313797486733956}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4313797486733956
 Transform:
@@ -287,7 +287,8 @@ Transform:
   m_LocalRotation: {x: 0.000000021855694, y: 0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
-  m_Children: []
+  m_Children:
+  - {fileID: 4139326781440120}
   m_Father: {fileID: 4000014097590258}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -315,7 +316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000014097590258}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4364263220110790
 Transform:
@@ -331,7 +332,7 @@ Transform:
   - {fileID: 4414185559780620}
   - {fileID: 4841515078382218}
   m_Father: {fileID: 4000014097590258}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4414185559780620
 Transform:
@@ -357,7 +358,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4000014097590258}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4829898321867556
 Transform:
@@ -547,7 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de00292afe7b4ff8a3160998b175600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: f6ba0cb4874164a9ba19c07561c5b03e, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
 --- !u!114 &114109567859955106
@@ -561,7 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 253bf86e7ad914470bf9f18e5228642f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: ea5449f3557ab489888176a6ee3ee255, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   scoreMultiplier: 5
@@ -576,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdc0bbab4db77430790a99abef2f8886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 0}
+  uiIcon: {fileID: 21300000, guid: ddfae25ed5599440a89874dde487af4b, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   speedMultiplier: 0.2
@@ -592,11 +593,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpUi: {fileID: 0}
+  powerUpIcon: {fileID: 0}
   availablePowerUps:
   - {fileID: 114965998278617158}
   - {fileID: 114006374863663550}
   - {fileID: 114109567859955106}
   - {fileID: 114253653995557062}
+--- !u!114 &114297933504877166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1733506071881618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c22e446bff5e042dea94df15bfe82a24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114355160936458678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -624,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c03e488fd653142a7bcb71b814c43414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  uiIcon: {fileID: 21300000, guid: 1128728ea2f0e4d07b412036fb49b8b1, type: 3}
   totalDuration: 5
   player: {fileID: 1000013144991384}
   duration: 5
@@ -642,7 +655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc403c66005349c080b5470ede59af6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiIcon: {fileID: 21300000, guid: a38b24de69a7346a7a4e2e422300b4a5, type: 3}
+  uiIcon: {fileID: 21300000, guid: ca6a889fc19774bdb8aeb6eb68e10eb5, type: 3}
   totalDuration: 0
   player: {fileID: 1000013144991384}
 --- !u!120 &120000013302740228

@@ -98,10 +98,10 @@ public class GameSettings : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-        if (testing)
-		{
-			StateManager.gameState = StateManager.States.play;
-		}
+        //if (testing)
+		//{
+		//	StateManager.gameState = StateManager.States.play;
+		//}
         Init();
 		//else
 		//{

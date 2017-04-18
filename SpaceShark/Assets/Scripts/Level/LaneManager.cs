@@ -29,6 +29,9 @@ public class LaneManager : MonoBehaviour
     public static LaneInfo[] laneData = new LaneInfo[9];
     public static ObstacleLocationInfo[] obstacleLocationData = new ObstacleLocationInfo[12];
 
+    public static float staticLaneWidth;
+    public static float staticLaneHeight;
+
     [Header("Lane Size Adjustment")]
     [SerializeField]
     // The width of an individual lane
@@ -73,6 +76,8 @@ public class LaneManager : MonoBehaviour
 
     void Awake ()
     {
+        staticLaneHeight = laneHeight;
+        staticLaneWidth = laneWidth;
         InitialiseLanes();
         InitialiseObstaclePositions();
     }

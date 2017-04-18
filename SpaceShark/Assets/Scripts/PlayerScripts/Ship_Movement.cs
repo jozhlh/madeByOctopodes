@@ -60,6 +60,7 @@ public class Ship_Movement : MonoBehaviour
     private float invincibilityTimer = 0.0f;
     private float speedTimer = 0.0f;
     
+    private StateManager state = null;
 
     //private AkSoundEngine wwise = new AkSoundEngine();
 
@@ -67,6 +68,7 @@ public class Ship_Movement : MonoBehaviour
     void Awake ()
     {
         Application.targetFrameRate = 30;
+        state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
     }
 
     // Use this for initialization
@@ -85,7 +87,7 @@ public class Ship_Movement : MonoBehaviour
         gameSpeed = currentSpeed;
 
         // Disable all player input at start of tutorial
-        if (StateManager.gameState == StateManager.States.tutorial)
+        if (state.GetState() == StateManager.States.tutorial)
         {
             if (TutorialManager.shoot.enabled)
             {
@@ -115,8 +117,9 @@ public class Ship_Movement : MonoBehaviour
     // Update is called once per frame
     void Update ()
     {
+        //state.SetToMenu();
         // If the game is in progress, move ship
-        if (StateManager.gameState == StateManager.States.play)
+        if (state.GetState() == StateManager.States.play)
         {
             // If the game has just started, do intro camera movement
             if (introProgress < introDuration)
@@ -132,9 +135,9 @@ public class Ship_Movement : MonoBehaviour
 
             // Move the player
             MoveToLane();
-        }
+        
         // If the tutorial is in progress
-        else if (StateManager.gameState == StateManager.States.tutorial)
+       /* else if (state.GetState() == StateManager.States.tutorial)
         {
             // If the tutorial has just started, do intro camera movement
             if (introProgress < introDuration)
@@ -157,7 +160,7 @@ public class Ship_Movement : MonoBehaviour
             }
             // Move the player
             MoveToLane();
-        }
+        }*/
 
         if (invincible)
         {
@@ -191,6 +194,7 @@ public class Ship_Movement : MonoBehaviour
         }
 
         gameSpeed = currentSpeed;
+        }
     }
 
     //If the player collides with an object, respond according to what the object was
@@ -218,7 +222,7 @@ public class Ship_Movement : MonoBehaviour
         }
 
         // Bring up tutorial Ui when the player hits the respective triggers
-        if (StateManager.gameState == StateManager.States.tutorial)
+        if (state.GetState() == StateManager.States.tutorial)
         {
             if (other.tag == "HorizontalTutorial")
             {
@@ -267,11 +271,11 @@ public class Ship_Movement : MonoBehaviour
     // Get the direction of any new swipe
     private void HandleOnSwipe(GameInput.Direction direction)
     {
-        if (StateManager.gameState == StateManager.States.tutorial)
+        if (state.GetState() == StateManager.States.tutorial)
         {
             TutorialMovement(direction);
         }
-        else if (StateManager.gameState == StateManager.States.play)
+        else if (state.GetState() == StateManager.States.play)
         {
             GameMovement(direction);
             currentLane = LaneManager.laneData[(int)targetLane.laneID];

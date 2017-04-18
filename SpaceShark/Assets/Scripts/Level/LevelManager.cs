@@ -62,6 +62,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField]
     // Reference to the sound manager in the scene
     private GameObject soundManager;
+    private StateManager state = null;
 
     private int lastPrefabIndex = 0;
 
@@ -73,6 +74,7 @@ public class LevelManager : MonoBehaviour
     {
         Init();
         player.SetActive(true);
+        state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
     }
 	
 	// Update is called once per frame
@@ -168,7 +170,7 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-         StateManager.gameState = StateManager.States.dead;
+         state.SetToDead();
 
         player.SetActive(false);
 
@@ -203,14 +205,14 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        if (StateManager.gameState == StateManager.States.tutorial)
+        if (state.GetState() == StateManager.States.tutorial)
         {
             TutorialManager.DisableUI();
         }
 
 
 
-        StateManager.gameState = StateManager.States.dead;
+        state.SetToDead();
 
     }
 

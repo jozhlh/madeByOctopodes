@@ -6,6 +6,12 @@ public class Goal : MonoBehaviour {
 [SerializeField]
     // Reference to the sound manager in the scene
     private GameObject soundManager;
+    private StateManager state = null;
+
+    void Start()
+    {
+        state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+    }
 
     void Update()
     {
@@ -20,7 +26,7 @@ public class Goal : MonoBehaviour {
 	{
 		if (other.tag == "Player")
 		{
-			StateManager.gameState = StateManager.States.complete;
+			state.SetToComplete();
 			// Stop engine sounds
 			soundManager.GetComponent<SoundManager>().StopEvent("shipEngine", 0, gameObject);
 		}

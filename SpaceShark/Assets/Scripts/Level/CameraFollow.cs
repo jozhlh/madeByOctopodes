@@ -13,11 +13,13 @@ public class CameraFollow : MonoBehaviour {
     private float transition = 0.0f;
     private float animationDuration = 2.0f;
     private Vector3 animationOffset = new Vector3(0,15,-10);
+    private StateManager state = null;
 
 
     void Awake ()
     {
         followDistance = gameObject.transform.position.z;
+        state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
         
     }
 
@@ -35,18 +37,21 @@ public class CameraFollow : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (transition > 1.0f)
+        if (state.GetState() == StateManager.States.play)
         {
-            cameraPosition = cameraTransform.position;
-            cameraPosition.z = (followTarget.transform.position.z + followDistance);
-            cameraTransform.position = cameraPosition;
-        }
-        else
-        {
-            //Animation at start of game
-            cameraTransform.position = Vector3.Lerp(cameraPosition + animationOffset, cameraPosition, transition);
-            transition += Time.deltaTime * 1 / animationDuration;
-            cameraTransform.LookAt(Ship_Movement.shipPosition);
+            if (transition > 1.0f)
+            {
+                cameraPosition = cameraTransform.position;
+                cameraPosition.z = (followTarget.transform.position.z + followDistance);
+                cameraTransform.position = cameraPosition;
+            }
+            else
+            {
+                //Animation at start of game
+                cameraTransform.position = Vector3.Lerp(cameraPosition + animationOffset, cameraPosition, transition);
+                transition += Time.deltaTime * 1 / animationDuration;
+                cameraTransform.LookAt(Ship_Movement.shipPosition);
+            }
         }
     }
 }
