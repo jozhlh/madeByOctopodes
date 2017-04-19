@@ -445,11 +445,6 @@
 								<MusicSegment Name="Part4" ID="{E8088AC6-1630-4F34-BF5F-DD33167EF788}" ShortID="74322251">
 									<PropertyList>
 										<Property Name="EndPosition" Type="Real64" Value="34248.3224673203"/>
-										<Property Name="Inclusion" Type="bool">
-											<ValueList>
-												<Value>False</Value>
-											</ValueList>
-										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -708,6 +703,29 @@
 												<Property Name="SourceContextType" Type="int16" Value="2"/>
 											</PropertyList>
 											<ReferenceList>
+												<Reference Name="SourceContextObject">
+													<ObjectRef Name="Part1" ID="{79CB46B0-B22C-480B-A86A-76A4414CA9CC}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
+												</Reference>
+											</ReferenceList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{343C2265-B962-4FE0-A21B-D0ED750D43AE}">
+														<PropertyList>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+											</TransitionInfo>
+										</MusicTransition>
+										<MusicTransition Name="Transition" ID="{AE1D7E55-1BFA-4C02-AC6F-29AEF19C779F}">
+											<PropertyList>
+												<Property Name="DestinationContextType" Type="int16" Value="2"/>
+												<Property Name="SourceContextType" Type="int16" Value="2"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="DestinationContextObject">
+													<ObjectRef Name="Part2" ID="{B004BFF3-20FA-4BA0-B6BE-5F56EFFF46AB}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
+												</Reference>
 												<Reference Name="SourceContextObject">
 													<ObjectRef Name="Part1" ID="{79CB46B0-B22C-480B-A86A-76A4414CA9CC}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
 												</Reference>
