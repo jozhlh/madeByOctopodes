@@ -227,7 +227,7 @@ ModelImporter:
     4300082: Death_desert043
     4300084: Desert_death
     4300086: Death_desert002
-    7400000: Take 001
+    7400000: DeathDesert
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -249,7 +249,125 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: DeathDesert
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Death_desert001
+        weight: 1
+      - path: Death_desert002
+        weight: 1
+      - path: Death_desert003
+        weight: 1
+      - path: Death_desert004
+        weight: 1
+      - path: Death_desert005
+        weight: 1
+      - path: Death_desert006
+        weight: 1
+      - path: Death_desert007
+        weight: 1
+      - path: Death_desert008
+        weight: 1
+      - path: Death_desert009
+        weight: 1
+      - path: Death_desert010
+        weight: 1
+      - path: Death_desert011
+        weight: 1
+      - path: Death_desert012
+        weight: 1
+      - path: Death_desert013
+        weight: 1
+      - path: Death_desert014
+        weight: 1
+      - path: Death_desert015
+        weight: 1
+      - path: Death_desert016
+        weight: 1
+      - path: Death_desert017
+        weight: 1
+      - path: Death_desert018
+        weight: 1
+      - path: Death_desert019
+        weight: 1
+      - path: Death_desert020
+        weight: 1
+      - path: Death_desert021
+        weight: 1
+      - path: Death_desert022
+        weight: 1
+      - path: Death_desert023
+        weight: 1
+      - path: Death_desert024
+        weight: 1
+      - path: Death_desert025
+        weight: 1
+      - path: Death_desert026
+        weight: 1
+      - path: Death_desert027
+        weight: 1
+      - path: Death_desert028
+        weight: 1
+      - path: Death_desert029
+        weight: 1
+      - path: Death_desert030
+        weight: 1
+      - path: Death_desert031
+        weight: 1
+      - path: Death_desert032
+        weight: 1
+      - path: Death_desert033
+        weight: 1
+      - path: Death_desert034
+        weight: 1
+      - path: Death_desert035
+        weight: 1
+      - path: Death_desert036
+        weight: 1
+      - path: Death_desert037
+        weight: 1
+      - path: Death_desert038
+        weight: 1
+      - path: Death_desert039
+        weight: 1
+      - path: Death_desert040
+        weight: 1
+      - path: Death_desert041
+        weight: 1
+      - path: Death_desert042
+        weight: 1
+      - path: Death_desert043
+        weight: 1
+      - path: Desert_death
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
