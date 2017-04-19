@@ -25,7 +25,7 @@ public class SceneTransition : MonoBehaviour
 	public void LoadScreenManagerMenu()
 	{
 		screenManager.gameObject.GetComponent<StateManager>().SetToLoadMenu();
-		screenManager.LoadScene("splash_scene");
+		screenManager.LoadScene("SplashScene");
 	}
 	/* 
 	public void LoadPrototypeLevel()

@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 65104003377095202}
   - component: {fileID: 114935099288809362}
   - component: {fileID: 114720180000861284}
+  - component: {fileID: 114348601263385210}
   m_Layer: 10
   m_Name: Mushroom
   m_TagString: Obstacle
@@ -239,6 +240,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.212852, y: 7.49, z: 1}
   m_Center: {x: -0.0024359229, y: 3.420064, z: -2.1000004}
+--- !u!114 &114348601263385210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809846085328238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!114 &114457951981674610
 MonoBehaviour:
   m_ObjectHideFlags: 1

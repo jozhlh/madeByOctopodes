@@ -301,7 +301,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  skinWidth: 0.1
+  skinWidth: 0.2
 --- !u!136 &136297582498771488
 CapsuleCollider:
   m_ObjectHideFlags: 1

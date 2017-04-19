@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class init : MonoBehaviour {
+public class CageRotate : MonoBehaviour {
 
-	[SerializeField]
-	private ScreenManager screen = null;
+    [SerializeField]
+    private float rotationSpeed = 90.0f;
 
 	// Use this for initialization
 	void Start () {
-		screen.gameObject.GetComponent<StateManager>().SetToLoadMenu();
-		screen.LoadScene("SplashScene");
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+        gameObject.transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
 	}
 }

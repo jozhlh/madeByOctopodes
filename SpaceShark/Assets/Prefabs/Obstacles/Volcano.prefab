@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 114434102476384126}
   - component: {fileID: 114585682455679798}
   - component: {fileID: 114877065962550156}
+  - component: {fileID: 114322295558184752}
   m_Layer: 10
   m_Name: Volcano
   m_TagString: Obstacle
@@ -315,6 +316,22 @@ MonoBehaviour:
   canFade: 1
   accent: 1
   baseColour: 0
+--- !u!114 &114322295558184752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1997964464290208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!114 &114434102476384126
 MonoBehaviour:
   m_ObjectHideFlags: 1

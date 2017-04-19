@@ -351,7 +351,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: prototype_Cave
+          m_StringArgument: CaveScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -854,7 +854,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 64367690305644b6390d22dd21ffd346, type: 2}
+  - {fileID: 2100000, guid: c8c25c216ba364968a4d231b45cba409, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1201,6 +1201,7 @@ Prefab:
     - {fileID: 65369578778200210, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114242516562328302, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114930041441017418, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
+    - {fileID: 114812889461709902, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &506232310 stripped
@@ -1292,7 +1293,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: prototype_Ice
+          m_StringArgument: IceScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -1663,7 +1664,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: prototype_Lava
+          m_StringArgument: LavaScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -4963,7 +4964,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 1a41a64a5655e734d87526e593acade7, type: 2}
+  - {fileID: 2100000, guid: 8bc50f28954b83644b8d1eb4aea31beb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5194,7 +5195,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 9b51f288448014032b59b218b6425343, type: 2}
+  - {fileID: 2100000, guid: 30d5e9c9102164a3f9b0691281715ba5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5326,7 +5327,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: prototype_Desert
+          m_StringArgument: DesertScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -6280,6 +6281,7 @@ Prefab:
     - {fileID: 65369578778200210, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114242516562328302, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114930041441017418, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
+    - {fileID: 114812889461709902, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1409259907 stripped
@@ -6834,6 +6836,7 @@ Prefab:
     - {fileID: 65369578778200210, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114242516562328302, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
     - {fileID: 114930041441017418, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
+    - {fileID: 114812889461709902, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c5a12b8162ebbf543a8980de2f6077c9, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1779217783 stripped
@@ -7098,7 +7101,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: prototype_Jungle
+          m_StringArgument: JungleScene
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -7183,7 +7186,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c99957270b8ba4ee78811fd0decbdecc, type: 2}
+  - {fileID: 2100000, guid: d4af79f64368844ae9dc5d067689e935, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
