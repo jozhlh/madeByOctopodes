@@ -63,8 +63,8 @@ public class SoundManager : MonoBehaviour {
 	
 	// RTPCs
 
-	public void SetHealth(GameObject player, float health)
+	public void SetRTCP(string rtcpName, float rtcp)
 	{
-		AkSoundEngine.SetRTPCValue ("Health", health);
+		AkSoundEngine.SetRTPCValue (rtcpName, rtcp);
 	}
 }

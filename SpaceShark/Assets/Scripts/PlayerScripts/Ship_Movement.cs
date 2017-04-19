@@ -189,6 +189,7 @@ public class Ship_Movement : MonoBehaviour
             if(speedTimer < 0)
             {
                 soundManager.StopEvent("slowTime", 0, gameObject);
+                soundManager.SetRTCP("GameSpeed", 1.0f);
                 alteredSpeed = false;
                 currentSpeed = GameSettings.gameSpeed;
                 movementSpeed = GameSettings.gameSpeed;
@@ -430,8 +431,11 @@ public class Ship_Movement : MonoBehaviour
 
     public void ChangeSpeed(float speedMultiplier, float duration)
     {
+       float maxSpeed = currentSpeed;
         currentSpeed = GameSettings.gameSpeed * speedMultiplier;
         movementSpeed = GameSettings.gameSpeed * speedMultiplier;
+        float speedPercentage = movementSpeed / maxSpeed;
+        soundManager.SetRTCP("GameSpeed", speedPercentage);
         alteredSpeed = true;
         speedTimer = duration;
     }
