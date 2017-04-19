@@ -37,6 +37,7 @@ public class ScreenManager : MonoBehaviour
 			soundManager.PlayEvent("menuSelect", gameObject);
 			state.SetToLoadLevel();
 		}
+		
 		StartCoroutine(LoadSceneAsync(sceneName));
 	}
 	
@@ -50,6 +51,7 @@ public class ScreenManager : MonoBehaviour
 		// Fade to black
 		yield return StartCoroutine(m_blackScreenCover.FadeIn());
 		
+		soundManager.PlayEvent("loading", gameObject);
 		// Load loading screen
 		yield return SceneManager.LoadSceneAsync("LoadingScene");
 		
@@ -72,6 +74,8 @@ public class ScreenManager : MonoBehaviour
 		// Play music or perform other misc tasks
 		Debug.Log("Loading Time Up");
 		
+		
+		PlayLevelAudio(sceneName);
 		// Fade to black
 		yield return StartCoroutine(m_blackScreenCover.FadeIn());
 		
@@ -95,5 +99,33 @@ public class ScreenManager : MonoBehaviour
 		yield return StartCoroutine(m_blackScreenCover.FadeOut());
 
 		//Destroy(gameObject);
+	}
+
+	private void PlayLevelAudio(string scene)
+	{
+		if (scene == "LavaScene")
+		{
+			soundManager.PlayEvent("lava", gameObject);
+		}
+		else if (scene == "JungleScene")
+		{
+			soundManager.PlayEvent("forest", gameObject);
+		}
+		else if (scene == "DesertScene")
+		{
+			soundManager.PlayEvent("desert", gameObject);
+		}
+		else if (scene == "IceScene")
+		{
+			soundManager.PlayEvent("ice", gameObject);
+		}
+		else if (scene == "CaveScene")
+		{
+			soundManager.PlayEvent("cave", gameObject);
+		}
+		else if (scene == "SplashScene")
+		{
+			soundManager.PlayEvent("menu", gameObject);
+		}
 	}
 }

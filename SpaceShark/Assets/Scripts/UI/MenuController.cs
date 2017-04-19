@@ -30,6 +30,8 @@ public class MenuController : MonoBehaviour
 	[SerializeField]
 	int selectedPlanet = 0;
 
+	private SoundManager soundManager = null;
+
 	// Use this for initialization
 	void Start () {
 		// Initialiseinput
@@ -40,6 +42,7 @@ public class MenuController : MonoBehaviour
 		currentAngle = transform.eulerAngles;
 		HidePlayButtons();
 		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+		soundManager = state.gameObject.GetComponent<SoundManager>();
 	}
 	
 	void PlacePlanets()
@@ -75,6 +78,7 @@ public class MenuController : MonoBehaviour
 			selectedPlanet = 0;
 		}
 		levels[selectedPlanet].GetComponent<MenuPlanet>().Select();
+		soundManager.PlayEvent("menuSwipe", gameObject);
 	}
 
 	void RotateAntiClockwise()
@@ -92,6 +96,7 @@ public class MenuController : MonoBehaviour
 			selectedPlanet = (levels.Count - 1);
 		}
 		levels[selectedPlanet].GetComponent<MenuPlanet>().Select();
+		soundManager.PlayEvent("menuSwipe", gameObject);
 	}
 
 	// Update is called once per frame

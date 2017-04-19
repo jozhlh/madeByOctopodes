@@ -188,6 +188,7 @@ public class Ship_Movement : MonoBehaviour
             speedTimer -= Time.deltaTime;
             if(speedTimer < 0)
             {
+                soundManager.StopEvent("slowTime", 0, gameObject);
                 alteredSpeed = false;
                 currentSpeed = GameSettings.gameSpeed;
                 movementSpeed = GameSettings.gameSpeed;
@@ -217,7 +218,7 @@ public class Ship_Movement : MonoBehaviour
             }
             else
             {
-                
+                soundManager.PlayEvent("playerDeath", soundManager.gameObject);
                 levelManager.ClearLevel();
             }
         }

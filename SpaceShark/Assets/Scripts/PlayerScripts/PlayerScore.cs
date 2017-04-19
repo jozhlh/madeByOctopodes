@@ -33,9 +33,11 @@ public class PlayerScore : MonoBehaviour
 	private int baseMultiplier = 1;
     private static int scoreMultiplier = 1;
 	private static bool boosted = false;
+    private static bool lostMultiplier = false;
     private static bool scoreMutiplying = false;
 	private float boostCountdown = 0.0f;
 	private StateManager state = null;
+    private SoundManager soundManager = null;
 
 	// Use this for initialization
 	void Start ()
@@ -43,7 +45,8 @@ public class PlayerScore : MonoBehaviour
 		score = 0;
 		countdown = scoringInterval;
 		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
-		scoreText.text = "";
+		soundManager = state.gameObject.GetComponent<SoundManager>();
+        scoreText.text = "";
         multiplierText.text = "";
         boostText.text = "";
         boostText1.text = "";
@@ -64,7 +67,12 @@ public class PlayerScore : MonoBehaviour
 			}
 			scoreText.text = score.ToString();
             multiplierText.text = ("X " + scoreMultiplier.ToString());
-		}
+            if (lostMultiplier)
+            {
+                soundManager.PlayEvent("resetMultiplier", gameObject);
+                lostMultiplier = false;
+            }
+        }
 
 		if (boosted)
 		{
@@ -113,6 +121,10 @@ public class PlayerScore : MonoBehaviour
 
     public static void BulletMissed()
     {
+        if (scoreMultiplier > 1)
+        {
+            lostMultiplier = true;
+        }
         scoreMutiplying = false;
         scoreMultiplier = 1;
         Debug.Log(scoreMultiplier);

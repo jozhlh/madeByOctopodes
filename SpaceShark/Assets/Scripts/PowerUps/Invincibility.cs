@@ -8,6 +8,7 @@ public class Invincibility : PowerUp
     {
         base.Activate();
         player.GetComponent<Ship_Movement>().SetInvincible(totalDuration);
-		Debug.Log("Invincibility Active");
+		//Debug.Log("Invincibility Active");
+        soundManager.PlayEvent("invincible", player);
     }
 }

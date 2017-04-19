@@ -29,7 +29,8 @@ public class Goal : MonoBehaviour {
 		{
 			state.SetToComplete();
 			// Stop engine sounds
-			soundManager.StopEvent("shipEngine", 0, gameObject);
+			//soundManager.StopEvent("shipEngine", 0, gameObject);
+            soundManager.PlayEvent("playerWin", gameObject);
 		}
 	}
 }

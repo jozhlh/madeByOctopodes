@@ -20,6 +20,7 @@ public class LightningStrike : PowerUp
 		GameObject field = Instantiate(energyField, Ship_Movement.shipPosition + fieldSpawnPos, transform.rotation);
 		//field.GetComponent<EnergyField>().SetMoveSpeed(speed);
 		Destroy(field, duration);
-		Debug.Log("Lightning Strike Fired Active");
+		//Debug.Log("Lightning Strike Fired Active");
+		soundManager.PlayEvent("lightningStrike", player);
     }
 }
