@@ -11,6 +11,7 @@
 				<GameParameter Name="LevelProgress" ID="{43BE0C57-C89B-495B-A095-9D030804CE51}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}">

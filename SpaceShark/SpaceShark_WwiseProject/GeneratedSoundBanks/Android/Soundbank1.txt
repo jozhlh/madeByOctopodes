@@ -1,9 +1,27 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1585024601	shipEngine			\Default Work Unit\shipEngine	
-	2446068219	enemyFire			\Default Work Unit\enemyFire	
-	2747570134	playerFire			\Default Work Unit\playerFire	
-	3249137159	enemyDeath			\Default Work Unit\enemyDeath	
-	3532008398	menuSwipe			\Default Work Unit\menuSwipe	
+	2137943	life			\Default Work Unit\PowerUps\life	
+	236977299	powerupCollect			\Default Work Unit\PowerUps\powerupCollect	
+	344481046	ice			\Default Work Unit\Level\ice	
+	491961918	forest			\Default Work Unit\Level\forest	
+	540301611	lava			\Default Work Unit\Level\lava	
+	600194807	doublePoints			\Default Work Unit\PowerUps\doublePoints	
+	640944686	invincible			\Default Work Unit\PowerUps\invincible	
+	664555880	menuSelect			\Default Work Unit\UI\menuSelect	
+	872879572	powerupUse			\Default Work Unit\PowerUps\powerupUse	
+	1585024601	shipEngine			\Default Work Unit\Player\shipEngine	
+	1656947812	playerDeath			\Default Work Unit\Player\playerDeath	
+	1850388778	desert			\Default Work Unit\Level\desert	
+	1865350373	slowTime			\Default Work Unit\PowerUps\slowTime	
+	2446068219	enemyFire			\Default Work Unit\Enemy\enemyFire	
+	2607556080	menu			\Default Work Unit\Level\menu	
+	2747570134	playerFire			\Default Work Unit\Player\playerFire	
+	2999241083	lightningStrike			\Default Work Unit\PowerUps\lightningStrike	
+	3048058352	random			\Default Work Unit\PowerUps\random	
+	3249137159	enemyDeath			\Default Work Unit\Enemy\enemyDeath	
+	3532008398	menuSwipe			\Default Work Unit\UI\menuSwipe	
+	3829570280	playerWin			\Default Work Unit\Level\playerWin	
+	4122393694	cave			\Default Work Unit\Level\cave	
+	4214620523	resetMultiplier			\Default Work Unit\Score\resetMultiplier	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1350179952	GameSpeed			\Default Work Unit\GameSpeed	
@@ -13,6 +31,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	74238188	Cannon1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Cannon1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyCannon\Cannon1		466596
 	396115666	ShipEnginesLoop	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\ShipEnginesLoop_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShipEngines\ShipEnginesLoop		473564
 	560663328	EnemyDeathGlassLayer1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathGlassLayer1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer1		348224
+	727248570	UI2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\UI2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI2		480068
 	840083219	ShipEnginesIntro	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\ShipEnginesIntro_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShipEngines\ShipEnginesIntro		306444
 	874969708	UI1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\UI1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI1		480068
 	907585816	Cannon2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Cannon2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyCannon\Cannon2		536228

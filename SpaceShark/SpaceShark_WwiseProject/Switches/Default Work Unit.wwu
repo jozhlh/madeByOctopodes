@@ -25,37 +25,32 @@
 									<Flags>5</Flags>
 								</Point>
 								<Point>
-									<XPos>18.91792</XPos>
+									<XPos>0.1891792</XPos>
 									<YPos>1</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>25</XPos>
+									<XPos>0.25</XPos>
 									<YPos>1</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>32.77027</XPos>
+									<XPos>0.3277027</XPos>
 									<YPos>2</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>50</XPos>
+									<XPos>0.5</XPos>
 									<YPos>2</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>65.87838</XPos>
+									<XPos>0.6587838</XPos>
 									<YPos>3</YPos>
 									<Flags>0</Flags>
 								</Point>
 								<Point>
-									<XPos>99.999</XPos>
-									<YPos>3</YPos>
-									<Flags>0</Flags>
-								</Point>
-								<Point>
-									<XPos>100</XPos>
+									<XPos>1</XPos>
 									<YPos>3</YPos>
 									<Flags>37</Flags>
 								</Point>
