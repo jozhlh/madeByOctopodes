@@ -17,9 +17,9 @@ public class Enemy : MonoBehaviour
     // Reference to the bullet prefab which will be created
     private GameObject enemyBullet = null;
 
-	[SerializeField]
+	//[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager = null;
 
     // Whether the player is in range of the enemy
     [SerializeField]
@@ -40,6 +40,7 @@ public class Enemy : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        soundManager = GameObject.Find("ScreenManager").GetComponent<SoundManager>();
         cooldownProgress = GameSettings.cooldown;
         playerInRange = false;   
     }
@@ -442,7 +443,7 @@ public class Enemy : MonoBehaviour
         bulletObjects.Add(newBullet);
 
         // Wwise Enemy Fire Event
-        soundManager.GetComponent<SoundManager>().PlayEvent("enemyFire", gameObject);
+        soundManager.PlayEvent("enemyFire", gameObject);
     }
 
     // Setters

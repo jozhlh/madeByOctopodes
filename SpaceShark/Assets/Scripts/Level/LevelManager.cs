@@ -64,9 +64,9 @@ public class LevelManager : MonoBehaviour
     // Reference to the player in the scene
     private GameObject playerExplosion;
 
-    [SerializeField]
+   //[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager;
     private StateManager state = null;
 
     private int lastPrefabIndex = 0;
@@ -80,6 +80,7 @@ public class LevelManager : MonoBehaviour
         Init();
         player.SetActive(true);
         state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+        soundManager = state.gameObject.GetComponent<SoundManager>();
         scorePanel.SetActive(false);
         multiplierPanel.SetActive(false);
     }
@@ -196,7 +197,7 @@ public class LevelManager : MonoBehaviour
         GameObject explosion = Instantiate(playerExplosion, player.transform.position, transform.rotation);
         Destroy(explosion, 2.0f);
         // Stop engine sounds
-        soundManager.GetComponent<SoundManager>().StopEvent("shipEngine", 0, player);
+        soundManager.StopEvent("shipEngine", 0, player);
        // Init();
     }
 

@@ -31,9 +31,9 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField]
     private float unrestrictedMovementDistance = 300.0f;
 
-    [SerializeField]
+    //[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager;
     
     // How far the player is through the intro intro animation
     private float introProgress = 0.0f;
@@ -69,6 +69,7 @@ public class Ship_Movement : MonoBehaviour
     {
         Application.targetFrameRate = 30;
         state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+        soundManager = state.gameObject.GetComponent<SoundManager>();
     }
 
     // Use this for initialization
@@ -108,8 +109,8 @@ public class Ship_Movement : MonoBehaviour
         }
 
         // Start intro swoosh sound
-        //soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
-        soundManager.GetComponent<SoundManager>().PlayEvent("menuSwipe", gameObject);
+        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
+        //soundManager.PlayEvent("menuSwipe", gameObject);
         sheildObject.SetActive(false);
         invincibilityObject.SetActive(false);
     }

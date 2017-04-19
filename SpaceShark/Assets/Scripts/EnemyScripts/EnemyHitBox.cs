@@ -3,14 +3,23 @@ using System.Collections;
 
 public class EnemyHitBox : MonoBehaviour
 { 
-    [SerializeField]
+    //[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager;
     
     // Used for tracking whether the enemy has been hit and needs destroying
     public bool destroyEnemy = false;
 
     public bool enemyDestroyed = false;
+
+    /// <summary>
+    /// Start is called on the frame when a script is enabled just before
+    /// any of the Update methods is called the first time.
+    /// </summary>
+    void Start()
+    {
+        soundManager = GameObject.Find("ScreenManager").GetComponent<SoundManager>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -21,7 +30,7 @@ public class EnemyHitBox : MonoBehaviour
             destroyEnemy = true;
 
             // Wwise Enemy Death Trigger
-            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
+            soundManager.PlayEvent("enemyDeath", gameObject);
         }
         if (other.tag == "Bullet")
         {
@@ -33,7 +42,7 @@ public class EnemyHitBox : MonoBehaviour
             destroyEnemy = true;
 
             // Wwise Enemy Death Trigger
-            soundManager.GetComponent<SoundManager>().PlayEvent("enemyDeath", gameObject);
+            soundManager.PlayEvent("enemyDeath", gameObject);
         }
     }
 
