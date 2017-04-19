@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour {
 	private string soundbankName;
 
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		// Import Soundbank
 		AkSoundEngine.LoadBank("Init", AkSoundEngine.AK_DEFAULT_POOL_ID,out initBankID);	
 		// Import Soundbank
