@@ -30,7 +30,7 @@
 				<Event Id="344481046" Name="ice" ObjectPath="\Events\Default Work Unit\Level\ice" MaxAttenuation="0.000000"/>
 				<Event Id="640944686" Name="invincible" ObjectPath="\Events\Default Work Unit\PowerUps\invincible" MaxAttenuation="0.000000"/>
 				<Event Id="540301611" Name="lava" ObjectPath="\Events\Default Work Unit\Level\lava" MaxAttenuation="0.000000"/>
-				<Event Id="2137943" Name="life" ObjectPath="\Events\Default Work Unit\PowerUps\life" MaxAttenuation="0.000000"/>
+				<Event Id="2137943" Name="life" ObjectPath="\Events\Default Work Unit\PowerUps\life"/>
 				<Event Id="2999241083" Name="lightningStrike" ObjectPath="\Events\Default Work Unit\PowerUps\lightningStrike"/>
 				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\Level\menu" MaxAttenuation="0.000000"/>
 				<Event Id="664555880" Name="menuSelect" ObjectPath="\Events\Default Work Unit\UI\menuSelect"/>
@@ -41,42 +41,94 @@
 				<Event Id="236977299" Name="powerupCollect" ObjectPath="\Events\Default Work Unit\PowerUps\powerupCollect"/>
 				<Event Id="872879572" Name="powerupUse" ObjectPath="\Events\Default Work Unit\PowerUps\powerupUse"/>
 				<Event Id="3048058352" Name="random" ObjectPath="\Events\Default Work Unit\PowerUps\random" MaxAttenuation="0.000000"/>
-				<Event Id="4214620523" Name="resetMultiplier" ObjectPath="\Events\Default Work Unit\Score\resetMultiplier" MaxAttenuation="0.000000"/>
+				<Event Id="4214620523" Name="resetMultiplier" ObjectPath="\Events\Default Work Unit\Score\resetMultiplier"/>
 				<Event Id="1585024601" Name="shipEngine" ObjectPath="\Events\Default Work Unit\Player\shipEngine"/>
 				<Event Id="1865350373" Name="slowTime" ObjectPath="\Events\Default Work Unit\PowerUps\slowTime" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="43393310" Language="SFX">
-					<ShortName>EnemyDeathExplosionLayer1.wav</ShortName>
-					<Path>SFX/EnemyDeathExplosionLayer1_9E69E797.wem</Path>
+				<File Id="10366376" Language="SFX">
+					<ShortName>Laser LP2.wav</ShortName>
+					<Path>SFX/Laser LP2_9E69E797.wem</Path>
 				</File>
-				<File Id="74238188" Language="SFX">
-					<ShortName>Cannon1.wav</ShortName>
-					<Path>SFX/Cannon1_9E69E797.wem</Path>
+				<File Id="22002277" Language="SFX">
+					<ShortName>Expl Low.wav</ShortName>
+					<Path>SFX/Expl Low_9E69E797.wem</Path>
 				</File>
-				<File Id="396115666" Language="SFX">
-					<ShortName>ShipEnginesLoop.wav</ShortName>
-					<Path>SFX/ShipEnginesLoop_4B8CC0C5.wem</Path>
+				<File Id="107670251" Language="SFX">
+					<ShortName>Laser HF1.wav</ShortName>
+					<Path>SFX/Laser HF1_9E69E797.wem</Path>
+				</File>
+				<File Id="107806390" Language="SFX">
+					<ShortName>Laser LP1.wav</ShortName>
+					<Path>SFX/Laser LP1_9E69E797.wem</Path>
+				</File>
+				<File Id="184217842" Language="SFX">
+					<ShortName>Laser MF2.wav</ShortName>
+					<Path>SFX/Laser MF2_9E69E797.wem</Path>
+				</File>
+				<File Id="249770876" Language="SFX">
+					<ShortName>EnemyDeathLaser.wav</ShortName>
+					<Path>SFX/EnemyDeathLaser_9E69E797.wem</Path>
+				</File>
+				<File Id="266648446" Language="SFX">
+					<ShortName>Laser LP4.wav</ShortName>
+					<Path>SFX/Laser LP4_9E69E797.wem</Path>
+				</File>
+				<File Id="333643600" Language="SFX">
+					<ShortName>PowerUp4.wav</ShortName>
+					<Path>SFX/PowerUp4_9E69E797.wem</Path>
+				</File>
+				<File Id="337961944" Language="SFX">
+					<ShortName>Expl Mid.wav</ShortName>
+					<Path>SFX/Expl Mid_9E69E797.wem</Path>
+				</File>
+				<File Id="377376685" Language="SFX">
+					<ShortName>Laser HF4.wav</ShortName>
+					<Path>SFX/Laser HF4_9E69E797.wem</Path>
+				</File>
+				<File Id="484308579" Language="SFX">
+					<ShortName>Expl High.wav</ShortName>
+					<Path>SFX/Expl High_9E69E797.wem</Path>
+				</File>
+				<File Id="540444792" Language="SFX">
+					<ShortName>Laser HF3.wav</ShortName>
+					<Path>SFX/Laser HF3_9E69E797.wem</Path>
 				</File>
 				<File Id="560663328" Language="SFX">
 					<ShortName>EnemyDeathGlassLayer1.wav</ShortName>
 					<Path>SFX/EnemyDeathGlassLayer1_9E69E797.wem</Path>
 				</File>
+				<File Id="647682736" Language="SFX">
+					<ShortName>PowerUp6.wav</ShortName>
+					<Path>SFX/PowerUp6_9E69E797.wem</Path>
+				</File>
 				<File Id="727248570" Language="SFX">
 					<ShortName>UI2.wav</ShortName>
 					<Path>SFX/UI2_9E69E797.wem</Path>
 				</File>
-				<File Id="840083219" Language="SFX">
-					<ShortName>ShipEnginesIntro.wav</ShortName>
-					<Path>SFX/ShipEnginesIntro_9E69E797.wem</Path>
+				<File Id="767504814" Language="SFX">
+					<ShortName>Laser LP3.wav</ShortName>
+					<Path>SFX/Laser LP3_9E69E797.wem</Path>
+				</File>
+				<File Id="822560933" Language="SFX">
+					<ShortName>EnemyDeathExplosionLow.wav</ShortName>
+					<Path>SFX/EnemyDeathExplosionLow_9E69E797.wem</Path>
+				</File>
+				<File Id="828092820" Language="SFX">
+					<ShortName>PowerUp8.wav</ShortName>
+					<Path>SFX/PowerUp8_9E69E797.wem</Path>
+				</File>
+				<File Id="871038476" Language="SFX">
+					<ShortName>Laser MF1.wav</ShortName>
+					<Path>SFX/Laser MF1_9E69E797.wem</Path>
 				</File>
 				<File Id="874969708" Language="SFX">
 					<ShortName>UI1.wav</ShortName>
 					<Path>SFX/UI1_9E69E797.wem</Path>
 				</File>
-				<File Id="907585816" Language="SFX">
-					<ShortName>Cannon2.wav</ShortName>
-					<Path>SFX/Cannon2_9E69E797.wem</Path>
+				<File Id="922431912" Language="SFX">
+					<ShortName>PowerUp7.wav</ShortName>
+					<Path>SFX/PowerUp7_9E69E797.wem</Path>
 				</File>
 				<File Id="966113440" Language="SFX">
 					<ShortName>EnemyDeathGlassLayer3.wav</ShortName>
@@ -85,6 +137,10 @@
 				<File Id="1027588360" Language="SFX">
 					<ShortName>EnemyDeathGlassLayer2.wav</ShortName>
 					<Path>SFX/EnemyDeathGlassLayer2_9E69E797.wem</Path>
+				</File>
+				<File Id="1046353490" Language="SFX">
+					<ShortName>Laser HF2.wav</ShortName>
+					<Path>SFX/Laser HF2_9E69E797.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

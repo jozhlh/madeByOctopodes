@@ -31,7 +31,7 @@
 								<Action Name="Play" ID="{992E36F5-2C59-4B3C-BF11-8AA9E5A77F5A}" ShortID="483409655" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{2FD8C792-EAF7-4AB2-A777-55B99F48C1DA}" Global="false">
-											<ObjectRef Name="Cannon" ID="{53444340-9D1F-4306-96C9-1EE5EA2B0C89}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+											<ObjectRef Name="Cannon2" ID="{0F6E51B2-1275-4FC0-9495-B4C56249B112}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -68,7 +68,7 @@
 								<Action Name="Play" ID="{FC83219D-0824-4582-A7FD-A8AD47DAF8E5}" ShortID="648355148" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{036A91CF-95A7-476A-A292-80E5EFA4D241}" Global="false">
-											<ObjectRef Name="EnemyCannon" ID="{F213FE35-CBF7-45BF-86B6-3779B34544B3}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+											<ObjectRef Name="Cannon2" ID="{0F6E51B2-1275-4FC0-9495-B4C56249B112}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -83,7 +83,7 @@
 								<Action Name="Play" ID="{4CEA0542-C16E-4B9B-9672-AA9C628554B3}" ShortID="153297037" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{34E18457-A6E7-44B8-8E7F-A76DE6CCCAC5}" Global="false">
-											<ObjectRef Name="UI1" ID="{1852D3C5-AA4C-4CA8-8F87-BB5B47CACA86}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+											<ObjectRef Name="PowerUp4" ID="{C39A7421-54B4-4982-A969-C99ECA54D849}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -94,7 +94,7 @@
 								<Action Name="Play" ID="{1B921422-CD4C-4551-8BE2-0E0BBD59AEE6}" ShortID="735141187" Type="Play" Scope="One" Global="false">
 									<ElementList>
 										<Element ID="{F77D3462-97E2-44C5-9095-DB3F2C0E0FFC}" Global="false">
-											<ObjectRef Name="UI1" ID="{1852D3C5-AA4C-4CA8-8F87-BB5B47CACA86}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+											<ObjectRef Name="PowerUp7" ID="{9AF2579D-03FB-4D89-BFF0-2C8129F576CB}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
 								</Action>
@@ -112,10 +112,21 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="slowTime" ID="{7EE591C6-2097-472B-8BC2-C36D80F4FDB3}"/>
-						<Event Name="life" ID="{08E100FD-9C2E-4644-9821-E2E58421902F}"/>
+						<Event Name="life" ID="{08E100FD-9C2E-4644-9821-E2E58421902F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{93187B38-FAB5-40C2-8CEA-FC91F2179B61}" ShortID="895090301" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{2695FFA0-F6AE-46E5-95F6-E0F59EF37013}" Global="false">
+											<ObjectRef Name="PowerUp6" ID="{7D81A64D-B65C-49EF-91C0-FF5F78F89C4C}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 						<Event Name="random" ID="{5E9E63D6-2B53-44DE-86D7-AA8D78866BF9}"/>
 						<Event Name="invincible" ID="{3CA776A6-5A74-4652-B4A8-42D2EF0F091B}"/>
 						<Event Name="doublePoints" ID="{0A0874B8-4072-4F86-9F7B-C942F62547FC}"/>
+						<Event Name="New_Event" ID="{1258E1C6-1234-4BF7-92F7-3BDAEA156B03}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{85D46F6A-E8F7-4D54-9AAD-803D7A7277E1}" ShortID="1023794158">
@@ -167,7 +178,17 @@
 				</Folder>
 				<Folder Name="Score" ID="{FA456B81-24D4-41DF-8233-DA5A5E637BE1}" ShortID="1042661620">
 					<ChildrenList>
-						<Event Name="resetMultiplier" ID="{2BC260FA-CC4F-40AB-BDAB-87E9B52F428F}"/>
+						<Event Name="resetMultiplier" ID="{2BC260FA-CC4F-40AB-BDAB-87E9B52F428F}">
+							<ChildrenList>
+								<Action Name="Play" ID="{CFFE8428-BF64-4122-BDD6-6B8BEF5FE75B}" ShortID="874220561" Type="Play" Scope="One" Global="false">
+									<ElementList>
+										<Element ID="{5D68D4A0-BAF0-408B-B25E-9353F17356DD}" Global="false">
+											<ObjectRef Name="PowerUp8" ID="{3612C7B0-5C29-49D6-AB3B-03918280CABD}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: 1265541248
-    m_lastTimePart2: -1999337686
+    m_lastTimePsrt1: 511882112
+    m_lastTimePart2: -1999337645
     List:
     - Name: cave
       Path: Default Work Unit/Level/cave
@@ -186,6 +186,18 @@ MonoBehaviour:
         ObjectType: 3
       ID: -762958898
       Guid: 299984eba6ac3e438cdeafdcab0e7463
+      maxAttenuation: 0
+    - Name: New_Event
+      Path: Default Work Unit/PowerUps/New_Event
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: New_Event
+        ObjectType: 3
+      ID: -1244022056
+      Guid: c6e158123412f74b92f73bdaea156b03
       maxAttenuation: 0
     - Name: playerAlive
       Path: Default Work Unit/Player/playerAlive
