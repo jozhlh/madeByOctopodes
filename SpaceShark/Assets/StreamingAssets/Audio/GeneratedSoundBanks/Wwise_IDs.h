@@ -15,9 +15,50 @@ namespace AK
     {
         static const AkUniqueID ENEMYDEATH = 3249137159U;
         static const AkUniqueID ENEMYFIRE = 2446068219U;
+        static const AkUniqueID MENUSWIPE = 3532008398U;
         static const AkUniqueID PLAYERFIRE = 2747570134U;
         static const AkUniqueID SHIPENGINE = 1585024601U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace GAMESTATE
+        {
+            static const AkUniqueID GROUP = 4091656514U;
+
+            namespace STATE
+            {
+                static const AkUniqueID ALIVE = 655265632U;
+                static const AkUniqueID DEAD = 2044049779U;
+                static const AkUniqueID GOAL = 567967104U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace STATE
+        } // namespace GAMESTATE
+
+    } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace LEVELPROGRESS
+        {
+            static const AkUniqueID GROUP = 2549870240U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID SECTION1 = 3524678539U;
+                static const AkUniqueID SECTION2 = 3524678536U;
+                static const AkUniqueID SECTION3 = 3524678537U;
+            } // namespace SWITCH
+        } // namespace LEVELPROGRESS
+
+    } // namespace SWITCHES
+
+    namespace GAME_PARAMETERS
+    {
+        static const AkUniqueID GAMESPEED = 1350179952U;
+        static const AkUniqueID HEALTH = 3677180323U;
+        static const AkUniqueID LEVELPROGRESS = 2549870240U;
+    } // namespace GAME_PARAMETERS
 
     namespace BANKS
     {

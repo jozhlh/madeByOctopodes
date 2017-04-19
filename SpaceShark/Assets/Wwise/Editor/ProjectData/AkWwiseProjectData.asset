@@ -16,8 +16,8 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: 1543933824
-    m_lastTimePart2: -1999347367
+    m_lastTimePsrt1: -329687680
+    m_lastTimePart2: -1999337694
     List:
     - Name: enemyDeath
       Path: Default Work Unit/enemyDeath
@@ -39,6 +39,66 @@ MonoBehaviour:
       ID: -1848899077
       Guid: 99eb95cd8fbccf4092c7017ed03bece8
       maxAttenuation: 0
+    - Name: lightningStrike
+      Path: Default Work Unit/lightningStrike
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: lightningStrike
+        ObjectType: 3
+      ID: -1295726213
+      Guid: 5c98e748b5914f44a99ba4748adde70f
+      maxAttenuation: 0
+    - Name: menuSelect
+      Path: Default Work Unit/menuSelect
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: menuSelect
+        ObjectType: 3
+      ID: 664555880
+      Guid: 3faf07833927844e8cf337e47ebf0c17
+      maxAttenuation: 0
+    - Name: menuSwipe
+      Path: Default Work Unit/menuSwipe
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: menuSwipe
+        ObjectType: 3
+      ID: -762958898
+      Guid: 299984eba6ac3e438cdeafdcab0e7463
+      maxAttenuation: 0
+    - Name: New_Event
+      Path: Default Work Unit/New_Event
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: New_Event
+        ObjectType: 3
+      ID: -1244022056
+      Guid: e2b6bbc771053f4b84715fc6bc7929a6
+      maxAttenuation: 0
+    - Name: playerAlive
+      Path: Default Work Unit/playerAlive
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playerAlive
+        ObjectType: 3
+      ID: -1737645427
+      Guid: 58b468275b9da741b690c19d605121b8
+      maxAttenuation: 0
+    - Name: playerDeath
+      Path: Default Work Unit/playerDeath
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playerDeath
+        ObjectType: 3
+      ID: 1656947812
+      Guid: 932cdba5fdde644ba2b935be15184431
+      maxAttenuation: 0
     - Name: playerFire
       Path: Default Work Unit/playerFire
       PathAndIcons:
@@ -48,6 +108,36 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1547397162
       Guid: e09be010cd0d7a4183902d888dd8fa42
+      maxAttenuation: 0
+    - Name: playerWin
+      Path: Default Work Unit/playerWin
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: playerWin
+        ObjectType: 3
+      ID: -465397016
+      Guid: 4266748f1a9bef4b884589af89b2c9b0
+      maxAttenuation: 0
+    - Name: powerupCollect
+      Path: Default Work Unit/powerupCollect
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: powerupCollect
+        ObjectType: 3
+      ID: 236977299
+      Guid: 174bcf560125054d8a80a29371a7e38f
+      maxAttenuation: 0
+    - Name: powerupUse
+      Path: Default Work Unit/powerupUse
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: powerupUse
+        ObjectType: 3
+      ID: 872879572
+      Guid: 04c9fc3ad06ff94881e9e7c6f07af3ee
       maxAttenuation: 0
     - Name: shipEngine
       Path: Default Work Unit/shipEngine
@@ -63,29 +153,87 @@ MonoBehaviour:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0F6A9059-8098-420B-B302-7E8368CB6947}'
-    m_lastTimePsrt1: -1509012352
-    m_lastTimePart2: -1999352962
+    m_lastTimePsrt1: -380014720
+    m_lastTimePart2: -1999337704
     List: []
   StateWwu:
   - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BD3CD14C-4141-4DDB-8778-C6319B997069}'
-    m_lastTimePsrt1: -1509012352
-    m_lastTimePart2: -1999352962
-    List: []
+    m_lastTimePsrt1: 2000181504
+    m_lastTimePart2: -1999337697
+    List:
+    - Name: GameState
+      Path: Default Work Unit/GameState
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: GameState
+        ObjectType: 9
+      ID: -203310782
+      Guid: fbc67cf73c3cda409ab7e8d94f48df7a
+      values:
+      - Alive
+      - Dead
+      - Goal
+      - Menu
+      - None
+      ValueIcons:
+      - ElementName: Alive
+        ObjectType: 8
+      - ElementName: Dead
+        ObjectType: 8
+      - ElementName: Goal
+        ObjectType: 8
+      - ElementName: Menu
+        ObjectType: 8
+      - ElementName: None
+        ObjectType: 8
+      valueIDs: 608f0e2773b9d579807dda21f0256c9bdb3ba32c
+      ValueGuids:
+      - bytes: b3a14a454a0ec647acd5a8b5fbab2109
+      - bytes: 42431dafb492a04aa7c128b55fa61e9a
+      - bytes: 3ee15ce4c209454da9905a99815b31f3
+      - bytes: bdd7c39841f28444b95463e9237de96a
+      - bytes: c139d4bc35d6a04faf8839080391c5be
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}'
-    m_lastTimePsrt1: -1509012352
-    m_lastTimePart2: -1999352962
-    List: []
+    m_lastTimePsrt1: 2000181504
+    m_lastTimePart2: -1999337697
+    List:
+    - Name: LevelProgress
+      Path: Default Work Unit/LevelProgress
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: LevelProgress
+        ObjectType: 11
+      ID: -1745097056
+      Guid: 89e5d03c6ced95498b182d18dc39585f
+      values:
+      - Section1
+      - Section2
+      - Section3
+      ValueIcons:
+      - ElementName: Section1
+        ObjectType: 10
+      - ElementName: Section2
+        ObjectType: 10
+      - ElementName: Section3
+        ObjectType: 10
+      valueIDs: 8b5316d2885316d2895316d2
+      ValueGuids:
+      - bytes: f15301a40e318841a278f668971520db
+      - bytes: dd1f4a9c29e47340a560ea364e72e903
+      - bytes: 828e91eeeb68f54bae78dea6eefb57ad
   BankWwu:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{584A89B9-C19F-4DC7-92E9-511AC3B1CE48}'
-    m_lastTimePsrt1: 1543933824
-    m_lastTimePart2: -1999347367
+    m_lastTimePsrt1: -879622272
+    m_lastTimePart2: -1999337692
     List:
     - Name: Soundbank1
       Path: Default Work Unit/Soundbank1

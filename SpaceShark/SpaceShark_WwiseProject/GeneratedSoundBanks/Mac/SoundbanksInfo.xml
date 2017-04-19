@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="120">
 	<RootPaths>
-		<ProjectRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/.cache/Mac/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
+		<ProjectRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/.cache/Mac/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Mac/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Mac/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -23,6 +23,7 @@
 			<IncludedEvents>
 				<Event Id="3249137159" Name="enemyDeath" ObjectPath="\Events\Default Work Unit\enemyDeath"/>
 				<Event Id="2446068219" Name="enemyFire" ObjectPath="\Events\Default Work Unit\enemyFire"/>
+				<Event Id="3532008398" Name="menuSwipe" ObjectPath="\Events\Default Work Unit\menuSwipe"/>
 				<Event Id="2747570134" Name="playerFire" ObjectPath="\Events\Default Work Unit\playerFire"/>
 				<Event Id="1585024601" Name="shipEngine" ObjectPath="\Events\Default Work Unit\shipEngine"/>
 			</IncludedEvents>
@@ -46,6 +47,10 @@
 				<File Id="840083219" Language="SFX">
 					<ShortName>ShipEnginesIntro.wav</ShortName>
 					<Path>SFX/ShipEnginesIntro_9E69E797.wem</Path>
+				</File>
+				<File Id="874969708" Language="SFX">
+					<ShortName>UI1.wav</ShortName>
+					<Path>SFX/UI1_9E69E797.wem</Path>
 				</File>
 				<File Id="907585816" Language="SFX">
 					<ShortName>Cannon2.wav</ShortName>

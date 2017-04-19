@@ -108,8 +108,8 @@ public class Ship_Movement : MonoBehaviour
         }
 
         // Start intro swoosh sound
-        soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
-
+        //soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
+        soundManager.GetComponent<SoundManager>().PlayEvent("menuSwipe", gameObject);
         sheildObject.SetActive(false);
         invincibilityObject.SetActive(false);
     }

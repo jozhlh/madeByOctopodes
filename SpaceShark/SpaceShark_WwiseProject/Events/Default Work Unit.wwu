@@ -69,11 +69,12 @@
 				</Event>
 				<Event Name="menuSwipe" ID="{EB849929-ACA6-433E-8CDE-AFDCAB0E7463}">
 					<ChildrenList>
-						<Action Name="Set Switch" ID="{7900675E-11CD-4AAF-80D8-E2AE29D13998}" ShortID="974030947" Type="SetSwitch" Scope="All" Global="false">
-							<SetItemParam>
-								<Group Name="LevelProgress" ID="{3CD0E589-ED6C-4995-8B18-2D18DC39585F}"/>
-								<GroupItem Name="Menu" ID="{4282F5A2-0AB9-4AA2-9FF3-D4F32663AB13}"/>
-							</SetItemParam>
+						<Action Name="Play" ID="{4CAC5940-2621-4C9D-80B7-AC4619A2E077}" ShortID="916611300" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{85FE32A6-C73C-469A-B3FA-514DBF73C73F}" Global="false">
+									<ObjectRef Name="UI1" ID="{1852D3C5-AA4C-4CA8-8F87-BB5B47CACA86}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+								</Element>
+							</ElementList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -91,6 +92,7 @@
 				<Event Name="lightningStrike" ID="{48E7985C-91B5-444F-A99B-A4748ADDE70F}"/>
 				<Event Name="powerupCollect" ID="{56CF4B17-2501-4D05-8A80-A29371A7E38F}"/>
 				<Event Name="powerupUse" ID="{3AFCC904-6FD0-48F9-81E9-E7C6F07AF3EE}"/>
+				<Event Name="New_Event" ID="{C7BBB6E2-0571-4B3F-8471-5FC6BC7929A6}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

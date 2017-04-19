@@ -97,6 +97,7 @@ public class Cannon : MonoBehaviour
 
         // Wwise Play Trigger
         soundManager.GetComponent<SoundManager>().PlayEvent("playerFire", gameObject);
+        //soundManager.GetComponent<SoundManager>().PlayEvent("menuSwipe", gameObject);
     }
 
 	// Destroy or disable any expired game objects

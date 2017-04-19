@@ -15,6 +15,8 @@ public class SoundManager : MonoBehaviour {
 		AkSoundEngine.LoadBank("Init", AkSoundEngine.AK_DEFAULT_POOL_ID,out initBankID);	
 		// Import Soundbank
 		AkSoundEngine.LoadBank("Soundbank1", AkSoundEngine.AK_DEFAULT_POOL_ID,out bankID);	
+		PlayEvent("menuSwipe", gameObject);
+		//PlayEvent("playerFire", gameObject);
 	}
 	
 	// Update is called once per frame
