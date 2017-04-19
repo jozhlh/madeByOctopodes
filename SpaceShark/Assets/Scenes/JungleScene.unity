@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.8455882, g: 0.8455882, b: 0.8455882, a: 1}
+  m_AmbientSkyColor: {r: 0.82745105, g: 0.8862746, b: 0.7803922, a: 1}
   m_AmbientEquatorColor: {r: 0.87843144, g: 0.7725491, b: 0.89019614, a: 1}
   m_AmbientGroundColor: {r: 0.87843144, g: 0.7725491, b: 0.89019614, a: 1}
   m_AmbientIntensity: 1
@@ -673,7 +673,7 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: eaf1463d079166147b8d512d39cee670, type: 2}
+      objectReference: {fileID: 2100000, guid: ce5cec870e07aad48a04253cd2c574a2, type: 2}
     - target: {fileID: 23232969734490586, guid: 04b4f46694d40c54a81affa491df5e9c,
         type: 2}
       propertyPath: m_Enabled
