@@ -485,21 +485,6 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1908682896}
-    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: levelManager
-      value: 
-      objectReference: {fileID: 15666839}
-    - target: {fileID: 114275804853123150, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: powerUpUi
-      value: 
-      objectReference: {fileID: 1364000226}
-    - target: {fileID: 114275804853123150, guid: e0173837cf210c14d9e0245149716d2b,
-        type: 2}
-      propertyPath: powerUpIcon
-      value: 
-      objectReference: {fileID: 91375652}
     - target: {fileID: 114000012894090726, guid: e0173837cf210c14d9e0245149716d2b,
         type: 2}
       propertyPath: multiplierText
@@ -515,6 +500,21 @@ Prefab:
       propertyPath: boostText1
       value: 
       objectReference: {fileID: 1153072578}
+    - target: {fileID: 114000012952238442, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: levelManager
+      value: 
+      objectReference: {fileID: 15666839}
+    - target: {fileID: 114275804853123150, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: powerUpUi
+      value: 
+      objectReference: {fileID: 1364000226}
+    - target: {fileID: 114275804853123150, guid: e0173837cf210c14d9e0245149716d2b,
+        type: 2}
+      propertyPath: powerUpIcon
+      value: 
+      objectReference: {fileID: 91375652}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e0173837cf210c14d9e0245149716d2b, type: 2}
   m_IsPrefabParent: 0

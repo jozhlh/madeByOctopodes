@@ -16,138 +16,296 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: 1380443136
-    m_lastTimePart2: -1999337689
+    m_lastTimePsrt1: 1265541248
+    m_lastTimePart2: -1999337686
     List:
-    - Name: enemyDeath
-      Path: Default Work Unit/enemyDeath
+    - Name: cave
+      Path: Default Work Unit/Level/cave
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: cave
+        ObjectType: 3
+      ID: -172573602
+      Guid: 29636acf6e91d049814e9f15a12d2005
+      maxAttenuation: 0
+    - Name: desert
+      Path: Default Work Unit/Level/desert
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: desert
+        ObjectType: 3
+      ID: 1850388778
+      Guid: 7e3a0de4737b1e45bb21134f15662f2f
+      maxAttenuation: 0
+    - Name: doublePoints
+      Path: Default Work Unit/PowerUps/doublePoints
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: doublePoints
+        ObjectType: 3
+      ID: 600194807
+      Guid: b874080a7240864f9f7bc942f62547fc
+      maxAttenuation: 0
+    - Name: enemyDeath
+      Path: Default Work Unit/Enemy/enemyDeath
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
       - ElementName: enemyDeath
         ObjectType: 3
       ID: -1045830137
       Guid: 5fa58ed01c988443af7978ea38b865c2
       maxAttenuation: 0
     - Name: enemyFire
-      Path: Default Work Unit/enemyFire
+      Path: Default Work Unit/Enemy/enemyFire
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Enemy
+        ObjectType: 4
       - ElementName: enemyFire
         ObjectType: 3
       ID: -1848899077
       Guid: 99eb95cd8fbccf4092c7017ed03bece8
       maxAttenuation: 0
-    - Name: lightningStrike
-      Path: Default Work Unit/lightningStrike
+    - Name: forest
+      Path: Default Work Unit/Level/forest
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: forest
+        ObjectType: 3
+      ID: 491961918
+      Guid: 2d953ea9eb3d3f448943aa8f0a8cc473
+      maxAttenuation: 0
+    - Name: ice
+      Path: Default Work Unit/Level/ice
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: ice
+        ObjectType: 3
+      ID: 344481046
+      Guid: 7a23f8eadec58849b595c9626789e092
+      maxAttenuation: 0
+    - Name: invincible
+      Path: Default Work Unit/PowerUps/invincible
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: invincible
+        ObjectType: 3
+      ID: 640944686
+      Guid: a676a73c745a5246b4a842d2ef0f091b
+      maxAttenuation: 0
+    - Name: lava
+      Path: Default Work Unit/Level/lava
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: lava
+        ObjectType: 3
+      ID: 540301611
+      Guid: e2b6bbc771053f4b84715fc6bc7929a6
+      maxAttenuation: 0
+    - Name: life
+      Path: Default Work Unit/PowerUps/life
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: life
+        ObjectType: 3
+      ID: 2137943
+      Guid: fd00e1082e9c44469821e2e58421902f
+      maxAttenuation: 0
+    - Name: lightningStrike
+      Path: Default Work Unit/PowerUps/lightningStrike
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
       - ElementName: lightningStrike
         ObjectType: 3
       ID: -1295726213
       Guid: 5c98e748b5914f44a99ba4748adde70f
       maxAttenuation: 0
-    - Name: menuSelect
-      Path: Default Work Unit/menuSelect
+    - Name: menu
+      Path: Default Work Unit/Level/menu
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: menu
+        ObjectType: 3
+      ID: -1687411216
+      Guid: b95576ae459c27498679cef47c9e36ee
+      maxAttenuation: 0
+    - Name: menuSelect
+      Path: Default Work Unit/UI/menuSelect
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
       - ElementName: menuSelect
         ObjectType: 3
       ID: 664555880
       Guid: 3faf07833927844e8cf337e47ebf0c17
       maxAttenuation: 0
     - Name: menuSwipe
-      Path: Default Work Unit/menuSwipe
+      Path: Default Work Unit/UI/menuSwipe
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: UI
+        ObjectType: 4
       - ElementName: menuSwipe
         ObjectType: 3
       ID: -762958898
       Guid: 299984eba6ac3e438cdeafdcab0e7463
       maxAttenuation: 0
-    - Name: New_Event
-      Path: Default Work Unit/New_Event
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: New_Event
-        ObjectType: 3
-      ID: -1244022056
-      Guid: e2b6bbc771053f4b84715fc6bc7929a6
-      maxAttenuation: 0
     - Name: playerAlive
-      Path: Default Work Unit/playerAlive
+      Path: Default Work Unit/Player/playerAlive
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
       - ElementName: playerAlive
         ObjectType: 3
       ID: -1737645427
       Guid: 58b468275b9da741b690c19d605121b8
       maxAttenuation: 0
     - Name: playerDeath
-      Path: Default Work Unit/playerDeath
+      Path: Default Work Unit/Player/playerDeath
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
       - ElementName: playerDeath
         ObjectType: 3
       ID: 1656947812
       Guid: 932cdba5fdde644ba2b935be15184431
       maxAttenuation: 0
     - Name: playerFire
-      Path: Default Work Unit/playerFire
+      Path: Default Work Unit/Player/playerFire
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
       - ElementName: playerFire
         ObjectType: 3
       ID: -1547397162
       Guid: e09be010cd0d7a4183902d888dd8fa42
       maxAttenuation: 0
     - Name: playerWin
-      Path: Default Work Unit/playerWin
+      Path: Default Work Unit/Level/playerWin
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
       - ElementName: playerWin
         ObjectType: 3
       ID: -465397016
       Guid: 4266748f1a9bef4b884589af89b2c9b0
       maxAttenuation: 0
     - Name: powerupCollect
-      Path: Default Work Unit/powerupCollect
+      Path: Default Work Unit/PowerUps/powerupCollect
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
       - ElementName: powerupCollect
         ObjectType: 3
       ID: 236977299
       Guid: 174bcf560125054d8a80a29371a7e38f
       maxAttenuation: 0
     - Name: powerupUse
-      Path: Default Work Unit/powerupUse
+      Path: Default Work Unit/PowerUps/powerupUse
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
       - ElementName: powerupUse
         ObjectType: 3
       ID: 872879572
       Guid: 04c9fc3ad06ff94881e9e7c6f07af3ee
       maxAttenuation: 0
-    - Name: shipEngine
-      Path: Default Work Unit/shipEngine
+    - Name: random
+      Path: Default Work Unit/PowerUps/random
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: random
+        ObjectType: 3
+      ID: -1246908944
+      Guid: d6639e5e532bde4486d7aa8d78866bf9
+      maxAttenuation: 0
+    - Name: resetMultiplier
+      Path: Default Work Unit/Score/resetMultiplier
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Score
+        ObjectType: 4
+      - ElementName: resetMultiplier
+        ObjectType: 3
+      ID: -80346773
+      Guid: fa60c22b4fccab40bdab87e9b52f428f
+      maxAttenuation: 0
+    - Name: shipEngine
+      Path: Default Work Unit/Player/shipEngine
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
       - ElementName: shipEngine
         ObjectType: 3
       ID: 1585024601
       Guid: 5c56093dc5f1bf4291eb3996563ac654
+      maxAttenuation: 0
+    - Name: slowTime
+      Path: Default Work Unit/PowerUps/slowTime
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: PowerUps
+        ObjectType: 4
+      - ElementName: slowTime
+        ObjectType: 3
+      ID: 1865350373
+      Guid: c691e57e97202b478bc2c36d80f4fdb3
       maxAttenuation: 0
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
@@ -200,8 +358,8 @@ MonoBehaviour:
   - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}'
-    m_lastTimePsrt1: 2000181504
-    m_lastTimePart2: -1999337697
+    m_lastTimePsrt1: -1159360640
+    m_lastTimePart2: -1999337684
     List:
     - Name: LevelProgress
       Path: Default Work Unit/LevelProgress
@@ -232,8 +390,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{584A89B9-C19F-4DC7-92E9-511AC3B1CE48}'
-    m_lastTimePsrt1: 1390443136
-    m_lastTimePart2: -1999337689
+    m_lastTimePsrt1: -1159360640
+    m_lastTimePart2: -1999337684
     List:
     - Name: Soundbank1
       Path: Default Work Unit/Soundbank1
@@ -248,6 +406,7 @@ MonoBehaviour:
   - /SpaceShark_WwiseProject
   - /SpaceShark_WwiseProject/Events
   - /SpaceShark_WwiseProject/Events/Default Work Unit
+  - /SpaceShark_WwiseProject/Events/Default Work Unit/Level
   - /SpaceShark_WwiseProject/SoundBanks
   - /SpaceShark_WwiseProject/SoundBanks/Default Work Unit
   m_lastPopulateTimePsrt1: 0
