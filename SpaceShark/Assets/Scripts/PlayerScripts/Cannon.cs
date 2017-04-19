@@ -9,9 +9,9 @@ public class Cannon : MonoBehaviour
     // Reference to the player in the scene
     private GameObject player;
 
-	[SerializeField]
+	//[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager;
 
 	[SerializeField]
     // Reference to the bullet prefab which the player fires
@@ -41,6 +41,7 @@ public class Cannon : MonoBehaviour
             GameInput.OnTap += PlayerFire;
         }
         state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+        soundManager = state.gameObject.GetComponent<SoundManager>();
 	}
 	
 	// Update is called once per frame
@@ -96,7 +97,8 @@ public class Cannon : MonoBehaviour
         //customTriggers.CustomTrigger();
 
         // Wwise Play Trigger
-        soundManager.GetComponent<SoundManager>().PlayEvent("playerFire", gameObject);
+        soundManager.PlayEvent("playerFire", gameObject);
+        //soundManager.GetComponent<SoundManager>().PlayEvent("menuSwipe", gameObject);
     }
 
 	// Destroy or disable any expired game objects

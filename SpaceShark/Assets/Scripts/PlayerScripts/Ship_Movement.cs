@@ -31,9 +31,9 @@ public class Ship_Movement : MonoBehaviour
     [SerializeField]
     private float unrestrictedMovementDistance = 300.0f;
 
-    [SerializeField]
+    //[SerializeField]
     // Reference to the sound manager in the scene
-    private GameObject soundManager;
+    private SoundManager soundManager;
     
     // How far the player is through the intro intro animation
     private float introProgress = 0.0f;
@@ -69,6 +69,7 @@ public class Ship_Movement : MonoBehaviour
     {
         Application.targetFrameRate = 30;
         state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+        soundManager = state.gameObject.GetComponent<SoundManager>();
     }
 
     // Use this for initialization
@@ -109,7 +110,7 @@ public class Ship_Movement : MonoBehaviour
 
         // Start intro swoosh sound
         soundManager.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
-
+        //soundManager.PlayEvent("menuSwipe", gameObject);
         sheildObject.SetActive(false);
         invincibilityObject.SetActive(false);
     }
@@ -187,6 +188,8 @@ public class Ship_Movement : MonoBehaviour
             speedTimer -= Time.deltaTime;
             if(speedTimer < 0)
             {
+                soundManager.StopEvent("slowTime", 0, gameObject);
+                soundManager.SetRTCP("GameSpeed", 1.0f);
                 alteredSpeed = false;
                 currentSpeed = GameSettings.gameSpeed;
                 movementSpeed = GameSettings.gameSpeed;
@@ -216,7 +219,7 @@ public class Ship_Movement : MonoBehaviour
             }
             else
             {
-                
+                soundManager.PlayEvent("playerDeath", soundManager.gameObject);
                 levelManager.ClearLevel();
             }
         }
@@ -428,8 +431,11 @@ public class Ship_Movement : MonoBehaviour
 
     public void ChangeSpeed(float speedMultiplier, float duration)
     {
+       float maxSpeed = currentSpeed;
         currentSpeed = GameSettings.gameSpeed * speedMultiplier;
         movementSpeed = GameSettings.gameSpeed * speedMultiplier;
+        float speedPercentage = movementSpeed / maxSpeed;
+        soundManager.SetRTCP("GameSpeed", speedPercentage);
         alteredSpeed = true;
         speedTimer = duration;
     }

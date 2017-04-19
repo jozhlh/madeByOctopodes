@@ -11,6 +11,7 @@ public class ScoreBoost : PowerUp
     {
         base.Activate();
         player.GetComponent<PlayerScore>().ScoreBoost(scoreMultiplier, totalDuration);
-		Debug.Log("Score Boost Active");
+		//Debug.Log("Score Boost Active");
+        soundManager.PlayEvent("doublePoints", player);
     }
 }

@@ -10,7 +10,9 @@ public class init : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		screen.gameObject.GetComponent<StateManager>().SetToLoadMenu();
+		
 		screen.LoadScene("SplashScene");
+		//screen.gameObject.GetComponent<SoundManager>().PlayEvent("shipEngine", gameObject);
 	}
 	
 	// Update is called once per frame

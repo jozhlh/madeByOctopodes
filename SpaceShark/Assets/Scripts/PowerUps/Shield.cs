@@ -8,5 +8,6 @@ public class Shield : PowerUp
     {
         base.Activate();
         player.GetComponent<Ship_Movement>().SetSheild();
+        soundManager.PlayEvent("life", player);
     }
 }

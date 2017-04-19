@@ -14,11 +14,14 @@ public class PowerUp : MonoBehaviour
 
 	private bool playerCanUse = false;
 	protected bool inUse = false;
+
+	protected SoundManager soundManager = null;
 	
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		soundManager = GameObject.Find("ScreenManager").GetComponent<SoundManager>();
 	}
 	
 	// Update is called once per frame
@@ -30,12 +33,14 @@ public class PowerUp : MonoBehaviour
 	{
 		// Use effect
 		playerCanUse = false;
+		soundManager.PlayEvent("powerupUse", player);
 	}
 
 	public void GiveToPlayer()
 	{
 		if (!playerCanUse)
 		{
+			soundManager.PlayEvent("powerupCollect", player);
 			playerCanUse = true;
 			// Update UI with Icon
 		}

@@ -12,5 +12,6 @@ public class SpeedChange : PowerUp
         base.Activate();
         player.GetComponent<Ship_Movement>().ChangeSpeed(speedMultiplier, totalDuration);
 		Debug.Log("Speed Change Active");
+        soundManager.PlayEvent("slowTime", player);
     }
 }
