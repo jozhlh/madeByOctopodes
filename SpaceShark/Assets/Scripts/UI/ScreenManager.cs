@@ -13,11 +13,13 @@ public class ScreenManager : MonoBehaviour
 	private float m_minDuration = 2.0f;
 
 	private StateManager state = null;
+	private SoundManager soundManager = null;
 	
 	void Awake()
 	{
 		//StartCoroutine(m_canvasCover.FadeOut());
 		state = GetComponent<StateManager>();
+		soundManager = GetComponent<SoundManager>();
 	}
 
 	void Update()
@@ -32,6 +34,7 @@ public class ScreenManager : MonoBehaviour
 	{
 		if (state.GetState() != StateManager.States.loadMenu)
 		{
+			soundManager.PlayEvent("menuSelect", gameObject);
 			state.SetToLoadLevel();
 		}
 		StartCoroutine(LoadSceneAsync(sceneName));
