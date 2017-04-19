@@ -21,23 +21,19 @@
 			<ShortName>Soundbank1</ShortName>
 			<Path>Soundbank1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4122393694" Name="cave" ObjectPath="\Events\Default Work Unit\Level\cave" MaxAttenuation="0.000000"/>
-				<Event Id="1850388778" Name="desert" ObjectPath="\Events\Default Work Unit\Level\desert" MaxAttenuation="0.000000"/>
 				<Event Id="600194807" Name="doublePoints" ObjectPath="\Events\Default Work Unit\PowerUps\doublePoints" MaxAttenuation="0.000000"/>
 				<Event Id="3249137159" Name="enemyDeath" ObjectPath="\Events\Default Work Unit\Enemy\enemyDeath"/>
 				<Event Id="2446068219" Name="enemyFire" ObjectPath="\Events\Default Work Unit\Enemy\enemyFire"/>
-				<Event Id="491961918" Name="forest" ObjectPath="\Events\Default Work Unit\Level\forest" MaxAttenuation="0.000000"/>
-				<Event Id="344481046" Name="ice" ObjectPath="\Events\Default Work Unit\Level\ice" MaxAttenuation="0.000000"/>
 				<Event Id="640944686" Name="invincible" ObjectPath="\Events\Default Work Unit\PowerUps\invincible" MaxAttenuation="0.000000"/>
-				<Event Id="540301611" Name="lava" ObjectPath="\Events\Default Work Unit\Level\lava" MaxAttenuation="0.000000"/>
+				<Event Id="540301611" Name="lava" ObjectPath="\Events\Default Work Unit\Level\lava"/>
 				<Event Id="2137943" Name="life" ObjectPath="\Events\Default Work Unit\PowerUps\life"/>
 				<Event Id="2999241083" Name="lightningStrike" ObjectPath="\Events\Default Work Unit\PowerUps\lightningStrike"/>
-				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\Level\menu" MaxAttenuation="0.000000"/>
+				<Event Id="3573931707" Name="loading" ObjectPath="\Events\Default Work Unit\Level\loading" MaxAttenuation="0.000000"/>
+				<Event Id="2607556080" Name="menu" ObjectPath="\Events\Default Work Unit\Level\menu"/>
 				<Event Id="664555880" Name="menuSelect" ObjectPath="\Events\Default Work Unit\UI\menuSelect"/>
 				<Event Id="3532008398" Name="menuSwipe" ObjectPath="\Events\Default Work Unit\UI\menuSwipe"/>
 				<Event Id="1656947812" Name="playerDeath" ObjectPath="\Events\Default Work Unit\Player\playerDeath"/>
 				<Event Id="2747570134" Name="playerFire" ObjectPath="\Events\Default Work Unit\Player\playerFire"/>
-				<Event Id="3829570280" Name="playerWin" ObjectPath="\Events\Default Work Unit\Level\playerWin"/>
 				<Event Id="236977299" Name="powerupCollect" ObjectPath="\Events\Default Work Unit\PowerUps\powerupCollect"/>
 				<Event Id="872879572" Name="powerupUse" ObjectPath="\Events\Default Work Unit\PowerUps\powerupUse"/>
 				<Event Id="3048058352" Name="random" ObjectPath="\Events\Default Work Unit\PowerUps\random" MaxAttenuation="0.000000"/>
@@ -134,6 +130,10 @@
 					<ShortName>EnemyDeathGlassLayer3.wav</ShortName>
 					<Path>SFX/EnemyDeathGlassLayer3_9E69E797.wem</Path>
 				</File>
+				<File Id="1027021870" Language="SFX">
+					<ShortName>Lava Mix2.wav</ShortName>
+					<Path>SFX/Lava Mix2_4B8CC0C5.wem</Path>
+				</File>
 				<File Id="1027588360" Language="SFX">
 					<ShortName>EnemyDeathGlassLayer2.wav</ShortName>
 					<Path>SFX/EnemyDeathGlassLayer2_9E69E797.wem</Path>
@@ -141,6 +141,10 @@
 				<File Id="1046353490" Language="SFX">
 					<ShortName>Laser HF2.wav</ShortName>
 					<Path>SFX/Laser HF2_9E69E797.wem</Path>
+				</File>
+				<File Id="1048792545" Language="SFX">
+					<ShortName>Menu Mix2.wav</ShortName>
+					<Path>SFX/Menu Mix2_4B8CC0C5.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

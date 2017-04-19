@@ -22,6 +22,72 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Lava Mix2" ID="{3CB9BF1B-B814-4A66-AB5D-681696F60F89}" ShortID="1010814733">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="131368.4375"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Lava Mix2" ID="{882EA806-9475-4CE7-89DF-57B3AAB9D819}" ShortID="651603098">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Lava Mix2" ID="{B0D820B4-1AEF-45AF-9D83-ECE5DF3C6C7D}" ShortID="1027021870">
+													<Language>SFX</Language>
+													<AudioFile>Lava Mix2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{727F1DF9-6CB4-4174-8A7F-41C709F4BDEB}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{8F541D9D-5DB0-4865-B11A-704CCF685F6A}">
+													<ClipList>
+														<MusicClip Name="Lava Mix2" ID="{7FA904F4-33CF-4AE2-871F-3225EBE729CE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="131368.4375"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Lava Mix2" ID="{B0D820B4-1AEF-45AF-9D83-ECE5DF3C6C7D}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{C7403A17-DDF7-4624-8898-35ACDCDDF71D}"/>
+										<MusicCue Name="Exit Cue" ID="{1CBBF6FE-2B68-444D-A33C-3E55375019BC}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="131368.4375"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{0C2F0AC8-030B-4E0B-9227-EC828F247D0B}">
 									<PropertyList>
@@ -36,7 +102,19 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{C6DA52D3-3699-4C52-A34A-1E95EAD8FC55}" ShortID="123381341"/>
+								<MusicPlaylistItem Name="" ID="{C6DA52D3-3699-4C52-A34A-1E95EAD8FC55}" ShortID="123381341">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{862236E1-09B4-4590-B454-3010213A6856}" ShortID="281931162">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Lava Mix2" ID="{3CB9BF1B-B814-4A66-AB5D-681696F60F89}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Forest" ID="{E101FFA3-5163-426D-80CF-6F8C96030FAC}" ShortID="473462959">
@@ -126,6 +204,72 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<MusicSegment Name="Menu Mix2" ID="{235FCFAE-4AF3-4A62-9177-295ED9F99ABD}" ShortID="942194828">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="121263.166666667"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Menu Mix2" ID="{375223AB-63D5-425A-BDE0-94C23C16EA42}" ShortID="947599563">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Menu Mix2" ID="{2AB4572B-7164-4B01-B006-7C0AE9A2AD98}" ShortID="1048792545">
+													<Language>SFX</Language>
+													<AudioFile>Menu Mix2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<TransitionList>
+												<MusicTransition Name="Root" ID="{602C80F7-FC7E-4AB0-8F23-86D6DB4CA42E}">
+													<PropertyList>
+														<Property Name="IsFolder" Type="bool" Value="True"/>
+													</PropertyList>
+													<TransitionInfo/>
+												</MusicTransition>
+											</TransitionList>
+											<SequenceList>
+												<MusicTrackSequence Name="" ID="{021E26EE-4A85-46F1-A856-A6A0F91E07B6}">
+													<ClipList>
+														<MusicClip Name="Menu Mix2" ID="{E4E7DB77-8A04-4799-9151-2EE9BDF6ECEE}">
+															<PropertyList>
+																<Property Name="EndTrimOffset" Type="Real64" Value="121263.166666667"/>
+																<Property Name="FadeInMode" Type="int16" Value="0"/>
+																<Property Name="FadeOutMode" Type="int16" Value="0"/>
+															</PropertyList>
+															<AudioSourceRef Name="Menu Mix2" ID="{2AB4572B-7164-4B01-B006-7C0AE9A2AD98}"/>
+														</MusicClip>
+													</ClipList>
+												</MusicTrackSequence>
+											</SequenceList>
+										</MusicTrack>
+									</ChildrenList>
+									<CueList>
+										<MusicCue Name="Entry Cue" ID="{5870988A-19D1-4343-8AFE-4BA293347829}"/>
+										<MusicCue Name="Exit Cue" ID="{69E7874E-865F-4BBF-B11D-B8A87499750B}">
+											<PropertyList>
+												<Property Name="CueType" Type="int16" Value="1"/>
+												<Property Name="TimeMs" Type="Real64" Value="121263.166666667"/>
+											</PropertyList>
+										</MusicCue>
+									</CueList>
+								</MusicSegment>
+							</ChildrenList>
 							<TransitionList>
 								<MusicTransition Name="Root" ID="{29B88BF6-388F-461B-A28A-57B2621C94DF}">
 									<PropertyList>
@@ -140,7 +284,19 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{080DD214-C8B0-4E0A-85F4-580627ABDCE8}" ShortID="1009219448"/>
+								<MusicPlaylistItem Name="" ID="{080DD214-C8B0-4E0A-85F4-580627ABDCE8}" ShortID="1009219448">
+									<PropertyList>
+										<Property Name="LoopCount" Type="int16" Value="0"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicPlaylistItem Name="" ID="{90F5CA83-F89A-4F5C-B4A8-418160E040E6}" ShortID="979422397">
+											<PropertyList>
+												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+											</PropertyList>
+											<SegmentRef Name="Menu Mix2" ID="{235FCFAE-4AF3-4A62-9177-295ED9F99ABD}"/>
+										</MusicPlaylistItem>
+									</ChildrenList>
+								</MusicPlaylistItem>
 							</Playlist>
 						</MusicPlaylistContainer>
 						<MusicPlaylistContainer Name="Loading" ID="{9BC5A80B-98DE-47CB-A607-5E854B232075}" ShortID="946632223">
@@ -231,17 +387,61 @@
 								<MusicTransition Name="Transition" ID="{85F081DF-6C92-40D5-86EB-6D06B1231A23}">
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{F25E579F-1BA4-4A9B-99A6-ADA268F41168}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="1"/>
+										<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+										<Property Name="PlaySourcePostExit" Type="bool" Value="False"/>
+										<Property Name="SourceContextType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="SourceContextObject">
+											<ObjectRef Name="Menu" ID="{019BC48F-FBBE-4573-A751-4ED831108D62}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<SourceFadeOut>
+											<MusicFade Name="Source Fade-out" ID="{6032208C-EC2D-4BBB-820C-F15D905980B2}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+													<Property Name="FadeType" Type="int16" Value="1"/>
+												</PropertyList>
+											</MusicFade>
+										</SourceFadeOut>
+									</TransitionInfo>
+								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{9B1FAD05-92C1-451B-B34D-FC88C0A7AD56}">
+									<PropertyList>
+										<Property Name="DestinationContextType" Type="int16" Value="2"/>
+										<Property Name="EnableDestinationFadeIn" Type="bool" Value="True"/>
+										<Property Name="SourceContextType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="DestinationContextObject">
+											<ObjectRef Name="Lava" ID="{4B298D41-0518-467A-AF78-B0772F2D0A03}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
+										</Reference>
+									</ReferenceList>
+									<TransitionInfo>
+										<DestinationFadeIn>
+											<MusicFade Name="Destination Fade-in" ID="{7E054387-93CD-4413-A23E-DA5048F71F52}">
+												<PropertyList>
+													<Property Name="FadeTime" Type="Real64" Value="2"/>
+												</PropertyList>
+											</MusicFade>
+										</DestinationFadeIn>
+									</TransitionInfo>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>
 					</TransitionList>
 					<ArgumentList>
-						<ArgumentRef Name="LevelProgress" ID="{3CD0E589-ED6C-4995-8B18-2D18DC39585F}"/>
+						<ArgumentRef Name="GameState" ID="{F77CC6FB-3C3C-40DA-9AB7-E8D94F48DF7A}"/>
 					</ArgumentList>
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Section1" ID="{A40153F1-310E-4188-A278-F668971520DB}"/>
+								<PathElementRef Name="GameState" ID="{F77CC6FB-3C3C-40DA-9AB7-E8D94F48DF7A}"/>
 							</Path>
 							<AudioNodeInfo>
 								<NoObject Platform="Linked"/>
@@ -249,7 +449,15 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Section2" ID="{9C4A1FDD-E429-4073-A560-EA364E72E903}"/>
+								<PathElementRef Name="Menu" ID="{98C3D7BD-F241-4484-B954-63E9237DE96A}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="Menu" ID="{019BC48F-FBBE-4573-A751-4ED831108D62}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
 							</Path>
 							<AudioNodeInfo>
 								<NoObject Platform="Linked"/>
@@ -257,10 +465,10 @@
 						</Entry>
 						<Entry>
 							<Path>
-								<PathElementRef Name="Section3" ID="{EE918E82-68EB-4BF5-AE78-DEA6EEFB57AD}"/>
+								<PathElementRef Name="Lava" ID="{1F552244-A2F2-4A59-82B5-08A6A84A21A2}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="Lava" ID="{4B298D41-0518-467A-AF78-B0772F2D0A03}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

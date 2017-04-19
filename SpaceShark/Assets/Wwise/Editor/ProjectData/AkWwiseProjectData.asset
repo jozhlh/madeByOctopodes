@@ -16,20 +16,20 @@ MonoBehaviour:
   - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: 511882112
-    m_lastTimePart2: -1999337645
+    m_lastTimePsrt1: 562732416
+    m_lastTimePart2: -1999337619
     List:
-    - Name: cave
-      Path: Default Work Unit/Level/cave
+    - Name: dead
+      Path: Default Work Unit/Level/dead
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
       - ElementName: Level
         ObjectType: 4
-      - ElementName: cave
+      - ElementName: dead
         ObjectType: 3
-      ID: -172573602
-      Guid: 29636acf6e91d049814e9f15a12d2005
+      ID: 2044049779
+      Guid: c28d4b8809299c45b4574e98143b3ab1
       maxAttenuation: 0
     - Name: desert
       Path: Default Work Unit/Level/desert
@@ -41,7 +41,7 @@ MonoBehaviour:
       - ElementName: desert
         ObjectType: 3
       ID: 1850388778
-      Guid: 7e3a0de4737b1e45bb21134f15662f2f
+      Guid: 53487ea1aefe4c4bb8b8d9ff760660ea
       maxAttenuation: 0
     - Name: doublePoints
       Path: Default Work Unit/PowerUps/doublePoints
@@ -89,7 +89,19 @@ MonoBehaviour:
       - ElementName: forest
         ObjectType: 3
       ID: 491961918
-      Guid: 2d953ea9eb3d3f448943aa8f0a8cc473
+      Guid: 90ec5eef7ca81247b95642dd86bf1134
+      maxAttenuation: 0
+    - Name: goal
+      Path: Default Work Unit/Level/goal
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: goal
+        ObjectType: 3
+      ID: 567967104
+      Guid: 97e86235fdf3d8459a442d2808b4c2e9
       maxAttenuation: 0
     - Name: ice
       Path: Default Work Unit/Level/ice
@@ -101,7 +113,7 @@ MonoBehaviour:
       - ElementName: ice
         ObjectType: 3
       ID: 344481046
-      Guid: 7a23f8eadec58849b595c9626789e092
+      Guid: 8ae5fe35ec176a4abc685c98890bab3c
       maxAttenuation: 0
     - Name: invincible
       Path: Default Work Unit/PowerUps/invincible
@@ -125,7 +137,7 @@ MonoBehaviour:
       - ElementName: lava
         ObjectType: 3
       ID: 540301611
-      Guid: e2b6bbc771053f4b84715fc6bc7929a6
+      Guid: 6401c884971f1f49aa58ae28277e09e0
       maxAttenuation: 0
     - Name: life
       Path: Default Work Unit/PowerUps/life
@@ -151,6 +163,18 @@ MonoBehaviour:
       ID: -1295726213
       Guid: 5c98e748b5914f44a99ba4748adde70f
       maxAttenuation: 0
+    - Name: loading
+      Path: Default Work Unit/Level/loading
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Level
+        ObjectType: 4
+      - ElementName: loading
+        ObjectType: 3
+      ID: -721035589
+      Guid: 5b128d348b249542b4bf3e29fae630ce
+      maxAttenuation: 0
     - Name: menu
       Path: Default Work Unit/Level/menu
       PathAndIcons:
@@ -161,7 +185,7 @@ MonoBehaviour:
       - ElementName: menu
         ObjectType: 3
       ID: -1687411216
-      Guid: b95576ae459c27498679cef47c9e36ee
+      Guid: 50405cf64c0def45b542392e38301517
       maxAttenuation: 0
     - Name: menuSelect
       Path: Default Work Unit/UI/menuSelect
@@ -234,18 +258,6 @@ MonoBehaviour:
         ObjectType: 3
       ID: -1547397162
       Guid: e09be010cd0d7a4183902d888dd8fa42
-      maxAttenuation: 0
-    - Name: playerWin
-      Path: Default Work Unit/Level/playerWin
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Level
-        ObjectType: 4
-      - ElementName: playerWin
-        ObjectType: 3
-      ID: -465397016
-      Guid: 4266748f1a9bef4b884589af89b2c9b0
       maxAttenuation: 0
     - Name: powerupCollect
       Path: Default Work Unit/PowerUps/powerupCollect
@@ -330,8 +342,8 @@ MonoBehaviour:
   - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BD3CD14C-4141-4DDB-8778-C6319B997069}'
-    m_lastTimePsrt1: 2000181504
-    m_lastTimePart2: -1999337697
+    m_lastTimePsrt1: 637699712
+    m_lastTimePart2: -1999337620
     List:
     - Name: GameState
       Path: Default Work Unit/GameState
@@ -343,27 +355,43 @@ MonoBehaviour:
       ID: -203310782
       Guid: fbc67cf73c3cda409ab7e8d94f48df7a
       values:
-      - Alive
       - Dead
+      - Desert
+      - Forest
       - Goal
+      - Ice
+      - Lava
+      - Loading
       - Menu
       - None
       ValueIcons:
-      - ElementName: Alive
-        ObjectType: 8
       - ElementName: Dead
         ObjectType: 8
+      - ElementName: Desert
+        ObjectType: 8
+      - ElementName: Forest
+        ObjectType: 8
       - ElementName: Goal
+        ObjectType: 8
+      - ElementName: Ice
+        ObjectType: 8
+      - ElementName: Lava
+        ObjectType: 8
+      - ElementName: Loading
         ObjectType: 8
       - ElementName: Menu
         ObjectType: 8
       - ElementName: None
         ObjectType: 8
-      valueIDs: 608f0e2773b9d579807dda21f0256c9bdb3ba32c
+      valueIDs: 73b9d5792ab14a6e3ebe521d807dda21165d88142b593420bbde05d5f0256c9bdb3ba32c
       ValueGuids:
-      - bytes: b3a14a454a0ec647acd5a8b5fbab2109
       - bytes: 42431dafb492a04aa7c128b55fa61e9a
+      - bytes: cef0d27d27b56b4ca9edb60696e5e12c
+      - bytes: 9c2ce7c5252bc4478d30543c20562368
       - bytes: 3ee15ce4c209454da9905a99815b31f3
+      - bytes: c99afbc6bfcb1f40aa41b6263c3f0011
+      - bytes: 4422551ff2a2594a82b508a6a84a21a2
+      - bytes: fa95bcc3eda79543a1b5b417523cb467
       - bytes: bdd7c39841f28444b95463e9237de96a
       - bytes: c139d4bc35d6a04faf8839080391c5be
   SwitchWwu:
@@ -402,8 +430,8 @@ MonoBehaviour:
   - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{584A89B9-C19F-4DC7-92E9-511AC3B1CE48}'
-    m_lastTimePsrt1: -1159360640
-    m_lastTimePart2: -1999337684
+    m_lastTimePsrt1: 637699712
+    m_lastTimePart2: -1999337620
     List:
     - Name: Soundbank1
       Path: Default Work Unit/Soundbank1

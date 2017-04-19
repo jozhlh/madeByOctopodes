@@ -1,8 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2137943	life			\Default Work Unit\PowerUps\life	
 	236977299	powerupCollect			\Default Work Unit\PowerUps\powerupCollect	
-	344481046	ice			\Default Work Unit\Level\ice	
-	491961918	forest			\Default Work Unit\Level\forest	
 	540301611	lava			\Default Work Unit\Level\lava	
 	600194807	doublePoints			\Default Work Unit\PowerUps\doublePoints	
 	640944686	invincible			\Default Work Unit\PowerUps\invincible	
@@ -10,7 +8,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	872879572	powerupUse			\Default Work Unit\PowerUps\powerupUse	
 	1585024601	shipEngine			\Default Work Unit\Player\shipEngine	
 	1656947812	playerDeath			\Default Work Unit\Player\playerDeath	
-	1850388778	desert			\Default Work Unit\Level\desert	
 	1865350373	slowTime			\Default Work Unit\PowerUps\slowTime	
 	2446068219	enemyFire			\Default Work Unit\Enemy\enemyFire	
 	2607556080	menu			\Default Work Unit\Level\menu	
@@ -19,8 +16,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	3048058352	random			\Default Work Unit\PowerUps\random	
 	3249137159	enemyDeath			\Default Work Unit\Enemy\enemyDeath	
 	3532008398	menuSwipe			\Default Work Unit\UI\menuSwipe	
-	3829570280	playerWin			\Default Work Unit\Level\playerWin	
-	4122393694	cave			\Default Work Unit\Level\cave	
+	3573931707	loading			\Default Work Unit\Level\loading	
 	4214620523	resetMultiplier			\Default Work Unit\Score\resetMultiplier	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -49,6 +45,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	874969708	UI1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\UI1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI1		480068
 	922431912	PowerUp7	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\PowerUp7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp7		358028
 	966113440	EnemyDeathGlassLayer3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\EnemyDeathGlassLayer3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer3		146292
+	1027021870	Lava Mix2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\Lava Mix2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Lava\Lava Mix2\Lava Mix2		25222804
 	1027588360	EnemyDeathGlassLayer2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\EnemyDeathGlassLayer2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer2		146292
 	1046353490	Laser HF2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\Laser HF2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF2		240068
+	1048792545	Menu Mix2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Windows\SFX\Menu Mix2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Menu\Menu Mix2\Menu Mix2		23282592
 

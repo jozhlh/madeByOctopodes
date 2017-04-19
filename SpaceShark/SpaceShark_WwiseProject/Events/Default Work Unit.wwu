@@ -157,23 +157,58 @@
 				</Folder>
 				<Folder Name="Level" ID="{4654E7B9-82F7-4E13-B17C-256731E8B964}" ShortID="241405602">
 					<ChildrenList>
-						<Event Name="lava" ID="{C7BBB6E2-0571-4B3F-8471-5FC6BC7929A6}"/>
-						<Event Name="playerWin" ID="{8F746642-9B1A-4BEF-8845-89AF89B2C9B0}">
+						<Event Name="goal" ID="{3562E897-F3FD-45D8-9A44-2D2808B4C2E9}"/>
+						<Event Name="forest" ID="{EF5EEC90-A87C-4712-B956-42DD86BF1134}"/>
+						<Event Name="menu" ID="{F65C4050-0D4C-45EF-B542-392E38301517}">
 							<ChildrenList>
-								<Action Name="Play" ID="{DD7A3720-4C7C-408F-ACC8-708ECA875F05}" ShortID="16330707" Type="Play" Scope="One" Global="false">
+								<Action Name="Stop All" ID="{033C1054-9917-4617-B78A-EBEE3CC856F0}" ShortID="654727724" Type="Stop" Scope="All" Global="true">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+								</Action>
+								<Action Name="Play" ID="{93C19700-6C99-4386-8A2D-7B96989469E7}" ShortID="802054472" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
 									<ElementList>
-										<Element ID="{46F5C72E-CDE2-4990-9F90-980A69F9084E}" Global="false">
-											<ObjectRef Name="UI1" ID="{1852D3C5-AA4C-4CA8-8F87-BB5B47CACA86}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+										<Element ID="{833390FE-D0BB-4E7B-9EF2-8B74DDFDAA40}" Global="false">
+											<ObjectRef Name="Menu" ID="{019BC48F-FBBE-4573-A751-4ED831108D62}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
 										</Element>
 									</ElementList>
 								</Action>
 							</ChildrenList>
 						</Event>
-						<Event Name="ice" ID="{EAF8237A-C5DE-4988-B595-C9626789E092}"/>
-						<Event Name="forest" ID="{A93E952D-3DEB-443F-8943-AA8F0A8CC473}"/>
-						<Event Name="menu" ID="{AE7655B9-9C45-4927-8679-CEF47C9E36EE}"/>
-						<Event Name="cave" ID="{CF6A6329-916E-49D0-814E-9F15A12D2005}"/>
-						<Event Name="desert" ID="{E40D3A7E-7B73-451E-BB21-134F15662F2F}"/>
+						<Event Name="desert" ID="{A17E4853-FEAE-4B4C-B8B8-D9FF760660EA}"/>
+						<Event Name="lava" ID="{84C80164-1F97-491F-AA58-AE28277E09E0}">
+							<ChildrenList>
+								<Action Name="Stop All" ID="{D6819656-7B89-4929-B536-A9DD367A3303}" ShortID="977237481" Type="Stop" Scope="All" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+								</Action>
+								<Action Name="Play" ID="{483059C6-DB86-45F7-A0A6-1E23C654AB4A}" ShortID="645277863" Type="Play" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{5720F5D1-21CA-4D8D-9978-008D34D1FA40}" Global="false">
+											<ObjectRef Name="Lava" ID="{4B298D41-0518-467A-AF78-B0772F2D0A03}" WorkUnitID="{2B97E52F-DA57-436E-BFD2-0E33366FF4FD}"/>
+										</Element>
+									</ElementList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="dead" ID="{884B8DC2-2909-459C-B457-4E98143B3AB1}"/>
+						<Event Name="ice" ID="{35FEE58A-17EC-4A6A-BC68-5C98890BAB3C}"/>
+						<Event Name="loading" ID="{348D125B-248B-4295-B4BF-3E29FAE630CE}">
+							<ChildrenList>
+								<Action Name="Stop All" ID="{EB4EBB34-16A0-4E64-AC42-A29A28029974}" ShortID="721156941" Type="Stop" Scope="All" Global="true">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="2"/>
+									</PropertyList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Score" ID="{FA456B81-24D4-41DF-8233-DA5A5E637BE1}" ShortID="1042661620">
