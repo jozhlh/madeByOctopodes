@@ -17,14 +17,23 @@ public class PlayerScore : MonoBehaviour
 	[SerializeField]
     // The UI object which displays the score to the player
 	private Text scoreText = null;
+    [SerializeField]
+    private Text multiplierText = null;
+    [SerializeField]
+    private Text boostText = null;
+    [SerializeField]
+    private Text boostText1 = null;
+
 
     // Progress to the next scoring interval
-	private float countdown;
+    private float countdown;
 
 	// Track score multiplier
-	private float multiplier = 1.0f;
-	private float baseMultiplier = 1.0f;
-	private bool boosted = false;
+	private static int boostMultiplier = 1;
+	private int baseMultiplier = 1;
+    private static int scoreMultiplier = 1;
+	private static bool boosted = false;
+    private static bool scoreMutiplying = false;
 	private float boostCountdown = 0.0f;
 	private StateManager state = null;
 
@@ -35,6 +44,10 @@ public class PlayerScore : MonoBehaviour
 		countdown = scoringInterval;
 		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
 		scoreText.text = "";
+        multiplierText.text = "";
+        boostText.text = "";
+        boostText1.text = "";
+        scoreMultiplier = 1;
 	}
 	
 	// Update is called once per frame
@@ -46,10 +59,11 @@ public class PlayerScore : MonoBehaviour
 			countdown -= Time.deltaTime;
 			if (countdown < 0)
 			{
-				score++;
+                score += 1 * scoreMultiplier;
 				countdown = scoringInterval;
 			}
 			scoreText.text = score.ToString();
+            multiplierText.text = ("X " + scoreMultiplier.ToString());
 		}
 
 		if (boosted)
@@ -58,8 +72,10 @@ public class PlayerScore : MonoBehaviour
 			if (boostCountdown < 0)
 			{
 				boosted = false;
-				multiplier = baseMultiplier;
-			}
+				boostMultiplier = baseMultiplier;
+                boostText.text = "";
+                boostText1.text = "";
+            }
 		}
 	}
 
@@ -72,13 +88,33 @@ public class PlayerScore : MonoBehaviour
     // Increments the score when the player kills an enemy
     public static void EnemyKilled()
     {
-        score += enemyScoreValue;
+        if (boosted)
+        {
+            score += enemyScoreValue * scoreMultiplier * boostMultiplier;
+        }
+        else
+        {
+            score += enemyScoreValue * scoreMultiplier;
+        }
+        scoreMutiplying = true;
+        scoreMultiplier += 1;
+        Debug.Log(scoreMultiplier);
     }
 
-	public void ScoreBoost(float boostVal, float boostDuration)
+	public void ScoreBoost(int boostVal, float boostDuration)
 	{
 		boosted = true;
-		multiplier = boostVal;
+		boostMultiplier = boostVal;
 		boostCountdown = boostDuration;
-	}
+        boostText.text = "Double Points";
+        boostText1.text = "Double Points";
+
+    }
+
+    public static void BulletMissed()
+    {
+        scoreMutiplying = false;
+        scoreMultiplier = 1;
+        Debug.Log(scoreMultiplier);
+    }
 }

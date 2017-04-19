@@ -56,6 +56,11 @@ public class LevelManager : MonoBehaviour
     private GameObject player;
 
     [SerializeField]
+    private GameObject scorePanel;
+    [SerializeField]
+    private GameObject multiplierPanel;
+
+    [SerializeField]
     // Reference to the player in the scene
     private GameObject playerExplosion;
 
@@ -75,6 +80,8 @@ public class LevelManager : MonoBehaviour
         Init();
         player.SetActive(true);
         state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
+        scorePanel.SetActive(false);
+        multiplierPanel.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -86,7 +93,19 @@ public class LevelManager : MonoBehaviour
             SpawnSegment();
             spawnZ += LaneManager.lengthOfSegment;       //move the spawn position forwards the length of one tile
         }
-        
+
+        if(state.GetState() != StateManager.States.loadLevel)
+        {
+            scorePanel.SetActive(true);
+            multiplierPanel.SetActive(true);
+        }
+        else if(state.GetState() == StateManager.States.loadLevel)
+        {
+            scorePanel.SetActive(false);
+            multiplierPanel.SetActive(false);
+        }
+
+    
         CleanUp();
     }
 
@@ -209,9 +228,6 @@ public class LevelManager : MonoBehaviour
         {
             TutorialManager.DisableUI();
         }
-
-
-
         state.SetToDead();
 
     }

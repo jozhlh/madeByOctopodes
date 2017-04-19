@@ -99,19 +99,23 @@ public class GameInput : MonoBehaviour
             }
         }
 
+        
+
         // If a tap or a swipe was completed this frame, notify Callback Event
         if (tap || swipe)
         {
             // If it was a tap, send the position of the tap
-            if (tap && OnTap != null)
+            if ((tap && OnTap != null) && (Input.mousePosition.y > 300))
             {
                 OnTap(Input.mousePosition);
             }
             // If it was a swipe send the direction of the swipe
-            else if (swipe && OnSwipe != null)
+            else if (swipe && OnSwipe != null) 
             {
                 OnSwipe(direction);
             }
+
+
         }
     }
 

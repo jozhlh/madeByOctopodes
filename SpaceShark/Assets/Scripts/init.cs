@@ -10,7 +10,7 @@ public class init : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		screen.gameObject.GetComponent<StateManager>().SetToLoadMenu();
-		screen.LoadScene("splash_scene");
+		screen.LoadScene("SplashScene");
 	}
 	
 	// Update is called once per frame

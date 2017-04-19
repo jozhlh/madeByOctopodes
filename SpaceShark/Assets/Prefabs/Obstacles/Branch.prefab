@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 65104003377095202}
   - component: {fileID: 114935099288809362}
   - component: {fileID: 114720180000861284}
+  - component: {fileID: 114249860924991960}
   m_Layer: 10
   m_Name: Branch
   m_TagString: Obstacle
@@ -135,7 +136,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809846085328238}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: -0.7071068}
-  m_LocalPosition: {x: -8.539114, y: 3.7283907, z: -26.463928}
+  m_LocalPosition: {x: -8.539114, y: 3.7283907, z: -41.456}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4099277409715932}
@@ -210,7 +211,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aad4c3739732e4a5e8360fecbb927fa3, type: 2}
+  - {fileID: 2100000, guid: 19531b272b10447e78a09da74b1e4616, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -241,7 +242,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aad4c3739732e4a5e8360fecbb927fa3, type: 2}
+  - {fileID: 2100000, guid: d4af79f64368844ae9dc5d067689e935, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -272,7 +273,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: aad4c3739732e4a5e8360fecbb927fa3, type: 2}
+  - {fileID: 2100000, guid: d4af79f64368844ae9dc5d067689e935, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -338,6 +339,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.5, y: 9, z: 1}
   m_Center: {x: 0, y: 4.5, z: -2.1}
+--- !u!114 &114249860924991960
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1809846085328238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fb3f57d65a7ba547a4f132d8cecbe65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendTriggerMessage: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  skinWidth: 0.1
 --- !u!114 &114353626481702860
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -430,7 +430,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ac5ed3d20d7094eebb4b21eaaa2cf3af, type: 2}
+  - {fileID: 2100000, guid: 84fd7443460f4490393b0ae65ece5463, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -517,6 +517,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoringInterval: 1
   scoreText: {fileID: 0}
+  multiplierText: {fileID: 0}
+  boostText: {fileID: 0}
+  boostText1: {fileID: 0}
 --- !u!114 &114000012952238442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,6 +613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22e446bff5e042dea94df15bfe82a24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0.5
+  deviance: 1
 --- !u!114 &114355160936458678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3460,7 +3465,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -521041084
+  randomSeed: -267275362
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -4282,16 +4287,16 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4294936822
         key1:
           serializedVersion: 2
-          rgba: 4278255611
+          rgba: 4290921530
         key2:
           serializedVersion: 2
-          rgba: 4278256127
+          rgba: 4294958405
         key3:
           serializedVersion: 2
-          rgba: 0
+          rgba: 16768069
         key4:
           serializedVersion: 2
           rgba: 0
@@ -4305,9 +4310,9 @@ ParticleSystem:
           serializedVersion: 2
           rgba: 0
         ctime0: 0
-        ctime1: 6746
-        ctime2: 18697
-        ctime3: 0
+        ctime1: 21010
+        ctime2: 42598
+        ctime3: 27371
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -12199,16 +12204,16 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 4294967295
+          rgba: 4294936822
         key1:
           serializedVersion: 2
-          rgba: 4278255611
+          rgba: 4290921530
         key2:
           serializedVersion: 2
-          rgba: 4278256127
+          rgba: 4294958405
         key3:
           serializedVersion: 2
-          rgba: 0
+          rgba: 16768069
         key4:
           serializedVersion: 2
           rgba: 0
@@ -12222,9 +12227,9 @@ ParticleSystem:
           serializedVersion: 2
           rgba: 0
         ctime0: 0
-        ctime1: 6746
-        ctime2: 18697
-        ctime3: 0
+        ctime1: 21010
+        ctime2: 42598
+        ctime3: 27371
         ctime4: 0
         ctime5: 0
         ctime6: 0
@@ -13979,7 +13984,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fc36349a50b71243bbdd62f47642a7b, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14079,7 +14084,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 522e6f2239c707c4f929213ad3763b0d, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -14179,7 +14184,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fc36349a50b71243bbdd62f47642a7b, type: 2}
+  - {fileID: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0

@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreBoost : PowerUp 
 {
 	[SerializeField]
-	private float scoreMultiplier = 2.0f;
+	private int scoreMultiplier = 2;
 
     public override void Activate()
     {

@@ -268,7 +268,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: adb8d1cd419dc495a96196e65dcffee6, type: 2}
+  - {fileID: 2100000, guid: 677c772d9fa9880408eacb8b6868ac29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -299,7 +299,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: adb8d1cd419dc495a96196e65dcffee6, type: 2}
+  - {fileID: 2100000, guid: 677c772d9fa9880408eacb8b6868ac29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -330,7 +330,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: adb8d1cd419dc495a96196e65dcffee6, type: 2}
+  - {fileID: 2100000, guid: 677c772d9fa9880408eacb8b6868ac29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,7 +361,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: adb8d1cd419dc495a96196e65dcffee6, type: 2}
+  - {fileID: 2100000, guid: 677c772d9fa9880408eacb8b6868ac29, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -468,6 +468,7 @@ MonoBehaviour:
   soundManager: {fileID: 1132803960035924, guid: a2d0b81c757174b5bb68ea4bf795e737,
     type: 2}
   playerInRange: 0
+  RayDistance: 60
 --- !u!114 &114482473728405840
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -6,24 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/init_Scene.unity
+    path: Assets/Scenes/InitScene.unity
   - enabled: 1
-    path: Assets/Scenes/splash_scene.unity
-  - enabled: 0
-    path: Assets/Scenes/menu_scene.unity
-  - enabled: 0
-    path: Assets/Scenes/DeprecatedScenes/prototype_0.unity
-  - enabled: 0
-    path: Assets/Scenes/DeprecatedScenes/prototype_1.unity
-  - enabled: 0
-    path: Assets/Scenes/DeprecatedScenes/prototype_2.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_Lava.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_Tutorial.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_Jungle.unity
-  - enabled: 1
-    path: Assets/Scenes/prototype_Desert.unity
+    path: Assets/Scenes/SplashScene.unity
   - enabled: 1
     path: Assets/Scenes/LoadingScene.unity
+  - enabled: 1
+    path: Assets/Scenes/LavaScene.unity
+  - enabled: 1
+    path: Assets/Scenes/JungleScene.unity
+  - enabled: 1
+    path: Assets/Scenes/DesertScene.unity
+  - enabled: 1
+    path: Assets/Scenes/IceScene.unity

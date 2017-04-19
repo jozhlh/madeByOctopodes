@@ -25,6 +25,7 @@ public class PlayerBullet : MonoBehaviour
         if (bulletPosition.z > (Ship_Movement.shipPosition.z + bulletCulling))
         {
             destroyThis = true;
+            PlayerScore.BulletMissed();
         }
         gameObject.transform.position = bulletPosition;
     }
@@ -39,6 +40,10 @@ public class PlayerBullet : MonoBehaviour
             if (other.tag == "Enemy")
             {
                 other.GetComponent<EnemyHitBox>().destroyEnemy = true;
+            }
+            else if (other.tag == "Obstacle")
+            {
+                PlayerScore.BulletMissed();
             }
         }
     }

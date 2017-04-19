@@ -34,7 +34,7 @@ public class PowerUpManager : MonoBehaviour
 		{
 			int chosenPowerUp = Random.Range(0, availablePowerUps.Length);
 			availablePowerUps[chosenPowerUp].GiveToPlayer();
-			//chosenPowerUp = 1;
+			chosenPowerUp = 2;
 			equippedPowerUp = chosenPowerUp;
 			powerUpUi.SetActive(true);
 			powerUpIcon.GetComponent<Image>().sprite = availablePowerUps[chosenPowerUp].uiIcon;

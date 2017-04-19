@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class PingPongFloat : MonoBehaviour
 {
-	//[SerializeField]
+	[SerializeField]
 	private float speed = 0.50f;
-	//[SerializeField]
+	[SerializeField]
 	private float deviance = 2.0f;
 
 	private Vector3 currentPos;
