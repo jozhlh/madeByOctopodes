@@ -907,7 +907,7 @@ ModelImporter:
     4300354: Object318
     4300356: Object320
     4300358: Object054
-    7400000: Take 001
+    7400000: DeathIce
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -929,7 +929,397 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: DeathIce
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cylinder002
+        weight: 1
+      - path: Object002
+        weight: 1
+      - path: Object004
+        weight: 1
+      - path: Object006
+        weight: 1
+      - path: Object008
+        weight: 1
+      - path: Object010
+        weight: 1
+      - path: Object012
+        weight: 1
+      - path: Object014
+        weight: 1
+      - path: Object016
+        weight: 1
+      - path: Object018
+        weight: 1
+      - path: Object020
+        weight: 1
+      - path: Object022
+        weight: 1
+      - path: Object024
+        weight: 1
+      - path: Object026
+        weight: 1
+      - path: Object028
+        weight: 1
+      - path: Object030
+        weight: 1
+      - path: Object032
+        weight: 1
+      - path: Object034
+        weight: 1
+      - path: Object036
+        weight: 1
+      - path: Object038
+        weight: 1
+      - path: Object040
+        weight: 1
+      - path: Object042
+        weight: 1
+      - path: Object044
+        weight: 1
+      - path: Object046
+        weight: 1
+      - path: Object048
+        weight: 1
+      - path: Object050
+        weight: 1
+      - path: Object052
+        weight: 1
+      - path: Object054
+        weight: 1
+      - path: Object056
+        weight: 1
+      - path: Object058
+        weight: 1
+      - path: Object060
+        weight: 1
+      - path: Object062
+        weight: 1
+      - path: Object064
+        weight: 1
+      - path: Object066
+        weight: 1
+      - path: Object068
+        weight: 1
+      - path: Object070
+        weight: 1
+      - path: Object072
+        weight: 1
+      - path: Object074
+        weight: 1
+      - path: Object076
+        weight: 1
+      - path: Object078
+        weight: 1
+      - path: Object080
+        weight: 1
+      - path: Object082
+        weight: 1
+      - path: Object084
+        weight: 1
+      - path: Object086
+        weight: 1
+      - path: Object088
+        weight: 1
+      - path: Object090
+        weight: 1
+      - path: Object092
+        weight: 1
+      - path: Object094
+        weight: 1
+      - path: Object096
+        weight: 1
+      - path: Object098
+        weight: 1
+      - path: Object100
+        weight: 1
+      - path: Object102
+        weight: 1
+      - path: Object104
+        weight: 1
+      - path: Object106
+        weight: 1
+      - path: Object108
+        weight: 1
+      - path: Object110
+        weight: 1
+      - path: Object112
+        weight: 1
+      - path: Object114
+        weight: 1
+      - path: Object116
+        weight: 1
+      - path: Object118
+        weight: 1
+      - path: Object120
+        weight: 1
+      - path: Object122
+        weight: 1
+      - path: Object124
+        weight: 1
+      - path: Object126
+        weight: 1
+      - path: Object128
+        weight: 1
+      - path: Object130
+        weight: 1
+      - path: Object132
+        weight: 1
+      - path: Object134
+        weight: 1
+      - path: Object136
+        weight: 1
+      - path: Object138
+        weight: 1
+      - path: Object140
+        weight: 1
+      - path: Object142
+        weight: 1
+      - path: Object144
+        weight: 1
+      - path: Object146
+        weight: 1
+      - path: Object148
+        weight: 1
+      - path: Object150
+        weight: 1
+      - path: Object152
+        weight: 1
+      - path: Object154
+        weight: 1
+      - path: Object156
+        weight: 1
+      - path: Object158
+        weight: 1
+      - path: Object160
+        weight: 1
+      - path: Object162
+        weight: 1
+      - path: Object164
+        weight: 1
+      - path: Object166
+        weight: 1
+      - path: Object168
+        weight: 1
+      - path: Object170
+        weight: 1
+      - path: Object172
+        weight: 1
+      - path: Object174
+        weight: 1
+      - path: Object176
+        weight: 1
+      - path: Object178
+        weight: 1
+      - path: Object180
+        weight: 1
+      - path: Object182
+        weight: 1
+      - path: Object184
+        weight: 1
+      - path: Object186
+        weight: 1
+      - path: Object188
+        weight: 1
+      - path: Object190
+        weight: 1
+      - path: Object192
+        weight: 1
+      - path: Object194
+        weight: 1
+      - path: Object196
+        weight: 1
+      - path: Object198
+        weight: 1
+      - path: Object200
+        weight: 1
+      - path: Object202
+        weight: 1
+      - path: Object204
+        weight: 1
+      - path: Object206
+        weight: 1
+      - path: Object208
+        weight: 1
+      - path: Object210
+        weight: 1
+      - path: Object212
+        weight: 1
+      - path: Object214
+        weight: 1
+      - path: Object216
+        weight: 1
+      - path: Object218
+        weight: 1
+      - path: Object220
+        weight: 1
+      - path: Object224
+        weight: 1
+      - path: Object226
+        weight: 1
+      - path: Object228
+        weight: 1
+      - path: Object230
+        weight: 1
+      - path: Object232
+        weight: 1
+      - path: Object234
+        weight: 1
+      - path: Object236
+        weight: 1
+      - path: Object238
+        weight: 1
+      - path: Object240
+        weight: 1
+      - path: Object242
+        weight: 1
+      - path: Object244
+        weight: 1
+      - path: Object246
+        weight: 1
+      - path: Object248
+        weight: 1
+      - path: Object250
+        weight: 1
+      - path: Object252
+        weight: 1
+      - path: Object254
+        weight: 1
+      - path: Object256
+        weight: 1
+      - path: Object258
+        weight: 1
+      - path: Object260
+        weight: 1
+      - path: Object262
+        weight: 1
+      - path: Object264
+        weight: 1
+      - path: Object266
+        weight: 1
+      - path: Object268
+        weight: 1
+      - path: Object270
+        weight: 1
+      - path: Object272
+        weight: 1
+      - path: Object274
+        weight: 1
+      - path: Object276
+        weight: 1
+      - path: Object278
+        weight: 1
+      - path: Object280
+        weight: 1
+      - path: Object282
+        weight: 1
+      - path: Object284
+        weight: 1
+      - path: Object286
+        weight: 1
+      - path: Object288
+        weight: 1
+      - path: Object290
+        weight: 1
+      - path: Object292
+        weight: 1
+      - path: Object294
+        weight: 1
+      - path: Object296
+        weight: 1
+      - path: Object298
+        weight: 1
+      - path: Object302
+        weight: 1
+      - path: Object306
+        weight: 1
+      - path: Object310
+        weight: 1
+      - path: Object314
+        weight: 1
+      - path: Object316
+        weight: 1
+      - path: Object318
+        weight: 1
+      - path: Object320
+        weight: 1
+      - path: Object322
+        weight: 1
+      - path: Object324
+        weight: 1
+      - path: Object326
+        weight: 1
+      - path: Object328
+        weight: 1
+      - path: Object330
+        weight: 1
+      - path: Object332
+        weight: 1
+      - path: Object334
+        weight: 1
+      - path: Object336
+        weight: 1
+      - path: Object338
+        weight: 1
+      - path: Object340
+        weight: 1
+      - path: Object342
+        weight: 1
+      - path: Object344
+        weight: 1
+      - path: Object346
+        weight: 1
+      - path: Object348
+        weight: 1
+      - path: Object350
+        weight: 1
+      - path: Object352
+        weight: 1
+      - path: Object356
+        weight: 1
+      - path: Object360
+        weight: 1
+      - path: Object364
+        weight: 1
+      - path: Object368
+        weight: 1
+      - path: Object370
+        weight: 1
+      - path: Object372
+        weight: 1
+      - path: Object374
+        weight: 1
+      - path: Object376
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
