@@ -5,6 +5,64 @@
 			<ChildrenList>
 				<RandomSequenceContainer Name="ShipEngines" ID="{8BFD878B-16C0-4E3E-8A7F-2470838A4749}" ShortID="633691298">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{2027A6AF-E88B-44F2-9597-49F8545EDD51}" ShortID="26795049">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{FC300E54-8D77-4BDA-A0BD-D03DBACD02EE}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>40</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{329EB03F-2534-47D0-8180-36DEB2AA2F20}" ShortID="888414636">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B02EA157-D0FA-4FDE-98A1-E79E4D127C25}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-2068</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
 						<Property Name="Volume" Type="Real64">
@@ -71,19 +129,76 @@
 				</RandomSequenceContainer>
 				<RandomSequenceContainer Name="Cannon" ID="{53444340-9D1F-4306-96C9-1EE5EA2B0C89}" ShortID="22907926">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{49C36A8C-187F-4E54-8535-81B457CFB66C}" ShortID="986601007">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B7189ADB-3C7D-4F01-8DA5-BFBD85C4B37C}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>40</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
 									<Modifier Name="" ID="{A45690E9-0C1F-4A2C-AA68-33C7D700B8C7}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="25"/>
-											<Property Name="Min" Type="Real64" Value="-25"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+							<RTPCList>
+								<RTPC Name="" ID="{54C8FB8D-DC49-4C65-8B28-EE96A23751CE}" ShortID="680239267">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{E768D680-CDF8-4489-B1FF-DCB7AA24AA5A}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-2068</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
@@ -141,6 +256,64 @@
 				</RandomSequenceContainer>
 				<BlendContainer Name="EnemyDeath" ID="{67D4B60F-C89C-4D90-B1AD-579CC604230E}" ShortID="939812771">
 					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{7FC4C643-C7F6-4CD2-B2F2-864381C79D3E}" ShortID="443846161">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{C1CC53DB-722F-4713-A859-FEFD457990F5}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>48</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{7DD4D987-D712-497B-B3B3-66F3ACF0BDCE}" ShortID="926205204">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{A94A6EBF-326E-4726-B064-1626C6649189}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-1061</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-6</Value>
@@ -282,6 +455,35 @@
 								<Value>60</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{5AF9A984-A208-4F7F-8B5C-557B58010ECC}" ShortID="120697860">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{6CC98203-216C-471B-B841-4C9747C91B65}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>40</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="Pitch" Type="int32">
 							<ModifierList>
 								<ModifierInfo>
@@ -294,6 +496,33 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+							<RTPCList>
+								<RTPC Name="" ID="{0E03A535-1BEC-4DFD-91CA-C5C17BC6EFDA}" ShortID="644133144">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="GameSpeed" ID="{0FF71952-C156-445B-B1D4-52E5CDE3C5DF}" WorkUnitID="{BF766896-4170-4768-9C45-473767D6BB8D}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{1B48ABFF-9273-4DCC-A189-46686F85A11A}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-2068</YPos>
+												<Flags>5</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -356,6 +585,423 @@
 						</Sound>
 					</ChildrenList>
 				</RandomSequenceContainer>
+				<BlendContainer Name="Cannon2" ID="{0F6E51B2-1275-4FC0-9495-B4C56249B112}" ShortID="559170388">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>46</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{A7E1D8FC-1759-4575-A50A-502A7AD9C5A4}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="177"/>
+											<Property Name="Min" Type="Real64" Value="-227"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Expl" ID="{A3E793F5-28D4-49FD-B28D-EC70036BCDF7}" ShortID="302994413">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Expl High" ID="{81D92E84-FA7A-491B-9DBA-4D51E971D831}" ShortID="1011651814" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-23</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl High" ID="{B8169848-D892-49D4-85AC-2C194E45E0BC}" ShortID="484308579">
+											<Language>SFX</Language>
+											<AudioFile>Expl High.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl High" ID="{B8169848-D892-49D4-85AC-2C194E45E0BC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Expl Low" ID="{65DFF9AA-5542-4C3E-BEF1-FFCB0C773FDB}" ShortID="381971556" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl Low" ID="{EB1E97C5-404D-4EEC-97BB-0428A3975708}" ShortID="22002277">
+											<Language>SFX</Language>
+											<AudioFile>Expl Low.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl Low" ID="{EB1E97C5-404D-4EEC-97BB-0428A3975708}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Expl Mid" ID="{8426913B-20C9-4AB6-997A-299B71B03656}" ShortID="982033601" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Expl Mid" ID="{03F6B77E-2E8D-4FC3-AD87-78FDC0A97B8A}" ShortID="337961944">
+											<Language>SFX</Language>
+											<AudioFile>Expl Mid.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Expl Mid" ID="{03F6B77E-2E8D-4FC3-AD87-78FDC0A97B8A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<RandomSequenceContainer Name="Laser HF" ID="{3EF00C5E-AECE-48B3-A3C7-7BA61AD5A68B}" ShortID="279201291">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Laser HF1" ID="{9C3A1C07-109A-4192-B37F-A49951956C61}" ShortID="383782168" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser HF1" ID="{9F08D0D9-3B0C-4934-9963-DB851BBCCAE2}" ShortID="107670251">
+											<Language>SFX</Language>
+											<AudioFile>Laser HF1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser HF1" ID="{9F08D0D9-3B0C-4934-9963-DB851BBCCAE2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser HF2" ID="{B841D3B9-EE2A-4A94-AC91-1273573DDE4F}" ShortID="26969490" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser HF2" ID="{9FBF2D28-C0FD-4647-9B39-7455EE7E8C0B}" ShortID="1046353490">
+											<Language>SFX</Language>
+											<AudioFile>Laser HF2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser HF2" ID="{9FBF2D28-C0FD-4647-9B39-7455EE7E8C0B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser HF3" ID="{34E3DE8D-C0E5-494B-96A6-CAD9215708A8}" ShortID="892111474" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser HF3" ID="{66FB4890-2E96-4992-8D51-148BC004649F}" ShortID="540444792">
+											<Language>SFX</Language>
+											<AudioFile>Laser HF3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser HF3" ID="{66FB4890-2E96-4992-8D51-148BC004649F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser HF4" ID="{4A394CAB-EC97-4D8E-B4D4-9C8AED98C28E}" ShortID="216260672" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser HF4" ID="{7A3EAEB1-211A-4A62-B023-DD92A2A97B97}" ShortID="377376685">
+											<Language>SFX</Language>
+											<AudioFile>Laser HF4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser HF4" ID="{7A3EAEB1-211A-4A62-B023-DD92A2A97B97}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Laser LP" ID="{E11061EA-2CEF-487E-B799-CD27C23C3A9B}" ShortID="174385457">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Laser LP1" ID="{619D2DFB-6FDA-4B9A-AAD4-E17DC3F139D8}" ShortID="713657097" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser LP1" ID="{771B35B6-56B0-4D46-AF09-44F22A9C18E6}" ShortID="107806390">
+											<Language>SFX</Language>
+											<AudioFile>Laser LP1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser LP1" ID="{771B35B6-56B0-4D46-AF09-44F22A9C18E6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser LP2" ID="{11E44624-2E10-40BE-9406-27C06A692468}" ShortID="74664150" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser LP2" ID="{5005819E-47C7-48FD-904E-12ECF12D001E}" ShortID="10366376">
+											<Language>SFX</Language>
+											<AudioFile>Laser LP2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser LP2" ID="{5005819E-47C7-48FD-904E-12ECF12D001E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser LP3" ID="{DD47B3DC-D433-432B-8B53-F286D6797A7D}" ShortID="308166625" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser LP3" ID="{C93E5D14-075B-43FB-8D1A-C95217BBF818}" ShortID="767504814">
+											<Language>SFX</Language>
+											<AudioFile>Laser LP3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser LP3" ID="{C93E5D14-075B-43FB-8D1A-C95217BBF818}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser LP4" ID="{4C3561A4-7F98-485C-B3A7-9DEBF8CE654C}" ShortID="329035657" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser LP4" ID="{BD32DEE7-984C-4146-8209-CE8D6430F91C}" ShortID="266648446">
+											<Language>SFX</Language>
+											<AudioFile>Laser LP4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser LP4" ID="{BD32DEE7-984C-4146-8209-CE8D6430F91C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Laser MF" ID="{54A31FA7-DB8A-4AB1-A771-AD44440F04A6}" ShortID="622861487">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Laser MF1" ID="{162FECEA-6347-4B34-9ACA-13B5AE299CA6}" ShortID="925833582" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser MF1" ID="{835869E5-43FE-4B21-A253-E3C59578FF57}" ShortID="871038476">
+											<Language>SFX</Language>
+											<AudioFile>Laser MF1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser MF1" ID="{835869E5-43FE-4B21-A253-E3C59578FF57}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Laser MF2" ID="{68928168-577D-4F0E-9A70-63244FB5628D}" ShortID="599816876" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-16</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Laser MF2" ID="{1086555B-3662-49BE-9EF1-4FDF7A6B9823}" ShortID="184217842">
+											<Language>SFX</Language>
+											<AudioFile>Laser MF2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Laser MF2" ID="{1086555B-3662-49BE-9EF1-4FDF7A6B9823}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</BlendContainer>
+				<ActorMixer Name="UI" ID="{6344CF4E-D031-41C7-8DCC-7ECA0CF68BD4}" ShortID="352966764">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
+				<ActorMixer Name="Power Ups" ID="{9B84FB4F-D06F-428A-8124-CD0EBD0F840D}" ShortID="185758711">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{999B27B6-9CDA-4D5D-8F55-2ABE184A3F7F}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{0F6A9059-8098-420B-B302-7E8368CB6947}"/>
+						</Reference>
+					</ReferenceList>
+				</ActorMixer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

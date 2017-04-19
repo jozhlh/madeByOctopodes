@@ -1,3 +1,21 @@
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2549870240	LevelProgress			\Default Work Unit\LevelProgress	
+
+Switch	ID	Name	Switch Group			Notes
+	3524678536	Section2	LevelProgress			
+	3524678537	Section3	LevelProgress			
+	3524678539	Section1	LevelProgress			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	4091656514	GameState			\Default Work Unit\GameState	
+
+State	ID	Name	State Group			Notes
+	567967104	Goal	GameState			
+	655265632	Alive	GameState			
+	748895195	None	GameState			
+	2044049779	Dead	GameState			
+	2607556080	Menu	GameState			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	

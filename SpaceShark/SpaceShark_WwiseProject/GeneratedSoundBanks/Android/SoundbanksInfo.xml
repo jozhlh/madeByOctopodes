@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Android" BasePlatform="Android" SchemaVersion="11" SoundbankVersion="120">
 	<RootPaths>
-		<ProjectRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/</ProjectRoot>
-		<SourceFilesRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/.cache/Android/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Android/</SoundBanksRoot>
+		<ProjectRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/</ProjectRoot>
+		<SourceFilesRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/.cache/Android/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Android/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/user/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Android/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/joshuahale/Library/Application Support/Wwise2016/Bottles/wwise/dosdevices/y:/Documents/gitRepos/madeByOctopodes/SpaceShark/SpaceShark_WwiseProject/GeneratedSoundBanks/Android/</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

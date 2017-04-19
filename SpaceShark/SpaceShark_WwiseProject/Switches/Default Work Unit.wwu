@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}" SchemaVersion="75">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="LevelProgress" ID="{3CD0E589-ED6C-4995-8B18-2D18DC39585F}">
+					<PropertyList>
+						<Property Name="UseGameParameter" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Switch Name="Section1" ID="{A40153F1-310E-4188-A278-F668971520DB}"/>
+						<Switch Name="Section2" ID="{9C4A1FDD-E429-4073-A560-EA364E72E903}"/>
+						<Switch Name="Section3" ID="{EE918E82-68EB-4BF5-AE78-DEA6EEFB57AD}"/>
+					</ChildrenList>
+					<SwitchOnRTPC>
+						<GameParameterRef Name="LevelProgress" ID="{43BE0C57-C89B-495B-A095-9D030804CE51}"/>
+						<Curve Name="" ID="{5A053B72-FE82-480D-9C11-132283EEEEA5}">
+							<PropertyList>
+								<Property Name="Flags" Type="int32" Value="65537"/>
+							</PropertyList>
+							<PointList>
+								<Point>
+									<XPos>0</XPos>
+									<YPos>1</YPos>
+									<Flags>5</Flags>
+								</Point>
+								<Point>
+									<XPos>18.91792</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>25</XPos>
+									<YPos>1</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>32.77027</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>50</XPos>
+									<YPos>2</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>65.87838</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>99.999</XPos>
+									<YPos>3</YPos>
+									<Flags>0</Flags>
+								</Point>
+								<Point>
+									<XPos>100</XPos>
+									<YPos>3</YPos>
+									<Flags>37</Flags>
+								</Point>
+							</PointList>
+						</Curve>
+					</SwitchOnRTPC>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</Switches>
 </WwiseDocument>
