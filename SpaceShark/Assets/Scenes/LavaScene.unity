@@ -365,6 +365,18 @@ Prefab:
       value: 
       objectReference: {fileID: 1634842799681798, guid: f8640e1a740d242569db137ddd79433b,
         type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyWallPrefabs.Array.data[1]
+      value: 
+      objectReference: {fileID: 1004868614571198, guid: fc54b016a7f9ba44386ebf220a489fc6,
+        type: 2}
+    - target: {fileID: 114000013431486696, guid: 6777fa52da71cd0459d8d7e9da8d3db0,
+        type: 2}
+      propertyPath: valleyWallPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 1004868614571198, guid: 87f6b501c219294449be2d3d27b38ad0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6777fa52da71cd0459d8d7e9da8d3db0, type: 2}
   m_IsPrefabParent: 0
