@@ -52,6 +52,35 @@ public class GameInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+#if UNITY_EDITOR
+        //Direction arrowDirection = Direction.W;
+
+        if (OnSwipe != null)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                OnSwipe(Direction.W);
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                OnSwipe(Direction.E);
+            }
+            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                OnSwipe(Direction.N);
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                OnSwipe(Direction.S);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && (OnTap != null))
+        {
+            OnTap(new Vector3(0,0,0));
+        }
+#endif
+
         // Cache the last frame mouse status and read in the current mouse status 
         for (int i = 0; i < kNumMouseButtons; i++)
         {

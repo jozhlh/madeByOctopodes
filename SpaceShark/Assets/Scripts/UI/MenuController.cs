@@ -9,7 +9,6 @@ public class MenuController : MonoBehaviour
 	private GameObject ui = null;
 	[SerializeField]
 	private GameObject stars = null;
-	//[SerializeField]
 	private StateManager state = null;
 
 	[SerializeField]
@@ -44,7 +43,8 @@ public class MenuController : MonoBehaviour
 		state = GameObject.Find("ScreenManager").GetComponent<StateManager>();
 		soundManager = state.gameObject.GetComponent<SoundManager>();
 	}
-	
+
+
 	void PlacePlanets()
 	{
 		//placementAngle = (2 * Mathf.PI) / levels.Count;
@@ -135,9 +135,27 @@ public class MenuController : MonoBehaviour
 			//planet.transform.rotation.eulerAngles = currentAngle;
 			planet.transform.localRotation = zeroRotation;
 		}
-	}
 
-	private void HandleOnSwipe(GameInput.Direction direction)
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (levels[selectedPlanet].GetComponent<MenuPlanet>().playButton.activeInHierarchy)
+            {
+                levels[selectedPlanet].GetComponent<MenuPlanet>().LoadLevel();
+            }
+            else
+            {
+                if (selectedPlanet != 4)
+                {
+                    levels[selectedPlanet].GetComponent<MenuPlanet>().ShowPlayButton();
+                }
+            }
+        }
+
+#endif
+    }
+
+    private void HandleOnSwipe(GameInput.Direction direction)
     {
         switch (direction)
 		{

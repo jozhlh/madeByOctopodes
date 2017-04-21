@@ -259,7 +259,7 @@ Prefab:
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
       propertyPath: swipeOrTapSensitivity
-      value: 200
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
         type: 2}
@@ -267,6 +267,16 @@ Prefab:
       value: 
       objectReference: {fileID: 1426616765103170, guid: 3b6243f82358e45c7a31eb579d7118d6,
         type: 2}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: fadeDistanceTop
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 114595355600822326, guid: ae021d8ef418343e59d921d10a76a399,
+        type: 2}
+      propertyPath: fadeDistanceMid
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae021d8ef418343e59d921d10a76a399, type: 2}
   m_IsPrefabParent: 0
@@ -989,25 +999,25 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0d27b54cac2e14f4ab488840c4455d18,
+      objectReference: {fileID: 21300000, guid: 3b1075ea55d14da439e821f11230a1dd,
         type: 3}
     - target: {fileID: 114000011198004602, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0d27b54cac2e14f4ab488840c4455d18,
+      objectReference: {fileID: 21300000, guid: 3b1075ea55d14da439e821f11230a1dd,
         type: 3}
     - target: {fileID: 114000010778931702, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0d27b54cac2e14f4ab488840c4455d18,
+      objectReference: {fileID: 21300000, guid: 3b1075ea55d14da439e821f11230a1dd,
         type: 3}
     - target: {fileID: 114000011590582242, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0d27b54cac2e14f4ab488840c4455d18,
+      objectReference: {fileID: 21300000, guid: 3b1075ea55d14da439e821f11230a1dd,
         type: 3}
     - target: {fileID: 114000011662695936, guid: ff01a0833fc1a41ab9bfaaeb48fbfa01,
         type: 2}
@@ -1752,6 +1762,11 @@ Prefab:
       propertyPath: victoryUI
       value: 
       objectReference: {fileID: 1750018006}
+    - target: {fileID: 114000011727415508, guid: ecf803f2fe1fe4e5a81f4546eed36575,
+        type: 2}
+      propertyPath: sceneTransition
+      value: 
+      objectReference: {fileID: 2119830674}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecf803f2fe1fe4e5a81f4546eed36575, type: 2}
   m_IsPrefabParent: 0
