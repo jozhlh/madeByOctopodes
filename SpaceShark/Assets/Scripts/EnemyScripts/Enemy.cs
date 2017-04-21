@@ -76,6 +76,8 @@ public class Enemy : MonoBehaviour
         {
             playerInRange = true;
         }
+
+        CleanUp();
     }
 
     private void CheckLane()
@@ -466,6 +468,30 @@ public class Enemy : MonoBehaviour
     public bool IsPlayerInRange()
     {
         return playerInRange;
+    }
+
+    // Destroy or disable any expired game objects
+    public void CleanUp()
+    {
+        List<GameObject> toBeCleared = new List<GameObject>();
+
+        // Add bullets to clearance list
+        foreach (GameObject bullet in bulletObjects)
+        {
+            if (bullet.GetComponent<EnemyBullet>().destroyThis)
+            {
+                toBeCleared.Add(bullet);
+            }
+        }
+
+        // Destroy bullets 
+        foreach (GameObject bullet in toBeCleared)
+        {
+             bulletObjects.Remove(bullet);
+            bullet.SetActive(false);
+            Destroy(bullet);
+        }
+        toBeCleared.Clear();
     }
 
 }

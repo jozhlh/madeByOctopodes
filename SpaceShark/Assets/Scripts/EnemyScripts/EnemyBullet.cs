@@ -13,7 +13,7 @@ public class EnemyBullet : MonoBehaviour {
 
     // Status data
     //TODO: Enemy bullet is never destroyed, these variables are not used
-    private bool destroyThis = false;
+    public bool destroyThis = false;
     private float timeStartedMoving;
 
 
