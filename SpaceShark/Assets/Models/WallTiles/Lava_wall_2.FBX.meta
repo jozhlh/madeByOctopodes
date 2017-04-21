@@ -1,0 +1,132 @@
+fileFormatVersion: 2
+guid: 33ac34243e7af2941a984c489a9bafff
+timeCreated: 1492771767
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Lava_rock_002
+    100002: Lava_rock_003
+    100004: Lava_rock_004
+    100006: //RootNode
+    100008: LavaLevelTree011
+    100010: LavaLevelTree012
+    100012: LavaLevelTree014
+    100014: LavaLevelTree015
+    100016: LavaLevelTree017
+    100018: LavaLevelTree5
+    100020: LavaLevelWeeds003
+    100022: Wall_002
+    400000: Lava_rock_002
+    400002: Lava_rock_003
+    400004: Lava_rock_004
+    400006: //RootNode
+    400008: LavaLevelTree011
+    400010: LavaLevelTree012
+    400012: LavaLevelTree014
+    400014: LavaLevelTree015
+    400016: LavaLevelTree017
+    400018: LavaLevelTree5
+    400020: LavaLevelWeeds003
+    400022: Wall_002
+    2300000: Lava_rock_002
+    2300002: Lava_rock_003
+    2300004: Lava_rock_004
+    2300006: LavaLevelTree011
+    2300008: LavaLevelTree012
+    2300010: LavaLevelTree014
+    2300012: LavaLevelTree015
+    2300014: LavaLevelTree017
+    2300016: LavaLevelTree5
+    2300018: LavaLevelWeeds003
+    2300020: Wall_002
+    3300000: Lava_rock_002
+    3300002: Lava_rock_003
+    3300004: Lava_rock_004
+    3300006: LavaLevelTree011
+    3300008: LavaLevelTree012
+    3300010: LavaLevelTree014
+    3300012: LavaLevelTree015
+    3300014: LavaLevelTree017
+    3300016: LavaLevelTree5
+    3300018: LavaLevelWeeds003
+    3300020: Wall_002
+    4300000: Wall_002
+    4300002: Lava_rock_002
+    4300004: LavaLevelTree011
+    4300006: LavaLevelTree012
+    4300008: LavaLevelWeeds003
+    4300010: LavaLevelTree014
+    4300012: LavaLevelTree015
+    4300014: LavaLevelTree017
+    4300016: Lava_rock_003
+    4300018: Lava_rock_004
+    4300020: LavaLevelTree5
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
