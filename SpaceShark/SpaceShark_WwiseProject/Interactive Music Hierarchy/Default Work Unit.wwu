@@ -335,7 +335,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-14</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{A8F8DAB6-F22B-4CA9-BB49-67B4935CF85E}" ShortID="247235058">
@@ -570,7 +570,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-16</Value>
+										<Value>-14</Value>
 									</ValueList>
 									<RTPCList>
 										<RTPC Name="" ID="{F88F5B84-BF53-4556-B27C-4FF873CA146C}" ShortID="869675015">

@@ -82,13 +82,13 @@
 						</Event>
 						<Event Name="playerSwipe" ID="{687F74C8-03E9-4FF0-A1B7-1399CDD0166B}">
 							<ChildrenList>
-								<Action Name="Set Voice Pitch" ID="{8C04FF10-9E38-4370-9302-EBB48B93DDAC}" ShortID="391741668" Type="ChangePitch" Scope="One" Global="false">
+								<Action Name="Set Voice Pitch" ID="{77AC1434-DB0F-40D0-97C9-D61997A3F0A9}" ShortID="405393947" Type="ChangePitch" Scope="One" Global="true">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
-										<Property Name="Pitch" Type="int32" Value="180">
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+										<Property Name="Pitch" Type="int32" Value="100">
 											<ModifierList>
 												<ModifierInfo>
-													<Modifier Name="" ID="{E64C468D-FE30-4460-9663-EA6EBF646ABA}">
+													<Modifier Name="" ID="{D0D2449F-4E89-433C-A2C7-5591005E72B6}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
 															<Property Name="Max" Type="Real64" Value="20"/>
@@ -100,18 +100,40 @@
 										</Property>
 									</PropertyList>
 									<ElementList>
-										<Element ID="{56038C69-FD3E-4CD6-AA81-C4575AFA8F98}" Global="false">
+										<Element ID="{D1E56858-33FA-436F-B919-71C9C831C3D1}" Global="true">
 											<ObjectRef Name="LofiEngine5" ID="{317C17DD-C1F1-41A7-A5B1-60607B20B164}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
 								</Action>
-								<Action Name="Reset Voice Pitch" ID="{3BEF1F9C-BDAD-4DD5-9C8D-07AAAB16A406}" ShortID="925379550" Type="ResetPitch" Scope="One" Global="false">
+								<Action Name="Reset Voice Pitch" ID="{3BEF1F9C-BDAD-4DD5-9C8D-07AAAB16A406}" ShortID="925379550" Type="ResetPitch" Scope="One" Global="true">
 									<PropertyList>
-										<Property Name="Delay" Type="Real64" Value="0.3"/>
-										<Property Name="FadeTime" Type="Real64" Value="0.3"/>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
 									</PropertyList>
 									<ElementList>
-										<Element ID="{0D008D0C-E73C-4153-B5FE-56458A564E82}" Global="false">
+										<Element ID="{0D008D0C-E73C-4153-B5FE-56458A564E82}" Global="true">
+											<ObjectRef Name="LofiEngine5" ID="{317C17DD-C1F1-41A7-A5B1-60607B20B164}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Set Voice Volume" ID="{8759CEE0-83D6-4B1D-A131-D78BE938B022}" ShortID="727996839" Type="ChangeVolume" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+										<Property Name="Volume" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{099F90E2-3924-4EA8-880F-40011C03C770}" Global="false">
+											<ObjectRef Name="LofiEngine5" ID="{317C17DD-C1F1-41A7-A5B1-60607B20B164}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
+										</Element>
+									</ElementList>
+								</Action>
+								<Action Name="Reset Voice Volume" ID="{032A37E1-2139-4A83-8D37-83D73D4B288F}" ShortID="209587970" Type="ResetVolume" Scope="One" Global="false">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="0.15"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.15"/>
+									</PropertyList>
+									<ElementList>
+										<Element ID="{E7E9FC18-CCED-4A57-B5DB-633C76348CED}" Global="false">
 											<ObjectRef Name="LofiEngine5" ID="{317C17DD-C1F1-41A7-A5B1-60607B20B164}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
 										</Element>
 									</ElementList>
@@ -384,13 +406,10 @@
 							<ChildrenList>
 								<Action Name="Stop All" ID="{1121FA09-A7DA-4BB4-B7BC-7FECA50A970C}" ShortID="365572066" Type="Stop" Scope="All" Global="false">
 									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
 									</PropertyList>
 								</Action>
 								<Action Name="Play" ID="{59045CCE-3397-464A-A7E2-533D5D9ABC83}" ShortID="760958140" Type="Play" Scope="One" Global="false">
-									<PropertyList>
-										<Property Name="FadeTime" Type="Real64" Value="2"/>
-									</PropertyList>
 									<ElementList>
 										<Element ID="{03F30DA5-AA04-4828-A29B-1C123897AD99}" Global="false">
 											<ObjectRef Name="PlayerDeath" ID="{8D3323E3-C487-4714-B84F-0E00D348C809}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}"/>
