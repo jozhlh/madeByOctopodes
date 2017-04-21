@@ -1,52 +1,72 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2137943	life			\Default Work Unit\PowerUps\life	
 	236977299	powerupCollect			\Default Work Unit\PowerUps\powerupCollect	
+	344481046	ice			\Default Work Unit\Level\ice	
+	491961918	forest			\Default Work Unit\Level\forest	
 	540301611	lava			\Default Work Unit\Level\lava	
+	567967104	goal			\Default Work Unit\Level\goal	
 	600194807	doublePoints			\Default Work Unit\PowerUps\doublePoints	
 	640944686	invincible			\Default Work Unit\PowerUps\invincible	
 	664555880	menuSelect			\Default Work Unit\UI\menuSelect	
 	872879572	powerupUse			\Default Work Unit\PowerUps\powerupUse	
+	1350496757	playerMovement			\Default Work Unit\Player\playerMovement	
 	1585024601	shipEngine			\Default Work Unit\Player\shipEngine	
 	1656947812	playerDeath			\Default Work Unit\Player\playerDeath	
+	1850388778	desert			\Default Work Unit\Level\desert	
 	1865350373	slowTime			\Default Work Unit\PowerUps\slowTime	
+	2044049779	dead			\Default Work Unit\Level\dead	
+	2144546276	playerSwipe			\Default Work Unit\Player\playerSwipe	
 	2446068219	enemyFire			\Default Work Unit\Enemy\enemyFire	
 	2607556080	menu			\Default Work Unit\Level\menu	
 	2747570134	playerFire			\Default Work Unit\Player\playerFire	
 	2999241083	lightningStrike			\Default Work Unit\PowerUps\lightningStrike	
 	3048058352	random			\Default Work Unit\PowerUps\random	
+	3050945240	New_Event			\Default Work Unit\PowerUps\New_Event	
 	3249137159	enemyDeath			\Default Work Unit\Enemy\enemyDeath	
 	3532008398	menuSwipe			\Default Work Unit\UI\menuSwipe	
 	3573931707	loading			\Default Work Unit\Level\loading	
+	3829570280	playerWin			\Default Work Unit\Player\playerWin	
 	4214620523	resetMultiplier			\Default Work Unit\Score\resetMultiplier	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1350179952	GameSpeed			\Default Work Unit\GameSpeed	
 
+Effect plug-ins	ID	Name	Type				Notes
+	881948190	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	1588715066	Echoes_Linear	Wwise Delay			
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	10366376	Laser LP2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP2		240068
-	22002277	Expl Low	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Expl Low_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Expl\Expl Low		240068
-	107670251	Laser HF1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF1		240068
-	107806390	Laser LP1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP1		240068
-	184217842	Laser MF2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser MF2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser MF\Laser MF2		240068
+	10366376	Laser LP2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP2_E169C32F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP2		51268
+	77192879	Lava	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Lava_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Lava\Lava\Lava		25222736
+	101934657	Ice	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Ice_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Ice\Ice\Ice		24576000
+	107670251	Laser HF1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF1_62BAE3EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF1		69648
+	107806390	Laser LP1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP1_F489EF76.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP1		60720
+	123765629	Desert	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Desert_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Desert\Desert\Desert		26622736
 	249770876	EnemyDeathLaser	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathLaser_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathLaser		181960
-	266648446	Laser LP4	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP4		240068
+	266648446	Laser LP4	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP4_55CBD227.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP4		45492
 	333643600	PowerUp4	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp4		313280
-	337961944	Expl Mid	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Expl Mid_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Expl\Expl Mid		240068
-	377376685	Laser HF4	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF4_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF4		240068
-	484308579	Expl High	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Expl High_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Expl\Expl High		240068
-	540444792	Laser HF3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF3		240068
+	351781161	SlowTimeNoise	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\audiocheck.net_whitenoise_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\SlowTimeNoise		882066
+	377376685	Laser HF4	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF4_D7656BA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF4		60460
+	424060223	79 Track 79	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\79 Track 79_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerDeath\79 Track 79		1518144
+	456007425	LofiEngine5	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\LofiEngine5_4B8CC0C5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Thrust\LofiEngine5		2416296
+	510240517	Menu	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Menu_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Menu\Menu\Menu		23282544
+	516595383	PowerUp3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp3		313280
+	540444792	Laser HF3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF3_8DC3037F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF3		63872
 	560663328	EnemyDeathGlassLayer1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathGlassLayer1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer1		348224
+	606823282	PlayerWinTone	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PlayerWinTone_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Win\PlayerWinTone\PlayerWinTone		3510924
 	647682736	PowerUp6	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp6_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp6		358028
 	727248570	UI2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\UI2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI2		480068
-	767504814	Laser LP3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP3		240068
+	767504814	Laser LP3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser LP3_D154AA48.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser LP\Laser LP3		52580
+	776083260	Loading Mix1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Loading Mix1_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Loading\Loading Mix1\Loading Mix1		4859548
 	822560933	EnemyDeathExplosionLow	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathExplosionLow_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathExplosionLow		439644
 	828092820	PowerUp8	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp8_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp8		179048
-	871038476	Laser MF1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser MF1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser MF\Laser MF1		240068
+	841251737	74 Track 74	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\74 Track 74_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\PlayerDeath\74 Track 74		2196544
+	869338170	PowerUp5	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp5_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp5		358028
 	874969708	UI1	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\UI1_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\UI1		480068
 	922431912	PowerUp7	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\PowerUp7_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Power Ups\PowerUp7		358028
 	966113440	EnemyDeathGlassLayer3	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathGlassLayer3_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer3		146292
-	1027021870	Lava Mix2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Lava Mix2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Lava\Lava Mix2\Lava Mix2		25222804
+	970338993	Forest	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Forest_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Forest\Forest\Forest		26922416
+	1008538817	DeathTone	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\DeathTone_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Death\DeathTone\DeathTone		894968
 	1027588360	EnemyDeathGlassLayer2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\EnemyDeathGlassLayer2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\EnemyDeath\EnemyDeathGlassLayer2		146292
-	1046353490	Laser HF2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF2_9E69E797.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF2		240068
-	1048792545	Menu Mix2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Menu Mix2_4B8CC0C5.wem		\Interactive Music Hierarchy\Default Work Unit\MusicSwitch\Menu\Menu Mix2\Menu Mix2		23282592
+	1046353490	Laser HF2	Y:\Documents\gitRepos\madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\.cache\Android\SFX\Laser HF2_EEFBF27A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Cannon2\Laser HF\Laser HF2		61508
 
