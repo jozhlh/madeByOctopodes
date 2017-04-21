@@ -9,6 +9,8 @@ public class UiManager : MonoBehaviour {
 	[SerializeField]
 	private GameObject victoryUI;
 	private StateManager state = null;
+    [SerializeField]
+    private SceneTransition sceneTransition = null;
 
 	void Start()
 	{
@@ -23,7 +25,15 @@ public class UiManager : MonoBehaviour {
             // If the player is dead show death UI
 			case StateManager.States.dead:
 				deathUI.SetActive(true);
-				break;
+#if UNITY_EDITOR
+                if (Input.GetKeyDown(KeyCode.Return))
+                {
+                    sceneTransition.LoadScreenManagerMenu();
+                }
+               // else if (Input)
+
+#endif
+                break;
             // If the player has won show complete UI
             case StateManager.States.complete:
 				victoryUI.SetActive(true);

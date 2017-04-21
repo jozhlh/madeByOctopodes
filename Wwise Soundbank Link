@@ -1,3 +1,13 @@
-Wwise Soundbank Link:
+As the Wwise soundbank is too large, the file has been excluded from the repository.
 
+The init.bnk and Soundbank1.bnk must be copied into the correct folder for testing or building.
+
+It is stored here:
 https://1drv.ms/f/s!Aj2I7kPS1wYIg3CCA-FR5-aRIWep
+
+For building:
+The init.bnk and Soundbank1.bnk in the Android folder must be copied into:
+madeByOctopodes\SpaceShark\Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\
+
+For testing, the android windows and mac init.bnk and Soundbank1.bnk files must be copied into their respective folders in this directory:
+madeByOctopodes\SpaceShark\SpaceShark_WwiseProject\GeneratedSoundBanks

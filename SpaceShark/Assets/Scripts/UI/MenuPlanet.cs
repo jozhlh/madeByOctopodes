@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class MenuPlanet : MonoBehaviour {
 
-	[SerializeField]
-	private GameObject playButton = null;
+	public GameObject playButton = null;
 
 	[SerializeField]
 	private GameObject levelDescription = null;
@@ -16,8 +15,14 @@ public class MenuPlanet : MonoBehaviour {
 	[SerializeField]
 	private GameObject enemyFleet = null;
 
-	//float planetAxis = 0.0f;
-	Vector3 planetAxis;
+    [SerializeField]
+    private SceneTransition sceneTransition = null;
+
+    [SerializeField]
+    private string levelName = "";
+
+    //float planetAxis = 0.0f;
+    Vector3 planetAxis;
 	Vector3 fleetAxis;
 	float planetRotationSpeed = 10.0f;
 	float fleetRotationSpeed = 40.0f;
@@ -76,4 +81,9 @@ public class MenuPlanet : MonoBehaviour {
 		selected = false;
 		levelDescription.SetActive(false);
 	}
+
+    public void LoadLevel()
+    {
+        sceneTransition.LoadScreenManagerLevel(levelName);
+    }
 }
