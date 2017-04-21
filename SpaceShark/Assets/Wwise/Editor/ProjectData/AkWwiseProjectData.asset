@@ -13,14 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentPluginConfig: 
   EventWwu:
-  - PhysicalPath: Events\Default Work Unit.wwu
+  - PhysicalPath: Events/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}'
-    m_lastTimePsrt1: -2099461676
-    m_lastTimePart2: -1999337323
+    m_lastTimePsrt1: -1870723072
+    m_lastTimePart2: -1999337267
     List:
     - Name: dead
-      Path: Default Work Unit\Level\dead
+      Path: Default Work Unit/Level/dead
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -32,7 +32,7 @@ MonoBehaviour:
       Guid: c28d4b8809299c45b4574e98143b3ab1
       maxAttenuation: 0
     - Name: desert
-      Path: Default Work Unit\Level\desert
+      Path: Default Work Unit/Level/desert
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -44,7 +44,7 @@ MonoBehaviour:
       Guid: 53487ea1aefe4c4bb8b8d9ff760660ea
       maxAttenuation: 0
     - Name: doublePoints
-      Path: Default Work Unit\PowerUps\doublePoints
+      Path: Default Work Unit/PowerUps/doublePoints
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -56,7 +56,7 @@ MonoBehaviour:
       Guid: b874080a7240864f9f7bc942f62547fc
       maxAttenuation: 0
     - Name: enemyDeath
-      Path: Default Work Unit\Enemy\enemyDeath
+      Path: Default Work Unit/Enemy/enemyDeath
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -68,7 +68,7 @@ MonoBehaviour:
       Guid: 5fa58ed01c988443af7978ea38b865c2
       maxAttenuation: 0
     - Name: enemyFire
-      Path: Default Work Unit\Enemy\enemyFire
+      Path: Default Work Unit/Enemy/enemyFire
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -80,7 +80,7 @@ MonoBehaviour:
       Guid: 99eb95cd8fbccf4092c7017ed03bece8
       maxAttenuation: 0
     - Name: forest
-      Path: Default Work Unit\Level\forest
+      Path: Default Work Unit/Level/forest
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -92,7 +92,7 @@ MonoBehaviour:
       Guid: 90ec5eef7ca81247b95642dd86bf1134
       maxAttenuation: 0
     - Name: goal
-      Path: Default Work Unit\Level\goal
+      Path: Default Work Unit/Level/goal
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -104,7 +104,7 @@ MonoBehaviour:
       Guid: 97e86235fdf3d8459a442d2808b4c2e9
       maxAttenuation: 0
     - Name: ice
-      Path: Default Work Unit\Level\ice
+      Path: Default Work Unit/Level/ice
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -116,7 +116,7 @@ MonoBehaviour:
       Guid: 8ae5fe35ec176a4abc685c98890bab3c
       maxAttenuation: 0
     - Name: invincible
-      Path: Default Work Unit\PowerUps\invincible
+      Path: Default Work Unit/PowerUps/invincible
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -128,7 +128,7 @@ MonoBehaviour:
       Guid: a676a73c745a5246b4a842d2ef0f091b
       maxAttenuation: 0
     - Name: lava
-      Path: Default Work Unit\Level\lava
+      Path: Default Work Unit/Level/lava
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -140,7 +140,7 @@ MonoBehaviour:
       Guid: 6401c884971f1f49aa58ae28277e09e0
       maxAttenuation: 0
     - Name: life
-      Path: Default Work Unit\PowerUps\life
+      Path: Default Work Unit/PowerUps/life
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -152,7 +152,7 @@ MonoBehaviour:
       Guid: fd00e1082e9c44469821e2e58421902f
       maxAttenuation: 0
     - Name: lightningStrike
-      Path: Default Work Unit\PowerUps\lightningStrike
+      Path: Default Work Unit/PowerUps/lightningStrike
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -164,7 +164,7 @@ MonoBehaviour:
       Guid: 5c98e748b5914f44a99ba4748adde70f
       maxAttenuation: 0
     - Name: loading
-      Path: Default Work Unit\Level\loading
+      Path: Default Work Unit/Level/loading
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -176,7 +176,7 @@ MonoBehaviour:
       Guid: 5b128d348b249542b4bf3e29fae630ce
       maxAttenuation: 0
     - Name: menu
-      Path: Default Work Unit\Level\menu
+      Path: Default Work Unit/Level/menu
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -188,7 +188,7 @@ MonoBehaviour:
       Guid: 50405cf64c0def45b542392e38301517
       maxAttenuation: 0
     - Name: menuSelect
-      Path: Default Work Unit\UI\menuSelect
+      Path: Default Work Unit/UI/menuSelect
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -200,7 +200,7 @@ MonoBehaviour:
       Guid: 3faf07833927844e8cf337e47ebf0c17
       maxAttenuation: 0
     - Name: menuSwipe
-      Path: Default Work Unit\UI\menuSwipe
+      Path: Default Work Unit/UI/menuSwipe
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -212,7 +212,7 @@ MonoBehaviour:
       Guid: 299984eba6ac3e438cdeafdcab0e7463
       maxAttenuation: 0
     - Name: New_Event
-      Path: Default Work Unit\PowerUps\New_Event
+      Path: Default Work Unit/PowerUps/New_Event
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -223,20 +223,8 @@ MonoBehaviour:
       ID: -1244022056
       Guid: c6e158123412f74b92f73bdaea156b03
       maxAttenuation: 0
-    - Name: playerAlive
-      Path: Default Work Unit\Player\playerAlive
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Player
-        ObjectType: 4
-      - ElementName: playerAlive
-        ObjectType: 3
-      ID: -1737645427
-      Guid: 58b468275b9da741b690c19d605121b8
-      maxAttenuation: 0
     - Name: playerDeath
-      Path: Default Work Unit\Player\playerDeath
+      Path: Default Work Unit/Player/playerDeath
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -248,7 +236,7 @@ MonoBehaviour:
       Guid: 932cdba5fdde644ba2b935be15184431
       maxAttenuation: 0
     - Name: playerFire
-      Path: Default Work Unit\Player\playerFire
+      Path: Default Work Unit/Player/playerFire
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -259,8 +247,44 @@ MonoBehaviour:
       ID: -1547397162
       Guid: e09be010cd0d7a4183902d888dd8fa42
       maxAttenuation: 0
+    - Name: playerMovement
+      Path: Default Work Unit/Player/playerMovement
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: playerMovement
+        ObjectType: 3
+      ID: 1350496757
+      Guid: 51c6cfa818b08b4b8bce3a8c19e445cd
+      maxAttenuation: 0
+    - Name: playerSwipe
+      Path: Default Work Unit/Player/playerSwipe
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: playerSwipe
+        ObjectType: 3
+      ID: 2144546276
+      Guid: c8747f68e903f04fa1b71399cdd0166b
+      maxAttenuation: 0
+    - Name: playerWin
+      Path: Default Work Unit/Player/playerWin
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Player
+        ObjectType: 4
+      - ElementName: playerWin
+        ObjectType: 3
+      ID: -465397016
+      Guid: 58b468275b9da741b690c19d605121b8
+      maxAttenuation: 0
     - Name: powerupCollect
-      Path: Default Work Unit\PowerUps\powerupCollect
+      Path: Default Work Unit/PowerUps/powerupCollect
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -272,7 +296,7 @@ MonoBehaviour:
       Guid: 174bcf560125054d8a80a29371a7e38f
       maxAttenuation: 0
     - Name: powerupUse
-      Path: Default Work Unit\PowerUps\powerupUse
+      Path: Default Work Unit/PowerUps/powerupUse
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -284,7 +308,7 @@ MonoBehaviour:
       Guid: 04c9fc3ad06ff94881e9e7c6f07af3ee
       maxAttenuation: 0
     - Name: random
-      Path: Default Work Unit\PowerUps\random
+      Path: Default Work Unit/PowerUps/random
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -296,7 +320,7 @@ MonoBehaviour:
       Guid: d6639e5e532bde4486d7aa8d78866bf9
       maxAttenuation: 0
     - Name: resetMultiplier
-      Path: Default Work Unit\Score\resetMultiplier
+      Path: Default Work Unit/Score/resetMultiplier
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -308,7 +332,7 @@ MonoBehaviour:
       Guid: fa60c22b4fccab40bdab87e9b52f428f
       maxAttenuation: 0
     - Name: shipEngine
-      Path: Default Work Unit\Player\shipEngine
+      Path: Default Work Unit/Player/shipEngine
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -320,7 +344,7 @@ MonoBehaviour:
       Guid: 5c56093dc5f1bf4291eb3996563ac654
       maxAttenuation: 0
     - Name: slowTime
-      Path: Default Work Unit\PowerUps\slowTime
+      Path: Default Work Unit/PowerUps/slowTime
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -332,21 +356,21 @@ MonoBehaviour:
       Guid: c691e57e97202b478bc2c36d80f4fdb3
       maxAttenuation: 0
   AuxBusWwu:
-  - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
+  - PhysicalPath: Master-Mixer Hierarchy/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{0F6A9059-8098-420B-B302-7E8368CB6947}'
-    m_lastTimePsrt1: -14363030
-    m_lastTimePart2: -1999340855
+    m_lastTimePsrt1: -390014720
+    m_lastTimePart2: -1999337704
     List: []
   StateWwu:
-  - PhysicalPath: States\Default Work Unit.wwu
+  - PhysicalPath: States/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{BD3CD14C-4141-4DDB-8778-C6319B997069}'
-    m_lastTimePsrt1: -2071737826
-    m_lastTimePart2: -1999337323
+    m_lastTimePsrt1: 627699712
+    m_lastTimePart2: -1999337620
     List:
     - Name: GameState
-      Path: Default Work Unit\GameState
+      Path: Default Work Unit/GameState
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -395,14 +419,14 @@ MonoBehaviour:
       - bytes: bdd7c39841f28444b95463e9237de96a
       - bytes: c139d4bc35d6a04faf8839080391c5be
   SwitchWwu:
-  - PhysicalPath: Switches\Default Work Unit.wwu
+  - PhysicalPath: Switches/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{8D8EABDA-1A1B-4092-AE51-26FE4E8C0444}'
-    m_lastTimePsrt1: -2071732808
-    m_lastTimePart2: -1999337323
+    m_lastTimePsrt1: 745606656
+    m_lastTimePart2: -1999337684
     List:
     - Name: LevelProgress
-      Path: Default Work Unit\LevelProgress
+      Path: Default Work Unit/LevelProgress
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
@@ -427,14 +451,14 @@ MonoBehaviour:
       - bytes: dd1f4a9c29e47340a560ea364e72e903
       - bytes: 828e91eeeb68f54bae78dea6eefb57ad
   BankWwu:
-  - PhysicalPath: SoundBanks\Default Work Unit.wwu
+  - PhysicalPath: SoundBanks/Default Work Unit.wwu
     ParentPhysicalPath: 
     Guid: '{584A89B9-C19F-4DC7-92E9-511AC3B1CE48}'
-    m_lastTimePsrt1: -2071742835
-    m_lastTimePart2: -1999337323
+    m_lastTimePsrt1: 1208361216
+    m_lastTimePart2: -1999337294
     List:
     - Name: Soundbank1
-      Path: Default Work Unit\Soundbank1
+      Path: Default Work Unit/Soundbank1
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
