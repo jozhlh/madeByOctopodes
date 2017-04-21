@@ -59,6 +59,9 @@ public class LevelManager : MonoBehaviour
     private GameObject scorePanel;
     [SerializeField]
     private GameObject multiplierPanel;
+    [SerializeField]
+    private GameObject powerUpPanel;
+
 
     [SerializeField]
     // Reference to the player in the scene
@@ -83,6 +86,8 @@ public class LevelManager : MonoBehaviour
         soundManager = state.gameObject.GetComponent<SoundManager>();
         scorePanel.SetActive(false);
         multiplierPanel.SetActive(false);
+        powerUpPanel.SetActive(false);
+        powerUpPanel.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -99,10 +104,12 @@ public class LevelManager : MonoBehaviour
         {
             scorePanel.SetActive(true);
             multiplierPanel.SetActive(true);
+            powerUpPanel.SetActive(true);
         }
         else if(state.GetState() == StateManager.States.loadLevel)
         {
             scorePanel.SetActive(false);
+            powerUpPanel.SetActive(false);
             multiplierPanel.SetActive(false);
         }
 

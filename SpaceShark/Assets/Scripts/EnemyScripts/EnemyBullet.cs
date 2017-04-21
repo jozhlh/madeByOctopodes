@@ -27,7 +27,7 @@ public class EnemyBullet : MonoBehaviour {
     void Update()
     {
         // Move the bullet along the vector toward the player
-        bulletPosition += (bulletTrajectory * Time.deltaTime);
+        bulletPosition += (bulletTrajectory * Time.deltaTime * Ship_Movement.gameSpeed * 0.01f);
 
         // Move the bullet in the z axis to mimic aiming ahead of the player
         bulletPosition.z += Time.deltaTime * Ship_Movement.gameSpeed;
