@@ -8,28 +8,33 @@
 						<ObjectRef Name="resetMultiplier" ID="{2BC260FA-CC4F-40AB-BDAB-87E9B52F428F}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="enemyFire" ID="{CD95EB99-BC8F-40CF-92C7-017ED03BECE8}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="playerFire" ID="{10E09BE0-0DCD-417A-8390-2D888DD8FA42}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playerWin" ID="{2768B458-9D5B-41A7-B690-C19D605121B8}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="loading" ID="{348D125B-248B-4295-B4BF-3E29FAE630CE}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="shipEngine" ID="{3D09565C-F1C5-42BF-91EB-3996563AC654}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="menuSwipe" ID="{EB849929-ACA6-433E-8CDE-AFDCAB0E7463}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="enemyDeath" ID="{D08EA55F-981C-4384-AF79-78EA38B865C2}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="forest" ID="{A93E952D-3DEB-443F-8943-AA8F0A8CC473}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="lightningStrike" ID="{48E7985C-91B5-444F-A99B-A4748ADDE70F}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="random" ID="{5E9E63D6-2B53-44DE-86D7-AA8D78866BF9}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="desert" ID="{E40D3A7E-7B73-451E-BB21-134F15662F2F}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="dead" ID="{884B8DC2-2909-459C-B457-4E98143B3AB1}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="goal" ID="{3562E897-F3FD-45D8-9A44-2D2808B4C2E9}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="menu" ID="{F65C4050-0D4C-45EF-B542-392E38301517}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="life" ID="{08E100FD-9C2E-4644-9821-E2E58421902F}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="invincible" ID="{3CA776A6-5A74-4652-B4A8-42D2EF0F091B}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="forest" ID="{EF5EEC90-A87C-4712-B956-42DD86BF1134}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="slowTime" ID="{7EE591C6-2097-472B-8BC2-C36D80F4FDB3}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI2" ID="{7AD8CC4E-D432-48C5-B705-60E8AA29C50F}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="powerupUse" ID="{3AFCC904-6FD0-48F9-81E9-E7C6F07AF3EE}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="menu" ID="{AE7655B9-9C45-4927-8679-CEF47C9E36EE}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="ice" ID="{EAF8237A-C5DE-4988-B595-C9626789E092}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="cave" ID="{CF6A6329-916E-49D0-814E-9F15A12D2005}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="lava" ID="{C7BBB6E2-0571-4B3F-8471-5FC6BC7929A6}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="lava" ID="{84C80164-1F97-491F-AA58-AE28277E09E0}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ice" ID="{35FEE58A-17EC-4A6A-BC68-5C98890BAB3C}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="desert" ID="{A17E4853-FEAE-4B4C-B8B8-D9FF760660EA}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="playerDeath" ID="{A5DB2C93-DEFD-4B64-A2B9-35BE15184431}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="playerWin" ID="{8F746642-9B1A-4BEF-8845-89AF89B2C9B0}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playerMovement" ID="{A8CFC651-B018-4B8B-8BCE-3A8C19E445CD}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="New_Event" ID="{1258E1C6-1234-4BF7-92F7-3BDAEA156B03}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="UI1" ID="{1852D3C5-AA4C-4CA8-8F87-BB5B47CACA86}" WorkUnitID="{3A9FB4C2-5B32-4FD7-962B-40CABA44F195}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="powerupCollect" ID="{56CF4B17-2501-4D05-8A80-A29371A7E38F}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="menuSelect" ID="{8307AF3F-2739-4E84-8CF3-37E47EBF0C17}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="doublePoints" ID="{0A0874B8-4072-4F86-9F7B-C942F62547FC}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="playerSwipe" ID="{687F74C8-03E9-4FF0-A1B7-1399CDD0166B}" WorkUnitID="{0A0B2F1C-1F43-495F-9014-5BC7A01825AD}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -4,36 +4,67 @@
 		<WorkUnit Name="Default Work Unit" ID="{BD3CD14C-4141-4DDB-8778-C6319B997069}" PersistMode="Standalone">
 			<ChildrenList>
 				<StateGroup Name="GameState" ID="{F77CC6FB-3C3C-40DA-9AB7-E8D94F48DF7A}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="2"/>
+					</PropertyList>
 					<ChildrenList>
 						<State Name="None" ID="{BCD439C1-D635-4FA0-AF88-39080391C5BE}"/>
 						<State Name="Goal" ID="{E45CE13E-09C2-4D45-A990-5A99815B31F3}"/>
 						<State Name="Menu" ID="{98C3D7BD-F241-4484-B954-63E9237DE96A}"/>
-						<State Name="Alive" ID="{454AA1B3-0E4A-47C6-ACD5-A8B5FBAB2109}"/>
 						<State Name="Dead" ID="{AF1D4342-92B4-4AA0-A7C1-28B55FA61E9A}"/>
+						<State Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+						<State Name="Lava" ID="{1F552244-A2F2-4A59-82B5-08A6A84A21A2}"/>
+						<State Name="Forest" ID="{C5E72C9C-2B25-47C4-8D30-543C20562368}"/>
+						<State Name="Ice" ID="{C6FB9AC9-CBBF-401F-AA41-B6263C3F0011}"/>
+						<State Name="Desert" ID="{7DD2F0CE-B527-4C6B-A9ED-B60696E5E12C}"/>
 					</ChildrenList>
 					<TransitionList>
 						<Transition>
-							<StartState Name="Menu" ID="{98C3D7BD-F241-4484-B954-63E9237DE96A}"/>
-							<EndState Name="Alive" ID="{454AA1B3-0E4A-47C6-ACD5-A8B5FBAB2109}"/>
-							<Time>2</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="Alive" ID="{454AA1B3-0E4A-47C6-ACD5-A8B5FBAB2109}"/>
-							<EndState Name="Dead" ID="{AF1D4342-92B4-4AA0-A7C1-28B55FA61E9A}"/>
-							<Time>1</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="Alive" ID="{454AA1B3-0E4A-47C6-ACD5-A8B5FBAB2109}"/>
-							<EndState Name="Goal" ID="{E45CE13E-09C2-4D45-A990-5A99815B31F3}"/>
-							<Time>2</Time>
-							<IsShared>false</IsShared>
-						</Transition>
-						<Transition>
-							<StartState Name="Alive" ID="{454AA1B3-0E4A-47C6-ACD5-A8B5FBAB2109}"/>
+							<StartState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
 							<EndState Name="Menu" ID="{98C3D7BD-F241-4484-B954-63E9237DE96A}"/>
-							<Time>1</Time>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Menu" ID="{98C3D7BD-F241-4484-B954-63E9237DE96A}"/>
+							<EndState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<EndState Name="Lava" ID="{1F552244-A2F2-4A59-82B5-08A6A84A21A2}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<EndState Name="Desert" ID="{7DD2F0CE-B527-4C6B-A9ED-B60696E5E12C}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<EndState Name="Forest" ID="{C5E72C9C-2B25-47C4-8D30-543C20562368}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<EndState Name="Ice" ID="{C6FB9AC9-CBBF-401F-AA41-B6263C3F0011}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Dead" ID="{AF1D4342-92B4-4AA0-A7C1-28B55FA61E9A}"/>
+							<EndState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<Time>2</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+						<Transition>
+							<StartState Name="Goal" ID="{E45CE13E-09C2-4D45-A990-5A99815B31F3}"/>
+							<EndState Name="Loading" ID="{C3BC95FA-A7ED-4395-A1B5-B417523CB467}"/>
+							<Time>2</Time>
 							<IsShared>false</IsShared>
 						</Transition>
 					</TransitionList>

@@ -10,11 +10,15 @@ State Group	ID	Name			Wwise Object Path	Notes
 	4091656514	GameState			\Default Work Unit\GameState	
 
 State	ID	Name	State Group			Notes
+	344481046	Ice	GameState			
+	491961918	Forest	GameState			
+	540301611	Lava	GameState			
 	567967104	Goal	GameState			
-	655265632	Alive	GameState			
 	748895195	None	GameState			
+	1850388778	Desert	GameState			
 	2044049779	Dead	GameState			
 	2607556080	Menu	GameState			
+	3573931707	Loading	GameState			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	805203703	Master Secondary Bus			\Default Work Unit\Master Secondary Bus	

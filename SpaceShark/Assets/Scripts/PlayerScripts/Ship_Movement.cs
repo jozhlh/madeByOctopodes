@@ -338,6 +338,7 @@ public class Ship_Movement : MonoBehaviour
     {
         if (introProgress > introDuration)
         {
+            soundManager.PlayEvent("playerSwipe", gameObject);
             switch (direction)
             {
                 case GameInput.Direction.W:
