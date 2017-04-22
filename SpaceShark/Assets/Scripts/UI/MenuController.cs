@@ -136,7 +136,7 @@ public class MenuController : MonoBehaviour
 			planet.transform.localRotation = zeroRotation;
 		}
 
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (levels[selectedPlanet].GetComponent<MenuPlanet>().playButton.activeInHierarchy)

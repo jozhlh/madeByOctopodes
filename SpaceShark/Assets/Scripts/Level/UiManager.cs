@@ -25,7 +25,7 @@ public class UiManager : MonoBehaviour {
             // If the player is dead show death UI
 			case StateManager.States.dead:
 				deathUI.SetActive(true);
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
                 if (Input.GetKeyDown(KeyCode.Return))
                 {
                     sceneTransition.LoadScreenManagerMenu();

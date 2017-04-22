@@ -7,6 +7,14 @@ public class init : MonoBehaviour {
 	[SerializeField]
 	private ScreenManager screen = null;
 
+
+    void Awake()
+    {
+#if UNITY_STANDALONE_WIN
+        Screen.SetResolution(1440, 2560, false);
+#endif
+    }
+
 	// Use this for initialization
 	void Start () {
 		screen.gameObject.GetComponent<StateManager>().SetToLoadMenu();

@@ -52,7 +52,7 @@ public class GameInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-#if UNITY_EDITOR
+#if UNITY_EDITOR || UNITY_STANDALONE_WIN
         //Direction arrowDirection = Direction.W;
 
         if (OnSwipe != null)
